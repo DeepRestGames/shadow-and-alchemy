@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://u041ieqpou71"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop.gd" id="1_38v8p"]
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/PropsInteraction.gd" id="1_bm1sk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0fie3"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0.5, 0.5, 0.5, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="Sky" id="Sky_xa36o"]
+sky_material = SubResource("ProceduralSkyMaterial_0fie3")
+
+[sub_resource type="Environment" id="Environment_j6rjh"]
+background_mode = 2
+sky = SubResource("Sky_xa36o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wr4ug"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8yacx"]
+albedo_color = Color(0.891291, 4.18738e-06, 8.66354e-07, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gk8mo"]
+albedo_color = Color(0.00492994, 0.228797, 1, 1)
+
+[node name="MainScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_j6rjh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Table" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1, -1.75)
+use_collision = true
+size = Vector3(3, 1, 1.5)
+
+[node name="Props" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.8)
+
+[node name="GreenBottle" type="CSGCylinder3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18286, -0.442372, -0.188978)
+use_collision = true
+collision_layer = 2
+radius = 0.1
+height = 0.3
+material = SubResource("StandardMaterial3D_wr4ug")
+script = ExtResource("1_38v8p")
+
+[node name="RedBottle" type="CSGCylinder3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.861502, -0.442372, 0.0175322)
+use_collision = true
+collision_layer = 2
+radius = 0.1
+height = 0.3
+material = SubResource("StandardMaterial3D_8yacx")
+
+[node name="BlueBottle" type="CSGCylinder3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.331608, -0.442372, -0.270303)
+use_collision = true
+collision_layer = 2
+radius = 0.1
+height = 0.3
+material = SubResource("StandardMaterial3D_gk8mo")
+
+[node name="Player" type="Node3D" parent="."]
+
+[node name="PropsInteraction" type="Node3D" parent="Player"]
+script = ExtResource("1_bm1sk")
