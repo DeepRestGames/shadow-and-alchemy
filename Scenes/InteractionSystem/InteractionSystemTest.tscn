@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://u041ieqpou71"]
+[gd_scene load_steps=11 format=3 uid="uid://u041ieqpou71"]
 
-[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop.gd" id="1_38v8p"]
-[ext_resource type="Script" path="res://Scripts/InteractionSystem/PropsInteraction.gd" id="1_bm1sk"]
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Interaction.gd" id="1_38v8p"]
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/InteractionSystem.gd" id="1_bm1sk"]
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="2_6qrrl"]
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Focus.gd" id="3_rrgj2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0fie3"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -51,7 +53,7 @@ collision_layer = 2
 radius = 0.1
 height = 0.3
 material = SubResource("StandardMaterial3D_wr4ug")
-script = ExtResource("1_38v8p")
+script = ExtResource("3_rrgj2")
 
 [node name="RedBottle" type="CSGCylinder3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.861502, -0.442372, 0.0175322)
@@ -60,6 +62,7 @@ collision_layer = 2
 radius = 0.1
 height = 0.3
 material = SubResource("StandardMaterial3D_8yacx")
+script = ExtResource("1_38v8p")
 
 [node name="BlueBottle" type="CSGCylinder3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.331608, -0.442372, -0.270303)
@@ -68,8 +71,9 @@ collision_layer = 2
 radius = 0.1
 height = 0.3
 material = SubResource("StandardMaterial3D_gk8mo")
+script = ExtResource("2_6qrrl")
 
 [node name="Player" type="Node3D" parent="."]
 
-[node name="PropsInteraction" type="Node3D" parent="Player"]
+[node name="InteractionSystem" type="Node3D" parent="Player"]
 script = ExtResource("1_bm1sk")

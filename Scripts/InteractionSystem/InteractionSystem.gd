@@ -32,7 +32,6 @@ func _input(event):
 		var result := space_state.intersect_ray(query)
 		
 		if not result.is_empty():
-			print(result)
 			current_intersected_prop = result["collider"] as Prop
 		else:
 			current_intersected_prop = null
@@ -41,5 +40,5 @@ func _input(event):
 func _process(_delta):
 	
 	if Input.is_action_just_pressed("left_click") and current_intersected_prop != null:
-		current_intersected_prop.interacted()
+		current_intersected_prop._interacted()
 
