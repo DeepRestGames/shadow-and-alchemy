@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://u041ieqpou71"]
 
-[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Interaction.gd" id="1_38v8p"]
-[ext_resource type="Script" path="res://Scripts/InteractionSystem/InteractionSystem.gd" id="1_bm1sk"]
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Puzzle.gd" id="1_38v8p"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="2_6qrrl"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Focus.gd" id="3_rrgj2"]
+[ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="4_0euu7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0fie3"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -36,8 +36,6 @@ environment = SubResource("Environment_j6rjh")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="."]
-
 [node name="Table" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1, -1.75)
 use_collision = true
@@ -63,6 +61,7 @@ radius = 0.1
 height = 0.3
 material = SubResource("StandardMaterial3D_8yacx")
 script = ExtResource("1_38v8p")
+puzzle_name = "CombinationLock"
 
 [node name="BlueBottle" type="CSGCylinder3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.331608, -0.442372, -0.270303)
@@ -73,7 +72,5 @@ height = 0.3
 material = SubResource("StandardMaterial3D_gk8mo")
 script = ExtResource("2_6qrrl")
 
-[node name="Player" type="Node3D" parent="."]
-
-[node name="InteractionSystem" type="Node3D" parent="Player"]
-script = ExtResource("1_bm1sk")
+[node name="Player" parent="." instance=ExtResource("4_0euu7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.342387, 0)

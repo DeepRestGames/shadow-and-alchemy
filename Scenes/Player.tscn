@@ -1,9 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1ngk84wlraoa"]
+[gd_scene load_steps=7 format=3 uid="uid://d1ngk84wlraoa"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_h2fim"]
+[ext_resource type="PackedScene" uid="uid://dv04x80jkku7u" path="res://Scenes/Puzzles/CombinationPuzzle.tscn" id="2_kotmf"]
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/InteractionSystem.gd" id="2_qmrlh"]
+[ext_resource type="Script" path="res://Scripts/HUD.gd" id="3_x3wc8"]
+[ext_resource type="Script" path="res://Scripts/Puzzles/CombinationPuzzle.gd" id="5_aybxv"]
+[ext_resource type="Resource" uid="uid://2kecvln1sbpr" path="res://Resources/Puzzles/PuzzleTest.tres" id="6_t4vfd"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_h2fim")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="InteractionSystem" type="Node3D" parent="."]
+script = ExtResource("2_qmrlh")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_x3wc8")
+
+[node name="CombinationLockPuzzle" parent="HUD" instance=ExtResource("2_kotmf")]
+visible = false
+layout_mode = 1
+script = ExtResource("5_aybxv")
+puzzle_configuration = ExtResource("6_t4vfd")
+
+[editable path="HUD/CombinationLockPuzzle"]
