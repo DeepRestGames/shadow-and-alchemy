@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckc21cpje40gh"]
+
+[ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
+[ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.0.blend" id="2_ebig3"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
+panorama = ExtResource("1_aeey2")
+
+[sub_resource type="Sky" id="Sky_fu3n5"]
+sky_material = SubResource("PanoramaSkyMaterial_tca5b")
+
+[sub_resource type="Environment" id="Environment_nps7j"]
+background_mode = 1
+sky = SubResource("Sky_fu3n5")
+sky_rotation = Vector3(0, -2.10836, 0)
+ambient_light_source = 3
+tonemap_mode = 1
+
+[node name="MainScenePrototype02" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nps7j")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.827081, 0.260411, -0.49812, 0, 0.886204, 0.463296, 0.562083, 0.383183, -0.732962, 0, 0, 0)
+light_color = Color(0.0941176, 0.054902, 0.027451, 1)
+shadow_enabled = true
+
+[node name="Cabin_v0_0_0" parent="." instance=ExtResource("2_ebig3")]
+
+[node name="catapecchia_v0_0_0" parent="Cabin_v0_0_0" index="0"]
+visible = false
+
+[node name="Props" type="Node3D" parent="Cabin_v0_0_0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.576236, 1.85896, -5.83088)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Cabin_v0_0_0/Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0671048, -0.429732, 3.76039)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Cabin_v0_0_0/Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, -0.00713611, 7.28915)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Cabin_v0_0_0/Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, -0.207136, 4.64512)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Cabin_v0_0_0/Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.80117, 0.0417759, 3.8757)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Cabin_v0_0_0/Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53504, -1.09415, 6.44933)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Cabin_v0_0_0/Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 9.4)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[editable path="Cabin_v0_0_0"]
