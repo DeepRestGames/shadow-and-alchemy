@@ -42,7 +42,6 @@ func _process(_delta):
 
 func _process_focus_inputs():
 	var focus_point: FocusPoint = null
-	var previous_point: NavigationPoint = current_navigation_point
 	
 	var match_north = current_navigation_point["north_focus_point"] and facing_direction == FacingDirection.NORTH
 	if match_north:
@@ -181,16 +180,18 @@ func _animate_focus(focus_point: FocusPoint):
 	tween.connect("finished", _tween_focus_over)
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
+	tween.set_parallel(true)
 	tween.tween_property(camera_3d, "global_position", focus_point.focus_camera.global_position, TIME_BETWEEN_MOVEMENTS)
 	tween.tween_property(camera_3d, "global_rotation_degrees", focus_point.focus_camera.global_rotation_degrees, TIME_BETWEEN_MOVEMENTS)
 	
-func _animate_defocus(unfocus_pos, unfocused_rot):
+func _animate_defocus(_unfocus_pos, _unfocused_rot):
 	var tween = get_tree().create_tween()
 	tween.connect("finished", _tween_defocus_over)
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(camera_3d, "global_position", unfocus_pos, TIME_BETWEEN_MOVEMENTS)
-	tween.tween_property(camera_3d, "global_rotation_degrees", unfocused_rot, TIME_BETWEEN_MOVEMENTS)
+	tween.set_parallel(true)
+	tween.tween_property(camera_3d, "global_position", _unfocus_pos, TIME_BETWEEN_MOVEMENTS)
+	tween.tween_property(camera_3d, "global_rotation_degrees", _unfocused_rot, TIME_BETWEEN_MOVEMENTS)
 	
 func _tween_focus_over():
 	player_state = PlayerState.FOCUSING
