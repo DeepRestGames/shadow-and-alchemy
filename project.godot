@@ -16,6 +16,10 @@ run/main_scene="res://Scenes/MainScene_Prototype01.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+InventorySystem="*res://Scripts/InventorySystem/InventorySystem.gd"
+
 [input]
 
 move_forward={

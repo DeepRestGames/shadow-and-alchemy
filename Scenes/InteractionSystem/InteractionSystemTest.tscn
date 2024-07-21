@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://u041ieqpou71"]
+[gd_scene load_steps=12 format=3 uid="uid://u041ieqpou71"]
 
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Interaction.gd" id="1_38v8p"]
-[ext_resource type="Script" path="res://Scripts/InteractionSystem/InteractionSystem.gd" id="1_bm1sk"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="2_6qrrl"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Focus.gd" id="3_rrgj2"]
+[ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="4_q26nq"]
+[ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="5_ggtcx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0fie3"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -72,8 +73,6 @@ radius = 0.1
 height = 0.3
 material = SubResource("StandardMaterial3D_gk8mo")
 script = ExtResource("2_6qrrl")
+inventory_item_data = ExtResource("4_q26nq")
 
-[node name="Player" type="Node3D" parent="."]
-
-[node name="InteractionSystem" type="Node3D" parent="Player"]
-script = ExtResource("1_bm1sk")
+[node name="Player" parent="." instance=ExtResource("5_ggtcx")]
