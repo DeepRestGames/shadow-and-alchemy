@@ -1,12 +1,12 @@
 extends Node3D
 
 @onready var camera_3d = $Camera3D
-var unfocus_pos
-var unfocused_rot
+var unfocus_pos: Vector3
+var unfocused_rot: Vector3
 
-var facing_direction = FacingDirection.WEST
-var player_state = PlayerState.IDLE
-
+var facing_direction: FacingDirection = FacingDirection.WEST
+var player_state: PlayerState = PlayerState.IDLE
+var previous_state: PlayerState
 
 const TIME_BETWEEN_MOVEMENTS: float = 0.35
 const TIME_BETWEEN_ROTATIONS: float = 0.35
@@ -22,23 +22,40 @@ enum FacingDirection {
 }
 # State of the player
 enum PlayerState {
-	IDLE,		# 0
+	IDLE,		# 0		CAN OPEN DIARY
 	MOVING,		# 1
 	FOCUSING,	# 2
-	INVENTORY	# 3
+	INVENTORY,	# 3		CAN OPEN DIARY
+	DIARY		# 4
 }
+@onready var diary = $Diary
 
 @onready var debug_ui = $DEBUG_UI
 
+func _ready():
+	diary.hide()
 
 func _process(_delta):
 	_process_movement_inputs()
 	_process_focus_inputs()
+	_process_pause_inputs()
+	
 	# TODO: DEBUG/REMOVE
 	debug_ui.text = "STATE: " + str(PlayerState.keys()[player_state])
 	debug_ui.text += "\nPOS: " + str(camera_3d.global_position)
 	debug_ui.text += "\nROT: " + str(camera_3d.global_position)
 
+func _process_pause_inputs():
+	if Input.is_action_just_pressed("open_diary"):
+		if player_state == PlayerState.DIARY:
+			player_state = previous_state
+			diary.hide()
+			
+		elif player_state == PlayerState.IDLE or player_state == PlayerState.FOCUSING:
+			previous_state = player_state
+			player_state = PlayerState.DIARY
+			diary.show()
+	
 
 func _process_focus_inputs():
 	var focus_point: FocusPoint = null
