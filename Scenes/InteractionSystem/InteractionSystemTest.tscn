@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://u041ieqpou71"]
+[gd_scene load_steps=14 format=3 uid="uid://u041ieqpou71"]
 
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Interaction.gd" id="1_38v8p"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="2_6qrrl"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Focus.gd" id="3_rrgj2"]
 [ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="4_q26nq"]
+[ext_resource type="Resource" uid="uid://g4uyankif1ku" path="res://Resources/InventoryItems/Mercury.tres" id="5_6qhmo"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="5_ggtcx"]
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/PuzzleSlot.gd" id="7_2han0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0fie3"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -26,7 +28,7 @@ albedo_color = Color(0, 1, 0, 1)
 albedo_color = Color(0.891291, 4.18738e-06, 8.66354e-07, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gk8mo"]
-albedo_color = Color(0.00492994, 0.228797, 1, 1)
+albedo_color = Color(0.00392157, 0.227451, 1, 1)
 
 [node name="MainScene" type="Node3D"]
 
@@ -36,8 +38,6 @@ environment = SubResource("Environment_j6rjh")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
-
-[node name="Camera3D" type="Camera3D" parent="."]
 
 [node name="Table" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1, -1.75)
@@ -75,4 +75,21 @@ material = SubResource("StandardMaterial3D_gk8mo")
 script = ExtResource("2_6qrrl")
 inventory_item_data = ExtResource("4_q26nq")
 
+[node name="BlueBottle2" type="CSGCylinder3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.620572, -0.442372, 0.0731244)
+use_collision = true
+collision_layer = 2
+radius = 0.1
+height = 0.3
+material = SubResource("StandardMaterial3D_gk8mo")
+script = ExtResource("2_6qrrl")
+inventory_item_data = ExtResource("5_6qhmo")
+
 [node name="Player" parent="." instance=ExtResource("5_ggtcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.22739, 0)
+
+[node name="ItemDropArea" type="CSGBox3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.435688, -0.184734, -2.60842)
+use_collision = true
+collision_layer = 4
+script = ExtResource("7_2han0")

@@ -8,3 +8,5 @@ func _interacted():
 	InventorySystem.add_item(inventory_item_data)
 	
 	print("Item added to inventory!")
+	
+	queue_free()
