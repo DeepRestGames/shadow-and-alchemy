@@ -16,5 +16,3 @@ func _process(_delta):
 				print("Puzzle solved!")
 				
 				queue_free()
-	
-	

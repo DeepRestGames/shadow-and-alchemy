@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d1ngk84wlraoa"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_h2fim"]
-[ext_resource type="PackedScene" uid="uid://dv04x80jkku7u" path="res://Scenes/Puzzles/CombinationPuzzle.tscn" id="2_kotmf"]
+[ext_resource type="PackedScene" uid="uid://dv04x80jkku7u" path="res://Scenes/Puzzles/CombinationPuzzleUI.tscn" id="2_kotmf"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/InteractionSystem.gd" id="2_qmrlh"]
 [ext_resource type="Script" path="res://Scripts/HUD.gd" id="3_x3wc8"]
 [ext_resource type="Script" path="res://Scripts/Puzzles/CombinationPuzzle.gd" id="5_aybxv"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://u041ieqpou71"]
+[gd_scene load_steps=12 format=3 uid="uid://u041ieqpou71"]
 
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Puzzle.gd" id="1_38v8p"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="2_6qrrl"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Focus.gd" id="3_rrgj2"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="4_0euu7"]
+[ext_resource type="PackedScene" uid="uid://dg1dkxibqucgk" path="res://Scenes/Puzzles/CombinationPuzzle.tscn" id="5_nk2yb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0fie3"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -74,3 +75,6 @@ script = ExtResource("2_6qrrl")
 
 [node name="Player" parent="." instance=ExtResource("4_0euu7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.342387, 0)
+
+[node name="CombinationPuzzle" parent="." instance=ExtResource("5_nk2yb")]
+transform = Transform3D(0.815128, 0, -0.579281, 0, 1, 0, 0.579281, 0, 0.815128, 0.272272, -0.489846, -1.68336)
