@@ -29,7 +29,38 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"b_LongWall": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_LongWall.tres"
+},
+"b_Truss": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_Truss.tres"
+},
+"b_door": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_door.tres"
+},
+"b_floor": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_floor.tres"
+},
+"b_long truss": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_long truss.tres"
+},
+"b_roof": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_roof.tres"
+},
+"b_shortWall": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_shortWall.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0

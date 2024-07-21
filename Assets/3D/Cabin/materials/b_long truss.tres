@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bc6hnj4iwogir"]
+
+[ext_resource type="Texture2D" uid="uid://d3yn313jl651r" path="res://Assets/3D/Cabin/textures/Wood1.png" id="1_xujto"]
+
+[resource]
+resource_name = "b_Truss"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.906434, 0.678401, 0.40077, 1)
+albedo_texture = ExtResource("1_xujto")
+uv1_scale = Vector3(0.79, 0.79, 0.79)
+uv1_triplanar = true
+uv1_world_triplanar = true
