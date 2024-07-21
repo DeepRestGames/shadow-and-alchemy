@@ -7,3 +7,7 @@ script = ExtResource("1_h2fim")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="DEBUG_UI" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

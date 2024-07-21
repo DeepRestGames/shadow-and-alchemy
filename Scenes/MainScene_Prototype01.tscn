@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://6hoi0bkmcnyt"]
+[gd_scene load_steps=7 format=3 uid="uid://6hoi0bkmcnyt"]
 
 [ext_resource type="PackedScene" uid="uid://bhv1boykqvw23" path="res://Scenes/PlayerMovement/NavigationPoint.tscn" id="1_fg33c"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="1_jwaoo"]
+[ext_resource type="PackedScene" uid="uid://b68s0qxy7ri2k" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="3_8i0nq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vmfb6"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -151,9 +152,10 @@ north_navigation_point = NodePath("../NavigationPoint4")
 east_navigation_point = NodePath("../StartingNavigationPoint")
 west_navigation_point = NodePath("../NavigationPoint3")
 
-[node name="NavigationPoint3" parent="Environment/NavigationPoints" node_paths=PackedStringArray("east_navigation_point") instance=ExtResource("1_fg33c")]
+[node name="NavigationPoint3" parent="Environment/NavigationPoints" node_paths=PackedStringArray("east_navigation_point", "west_focus_point") instance=ExtResource("1_fg33c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0, 7.8)
 east_navigation_point = NodePath("../NavigationPoint2")
+west_focus_point = NodePath("../../FocusPoints/FocusPoint3")
 
 [node name="NavigationPoint4" parent="Environment/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "south_navigation_point") instance=ExtResource("1_fg33c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
@@ -171,10 +173,11 @@ east_navigation_point = NodePath("../NavigationPoint7")
 south_navigation_point = NodePath("../NavigationPoint4")
 west_navigation_point = NodePath("../NavigationPoint8")
 
-[node name="NavigationPoint7" parent="Environment/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "west_navigation_point") instance=ExtResource("1_fg33c")]
+[node name="NavigationPoint7" parent="Environment/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "west_navigation_point", "east_focus_point") instance=ExtResource("1_fg33c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, 4)
 north_navigation_point = NodePath("../NavigationPoint12")
 west_navigation_point = NodePath("../NavigationPoint6")
+east_focus_point = NodePath("../../FocusPoints/FocusPoint")
 
 [node name="NavigationPoint8" parent="Environment/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point") instance=ExtResource("1_fg33c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0, 4)
@@ -186,13 +189,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0, 2)
 east_navigation_point = NodePath("../NavigationPoint11")
 south_navigation_point = NodePath("../NavigationPoint8")
 
-[node name="NavigationPoint11" parent="Environment/NavigationPoints" node_paths=PackedStringArray("east_navigation_point", "south_navigation_point", "west_navigation_point") instance=ExtResource("1_fg33c")]
+[node name="NavigationPoint11" parent="Environment/NavigationPoints" node_paths=PackedStringArray("east_navigation_point", "south_navigation_point", "west_navigation_point", "north_focus_point") instance=ExtResource("1_fg33c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38419e-07, 0, 2)
 east_navigation_point = NodePath("../NavigationPoint12")
 south_navigation_point = NodePath("../NavigationPoint6")
 west_navigation_point = NodePath("../NavigationPoint10")
+north_focus_point = NodePath("../../FocusPoints/FocusPoint2")
 
 [node name="NavigationPoint12" parent="Environment/NavigationPoints" node_paths=PackedStringArray("south_navigation_point", "west_navigation_point") instance=ExtResource("1_fg33c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 0, 2)
 south_navigation_point = NodePath("../NavigationPoint7")
 west_navigation_point = NodePath("../NavigationPoint11")
+
+[node name="FocusPoints" type="Node3D" parent="Environment"]
+
+[node name="FocusPoint" parent="Environment/FocusPoints" instance=ExtResource("3_8i0nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.69039, 0.197479, 3.60781)
+
+[node name="FocusCamera" parent="Environment/FocusPoints/FocusPoint" index="1"]
+transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, -1.2356, 0.389964, 0)
+
+[node name="FocusPoint2" parent="Environment/FocusPoints" instance=ExtResource("3_8i0nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0438264, 0.197479, 1.58832)
+
+[node name="FocusCamera" parent="Environment/FocusPoints/FocusPoint2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061953, -0.109825, 0.761662)
+
+[node name="FocusPoint3" parent="Environment/FocusPoints" instance=ExtResource("3_8i0nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68367, 0.197436, 7.47456)
+
+[node name="FocusCamera" parent="Environment/FocusPoints/FocusPoint3" index="1"]
+transform = Transform3D(-4.37114e-08, -0.5, 0.866025, 0, 0.866025, 0.5, -1, 2.18557e-08, -3.78552e-08, 0.428973, 0.000205994, 0.0795188)
+
+[editable path="Environment/FocusPoints/FocusPoint"]
+[editable path="Environment/FocusPoints/FocusPoint2"]
+[editable path="Environment/FocusPoints/FocusPoint3"]
