@@ -2,10 +2,10 @@ extends Node3D
 
 # Movement
 enum FacingDirection {
-	NORTH,
-	EAST,
-	SOUTH,
-	WEST
+	NORTH,	# 0
+	EAST,	# 1
+	SOUTH,	# 2
+	WEST	# 3
 }
 
 var facing_direction = FacingDirection.WEST
@@ -14,7 +14,6 @@ var next_navigation_point: NavigationPoint
 
 
 func _process(_delta):
-	
 	if Input.is_action_just_pressed("move_forward"):
 		
 		# Check if there's a valid navigation point forward
@@ -83,46 +82,21 @@ func _process(_delta):
 	
 	
 	elif Input.is_action_just_pressed("turn_right"):
-		
-		match facing_direction:
-			
-			FacingDirection.NORTH:
-				facing_direction = FacingDirection.EAST
-				global_rotation_degrees.y = -90
-			
-			FacingDirection.EAST:
-				facing_direction = FacingDirection.SOUTH
-				global_rotation_degrees.y = -180
-			
-			FacingDirection.SOUTH:
-				facing_direction = FacingDirection.WEST
-				global_rotation_degrees.y = -270
-			
-			FacingDirection.WEST:
-				facing_direction = FacingDirection.NORTH
-				global_rotation_degrees.y = 0
-	
+		if facing_direction == FacingDirection.WEST:
+			facing_direction = FacingDirection.NORTH
+		else:
+			facing_direction += 1
+		global_rotation_degrees.y -= 90	
 	
 	elif Input.is_action_just_pressed("turn_left"):
+		if facing_direction == FacingDirection.NORTH:
+			facing_direction = FacingDirection.WEST
+		else:
+			facing_direction -= 1
+		global_rotation_degrees.y += 90	
 		
-		match facing_direction:
-			
-			FacingDirection.NORTH:
-				facing_direction = FacingDirection.WEST
-				global_rotation_degrees.y = -270
-			
-			FacingDirection.EAST:
-				facing_direction = FacingDirection.NORTH
-				global_rotation_degrees.y = 0
-			
-			FacingDirection.SOUTH:
-				facing_direction = FacingDirection.EAST
-				global_rotation_degrees.y = -90
-			
-			FacingDirection.WEST:
-				facing_direction = FacingDirection.SOUTH
-				global_rotation_degrees.y = -180
 
 
 func _impossible_movement():
+	# TODO: remove debug message
 	print("It's impossible to move forward!")
