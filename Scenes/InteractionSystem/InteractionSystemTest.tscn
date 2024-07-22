@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://u041ieqpou71"]
+[gd_scene load_steps=9 format=3 uid="uid://u041ieqpou71"]
 
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Interaction.gd" id="1_38v8p"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/InteractionSystem.gd" id="1_bm1sk"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="2_6qrrl"]
-[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Focus.gd" id="3_rrgj2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0fie3"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -17,9 +16,6 @@ sky_material = SubResource("ProceduralSkyMaterial_0fie3")
 [sub_resource type="Environment" id="Environment_j6rjh"]
 background_mode = 2
 sky = SubResource("Sky_xa36o")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wr4ug"]
-albedo_color = Color(0, 1, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8yacx"]
 albedo_color = Color(0.891291, 4.18738e-06, 8.66354e-07, 1)
@@ -45,15 +41,6 @@ size = Vector3(3, 1, 1.5)
 
 [node name="Props" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.8)
-
-[node name="GreenBottle" type="CSGCylinder3D" parent="Props"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18286, -0.442372, -0.188978)
-use_collision = true
-collision_layer = 2
-radius = 0.1
-height = 0.3
-material = SubResource("StandardMaterial3D_wr4ug")
-script = ExtResource("3_rrgj2")
 
 [node name="RedBottle" type="CSGCylinder3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.861502, -0.442372, 0.0175322)
