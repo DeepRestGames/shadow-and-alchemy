@@ -1,27 +1,75 @@
-[gd_scene load_steps=4 format=3 uid="uid://duhgac42d8866"]
+[gd_scene load_steps=8 format=3 uid="uid://duhgac42d8866"]
 
-[ext_resource type="Texture2D" uid="uid://bjh1mmn78qru8" path="res://Assets/2D/Decals/text.jpg" id="1_eoisk"]
+[ext_resource type="Script" path="res://Scripts/Diary/Diary.gd" id="1_s6rx6"]
+[ext_resource type="Texture2D" uid="uid://cglb3g30rrg3x" path="res://Assets/2D/Decals/book_texture.jpg" id="2_ldai3"]
+[ext_resource type="Texture2D" uid="uid://sntw8ewqgxsi" path="res://Assets/2D/Decals/old_paper.jpg" id="3_py4m4"]
+[ext_resource type="Texture2D" uid="uid://d263aum22cmct" path="res://Assets/2D/Decals/bombo.png" id="4_t7of5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3jg0"]
-albedo_color = Color(0.305882, 0.231373, 0.141176, 1)
+[sub_resource type="BoxMesh" id="BoxMesh_btvvn"]
+size = Vector3(0.7, 0.01, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_wk70x"]
-material = SubResource("StandardMaterial3D_c3jg0")
-size = Vector3(0.75, 0.2, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l2db"]
+albedo_color = Color(0.34902, 0.219608, 0.0235294, 1)
+albedo_texture = ExtResource("2_ldai3")
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_da6ug"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.454902, 0.454902, 0.454902, 1)
+albedo_texture = ExtResource("3_py4m4")
 
 [node name="Diary" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_s6rx6")
 
-[node name="Book" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_wk70x")
+[node name="Cover1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.973239, -0.229795, -1.00447e-08, 0.229795, 0.973239, -1.16976e-09, 1.00447e-08, -1.16976e-09, 1, 0.337856, 0.0788053, 3.44469e-09)
+mesh = SubResource("BoxMesh_btvvn")
+surface_material_override/0 = SubResource("StandardMaterial3D_2l2db")
 
-[node name="Decal" type="Decal" parent="Book"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0952561, 0)
-size = Vector3(2, 0.0283203, 2)
-texture_albedo = ExtResource("1_eoisk")
+[node name="Cover2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.961889, 0.273439, 1.19524e-08, -0.273439, 0.961889, -1.66587e-09, -1.19524e-08, -1.66587e-09, 1, -0.33244, 0.094494, -4.94306e-06)
+mesh = SubResource("BoxMesh_btvvn")
+surface_material_override/0 = SubResource("StandardMaterial3D_2l2db")
 
-[node name="DiaryLight" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.29675, -6.23982e-08)
-light_energy = 5.0
-spot_range = 1.25825
-spot_angle = 35.3719
+[node name="Pages" type="CSGBox3D" parent="."]
+transform = Transform3D(0.961569, 0.274563, 1.20016e-08, -0.274563, 0.961569, -1.67987e-09, -1.20016e-08, -1.67988e-09, 1, -0.329614, 0.130351, -0.00131225)
+material_override = SubResource("StandardMaterial3D_da6ug")
+size = Vector3(0.681055, 0.05, 0.959412)
+
+[node name="Pages2" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.970586, 0.240753, 1.05237e-08, -0.240753, -0.970586, -8.61371e-08, -1.05237e-08, -8.61371e-08, 1, 0.322183, 0.112374, -0.00131225)
+material_override = SubResource("StandardMaterial3D_da6ug")
+size = Vector3(0.681055, 0.05, 0.959412)
+
+[node name="PageLeft" type="Label3D" parent="."]
+transform = Transform3D(-0.969591, -8.47643e-08, -0.244732, -0.244732, -6.51065e-08, 0.969591, -9.81204e-08, 1, 4.23822e-08, 0.324104, 0.141987, 0.00286866)
+texture_filter = 0
+text = "Perro Salchicha, 
+gordo bachicha,
+toma solcito a 
+la orilla del mar.
+Tiene sombrero 
+de marinero
+y en vez de traje 
+se puso collar."
+font_size = 14
+
+[node name="PageRight" type="Label3D" parent="."]
+transform = Transform3D(-0.960035, -8.39289e-08, 0.279879, 0.279879, -1.92436e-08, 0.960035, -7.51889e-08, 1, 4.19645e-08, -0.297586, 0.149557, 0.00286866)
+visible = false
+texture_filter = 0
+text = "Una gaviota 
+medio marmota,
+bizca y con cara 
+de preocupación
+viene planeando, 
+mira buscando
+el desayuno para
+ su pichón. "
+font_size = 14
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-0.07221, 4.39252e-10, 0.020266, 0.020266, -3.31143e-09, 0.07221, 1.31771e-09, 0.075, 3.06956e-09, -0.304218, 0.160155, 7.00058e-09)
+texture = ExtResource("4_t7of5")
