@@ -5,26 +5,44 @@
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("1_aeey2")
+filter = false
 
 [sub_resource type="Sky" id="Sky_fu3n5"]
 sky_material = SubResource("PanoramaSkyMaterial_tca5b")
 
 [sub_resource type="Environment" id="Environment_nps7j"]
 background_mode = 1
+background_color = Color(0, 0, 0.0470588, 1)
 sky = SubResource("Sky_fu3n5")
 sky_rotation = Vector3(0, -2.10836, 0)
-ambient_light_source = 3
-tonemap_mode = 1
+tonemap_mode = 2
+tonemap_white = 8.0
 
 [node name="MainScenePrototype02" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nps7j")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.827081, 0.260411, -0.49812, 0, 0.886204, 0.463296, 0.562083, 0.383183, -0.732962, 0, 0, 0)
-light_color = Color(0.443137, 0.317647, 0.223529, 1)
+[node name="DirectionalLight3D_1" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.106264, 0.460673, -0.881186, 0, 0.886204, 0.463296, 0.994338, 0.0492317, -0.0941715, 0, 0, 0)
+light_color = Color(0.32549, 0.545098, 0.603922, 1)
+light_energy = 0.4
 shadow_enabled = true
+shadow_opacity = 0.8
+
+[node name="DirectionalLight3D_2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.859852, 0.236533, -0.452445, 0, 0.886204, 0.463296, 0.510543, -0.398366, 0.762004, 0, 0, 0)
+light_color = Color(0.270588, 0.196078, 0.701961, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_opacity = 0.8
+
+[node name="DirectionalLight3D_3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.0139623, 0.114926, 0.993276, 0, 0.993373, -0.114937, -0.999903, -0.00160478, -0.0138697, 0, 0, 0)
+light_color = Color(0, 0.196078, 0.701961, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_opacity = 0.8
 
 [node name="Cabin_v0_0_0" parent="." instance=ExtResource("2_ebig3")]
 

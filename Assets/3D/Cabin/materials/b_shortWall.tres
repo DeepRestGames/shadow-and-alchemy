@@ -1,15 +1,18 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dhj2vbx7rmnmw"]
 
-[ext_resource type="Texture2D" uid="uid://utx4lddwihjj" path="res://Assets/3D/Cabin/textures/Wood2.png" id="1_ejguv"]
+[ext_resource type="Texture2D" uid="uid://cbp2mdem84u66" path="res://Assets/3D/Cabin/textures/Wood2_V.png" id="1_unln3"]
 
 [resource]
 resource_name = "b_shortWall"
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.670588, 0.513726, 0.321569, 1)
-albedo_texture = ExtResource("1_ejguv")
+albedo_color = Color(0.592157, 0.447059, 0.270588, 1)
+albedo_texture = ExtResource("1_unln3")
+albedo_texture_force_srgb = true
 metallic_specular = 1.0
 roughness = 0.5
-uv1_scale = Vector3(1.28, 1.28, 1.28)
+uv1_scale = Vector3(0.622, 0.622, 0.622)
+uv1_offset = Vector3(0, 0, 0.01)
 uv1_triplanar = true
+uv1_world_triplanar = true

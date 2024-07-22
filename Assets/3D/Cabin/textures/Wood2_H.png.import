@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byy8n12mvsu4s"
-path.s3tc="res://.godot/imported/Dirt.png-fb78451e06079128aab6f39b4531fed7.s3tc.ctex"
-path.etc2="res://.godot/imported/Dirt.png-fb78451e06079128aab6f39b4531fed7.etc2.ctex"
+uid="uid://utx4lddwihjj"
+path.s3tc="res://.godot/imported/Wood2_H.png-31a095cd974b8a25e6c0ae28f89deffb.s3tc.ctex"
+path.etc2="res://.godot/imported/Wood2_H.png-31a095cd974b8a25e6c0ae28f89deffb.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/3D/Cabin/textures/Dirt.png"
-dest_files=["res://.godot/imported/Dirt.png-fb78451e06079128aab6f39b4531fed7.s3tc.ctex", "res://.godot/imported/Dirt.png-fb78451e06079128aab6f39b4531fed7.etc2.ctex"]
+source_file="res://Assets/3D/Cabin/textures/Wood2_H.png"
+dest_files=["res://.godot/imported/Wood2_H.png-31a095cd974b8a25e6c0ae28f89deffb.s3tc.ctex", "res://.godot/imported/Wood2_H.png-31a095cd974b8a25e6c0ae28f89deffb.etc2.ctex"]
 
 [params]
 

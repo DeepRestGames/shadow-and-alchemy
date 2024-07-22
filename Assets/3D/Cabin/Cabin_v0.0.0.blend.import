@@ -58,6 +58,18 @@ _subresources={
 "b_shortWall": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/3D/Cabin/materials/b_shortWall.tres"
+},
+"mini_beam": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/mini_beam.tres"
+},
+"truss_h": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/truss_h.tres"
+},
+"truss_v": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/truss_v.tres"
 }
 }
 }
