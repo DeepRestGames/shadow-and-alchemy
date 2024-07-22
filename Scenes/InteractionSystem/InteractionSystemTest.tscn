@@ -1,11 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://u041ieqpou71"]
+[gd_scene load_steps=12 format=3 uid="uid://u041ieqpou71"]
 
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Interaction.gd" id="1_38v8p"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="2_6qrrl"]
 [ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="4_q26nq"]
 [ext_resource type="Resource" uid="uid://g4uyankif1ku" path="res://Resources/InventoryItems/Mercury.tres" id="5_6qhmo"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="5_ggtcx"]
-[ext_resource type="Script" path="res://Scripts/InteractionSystem/PuzzleSlot.gd" id="7_2han0"]
+[ext_resource type="PackedScene" uid="uid://cmp4gbdjt2xhj" path="res://Scenes/InteractionSystem/ItemDropArea.tscn" id="6_uarfy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0fie3"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -75,8 +75,4 @@ inventory_item_data = ExtResource("5_6qhmo")
 [node name="Player" parent="." instance=ExtResource("5_ggtcx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.22739, 0)
 
-[node name="ItemDropArea" type="CSGBox3D" parent="."]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.435688, -0.184734, -2.60842)
-use_collision = true
-collision_layer = 4
-script = ExtResource("7_2han0")
+[node name="ItemDropArea" parent="." instance=ExtResource("6_uarfy")]

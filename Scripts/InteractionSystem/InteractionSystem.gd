@@ -5,8 +5,7 @@ var viewport: Viewport
 var camera: Camera3D
 var space_state: PhysicsDirectSpaceState3D
 
-@export var props_collision_layer := 2
-@export_range(.5, 5) var ray_lenght: float
+@export_range(.5, 5) var ray_lenght: float = 2.5
 
 # Props interactions
 @export var props_collision_layer := 2
