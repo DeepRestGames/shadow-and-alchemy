@@ -4,7 +4,9 @@ extends Node3D
 var viewport: Viewport
 var camera: Camera3D
 var space_state: PhysicsDirectSpaceState3D
-@export var ray_lenght: float
+
+@export var props_collision_layer := 2
+@export_range(.5, 5) var ray_lenght: float
 
 # Props interactions
 @export var props_collision_layer := 2
@@ -21,7 +23,6 @@ func _ready():
 	viewport = get_viewport()
 	camera = viewport.get_camera_3d()
 	space_state = get_world_3d().direct_space_state
-	ray_lenght = camera.far
 
 
 func _input(event):

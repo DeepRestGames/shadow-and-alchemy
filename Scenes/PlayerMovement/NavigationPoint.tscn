@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhv1boykqvw23"]
+[gd_scene load_steps=3 format=3 uid="uid://bhv1boykqvw23"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerMovement/NavigationPosition.gd" id="1_kam7n"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thnij"]
+albedo_color = Color(1, 0.345098, 1, 1)
+
 [node name="NavigationPoint" type="Node3D"]
 script = ExtResource("1_kam7n")
+
+[node name="DEBUG_NAV" type="CSGSphere3D" parent="."]
+radius = 0.05
+material = SubResource("StandardMaterial3D_thnij")
