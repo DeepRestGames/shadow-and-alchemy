@@ -58,6 +58,7 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("left_click") and current_intersected_prop != null and !current_intersected_prop.is_queued_for_deletion():
 		current_intersected_prop._interacted()
+		current_intersected_prop = null
 	
 	if is_dragging_item and Input.is_action_just_released("left_click"):
 		print("Released item from inventory!")
