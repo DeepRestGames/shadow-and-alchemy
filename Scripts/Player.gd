@@ -49,12 +49,12 @@ func _process_pause_inputs():
 	if Input.is_action_just_pressed("open_diary"):
 		if player_state == PlayerState.DIARY:
 			player_state = previous_state
-			diary.hide()
+			diary.put_away()
 			
 		elif player_state == PlayerState.IDLE or player_state == PlayerState.FOCUSING:
 			previous_state = player_state
 			player_state = PlayerState.DIARY
-			diary.show()
+			diary.pull_out()
 	
 
 func _process_focus_inputs():
