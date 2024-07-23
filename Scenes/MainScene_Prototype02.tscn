@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ckc21cpje40gh"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
-[ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.0.blend" id="2_ebig3"]
+[ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="2_ebig3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("1_aeey2")
@@ -16,6 +16,7 @@ background_color = Color(0, 0, 0.0470588, 1)
 sky = SubResource("Sky_fu3n5")
 sky_rotation = Vector3(0, -2.10836, 0)
 tonemap_mode = 2
+tonemap_exposure = 0.9
 tonemap_white = 8.0
 
 [node name="MainScenePrototype02" type="Node3D"]
@@ -56,6 +57,13 @@ light_energy = 0.4
 omni_range = 1.758
 omni_attenuation = 1.18921
 
+[node name="OmniLight3D8" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.78482, -0.537753, 4.33133)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
 [node name="OmniLight3D2" type="OmniLight3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, -0.00713611, 7.28915)
 light_color = Color(1, 0.607867, 0.266473, 1)
@@ -71,7 +79,21 @@ omni_range = 1.758
 omni_attenuation = 1.18921
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Props"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.80117, 0.0417759, 3.8757)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10548, -0.311826, 7.23611)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.78577, -1.30941, 6.76696)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.895552, -0.311826, 7.23611)
 light_color = Color(1, 0.607867, 0.266473, 1)
 light_energy = 0.4
 omni_range = 1.758

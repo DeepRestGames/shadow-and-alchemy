@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cikpxn4e0ls80"
-path="res://.godot/imported/Cabin_v0.0.0.blend-dc65bf8c3b955209a968265a3cbdd2a8.scn"
+path="res://.godot/imported/Cabin_v0.0.1.blend-3caeb0f8f3a83a708ed56fa89aeef67d.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Cabin/Cabin_v0.0.0.blend"
-dest_files=["res://.godot/imported/Cabin_v0.0.0.blend-dc65bf8c3b955209a968265a3cbdd2a8.scn"]
+source_file="res://Assets/3D/Cabin/Cabin_v0.0.1.blend"
+dest_files=["res://.godot/imported/Cabin_v0.0.1.blend-3caeb0f8f3a83a708ed56fa89aeef67d.scn"]
 
 [params]
 
@@ -31,6 +31,22 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
+"Chimney": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/furniture/Chimney.tres"
+},
+"ChimneyFrame": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/furniture/ChimneyFrame.tres"
+},
+"MetalFurniture": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/furniture/MetalFurniture.tres"
+},
+"WoodFurniture": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/furniture/WoodFurniture.tres"
+},
 "b_LongWall": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/3D/Cabin/materials/b_LongWall.tres"
