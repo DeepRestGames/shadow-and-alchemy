@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b68s0qxy7ri2k"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerMovement/FocusPosition.gd" id="1_a3eva"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thnij"]
+albedo_color = Color(0.501961, 0.764706, 0, 1)
+
+[node name="FocusPoint" type="Node3D"]
+script = ExtResource("1_a3eva")
+
+[node name="DEBUG_NAV" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011683, -0.00663078, -0.0022552)
+radius = 0.05
+material = SubResource("StandardMaterial3D_thnij")
+
+[node name="FocusCamera" type="Camera3D" parent="."]
