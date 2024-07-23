@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Diary/Diary.gd" id="1_s6rx6"]
 [ext_resource type="Texture2D" uid="uid://cglb3g30rrg3x" path="res://Assets/2D/Decals/book_texture.jpg" id="2_ldai3"]
 [ext_resource type="Texture2D" uid="uid://sntw8ewqgxsi" path="res://Assets/2D/Decals/old_paper.jpg" id="3_py4m4"]
-[ext_resource type="Texture2D" uid="uid://d263aum22cmct" path="res://Assets/2D/Decals/bombo.png" id="4_t7of5"]
+[ext_resource type="Texture2D" uid="uid://dr2tvite2kn5j" path="res://Assets/2D/Decals/page_sample.png" id="4_17gsf"]
 
 [sub_resource type="Animation" id="Animation_rwdd7"]
 length = 0.001
@@ -961,10 +961,9 @@ size = Vector3(0.18, 0.01, 1)
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_s6rx6")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.55149, 0.00903327)
-spot_range = 2.92232
-spot_angle = 22.5
+[node name="Candle" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45938, 6.37916e-08)
+omni_range = 1.91495
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -1000,6 +999,11 @@ transform = Transform3D(0.895906, 0.444244, -3.91613e-08, -0.444244, 0.895906, -
 material_override = SubResource("StandardMaterial3D_da6ug")
 size = Vector3(0.681, 0.065, 0.959)
 
+[node name="Right" type="Sprite3D" parent="Body/PagesPivot"]
+transform = Transform3D(0.0179285, -7.03648e-11, -0.00886395, -0.00886395, -3.67726e-10, -0.0179285, -9.98985e-11, 0.02, -3.60825e-10, -0.300325, 0.209607, 3.62838e-10)
+flip_h = true
+texture = ExtResource("4_17gsf")
+
 [node name="Pages2Pivot" type="Node3D" parent="Body"]
 transform = Transform3D(1, -4.27318e-16, 8.88178e-16, 4.27318e-16, 1, 3.79535e-31, -8.88178e-16, -5.64237e-37, 1, 2.98023e-08, 2.27092e-24, 2.39392e-16)
 
@@ -1008,42 +1012,13 @@ transform = Transform3D(0.957415, -0.288714, 4.185e-08, 0.288714, 0.957415, -3.1
 material_override = SubResource("StandardMaterial3D_da6ug")
 size = Vector3(0.681, 0.06, 0.959)
 
+[node name="Left" type="Sprite3D" parent="Body/Pages2Pivot"]
+transform = Transform3D(0.0191568, -7.10568e-11, 0.00574621, 0.00574621, -1.55188e-10, -0.0191568, 1.12648e-10, 0.02, -1.28231e-10, 0.325177, 0.154857, 6.74538e-11)
+flip_h = true
+texture = ExtResource("4_17gsf")
+
 [node name="Stipite" type="MeshInstance3D" parent="Body"]
 transform = Transform3D(0.99998, 0.00637041, 2.7846e-10, -0.00637041, 0.99998, -8.88178e-13, -2.7846e-10, -8.84626e-13, 1, 0.00242621, -0.0185028, -8.08784e-10)
 mesh = SubResource("BoxMesh_lqut7")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_2l2db")
-
-[node name="Pages" type="Node3D" parent="."]
-visible = false
-
-[node name="PageLeft" type="Label3D" parent="Pages"]
-transform = Transform3D(-0.969591, -8.47643e-08, -0.244732, -0.244732, -6.51065e-08, 0.969591, -9.81204e-08, 1, 4.23822e-08, 0.324104, 0.141987, 0.00286866)
-texture_filter = 0
-text = "Perro Salchicha, 
-gordo bachicha,
-toma solcito a 
-la orilla del mar.
-Tiene sombrero 
-de marinero
-y en vez de traje 
-se puso collar."
-font_size = 14
-
-[node name="PageRight" type="Label3D" parent="Pages"]
-transform = Transform3D(-0.960035, -8.39289e-08, 0.279879, 0.279879, -1.92436e-08, 0.960035, -7.51889e-08, 1, 4.19645e-08, -0.297586, 0.149557, 0.00286866)
-visible = false
-texture_filter = 0
-text = "Una gaviota 
-medio marmota,
-bizca y con cara 
-de preocupación
-viene planeando, 
-mira buscando
-el desayuno para
- su pichón. "
-font_size = 14
-
-[node name="Sprite3D" type="Sprite3D" parent="Pages"]
-transform = Transform3D(-0.07221, 4.39252e-10, 0.020266, 0.020266, -3.31143e-09, 0.07221, 1.31771e-09, 0.075, 3.06956e-09, -0.304218, 0.160155, 7.00058e-09)
-texture = ExtResource("4_t7of5")

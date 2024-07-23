@@ -55,6 +55,11 @@ func _process_pause_inputs():
 			previous_state = player_state
 			player_state = PlayerState.DIARY
 			diary.pull_out()
+	if Input.is_action_just_pressed("turn_diary_left") and player_state == PlayerState.DIARY:
+		diary.swapperoo_back()
+	if Input.is_action_just_pressed("turn_diary_right") and player_state == PlayerState.DIARY:
+		diary.swapperoo()
+
 	
 
 func _process_focus_inputs():
