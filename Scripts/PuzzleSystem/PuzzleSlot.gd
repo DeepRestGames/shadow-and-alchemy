@@ -18,7 +18,15 @@ func item_dropped(item: InventoryItemData):
 	get_tree().root.add_child(item_scene_instance)
 	item_scene_instance.global_position = item_spawn_origin.global_position
 	
-	var pickup_item_scene = item_scene_instance as Prop_Pickup
+	# Get node in model scene with Prop_Pickup script
+	var pickup_item_scene = null
+	if item_scene_instance is Prop_Pickup:
+		pickup_item_scene = item_scene_instance
+	else:
+		for node in item_scene_instance.get_children(true):
+			if node is Prop_Pickup:
+				pickup_item_scene = node as Prop_Pickup
+				break
 	item_scene_instance.global_position.y += pickup_item_scene.item_model_height / 2
 	current_dropped_item_scene = item_scene_instance
 	
