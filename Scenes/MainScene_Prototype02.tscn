@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckc21cpje40gh"]
+[gd_scene load_steps=9 format=3 uid="uid://ckc21cpje40gh"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
 [ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="2_ebig3"]
+[ext_resource type="PackedScene" uid="uid://dvdddw1tb55q" path="res://Assets/3D/Props/BloodVialEmpty_v0.0.0.blend" id="3_twbq6"]
+[ext_resource type="PackedScene" uid="uid://dppflreshnbo8" path="res://Assets/3D/Props/BloodVialSeparated_v0.0.0.blend" id="4_sw2ho"]
+[ext_resource type="PackedScene" uid="uid://tibfyewtauo3" path="res://Assets/3D/Props/BloodVial_v0.0.0.blend" id="5_dhadr"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("1_aeey2")
@@ -115,3 +118,12 @@ omni_attenuation = 1.18921
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.717154, 0, 0.696915, 0, 1, 0, -0.696915, 0, 0.717154, 2.33321, 1.09031, 0.47232)
+
+[node name="BloodVialEmpty_v0_0_0" parent="." instance=ExtResource("3_twbq6")]
+transform = Transform3D(0.116276, 0, 0.0879257, 0, 0.145777, 0, -0.0879257, 0, 0.116276, 0.154347, 0.814066, 1.9059)
+
+[node name="BloodVialSeparated_v0_0_0" parent="." instance=ExtResource("4_sw2ho")]
+transform = Transform3D(0.145029, 0, 0.0147469, 0, 0.145777, 0, -0.0147469, 0, 0.145029, 0.0126497, 0.812451, 1.88019)
+
+[node name="BloodVial_v0_0_0" parent="." instance=ExtResource("5_dhadr")]
+transform = Transform3D(0.139245, 0, -0.033903, 0, 0.143312, 0, 0.033903, 0, 0.139245, 0.103163, 0.811071, 1.79229)
