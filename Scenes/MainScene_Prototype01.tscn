@@ -1,9 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://6hoi0bkmcnyt"]
+[gd_scene load_steps=14 format=3 uid="uid://6hoi0bkmcnyt"]
 
 [ext_resource type="PackedScene" uid="uid://bhv1boykqvw23" path="res://Scenes/PlayerMovement/NavigationPoint.tscn" id="1_fg33c"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="1_jwaoo"]
 [ext_resource type="Script" path="res://Scripts/MainScene_Prototype01.gd" id="1_u3d13"]
-[ext_resource type="PackedScene" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="3_8i0nq"]
+[ext_resource type="PackedScene" uid="uid://b68s0qxy7ri2k" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="3_8i0nq"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Interaction.gd" id="3_8lpg5"]
 [ext_resource type="PackedScene" uid="uid://c334blq5lnfot" path="res://Scenes/Items/SaltBottle.tscn" id="3_pi20n"]
 [ext_resource type="PackedScene" uid="uid://1ofvsxrma8iv" path="res://Scenes/Items/CeremonialKnife.tscn" id="4_nl1dk"]
@@ -27,9 +27,6 @@ tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dgea"]
 albedo_color = Color(0.891291, 4.18738e-06, 8.66354e-07, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qq2h3"]
-albedo_color = Color(0.00492994, 0.228797, 1, 1)
 
 [node name="MainScenePrototype01" type="Node3D"]
 script = ExtResource("1_u3d13")

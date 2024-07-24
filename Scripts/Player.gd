@@ -75,18 +75,18 @@ func _process_pause_inputs():
 func _process_focus_inputs():
 	var focus_point: FocusPoint = null
 
-	var match_north = current_navigation_point["north_focus_point"] and facing_direction == FacingDirection.NORTH
+	var match_north = current_navigation_point.get("north_focus_point") and facing_direction == FacingDirection.NORTH
 	if match_north:
-		focus_point = current_navigation_point["north_focus_point"]
-	var match_east = current_navigation_point["east_focus_point"] and facing_direction == FacingDirection.EAST
+		focus_point = current_navigation_point.get("north_focus_point")
+	var match_east = current_navigation_point.get("east_focus_point") and facing_direction == FacingDirection.EAST
 	if match_east:
-		focus_point = current_navigation_point["east_focus_point"]
-	var match_south = current_navigation_point["south_focus_point"] and facing_direction == FacingDirection.SOUTH
+		focus_point = current_navigation_point.get("east_focus_point")
+	var match_south = current_navigation_point.get("south_focus_point") and facing_direction == FacingDirection.SOUTH
 	if match_south:
-		focus_point = current_navigation_point["south_focus_point"]
-	var match_west = current_navigation_point["west_focus_point"] and facing_direction == FacingDirection.WEST
+		focus_point = current_navigation_point.get("south_focus_point")
+	var match_west = current_navigation_point.get("west_focus_point") and facing_direction == FacingDirection.WEST
 	if match_west:
-		focus_point = current_navigation_point["west_focus_point"]
+		focus_point = current_navigation_point.get("west_focus_point")
 
 	if match_north or match_east or match_south or match_west:
 		if Input.is_action_just_pressed("move_forward") and player_state == PlayerState.IDLE:
