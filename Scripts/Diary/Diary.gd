@@ -12,7 +12,6 @@ var current_left_page_index: int = 0:
 	# Clamp
 	set(value):
 		# -2 cause 1 for 0 start and 2 because 2 pages at a time
-		var to_set = clamp(value, 0, (len(pages)-2))
 		current_left_page_index = clamp(value, 0, (len(pages)-2))
 
 func put_away():
