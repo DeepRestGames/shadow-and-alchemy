@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://crndfgpndn3h8"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_6jlps"]
+[ext_resource type="Resource" uid="uid://b2cuecbta7hjx" path="res://Resources/InventoryItems/Reward.tres" id="2_0orsq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7rwa"]
+albedo_color = Color(0.521569, 0.145098, 0.113725, 1)
+metallic = 1.0
+roughness = 0.05
+
+[node name="Reward" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGSphere3D" parent="."]
+use_collision = true
+collision_layer = 2
+radius = 0.2
+material = SubResource("StandardMaterial3D_o7rwa")
+script = ExtResource("1_6jlps")
+inventory_item_data = ExtResource("2_0orsq")
+item_model_height = 0.4

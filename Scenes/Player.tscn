@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1ngk84wlraoa"]
 
+[gd_scene load_steps=3 format=3 uid="uid://d1ngk84wlraoa"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_h2fim"]
-[ext_resource type="PackedScene" uid="uid://duhgac42d8866" path="res://Scenes/Diary.tscn" id="2_svcux"]
 [ext_resource type="PackedScene" uid="uid://b4csxpsd7ukr6" path="res://Scenes/InventorySystem/InventoryUI.tscn" id="3_3gjop"]
 
 [node name="Player" type="Node3D"]

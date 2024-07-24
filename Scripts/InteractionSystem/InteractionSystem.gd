@@ -60,6 +60,7 @@ func _process(_delta):
 			
 			if current_intersected_puzzle_slot != null:
 				current_intersected_puzzle_slot.item_dropped(dragged_item_data)
+				InventorySystem.remove_item(dragged_item_data)
 		
 		is_dragging_item = false
 		dragged_item_data = null

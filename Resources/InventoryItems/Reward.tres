@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://b2cuecbta7hjx"]
+
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="1_1iwte"]
+[ext_resource type="Texture2D" uid="uid://cqvoalrlysh35" path="res://Icons/orb (3).png" id="1_f40ae"]
+
+[resource]
+script = ExtResource("1_1iwte")
+item_name = "Reward"
+item_icon = ExtResource("1_f40ae")
+item_model_scene_path = "res://Scenes/Items/Reward.tscn"

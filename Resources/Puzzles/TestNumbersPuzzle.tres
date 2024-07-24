@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://ckpjx6hcasij8"]
+
+[ext_resource type="Resource" uid="uid://g4uyankif1ku" path="res://Resources/InventoryItems/Mercury.tres" id="1_r70e6"]
+[ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="2_6wiy2"]
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="3_osf0q"]
+
+[resource]
+script = ExtResource("3_osf0q")
+puzzle_name = ""
+puzzle_description = ""
+puzzle_solution = [ExtResource("1_r70e6"), ExtResource("2_6wiy2")]
+order_needed = false
