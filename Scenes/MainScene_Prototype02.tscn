@@ -25,7 +25,7 @@ tonemap_white = 8.0
 [node name="MainScenePrototype02" type="Node3D"]
 
 [node name="Player" parent="." node_paths=PackedStringArray("current_navigation_point") instance=ExtResource("1_g4vuj")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.428, 1.553, -1.45)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.428, 1.43448, -1.45)
 current_navigation_point = NodePath("../Navigation/NavigationPoints/StartingNavigationPoint")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -125,18 +125,66 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.928081, 0.647132, -5.18842)
 
 [node name="NavigationPoints" type="Node3D" parent="Navigation"]
 
-[node name="NavigationPoint1" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("east_navigation_point", "west_navigation_point") instance=ExtResource("4_s1v5p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.9, 5)
+[node name="StartingNavigationPoint" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "west_navigation_point") instance=ExtResource("4_s1v5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.8, 3.65)
+north_navigation_point = NodePath("../NavigationPoint3")
+west_navigation_point = NodePath("../NavigationPoint1")
+
+[node name="NavigationPoint1" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "west_navigation_point") instance=ExtResource("4_s1v5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.8, 5)
+north_navigation_point = NodePath("../NavigationPoint4")
 east_navigation_point = NodePath("../StartingNavigationPoint")
 west_navigation_point = NodePath("../NavigationPoint2")
 
-[node name="NavigationPoint2" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("east_navigation_point") instance=ExtResource("4_s1v5p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.9, 6.25)
+[node name="NavigationPoint2" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point") instance=ExtResource("4_s1v5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.8, 6.15)
+north_navigation_point = NodePath("../NavigationPoint5")
 east_navigation_point = NodePath("../NavigationPoint1")
 
-[node name="StartingNavigationPoint" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("west_navigation_point") instance=ExtResource("4_s1v5p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.9, 3.75)
-west_navigation_point = NodePath("../NavigationPoint1")
+[node name="NavigationPoint3" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("south_navigation_point", "west_navigation_point") instance=ExtResource("4_s1v5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.8, 3.65)
+south_navigation_point = NodePath("../StartingNavigationPoint")
+west_navigation_point = NodePath("../NavigationPoint4")
+
+[node name="NavigationPoint4" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_navigation_point", "west_navigation_point") instance=ExtResource("4_s1v5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.8, 5)
+north_navigation_point = NodePath("../NavigationPoint6")
+east_navigation_point = NodePath("../NavigationPoint3")
+south_navigation_point = NodePath("../NavigationPoint1")
+west_navigation_point = NodePath("../NavigationPoint5")
+
+[node name="NavigationPoint5" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_navigation_point") instance=ExtResource("4_s1v5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.8, 6.15)
+north_navigation_point = NodePath("../NavigationPoint7")
+east_navigation_point = NodePath("../NavigationPoint4")
+south_navigation_point = NodePath("../NavigationPoint2")
+
+[node name="NavigationPoint6" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "south_navigation_point", "west_navigation_point") instance=ExtResource("4_s1v5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.8, 5)
+north_navigation_point = NodePath("../NavigationPoint8")
+south_navigation_point = NodePath("../NavigationPoint4")
+west_navigation_point = NodePath("../NavigationPoint7")
+
+[node name="NavigationPoint7" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_navigation_point") instance=ExtResource("4_s1v5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.8, 6.15)
+north_navigation_point = NodePath("../NavigationPoint9")
+east_navigation_point = NodePath("../NavigationPoint6")
+south_navigation_point = NodePath("../NavigationPoint5")
+
+[node name="NavigationPoint8" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("east_navigation_point", "south_navigation_point", "west_navigation_point") instance=ExtResource("4_s1v5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0.8, 5)
+east_navigation_point = NodePath("../NavigationPoint10")
+south_navigation_point = NodePath("../NavigationPoint6")
+west_navigation_point = NodePath("../NavigationPoint9")
+
+[node name="NavigationPoint9" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("east_navigation_point", "south_navigation_point") instance=ExtResource("4_s1v5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0.8, 6.15)
+east_navigation_point = NodePath("../NavigationPoint8")
+south_navigation_point = NodePath("../NavigationPoint7")
+
+[node name="NavigationPoint10" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("west_navigation_point") instance=ExtResource("4_s1v5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0.8, 3.65)
+west_navigation_point = NodePath("../NavigationPoint8")
 
 [node name="FocusPoints" type="Node3D" parent="Navigation"]
 
