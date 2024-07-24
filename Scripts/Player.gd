@@ -1,5 +1,7 @@
 extends Node3D
 
+signal startBackgroundMusic
+
 @onready var camera_3d = $Camera3D
 var unfocus_pos: Vector3
 var unfocused_rot: Vector3
@@ -13,6 +15,7 @@ const TIME_BETWEEN_ROTATIONS: float = 0.35
 
 @export var current_navigation_point: NavigationPoint
 var next_navigation_point: NavigationPoint
+
 # Movement
 enum FacingDirection {
 	NORTH,	# 0
@@ -20,6 +23,7 @@ enum FacingDirection {
 	SOUTH,	# 2
 	WEST	# 3
 }
+
 # State of the player
 enum PlayerState {
 	IDLE,		# 0		CAN OPEN DIARY
@@ -40,10 +44,16 @@ func _process(_delta):
 	_process_focus_inputs()
 	_process_pause_inputs()
 	
+
+	# TODO: experiment to start creepy soundtrack at a scripted moment (in this example, focussing on `NavigationPoint11`)
+	if (player_state == PlayerState.FOCUSING) and ("NavigationPoint11" in str(current_navigation_point)):
+		startBackgroundMusic.emit()
+
 	# TODO: DEBUG/REMOVE
 	debug_ui.text = "STATE: " + str(PlayerState.keys()[player_state])
 	debug_ui.text += "\nPOS: " + str(camera_3d.global_position)
 	debug_ui.text += "\nROT: " + str(camera_3d.global_position)
+	debug_ui.text += "\nCurr nav point: " + str(current_navigation_point)
 
 func _process_pause_inputs():
 	if Input.is_action_just_pressed("open_diary"):
@@ -64,7 +74,7 @@ func _process_pause_inputs():
 
 func _process_focus_inputs():
 	var focus_point: FocusPoint = null
-	
+
 	var match_north = current_navigation_point["north_focus_point"] and facing_direction == FacingDirection.NORTH
 	if match_north:
 		focus_point = current_navigation_point["north_focus_point"]
@@ -77,7 +87,7 @@ func _process_focus_inputs():
 	var match_west = current_navigation_point["west_focus_point"] and facing_direction == FacingDirection.WEST
 	if match_west:
 		focus_point = current_navigation_point["west_focus_point"]
-		
+
 	if match_north or match_east or match_south or match_west:
 		if Input.is_action_just_pressed("move_forward") and player_state == PlayerState.IDLE:
 			player_state = PlayerState.MOVING
@@ -93,25 +103,25 @@ func _process_movement_inputs():
 	if Input.is_action_just_pressed("move_forward") and player_state == PlayerState.IDLE:
 		# Check if there's a valid navigation point forward
 		match facing_direction:
-			
+
 			FacingDirection.NORTH:
 				if current_navigation_point.north_navigation_point != null:
 					next_navigation_point = current_navigation_point.north_navigation_point
 				else:
 					_impossible_movement()
-			
+
 			FacingDirection.EAST:
 				if current_navigation_point.east_navigation_point != null:
 					next_navigation_point = current_navigation_point.east_navigation_point
 				else:
 					_impossible_movement()
-			
+
 			FacingDirection.SOUTH:
 				if current_navigation_point.south_navigation_point != null:
 					next_navigation_point = current_navigation_point.south_navigation_point
 				else:
 					_impossible_movement()
-			
+
 			FacingDirection.WEST:
 				if current_navigation_point.west_navigation_point != null:
 					next_navigation_point = current_navigation_point.west_navigation_point
@@ -120,37 +130,37 @@ func _process_movement_inputs():
 
 	# --- BACKWARD ---
 	elif Input.is_action_just_pressed("move_backward") and player_state == PlayerState.IDLE:
-		
+
 		# Check if there's a valid navigation point backwards
 		match facing_direction:
-			
+
 			FacingDirection.NORTH:
 				if current_navigation_point.south_navigation_point != null:
 					next_navigation_point = current_navigation_point.south_navigation_point
 				else:
 					_impossible_movement()
-			
+
 			FacingDirection.EAST:
 				if current_navigation_point.west_navigation_point != null:
 					next_navigation_point = current_navigation_point.west_navigation_point
 				else:
 					_impossible_movement()
-			
+
 			FacingDirection.SOUTH:
 				if current_navigation_point.north_navigation_point != null:
 					next_navigation_point = current_navigation_point.north_navigation_point
 				else:
 					_impossible_movement()
-			
+
 			FacingDirection.WEST:
 				if current_navigation_point.east_navigation_point != null:
 					next_navigation_point = current_navigation_point.east_navigation_point
 				else:
 					_impossible_movement()
-	
+
 	# After direction is established, continue with movement logic
 	if next_navigation_point != null:
-		_animate_movement(next_navigation_point.global_position)		
+		_animate_movement(next_navigation_point.global_position)
 		current_navigation_point = next_navigation_point
 		next_navigation_point = null
 
@@ -184,7 +194,7 @@ func _animate_movement(next_pos):
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(self, "global_position", next_pos, TIME_BETWEEN_MOVEMENTS)
-	
+
 func _animate_turn(next_face):
 	player_state = PlayerState.MOVING
 	var tween = get_tree().create_tween()
@@ -192,12 +202,12 @@ func _animate_turn(next_face):
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(self, "global_rotation_degrees", next_face, TIME_BETWEEN_ROTATIONS)
-	
+
 func _tween_movement_over():
 	player_state = PlayerState.IDLE
 # --------------------------------------------------------
 # ------------------ MOVEMENT FOCUSING ------------------
-func _animate_focus(focus_point: FocusPoint):	
+func _animate_focus(focus_point: FocusPoint):
 	var tween = get_tree().create_tween()
 	tween.connect("finished", _tween_focus_over)
 	tween.set_trans(Tween.TRANS_QUAD)
@@ -205,7 +215,7 @@ func _animate_focus(focus_point: FocusPoint):
 	tween.set_parallel(true)
 	tween.tween_property(camera_3d, "global_position", focus_point.focus_camera.global_position, TIME_BETWEEN_MOVEMENTS)
 	tween.tween_property(camera_3d, "global_rotation_degrees", focus_point.focus_camera.global_rotation_degrees, TIME_BETWEEN_MOVEMENTS)
-	
+
 func _animate_defocus(_unfocus_pos, _unfocused_rot):
 	var tween = get_tree().create_tween()
 	tween.connect("finished", _tween_defocus_over)
@@ -214,10 +224,10 @@ func _animate_defocus(_unfocus_pos, _unfocused_rot):
 	tween.set_parallel(true)
 	tween.tween_property(camera_3d, "global_position", _unfocus_pos, TIME_BETWEEN_MOVEMENTS)
 	tween.tween_property(camera_3d, "global_rotation_degrees", _unfocused_rot, TIME_BETWEEN_MOVEMENTS)
-	
+
 func _tween_focus_over():
 	player_state = PlayerState.FOCUSING
-	
+
 func _tween_defocus_over():
 	player_state = PlayerState.IDLE
 # -------------------------------------------------------
