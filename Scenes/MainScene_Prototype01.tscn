@@ -3,12 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://bhv1boykqvw23" path="res://Scenes/PlayerMovement/NavigationPoint.tscn" id="1_fg33c"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="1_jwaoo"]
 [ext_resource type="Script" path="res://Scripts/MainScene_Prototype01.gd" id="1_u3d13"]
-[ext_resource type="PackedScene" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="3_8i0nq"]
+[ext_resource type="PackedScene" uid="uid://b68s0qxy7ri2k" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="3_8i0nq"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Interaction.gd" id="3_8lpg5"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="4_cb70j"]
 [ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="5_mtnx1"]
 [ext_resource type="PackedScene" uid="uid://cmp4gbdjt2xhj" path="res://Scenes/InteractionSystem/ItemDropArea.tscn" id="8_om380"]
-[ext_resource type="AudioStream" uid="uid://bmerb43t0jheq" path="res://Assets/Sounds/soundtrack_suspence.mp3" id="9_8do2x"]
+[ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="9_8do2x"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vmfb6"]
 sky_top_color = Color(0, 0, 0, 1)
