@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckc21cpje40gh"]
+
+[ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
+[ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="2_ebig3"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
+panorama = ExtResource("1_aeey2")
+filter = false
+
+[sub_resource type="Sky" id="Sky_fu3n5"]
+sky_material = SubResource("PanoramaSkyMaterial_tca5b")
+
+[sub_resource type="Environment" id="Environment_nps7j"]
+background_mode = 1
+background_color = Color(0, 0, 0.0470588, 1)
+sky = SubResource("Sky_fu3n5")
+sky_rotation = Vector3(0, -2.10836, 0)
+tonemap_mode = 2
+tonemap_exposure = 0.9
+tonemap_white = 8.0
+
+[node name="MainScenePrototype02" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nps7j")
+
+[node name="DirectionalLight3D_1" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.106264, 0.460673, -0.881186, 0, 0.886204, 0.463296, 0.994338, 0.0492317, -0.0941715, 0, 0, 0)
+light_color = Color(0.32549, 0.545098, 0.603922, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_opacity = 0.8
+
+[node name="DirectionalLight3D_2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.859852, 0.236533, -0.452445, 0, 0.886204, 0.463296, 0.510543, -0.398366, 0.762004, 0, 0, 0)
+light_color = Color(0.270588, 0.196078, 0.701961, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_opacity = 0.8
+
+[node name="DirectionalLight3D_3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.0139623, 0.114926, 0.993276, 0, 0.993373, -0.114937, -0.999903, -0.00160478, -0.0138697, 0, 0, 0)
+light_color = Color(0, 0.196078, 0.701961, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_opacity = 0.8
+
+[node name="Cabin_v0_0_0" parent="." instance=ExtResource("2_ebig3")]
+
+[node name="Props" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.576236, 1.85896, -5.83088)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0671048, -0.429732, 3.76039)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.78482, -0.537753, 4.33133)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, -0.00713611, 7.28915)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, -0.207136, 4.64512)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10548, -0.311826, 7.23611)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.78577, -1.30941, 6.76696)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.895552, -0.311826, 7.23611)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53504, -1.09415, 6.44933)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 9.4)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 1.758
+omni_attenuation = 1.18921
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.717154, 0, 0.696915, 0, 1, 0, -0.696915, 0, 0.717154, 2.33321, 1.09031, 0.47232)
