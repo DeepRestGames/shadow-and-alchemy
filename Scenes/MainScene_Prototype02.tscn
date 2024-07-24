@@ -147,12 +147,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.8, 3.65)
 south_navigation_point = NodePath("../StartingNavigationPoint")
 west_navigation_point = NodePath("../NavigationPoint4")
 
-[node name="NavigationPoint4" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_navigation_point", "west_navigation_point") instance=ExtResource("4_s1v5p")]
+[node name="NavigationPoint4" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_navigation_point", "west_navigation_point", "east_focus_point") instance=ExtResource("4_s1v5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.8, 5)
 north_navigation_point = NodePath("../NavigationPoint6")
 east_navigation_point = NodePath("../NavigationPoint3")
 south_navigation_point = NodePath("../NavigationPoint1")
 west_navigation_point = NodePath("../NavigationPoint5")
+east_focus_point = NodePath("../../FocusPoints/FocusPointSedia")
 
 [node name="NavigationPoint5" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_navigation_point", "west_focus_point") instance=ExtResource("4_s1v5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.8, 6.15)
@@ -168,11 +169,12 @@ south_navigation_point = NodePath("../NavigationPoint4")
 west_navigation_point = NodePath("../NavigationPoint7")
 east_focus_point = NodePath("../../FocusPoints/FocusPointTable")
 
-[node name="NavigationPoint7" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_navigation_point") instance=ExtResource("4_s1v5p")]
+[node name="NavigationPoint7" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_navigation_point", "west_focus_point") instance=ExtResource("4_s1v5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.8, 6.15)
 north_navigation_point = NodePath("../NavigationPoint9")
 east_navigation_point = NodePath("../NavigationPoint6")
 south_navigation_point = NodePath("../NavigationPoint5")
+west_focus_point = NodePath("../../FocusPoints/FocusPointLibrary")
 
 [node name="NavigationPoint8" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("east_navigation_point", "south_navigation_point", "west_navigation_point", "north_focus_point") instance=ExtResource("4_s1v5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0.8, 5)
@@ -198,11 +200,23 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.042
 [node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointTable" index="1"]
 transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, -1.1033, 0.389964, -2.38419e-07)
 
+[node name="FocusPointSedia" parent="Navigation/FocusPoints" instance=ExtResource("5_56w6k")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.390723, 0.0588602, 3.8051)
+
+[node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointSedia" index="1"]
+transform = Transform3D(-0.542544, 0.420014, -0.727485, 0, 0.866025, 0.5, 0.840027, 0.271272, -0.469857, -0.73984, 0.389964, -0.363826)
+
 [node name="FocusPointChest" parent="Navigation/FocusPoints" instance=ExtResource("5_56w6k")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0.551933, 0.0851541, 7.02068)
 
 [node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointChest" index="1"]
 transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, -0.849418, 0.389964, 1.19209e-07)
+
+[node name="FocusPointLibrary" parent="Navigation/FocusPoints" instance=ExtResource("5_56w6k")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.2121, 0.398716, 6.64091)
+
+[node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointLibrary" index="1"]
+transform = Transform3D(-4.21174e-08, 0.20412, -0.978946, -9.93963e-09, 0.978946, 0.20412, 1, 1.83274e-08, -3.92017e-08, -1.08839, 0.389964, 1.19209e-07)
 
 [node name="FocusPointLectern" parent="Navigation/FocusPoints" instance=ExtResource("5_56w6k")]
 transform = Transform3D(-0.965672, 0.259763, 8.44218e-08, 0.259763, 0.965672, -2.27092e-08, -8.74228e-08, 0, -1, -4.42811, 0.869934, 5.10819)
@@ -217,6 +231,8 @@ transform = Transform3D(0.965473, -0.260505, 0, 0.260505, 0.965473, 0, 0, 0, 1, 
 transform = Transform3D(-4.87482e-08, 0.20827, -0.978071, 2.75917e-09, 0.978071, 0.20827, 1, 7.45414e-09, -4.82539e-08, -0.674685, 0.132381, -2.98023e-07)
 
 [editable path="Navigation/FocusPoints/FocusPointTable"]
+[editable path="Navigation/FocusPoints/FocusPointSedia"]
 [editable path="Navigation/FocusPoints/FocusPointChest"]
+[editable path="Navigation/FocusPoints/FocusPointLibrary"]
 [editable path="Navigation/FocusPoints/FocusPointLectern"]
 [editable path="Navigation/FocusPoints/FocusPointHole"]

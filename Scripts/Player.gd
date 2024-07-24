@@ -217,7 +217,7 @@ func _animate_focus(focus_point: FocusPoint):
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_parallel(true)
 	var new_rot = focus_point.focus_camera.global_rotation_degrees
-	# FIXME: patch for the spin
+	# FIXME: patch for the spin. Bad but next time we won't use EULER
 	if abs(focus_point.focus_camera.global_rotation_degrees.y - camera_3d.global_rotation_degrees.y) == 360:
 		new_rot.y = camera_3d.global_rotation_degrees.y
 	tween.tween_property(camera_3d, "global_position", focus_point.focus_camera.global_position, TIME_BETWEEN_MOVEMENTS)
@@ -229,6 +229,7 @@ func _animate_defocus(_unfocus_pos, _unfocused_rot):
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_parallel(true)
+	# FIXME: patch for the spin. Bad but next time we won't use EULER
 	if abs(_unfocused_rot.y - camera_3d.global_rotation_degrees.y) == 360:
 		_unfocused_rot.y = camera_3d.global_rotation_degrees.y
 	tween.tween_property(camera_3d, "global_position", _unfocus_pos, TIME_BETWEEN_MOVEMENTS)
