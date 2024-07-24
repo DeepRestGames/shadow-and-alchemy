@@ -7,7 +7,6 @@
 albedo_color = Color(0.00492994, 0.228797, 1, 1)
 
 [node name="SaltBottle" type="CSGCylinder3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.04144, -0.127872, 2.48856)
 use_collision = true
 collision_layer = 2
 radius = 0.1

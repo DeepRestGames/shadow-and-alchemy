@@ -1,20 +1,14 @@
 [gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://nfe0h4tn2qaf"]
 
-[ext_resource type="Texture2D" uid="uid://bole8v4e0270l" path="res://Icons/InventoryItemPlaceholder.png" id="1_ocof7"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_ysl4a"]
+[ext_resource type="Resource" uid="uid://yst2g71wu8b4" path="res://Resources/InventoryItems/CeremonialKnife.tres" id="1_8e8m0"]
+[ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="2_2sktw"]
+[ext_resource type="Resource" uid="uid://b2cuecbta7hjx" path="res://Resources/InventoryItems/Reward.tres" id="3_6oww4"]
 [ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="3_i0xl5"]
-
-[sub_resource type="Resource" id="Resource_od0de"]
-script = ExtResource("2_ysl4a")
-item_name = "PuzzleResult"
-item_icon = ExtResource("1_ocof7")
-item_model_scene_path = ""
-item_model_height = 0.0
 
 [resource]
 script = ExtResource("3_i0xl5")
 puzzle_name = "TestObjectsPuzzle"
 puzzle_description = ""
-puzzle_solution_items = []
+puzzle_solution_items = [ExtResource("1_8e8m0"), ExtResource("2_2sktw")]
 order_needed = false
-reward = SubResource("Resource_od0de")
+reward = ExtResource("3_6oww4")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://6hoi0bkmcnyt"]
+[gd_scene load_steps=12 format=3 uid="uid://6hoi0bkmcnyt"]
 
 [ext_resource type="PackedScene" uid="uid://bhv1boykqvw23" path="res://Scenes/PlayerMovement/NavigationPoint.tscn" id="1_fg33c"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="1_jwaoo"]
 [ext_resource type="PackedScene" uid="uid://b68s0qxy7ri2k" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="3_8i0nq"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Interaction.gd" id="3_8lpg5"]
 [ext_resource type="PackedScene" uid="uid://c334blq5lnfot" path="res://Scenes/Items/SaltBottle.tscn" id="3_pi20n"]
+[ext_resource type="PackedScene" uid="uid://1ofvsxrma8iv" path="res://Scenes/Items/CeremonialKnife.tscn" id="4_nl1dk"]
 [ext_resource type="PackedScene" uid="uid://cmp4gbdjt2xhj" path="res://Scenes/InteractionSystem/ItemDropArea.tscn" id="8_om380"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vmfb6"]
@@ -155,7 +156,11 @@ height = 0.3
 material = SubResource("StandardMaterial3D_5dgea")
 script = ExtResource("3_8lpg5")
 
-[node name="BlueBottle" parent="Environment/Props" instance=ExtResource("3_pi20n")]
+[node name="SaltBottle" parent="Environment/Props" instance=ExtResource("3_pi20n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75746, -0.140247, 2.57278)
+
+[node name="CeremonialKnife" parent="Environment/Props" instance=ExtResource("4_nl1dk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00084585, 1.19209e-07, 1.47549)
 
 [node name="NavigationPoints" type="Node3D" parent="Environment"]
 
@@ -241,6 +246,12 @@ transform = Transform3D(-4.37114e-08, -0.5, 0.866025, 0, 0.866025, 0.5, -1, 2.18
 
 [node name="ItemDropArea" parent="." instance=ExtResource("8_om380")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.66353, -0.297714, 3.5841)
+
+[node name="ItemDropArea2" parent="." instance=ExtResource("8_om380")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.28656, -0.297714, 3.33144)
+
+[node name="ItemDropArea3" parent="." instance=ExtResource("8_om380")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.29836, -0.297714, 3.81644)
 
 [editable path="Environment/FocusPoints/FocusPoint"]
 [editable path="Environment/FocusPoints/FocusPoint2"]
