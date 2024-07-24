@@ -10,7 +10,6 @@ func _ready():
 
 
 func _update_inventory_ui():
-	
 	# Clear current inventory items
 	for item in inventory_items:
 		item.free()
