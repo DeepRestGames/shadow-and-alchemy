@@ -78,12 +78,15 @@ func _process_focus_inputs():
 	var match_north = current_navigation_point.get("north_focus_point") and facing_direction == FacingDirection.NORTH
 	if match_north:
 		focus_point = current_navigation_point.get("north_focus_point")
+		
 	var match_east = current_navigation_point.get("east_focus_point") and facing_direction == FacingDirection.EAST
 	if match_east:
 		focus_point = current_navigation_point.get("east_focus_point")
+		
 	var match_south = current_navigation_point.get("south_focus_point") and facing_direction == FacingDirection.SOUTH
 	if match_south:
 		focus_point = current_navigation_point.get("south_focus_point")
+		
 	var match_west = current_navigation_point.get("west_focus_point") and facing_direction == FacingDirection.WEST
 	if match_west:
 		focus_point = current_navigation_point.get("west_focus_point")
@@ -213,8 +216,12 @@ func _animate_focus(focus_point: FocusPoint):
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_parallel(true)
+	var new_rot = focus_point.focus_camera.global_rotation_degrees
+	# FIXME: patch for the spin
+	if abs(focus_point.focus_camera.global_rotation_degrees.y - camera_3d.global_rotation_degrees.y) == 360:
+		new_rot.y = camera_3d.global_rotation_degrees.y
 	tween.tween_property(camera_3d, "global_position", focus_point.focus_camera.global_position, TIME_BETWEEN_MOVEMENTS)
-	tween.tween_property(camera_3d, "global_rotation_degrees", focus_point.focus_camera.global_rotation_degrees, TIME_BETWEEN_MOVEMENTS)
+	tween.tween_property(camera_3d, "global_rotation_degrees", new_rot, TIME_BETWEEN_MOVEMENTS)
 
 func _animate_defocus(_unfocus_pos, _unfocused_rot):
 	var tween = get_tree().create_tween()
@@ -222,6 +229,8 @@ func _animate_defocus(_unfocus_pos, _unfocused_rot):
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_parallel(true)
+	if abs(_unfocused_rot.y - camera_3d.global_rotation_degrees.y) == 360:
+		_unfocused_rot.y = camera_3d.global_rotation_degrees.y
 	tween.tween_property(camera_3d, "global_position", _unfocus_pos, TIME_BETWEEN_MOVEMENTS)
 	tween.tween_property(camera_3d, "global_rotation_degrees", _unfocused_rot, TIME_BETWEEN_MOVEMENTS)
 
