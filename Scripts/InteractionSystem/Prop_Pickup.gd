@@ -1,3 +1,4 @@
+class_name Prop_Pickup
 extends Prop
 
 

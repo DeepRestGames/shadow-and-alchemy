@@ -1,6 +1,9 @@
 extends TextureRect
 
 
+var item_data: InventoryItemData
+
+
 # Handle Drag&Drop, using items, etc.
 func _get_drag_data(_at_position):
 	var preview_texture = TextureRect.new()
@@ -10,6 +13,6 @@ func _get_drag_data(_at_position):
 	set_drag_preview(preview_texture)
 	
 	InteractionSystem.is_dragging_item = true
-	InteractionSystem.dragged_item_data = name
+	InteractionSystem.dragged_item_data = item_data
 	
-	return name
+	return item_data.item_name
