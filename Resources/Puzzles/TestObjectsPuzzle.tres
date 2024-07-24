@@ -13,8 +13,8 @@ item_model_height = 0.0
 
 [resource]
 script = ExtResource("3_i0xl5")
-puzzle_name = "TestNumbersPuzzle"
+puzzle_name = "TestObjectsPuzzle"
 puzzle_description = ""
 puzzle_solution_items = []
-order_needed = true
+order_needed = false
 reward = SubResource("Resource_od0de")

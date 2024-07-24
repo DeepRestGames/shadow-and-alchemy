@@ -17,8 +17,9 @@ func item_dropped(item: InventoryItemData):
 	var item_scene_instance = item_scene.instantiate()
 	get_tree().root.add_child(item_scene_instance)
 	item_scene_instance.global_position = item_spawn_origin.global_position
-	item_scene_instance.global_position.y += item.item_model_height / 2
 	
+	var pickup_item_scene = item_scene_instance as Prop_Pickup
+	item_scene_instance.global_position.y += pickup_item_scene.item_model_height / 2
 	current_dropped_item_scene = item_scene_instance
 	
 	# Add item to puzzles related to slot

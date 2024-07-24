@@ -3,6 +3,7 @@ extends Prop
 
 
 @export var inventory_item_data: InventoryItemData
+@export var item_model_height: float
 
 
 func _interacted():
