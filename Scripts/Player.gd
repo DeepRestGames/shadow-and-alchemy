@@ -1,5 +1,6 @@
 extends Node3D
 
+signal playerMoved
 signal startBackgroundMusic
 
 @onready var camera_3d = $Camera3D
@@ -8,7 +9,6 @@ var unfocused_rot
 
 var facing_direction = FacingDirection.WEST
 var player_state = PlayerState.IDLE
-
 
 const TIME_BETWEEN_MOVEMENTS: float = 0.35
 const TIME_BETWEEN_ROTATIONS: float = 0.35
@@ -172,6 +172,7 @@ func _animate_movement(next_pos):
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(self, "global_position", next_pos, TIME_BETWEEN_MOVEMENTS)
+	emit_signal("playerMoved")
 
 func _animate_turn(next_face):
 	player_state = PlayerState.MOVING
@@ -180,6 +181,7 @@ func _animate_turn(next_face):
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(self, "global_rotation_degrees", next_face, TIME_BETWEEN_ROTATIONS)
+	emit_signal("playerMoved")
 
 func _tween_movement_over():
 	player_state = PlayerState.IDLE
