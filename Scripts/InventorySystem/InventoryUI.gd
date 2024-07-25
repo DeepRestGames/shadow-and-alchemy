@@ -2,7 +2,7 @@ extends Control
 
 @onready var inventory_items_carousel = $InventoryItemsCarousel
 @onready var inventory_item_scene = preload("res://Scenes/InventorySystem/InventoryItemUI.tscn")
-var inventory_items: Array[TextureRect]
+var inventory_items: Array[InventoryItemUI]
 
 
 func _ready():
@@ -17,10 +17,9 @@ func _update_inventory_ui():
 	
 	# Add updated inventory items
 	for item in InventorySystem.inventory_items:
-		var current_item_scene = inventory_item_scene.instantiate()
-		current_item_scene.expand_mode = TextureRect.EXPAND_FIT_WIDTH
-		current_item_scene.texture = item.item_icon
-		current_item_scene.tooltip_text = item.item_name
+		var current_item_scene = inventory_item_scene.instantiate() as InventoryItemUI
+		current_item_scene.icon.texture = item.item_icon
+		current_item_scene.icon.tooltip_text = item.item_name
 		current_item_scene.item_data = item
 		
 		inventory_items_carousel.add_child(current_item_scene)
