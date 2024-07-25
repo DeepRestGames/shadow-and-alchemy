@@ -83,13 +83,6 @@ light_energy = 0.4
 omni_range = 1.758
 omni_attenuation = 1.18921
 
-[node name="OmniLight3D9" type="OmniLight3D" parent="Props"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.78577, -1.30941, 6.76696)
-light_color = Color(1, 0.607867, 0.266473, 1)
-light_energy = 0.4
-omni_range = 1.758
-omni_attenuation = 1.18921
-
 [node name="OmniLight3D7" type="OmniLight3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.895552, -0.311826, 7.23611)
 light_color = Color(1, 0.607867, 0.266473, 1)
@@ -124,6 +117,8 @@ transform = Transform3D(0.145029, 0, 0.0147469, 0, 0.145777, 0, -0.0147469, 0, 0
 transform = Transform3D(0.139245, 0, -0.033903, 0, 0.143312, 0, 0.033903, 0, 0.139245, 0.103163, 0.811071, 1.79229)
 
 [node name="Fireplace" parent="." instance=ExtResource("6_ehu2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23415, 0.419572, 0.944369)
 
 [node name="Candle" parent="." instance=ExtResource("7_bbkbo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438814, 0.811123, -2.12823)
+change_time_max = 1.0

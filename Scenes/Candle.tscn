@@ -82,6 +82,7 @@ emission_curve = SubResource("CurveTexture_ea1xy")
 
 [node name="Candle" type="Node3D"]
 script = ExtResource("1_q2vio")
+change_time_max = 1.0
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0982097, 0)
@@ -111,6 +112,6 @@ draw_pass_1 = SubResource("QuadMesh_m4qox")
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.229397, 0)
 light_color = Color(1, 0.607867, 0.266473, 1)
-light_energy = 0.4
-omni_range = 0.6
+light_energy = 0.410215
+omni_range = 0.607317
 omni_attenuation = 1.18921

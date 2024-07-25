@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://bab13j6o8fp2l"]
+[gd_scene load_steps=28 format=3 uid="uid://bab13j6o8fp2l"]
 
 [ext_resource type="Texture2D" uid="uid://b2wyalebwv3s7" path="res://Assets/2D/particles/kenney_particle-pack/PNG (Transparent)/flame_01.png" id="1_lqxsi"]
+[ext_resource type="Script" path="res://Scripts/FlickeringLight.gd" id="1_vobep"]
 [ext_resource type="Texture2D" uid="uid://c2qorjhn8jm0m" path="res://Assets/2D/particles/kenney_particle-pack/PNG (Transparent)/flame_02.png" id="2_fhfm3"]
 [ext_resource type="Texture2D" uid="uid://dam8016hf0wu2" path="res://Assets/2D/particles/kenney_particle-pack/PNG (Transparent)/fire_02.png" id="3_r2vjh"]
 [ext_resource type="Texture2D" uid="uid://b1deg25o2ov0h" path="res://Assets/2D/particles/kenney_particle-pack/PNG (Transparent)/fire_01.png" id="4_e76jf"]
@@ -127,7 +128,13 @@ particles_anim_v_frames = 1
 particles_anim_loop = false
 
 [node name="Fireplace" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.24529, 0.417447, 0.93382)
+script = ExtResource("1_vobep")
+range_max = 1.85
+range_min = 1.75
+energy_max = 0.47
+energy_min = 0.41
+change_time_min = 0.3
+change_time_max = 1.2
 
 [node name="FireFlickers" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.00971127, 0.229667, -0.00782049)
@@ -173,3 +180,9 @@ transform = Transform3D(0.175157, -0.161834, -0.121344, 0.112216, 0.252606, -0.0
 
 [node name="FirewoodPiece_v0_0_2" parent="." instance=ExtResource("5_mob6h")]
 transform = Transform3D(-0.222684, 0.165717, 0.0758649, -0.101667, -0.239343, 0.0997304, 0.173424, 0.0724766, 0.155879, -0.127097, 0.122057, -0.0623523)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.411071
+omni_range = 1.79226
+omni_attenuation = 1.18921
