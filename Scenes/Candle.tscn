@@ -1,0 +1,114 @@
+[gd_scene load_steps=19 format=3 uid="uid://cnxvs6h6003rk"]
+
+[ext_resource type="Texture2D" uid="uid://vmpd3n0ri880" path="res://Assets/2D/particles/kenney_particle-pack/PNG (Transparent)/flame_05.png" id="1_iu6ti"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pp2ny"]
+albedo_color = Color(0.839216, 0.839216, 0.619608, 1)
+metallic = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vh1j4"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_iu6ti")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_fwokg"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.760836, 0.785582), 0.0, 0.0, 0, 0, Vector2(1, 0.219422), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_tnvxr"]
+curve = SubResource("Curve_fwokg")
+
+[sub_resource type="Gradient" id="Gradient_3tqli"]
+offsets = PackedFloat32Array(0, 0.552542)
+colors = PackedColorArray(1, 0.737255, 0, 1, 1, 0.262745, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ftqga"]
+gradient = SubResource("Gradient_3tqli")
+
+[sub_resource type="Curve" id="Curve_tjwki"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.996904, 0.556709), -0.97827, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_tesrs"]
+curve = SubResource("Curve_tjwki")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_arilt"]
+emission_shape_offset = Vector3(0, 0.2, 0)
+gravity = Vector3(0, 0.3, 0)
+scale_min = 0.8
+color_ramp = SubResource("GradientTexture1D_ftqga")
+alpha_curve = SubResource("CurveTexture_tnvxr")
+emission_curve = SubResource("CurveTexture_tesrs")
+
+[sub_resource type="QuadMesh" id="QuadMesh_m4qox"]
+
+[sub_resource type="Curve" id="Curve_4ddiy"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.760836, 0.785582), 0.0, 0.0, 0, 0, Vector2(1, 0.219422), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_qvwj4"]
+curve = SubResource("Curve_4ddiy")
+
+[sub_resource type="Gradient" id="Gradient_7cyf4"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_awsqr"]
+gradient = SubResource("Gradient_7cyf4")
+
+[sub_resource type="Curve" id="Curve_6xtgx"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.996904, 0.556709), -0.97827, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ea1xy"]
+curve = SubResource("Curve_6xtgx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yv1m6"]
+emission_shape_offset = Vector3(0, 0.15, 0)
+gravity = Vector3(0, 0.5, 0)
+scale_min = 0.2
+scale_max = 0.3
+color_ramp = SubResource("GradientTexture1D_awsqr")
+alpha_curve = SubResource("CurveTexture_qvwj4")
+emission_curve = SubResource("CurveTexture_ea1xy")
+
+[node name="Candle" type="Node3D"]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0982097, 0)
+radius = 0.02
+height = 0.2
+material = SubResource("StandardMaterial3D_pp2ny")
+
+[node name="CandleFire" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.202925, 0)
+material_override = SubResource("StandardMaterial3D_vh1j4")
+amount = 5
+lifetime = 0.5
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_arilt")
+draw_pass_1 = SubResource("QuadMesh_m4qox")
+
+[node name="CandleFire2" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.202925, 0)
+sorting_offset = 1.0
+material_override = SubResource("StandardMaterial3D_vh1j4")
+amount = 5
+lifetime = 0.6
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_yv1m6")
+draw_pass_1 = SubResource("QuadMesh_m4qox")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.229397, 0)
+light_color = Color(1, 0.607867, 0.266473, 1)
+light_energy = 0.4
+omni_range = 0.6
+omni_attenuation = 1.18921
