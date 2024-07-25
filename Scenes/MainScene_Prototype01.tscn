@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="5_mtnx1"]
 [ext_resource type="PackedScene" uid="uid://cmp4gbdjt2xhj" path="res://Scenes/InteractionSystem/ItemDropArea.tscn" id="8_om380"]
 [ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="9_8do2x"]
-[ext_resource type="AudioStream" uid="uid://c0awp7t5jqrmf" path="res://Assets/Audio/Sound/footsteps_wood_single_1.mp3" id="10_c270w"]
+[ext_resource type="AudioStream" uid="uid://t622sra4diub" path="res://Assets/Audio/Sound/footsteps_wood_single_2.mp3" id="10_c270w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vmfb6"]
 sky_top_color = Color(0, 0, 0, 1)
