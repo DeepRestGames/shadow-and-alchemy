@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://cnxvs6h6003rk"]
+[gd_scene load_steps=20 format=3 uid="uid://cnxvs6h6003rk"]
 
 [ext_resource type="Texture2D" uid="uid://vmpd3n0ri880" path="res://Assets/2D/particles/kenney_particle-pack/PNG (Transparent)/flame_05.png" id="1_iu6ti"]
+[ext_resource type="Script" path="res://Scripts/FlickeringLight.gd" id="1_q2vio"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pp2ny"]
 albedo_color = Color(0.839216, 0.839216, 0.619608, 1)
@@ -80,6 +81,7 @@ alpha_curve = SubResource("CurveTexture_qvwj4")
 emission_curve = SubResource("CurveTexture_ea1xy")
 
 [node name="Candle" type="Node3D"]
+script = ExtResource("1_q2vio")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0982097, 0)
