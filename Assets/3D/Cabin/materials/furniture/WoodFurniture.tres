@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bsfwx7stmqq3y"]
+
+[ext_resource type="Texture2D" uid="uid://byy8n12mvsu4s" path="res://Assets/3D/Cabin/textures/Dirt.png" id="1_1xjj7"]
+
+[resource]
+resource_name = "WoodFurniture"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.45098, 0.341176, 0.215686, 1)
+albedo_texture = ExtResource("1_1xjj7")
+roughness = 0.5
+uv1_scale = Vector3(0.6, 0.6, 0.6)
+uv1_triplanar = true
+uv1_world_triplanar = true

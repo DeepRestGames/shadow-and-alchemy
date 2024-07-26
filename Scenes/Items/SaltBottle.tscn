@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c334blq5lnfot"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_wxkaa"]
+[ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="2_2q43n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qq2h3"]
+albedo_color = Color(0.00492994, 0.228797, 1, 1)
+
+[node name="SaltBottle" type="CSGCylinder3D"]
+use_collision = true
+collision_layer = 2
+radius = 0.1
+height = 0.3
+material = SubResource("StandardMaterial3D_qq2h3")
+script = ExtResource("1_wxkaa")
+inventory_item_data = ExtResource("2_2q43n")
+item_model_height = 0.3

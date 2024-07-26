@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://brxcggrnfovow"]
+
+[ext_resource type="Texture2D" uid="uid://8iiwjsgay57v" path="res://Assets/3D/Cabin/textures/Wood1_W.png" id="1_jg60r"]
+
+[resource]
+resource_name = "truss_v"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.835294, 0.603922, 0.305882, 1)
+albedo_texture = ExtResource("1_jg60r")
+uv1_scale = Vector3(4, 0.69, 1)
+uv1_offset = Vector3(0.235, 0.28, 0)

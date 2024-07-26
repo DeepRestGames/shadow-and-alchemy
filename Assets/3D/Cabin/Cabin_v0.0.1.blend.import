@@ -1,0 +1,109 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cikpxn4e0ls80"
+path="res://.godot/imported/Cabin_v0.0.1.blend-3caeb0f8f3a83a708ed56fa89aeef67d.scn"
+
+[deps]
+
+source_file="res://Assets/3D/Cabin/Cabin_v0.0.1.blend"
+dest_files=["res://.godot/imported/Cabin_v0.0.1.blend-3caeb0f8f3a83a708ed56fa89aeef67d.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"Chimney": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/furniture/Chimney.tres"
+},
+"ChimneyFrame": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/furniture/ChimneyFrame.tres"
+},
+"MetalFurniture": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/furniture/MetalFurniture.tres"
+},
+"WoodFurniture": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/furniture/WoodFurniture.tres"
+},
+"b_LongWall": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_LongWall.tres"
+},
+"b_Truss": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_Truss.tres"
+},
+"b_door": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_door.tres"
+},
+"b_floor": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_floor.tres"
+},
+"b_long truss": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_long truss.tres"
+},
+"b_roof": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_roof.tres"
+},
+"b_shortWall": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/b_shortWall.tres"
+},
+"mini_beam": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/mini_beam.tres"
+},
+"truss_h": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/truss_h.tres"
+},
+"truss_v": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Cabin/materials/truss_v.tres"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
+blender/nodes/visible=0
+blender/nodes/punctual_lights=true
+blender/nodes/cameras=true
+blender/nodes/custom_properties=true
+blender/nodes/modifiers=1
+blender/meshes/colors=false
+blender/meshes/uvs=true
+blender/meshes/normals=true
+blender/meshes/tangents=true
+blender/meshes/skins=2
+blender/meshes/export_bones_deforming_mesh_only=false
+blender/materials/unpack_enabled=true
+blender/materials/export_materials=1
+blender/animation/limit_playback=true
+blender/animation/always_sample=true
+blender/animation/group_tracks=true
