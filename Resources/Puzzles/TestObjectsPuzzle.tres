@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://nfe0h4tn2qaf"]
+
+[ext_resource type="Resource" uid="uid://yst2g71wu8b4" path="res://Resources/InventoryItems/CeremonialKnife.tres" id="1_8e8m0"]
+[ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="2_2sktw"]
+[ext_resource type="Resource" uid="uid://b2cuecbta7hjx" path="res://Resources/InventoryItems/Reward.tres" id="3_6oww4"]
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="3_i0xl5"]
+
+[resource]
+script = ExtResource("3_i0xl5")
+puzzle_name = "TestObjectsPuzzle"
+puzzle_description = ""
+puzzle_solution_items = [ExtResource("1_8e8m0"), ExtResource("2_2sktw")]
+order_needed = false
+reward = ExtResource("3_6oww4")

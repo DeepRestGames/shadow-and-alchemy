@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b86ooq4vkqbn5"]
+
+[resource]
+resource_name = "BloodVialBloodBelow"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.776471, 0.227451, 0.196078, 1)
+emission_enabled = true
+emission = Color(0.482353, 0, 0, 1)
+emission_energy_multiplier = 0.63

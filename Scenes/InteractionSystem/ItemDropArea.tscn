@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmp4gbdjt2xhj"]
+[gd_scene load_steps=3 format=3 uid="uid://cmp4gbdjt2xhj"]
 
-[ext_resource type="Script" path="res://Scripts/InteractionSystem/PuzzleSlot.gd" id="1_vwpk3"]
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/PuzzleSlot.gd" id="1_vwpk3"]
+[ext_resource type="Resource" uid="uid://nfe0h4tn2qaf" path="res://Resources/Puzzles/TestObjectsPuzzle.tres" id="2_15nuj"]
 
-[node name="ItemDropArea" type="CSGBox3D"]
+[node name="ItemDropArea" type="CSGCylinder3D"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 use_collision = true
 collision_layer = 4
+radius = 0.2
+height = 0.01
 script = ExtResource("1_vwpk3")
+related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("2_15nuj")])
+
+[node name="ItemSpawnOrigin" type="Node3D" parent="."]

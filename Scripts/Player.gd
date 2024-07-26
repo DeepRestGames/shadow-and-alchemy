@@ -4,11 +4,12 @@ signal playerMoved
 signal startBackgroundMusic
 
 @onready var camera_3d = $Camera3D
-var unfocus_pos
-var unfocused_rot
+var unfocus_pos: Vector3
+var unfocused_rot: Vector3
 
-var facing_direction = FacingDirection.WEST
-var player_state = PlayerState.IDLE
+var facing_direction: FacingDirection = FacingDirection.WEST
+var player_state: PlayerState = PlayerState.IDLE
+var previous_state: PlayerState
 
 const TIME_BETWEEN_MOVEMENTS: float = 0.35
 const TIME_BETWEEN_ROTATIONS: float = 0.35
@@ -26,18 +27,24 @@ enum FacingDirection {
 
 # State of the player
 enum PlayerState {
-	IDLE,		# 0
+	IDLE,		# 0		CAN OPEN DIARY
 	MOVING,		# 1
 	FOCUSING,	# 2
-	INVENTORY	# 3
+	INVENTORY,	# 3		CAN OPEN DIARY
+	DIARY		# 4
 }
+@onready var diary = $Diary
 
 @onready var debug_ui = $DEBUG_UI
 
+func _ready():
+	diary.hide()
 
 func _process(_delta):
 	_process_movement_inputs()
 	_process_focus_inputs()
+	_process_pause_inputs()
+	
 
 	# TODO: experiment to start creepy soundtrack at a scripted moment (in this example, focussing on `NavigationPoint11`)
 	if (player_state == PlayerState.FOCUSING) and ("NavigationPoint11" in str(current_navigation_point)):
@@ -49,22 +56,41 @@ func _process(_delta):
 	debug_ui.text += "\nROT: " + str(camera_3d.global_position)
 	debug_ui.text += "\nCurr nav point: " + str(current_navigation_point)
 
+func _process_pause_inputs():
+	if Input.is_action_just_pressed("open_diary"):
+		if player_state == PlayerState.DIARY and not diary.animation_player.is_playing():
+			player_state = previous_state
+			diary.put_away()
+			
+		elif (player_state == PlayerState.IDLE or player_state == PlayerState.FOCUSING) and not diary.animation_player.is_playing():
+			previous_state = player_state
+			player_state = PlayerState.DIARY
+			diary.pull_out()
+	if Input.is_action_just_pressed("turn_diary_left") and player_state == PlayerState.DIARY:
+		diary.turn_left()
+	if Input.is_action_just_pressed("turn_diary_right") and player_state == PlayerState.DIARY:
+		diary.turn_right()
+
+	
 
 func _process_focus_inputs():
 	var focus_point: FocusPoint = null
 
-	var match_north = current_navigation_point["north_focus_point"] and facing_direction == FacingDirection.NORTH
+	var match_north = current_navigation_point.get("north_focus_point") and facing_direction == FacingDirection.NORTH
 	if match_north:
-		focus_point = current_navigation_point["north_focus_point"]
-	var match_east = current_navigation_point["east_focus_point"] and facing_direction == FacingDirection.EAST
+		focus_point = current_navigation_point.get("north_focus_point")
+		
+	var match_east = current_navigation_point.get("east_focus_point") and facing_direction == FacingDirection.EAST
 	if match_east:
-		focus_point = current_navigation_point["east_focus_point"]
-	var match_south = current_navigation_point["south_focus_point"] and facing_direction == FacingDirection.SOUTH
+		focus_point = current_navigation_point.get("east_focus_point")
+		
+	var match_south = current_navigation_point.get("south_focus_point") and facing_direction == FacingDirection.SOUTH
 	if match_south:
-		focus_point = current_navigation_point["south_focus_point"]
-	var match_west = current_navigation_point["west_focus_point"] and facing_direction == FacingDirection.WEST
+		focus_point = current_navigation_point.get("south_focus_point")
+		
+	var match_west = current_navigation_point.get("west_focus_point") and facing_direction == FacingDirection.WEST
 	if match_west:
-		focus_point = current_navigation_point["west_focus_point"]
+		focus_point = current_navigation_point.get("west_focus_point")
 
 	if match_north or match_east or match_south or match_west:
 		if Input.is_action_just_pressed("move_forward") and player_state == PlayerState.IDLE:
@@ -193,8 +219,12 @@ func _animate_focus(focus_point: FocusPoint):
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_parallel(true)
+	var new_rot = focus_point.focus_camera.global_rotation_degrees
+	# FIXME: patch for the spin. Bad but next time we won't use EULER
+	if abs(focus_point.focus_camera.global_rotation_degrees.y - camera_3d.global_rotation_degrees.y) == 360:
+		new_rot.y = camera_3d.global_rotation_degrees.y
 	tween.tween_property(camera_3d, "global_position", focus_point.focus_camera.global_position, TIME_BETWEEN_MOVEMENTS)
-	tween.tween_property(camera_3d, "global_rotation_degrees", focus_point.focus_camera.global_rotation_degrees, TIME_BETWEEN_MOVEMENTS)
+	tween.tween_property(camera_3d, "global_rotation_degrees", new_rot, TIME_BETWEEN_MOVEMENTS)
 
 func _animate_defocus(_unfocus_pos, _unfocused_rot):
 	var tween = get_tree().create_tween()
@@ -202,6 +232,9 @@ func _animate_defocus(_unfocus_pos, _unfocused_rot):
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_parallel(true)
+	# FIXME: patch for the spin. Bad but next time we won't use EULER
+	if abs(_unfocused_rot.y - camera_3d.global_rotation_degrees.y) == 360:
+		_unfocused_rot.y = camera_3d.global_rotation_degrees.y
 	tween.tween_property(camera_3d, "global_position", _unfocus_pos, TIME_BETWEEN_MOVEMENTS)
 	tween.tween_property(camera_3d, "global_rotation_degrees", _unfocused_rot, TIME_BETWEEN_MOVEMENTS)
 
