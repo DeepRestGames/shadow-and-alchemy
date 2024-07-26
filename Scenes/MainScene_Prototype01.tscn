@@ -258,17 +258,19 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.28656, -0.297714, 3.3
 [node name="ItemDropArea3" parent="." instance=ExtResource("8_om380")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.29836, -0.297714, 3.81644)
 
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_8do2x")
-
-[node name="Footsteps" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_c270w")
-
 [node name="Timers" type="Node" parent="."]
 
 [node name="ThunderStormTimer" type="Timer" parent="Timers"]
 
-[node name="ThunderStorm" type="AudioStreamPlayer" parent="."]
+[node name="Audio" type="Node" parent="."]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("9_8do2x")
+
+[node name="Footsteps" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("10_c270w")
+
+[node name="ThunderStorm" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("11_qxw6b")
 
 [editable path="Environment/FocusPoints/FocusPoint"]
