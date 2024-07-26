@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ckc21cpje40gh"]
+[gd_scene load_steps=19 format=3 uid="uid://ckc21cpje40gh"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
 [ext_resource type="Script" path="res://Scripts/MainScene_Prototype02.gd" id="1_cljtm"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="11_i41rp"]
 [ext_resource type="AudioStream" uid="uid://t622sra4diub" path="res://Assets/Audio/Sound/footsteps_wood_single_2.mp3" id="12_iqq5d"]
 [ext_resource type="AudioStream" uid="uid://dlwk5ak6u2vgr" path="res://Assets/Audio/Sound/storm_faded.mp3" id="13_ehvq2"]
+[ext_resource type="AudioStream" uid="uid://c2pki04fd8067" path="res://Assets/Audio/Sound/fireplace_1.mp3" id="15_smehp"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("1_aeey2")
@@ -255,6 +256,13 @@ stream = ExtResource("12_iqq5d")
 
 [node name="ThunderStorm" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("13_ehvq2")
+
+[node name="Fireplace" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.234, 0.42, 0.944)
+stream = ExtResource("15_smehp")
+attenuation_model = 1
+unit_size = 4.0
+autoplay = true
 
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointSedia"]
