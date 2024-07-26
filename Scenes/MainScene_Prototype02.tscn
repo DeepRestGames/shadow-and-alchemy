@@ -1,12 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckc21cpje40gh"]
+[gd_scene load_steps=14 format=3 uid="uid://ckc21cpje40gh"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="1_g4vuj"]
 [ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="2_ebig3"]
-[ext_resource type="PackedScene" uid="uid://bhv1boykqvw23" path="res://Scenes/PlayerMovement/NavigationPoint.tscn" id="4_s1v5p"]
-[ext_resource type="PackedScene" uid="uid://b68s0qxy7ri2k" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="5_56w6k"]
 [ext_resource type="PackedScene" uid="uid://dvdddw1tb55q" path="res://Assets/3D/Props/BloodVialEmpty_v0.0.0.blend" id="3_twbq6"]
+[ext_resource type="PackedScene" uid="uid://bhv1boykqvw23" path="res://Scenes/PlayerMovement/NavigationPoint.tscn" id="4_s1v5p"]
 [ext_resource type="PackedScene" uid="uid://dppflreshnbo8" path="res://Assets/3D/Props/BloodVialSeparated_v0.0.0.blend" id="4_sw2ho"]
+[ext_resource type="PackedScene" uid="uid://b68s0qxy7ri2k" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="5_56w6k"]
 [ext_resource type="PackedScene" uid="uid://tibfyewtauo3" path="res://Assets/3D/Props/BloodVial_v0.0.0.blend" id="5_dhadr"]
 [ext_resource type="PackedScene" uid="uid://bab13j6o8fp2l" path="res://Scenes/Fireplace.tscn" id="6_ehu2w"]
 [ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="7_bbkbo"]
@@ -221,15 +221,6 @@ transform = Transform3D(0.965473, -0.260505, 0, 0.260505, 0.965473, 0, 0, 0, 1, 
 [node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointHole" index="1"]
 transform = Transform3D(-4.87482e-08, 0.20827, -0.978071, 2.75917e-09, 0.978071, 0.20827, 1, 7.45414e-09, -4.82539e-08, -0.674685, 0.132381, -2.98023e-07)
 
-[editable path="Navigation/FocusPoints/FocusPointTable"]
-[editable path="Navigation/FocusPoints/FocusPointSedia"]
-[editable path="Navigation/FocusPoints/FocusPointChest"]
-[editable path="Navigation/FocusPoints/FocusPointLibrary"]
-[editable path="Navigation/FocusPoints/FocusPointLectern"]
-[editable path="Navigation/FocusPoints/FocusPointHole"]
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.998477, 0, 0.0551768, 0, 1, 0, -0.0551768, 0, 0.998477, -0.238602, 1.26376, -0.897555)
-
 [node name="BloodVialEmpty_v0_0_0" parent="." instance=ExtResource("3_twbq6")]
 transform = Transform3D(0.116276, 0, 0.0879257, 0, 0.145777, 0, -0.0879257, 0, 0.116276, 0.154347, 0.814066, 1.9059)
 
@@ -244,3 +235,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23415, 0.419572, 0.944369)
 
 [node name="Candle" parent="." instance=ExtResource("7_bbkbo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438814, 0.811123, -2.12823)
+
+[editable path="Navigation/FocusPoints/FocusPointTable"]
+[editable path="Navigation/FocusPoints/FocusPointSedia"]
+[editable path="Navigation/FocusPoints/FocusPointChest"]
+[editable path="Navigation/FocusPoints/FocusPointLibrary"]
+[editable path="Navigation/FocusPoints/FocusPointLectern"]
+[editable path="Navigation/FocusPoints/FocusPointHole"]
