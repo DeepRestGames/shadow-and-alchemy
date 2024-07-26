@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://ckc21cpje40gh"]
+[gd_scene load_steps=11 format=3 uid="uid://ckc21cpje40gh"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
 [ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="2_ebig3"]
 [ext_resource type="PackedScene" uid="uid://dvdddw1tb55q" path="res://Assets/3D/Props/BloodVialEmpty_v0.0.0.blend" id="3_twbq6"]
 [ext_resource type="PackedScene" uid="uid://dppflreshnbo8" path="res://Assets/3D/Props/BloodVialSeparated_v0.0.0.blend" id="4_sw2ho"]
 [ext_resource type="PackedScene" uid="uid://tibfyewtauo3" path="res://Assets/3D/Props/BloodVial_v0.0.0.blend" id="5_dhadr"]
+[ext_resource type="PackedScene" uid="uid://bab13j6o8fp2l" path="res://Scenes/Fireplace.tscn" id="6_ehu2w"]
+[ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="7_bbkbo"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("1_aeey2")
@@ -53,13 +55,6 @@ shadow_opacity = 0.8
 [node name="Props" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.576236, 1.85896, -5.83088)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Props"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0671048, -0.429732, 3.76039)
-light_color = Color(1, 0.607867, 0.266473, 1)
-light_energy = 0.4
-omni_range = 1.758
-omni_attenuation = 1.18921
-
 [node name="OmniLight3D8" type="OmniLight3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.78482, -0.537753, 4.33133)
 light_color = Color(1, 0.607867, 0.266473, 1)
@@ -88,13 +83,6 @@ light_energy = 0.4
 omni_range = 1.758
 omni_attenuation = 1.18921
 
-[node name="OmniLight3D9" type="OmniLight3D" parent="Props"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.78577, -1.30941, 6.76696)
-light_color = Color(1, 0.607867, 0.266473, 1)
-light_energy = 0.4
-omni_range = 1.758
-omni_attenuation = 1.18921
-
 [node name="OmniLight3D7" type="OmniLight3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.895552, -0.311826, 7.23611)
 light_color = Color(1, 0.607867, 0.266473, 1)
@@ -117,7 +105,7 @@ omni_range = 1.758
 omni_attenuation = 1.18921
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.717154, 0, 0.696915, 0, 1, 0, -0.696915, 0, 0.717154, 2.33321, 1.09031, 0.47232)
+transform = Transform3D(0.998477, 0, 0.0551768, 0, 1, 0, -0.0551768, 0, 0.998477, -0.238602, 1.26376, -0.897555)
 
 [node name="BloodVialEmpty_v0_0_0" parent="." instance=ExtResource("3_twbq6")]
 transform = Transform3D(0.116276, 0, 0.0879257, 0, 0.145777, 0, -0.0879257, 0, 0.116276, 0.154347, 0.814066, 1.9059)
@@ -127,3 +115,9 @@ transform = Transform3D(0.145029, 0, 0.0147469, 0, 0.145777, 0, -0.0147469, 0, 0
 
 [node name="BloodVial_v0_0_0" parent="." instance=ExtResource("5_dhadr")]
 transform = Transform3D(0.139245, 0, -0.033903, 0, 0.143312, 0, 0.033903, 0, 0.139245, 0.103163, 0.811071, 1.79229)
+
+[node name="Fireplace" parent="." instance=ExtResource("6_ehu2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23415, 0.419572, 0.944369)
+
+[node name="Candle" parent="." instance=ExtResource("7_bbkbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438814, 0.811123, -2.12823)
