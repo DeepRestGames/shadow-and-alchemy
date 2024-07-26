@@ -19,6 +19,10 @@ var is_dragging_item := false
 var dragged_item_data = null
 var current_intersected_puzzle_slot: PuzzleSlot
 
+# Alchemical process symbols interactions
+@export var alchemical_process_symbols_collision_layer := 8
+var current_intersected_alchemical_process_symbols: AlchemicalProcessSymbol
+
 
 func _ready():
 	viewport = get_viewport()
@@ -48,6 +52,16 @@ func _process(_delta):
 			
 			if current_intersected_prop != null:
 				current_intersected_prop._interacted()
+		
+		# Check for alchemical process symbol
+		var alchemical_process_symbols_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, alchemical_process_symbols_collision_layer)
+		var alchemical_process_symbols_collision_result := space_state.intersect_ray(alchemical_process_symbols_collision_query)
+		
+		if not alchemical_process_symbols_collision_result.is_empty():
+			current_intersected_alchemical_process_symbols = alchemical_process_symbols_collision_result["collider"] as AlchemicalProcessSymbol
+			
+			if current_intersected_alchemical_process_symbols != null:
+				current_intersected_alchemical_process_symbols._interacted()
 		
 	
 	if is_dragging_item and Input.is_action_just_released("left_click"):
