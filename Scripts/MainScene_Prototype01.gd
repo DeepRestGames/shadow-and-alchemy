@@ -15,14 +15,21 @@ const footstep_sounds = [
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Prepare audio
-	var audio_stream = $BackgroundMusic.stream as AudioStreamMP3
-	var player = get_node("Player")
+	var audio_stream: AudioStreamMP3 = $BackgroundMusic.stream as AudioStreamMP3
+	var player: Node = get_node("Player")
 
 	audio_stream.loop = true
 	audio_stream.loop_offset = 21.372
 
 	player.connect("startBackgroundMusic", play_backgroundMusic)
 	player.connect("playerMoved", play_footstep)
+
+	# Prepare timers for ambient sounds
+	const rand_min: float = 10.0
+	const rand_max: float = 20.0
+	$Timers/ThunderStormTimer.wait_time = randf_range(rand_min, rand_max)
+	$Timers/ThunderStormTimer.connect("timeout", play_thunderstorm)
+	$Timers/ThunderStormTimer.start()
 
 
 func play_backgroundMusic():
@@ -34,6 +41,11 @@ func play_footstep():
 	var random_footstep = footstep_sounds[randi() % footstep_sounds.size()]
 	$Footsteps.stream = random_footstep
 	$Footsteps.play()
+
+
+func play_thunderstorm():
+	if not $ThunderStorm.is_playing():
+		$ThunderStorm.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
