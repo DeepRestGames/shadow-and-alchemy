@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dl24362otq47t"]
+[gd_scene load_steps=21 format=3 uid="uid://dl24362otq47t"]
 
 [ext_resource type="Script" path="res://Scripts/PuzzleSystem/AlchemicalProcessSymbol.gd" id="1_sbg4w"]
 [ext_resource type="Texture2D" uid="uid://7qphghswk1iv" path="res://Assets/2D/AlchemicalProcesses/Aquarius_Multiplication.png" id="2_u7c5d"]
@@ -9,11 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://dvkf8tp7s5461" path="res://Assets/2D/AlchemicalProcesses/Aries_Calcination.png" id="5_pq1am"]
 [ext_resource type="Texture2D" uid="uid://hynfrwtgbvxl" path="res://Assets/2D/AlchemicalProcesses/Taurus_Congelation.png" id="8_i0bb0"]
 [ext_resource type="Texture2D" uid="uid://bpaywf238lnt1" path="res://Assets/2D/AlchemicalProcesses/Leo_Digestion.png" id="9_clew7"]
+[ext_resource type="Texture2D" uid="uid://cub380tu2ni0t" path="res://Assets/2D/AlchemicalProcesses/Gemini_Fixation.png" id="9_v2rrf"]
+[ext_resource type="Texture2D" uid="uid://d2u0efwywjjgn" path="res://Assets/2D/AlchemicalProcesses/Cancer_Solution.png" id="10_n0oo6"]
 [ext_resource type="Texture2D" uid="uid://b8l5h3avop15d" path="res://Assets/2D/AlchemicalProcesses/Virgo_Distillation.png" id="10_wna7n"]
 [ext_resource type="Texture2D" uid="uid://x7wlw5bydj5o" path="res://Assets/2D/AlchemicalProcesses/Libra_Sublimation.png" id="11_ot8d5"]
 [ext_resource type="Texture2D" uid="uid://be21m7sk2l0sx" path="res://Assets/2D/AlchemicalProcesses/Scorpio_Separation.png" id="12_t54xu"]
 [ext_resource type="Texture2D" uid="uid://ewlcjmyc4nox" path="res://Assets/2D/AlchemicalProcesses/Sagittarius_Ceration.png" id="13_lawte"]
 [ext_resource type="Texture2D" uid="uid://c31yis5cdjonm" path="res://Assets/2D/AlchemicalProcesses/Capricorn_Fermentation_Putrefaction.png" id="14_1qupd"]
+[ext_resource type="Texture2D" uid="uid://bmd2cemv3mk2p" path="res://Assets/2D/AlchemicalProcesses/Pisces_Projection.png" id="17_dtevx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x2o37"]
 transparency = 1
@@ -217,6 +220,7 @@ grow_vertical = 2
 pivot_offset = Vector2(40, 40)
 script = ExtResource("4_1sypl")
 process_name = 2
+process_texture = ExtResource("9_v2rrf")
 
 [node name="InnerCircle" type="TextureRect" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Fixation"]
 custom_minimum_size = Vector2(180, 180)
@@ -286,6 +290,7 @@ grow_vertical = 2
 pivot_offset = Vector2(40, 40)
 script = ExtResource("4_1sypl")
 process_name = 3
+process_texture = ExtResource("10_n0oo6")
 
 [node name="InnerCircle" type="TextureRect" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Solution"]
 custom_minimum_size = Vector2(180, 180)
@@ -845,6 +850,7 @@ grow_vertical = 2
 pivot_offset = Vector2(40, 40)
 script = ExtResource("4_1sypl")
 process_name = 11
+process_texture = ExtResource("17_dtevx")
 
 [node name="InnerCircle" type="TextureRect" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Projection"]
 custom_minimum_size = Vector2(180, 180)
