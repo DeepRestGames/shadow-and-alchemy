@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddvlmsgydjki2"]
+
+[ext_resource type="Texture2D" uid="uid://ckh6m5jtdgsdn" path="res://Assets/2D/AlchemicalCircle_noCenter.png" id="1_pjbny"]
+[ext_resource type="PackedScene" uid="uid://cmp4gbdjt2xhj" path="res://Scenes/InteractionSystem/ItemDropArea.tscn" id="2_hqgle"]
+[ext_resource type="PackedScene" uid="uid://dl24362otq47t" path="res://Scenes/InteractionSystem/AlchemicalProcessSymbol.tscn" id="3_2kur5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qaj2o"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="AlchemicalCircle" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09885, 0.81, -1.95166)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 0, 0, 0)
+texture = ExtResource("1_pjbny")
+
+[node name="ItemDropArea" parent="." instance=ExtResource("2_hqgle")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.32772, -0.00158101, -0.218357)
+material = SubResource("StandardMaterial3D_qaj2o")
+
+[node name="ItemDropArea2" parent="." instance=ExtResource("2_hqgle")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.331154, -0.00158101, -0.218357)
+material = SubResource("StandardMaterial3D_qaj2o")
+
+[node name="ItemDropArea3" parent="." instance=ExtResource("2_hqgle")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.00532901, -0.00158101, 0.385779)
+material = SubResource("StandardMaterial3D_qaj2o")
+
+[node name="AlchemicalProcessSymbol" parent="." instance=ExtResource("3_2kur5")]
+transform = Transform3D(-7.62764e-08, 0, 1.745, 0, 1.745, 0, -1.745, 0, -7.62764e-08, -0.00148022, -0.00710535, -0.0020467)

@@ -1,8 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://dl24362otq47t"]
+[gd_scene load_steps=20 format=3 uid="uid://dl24362otq47t"]
 
 [ext_resource type="Script" path="res://Scripts/PuzzleSystem/AlchemicalProcessSymbol.gd" id="1_sbg4w"]
 [ext_resource type="Texture2D" uid="uid://7qphghswk1iv" path="res://Assets/2D/AlchemicalProcesses/Aquarius_Multiplication.png" id="2_u7c5d"]
-[ext_resource type="Script" path="res://Scripts/PuzzleSystem/UI/AlchemicalSymbolsChoice.gd" id="3_ubrtl"]
 [ext_resource type="Texture2D" uid="uid://cudg8ldkwnlxw" path="res://Assets/2D/particles/kenney_particle-pack/PNG (Transparent)/circle_05.png" id="3_whpm2"]
 [ext_resource type="Script" path="res://Scripts/PuzzleSystem/UI/AlchemicalSymbol.gd" id="4_1sypl"]
 [ext_resource type="Texture2D" uid="uid://dqjra4emyvxfc" path="res://Assets/2D/particles/kenney_particle-pack/PNG (Transparent)/circle_03.png" id="4_gds8e"]
@@ -33,7 +32,6 @@ inner_radius = 0.05
 outer_radius = 0.06
 
 [node name="AlchemicalProcessSymbol" type="CSGCylinder3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41025, -0.30262, 3.57228)
 use_collision = true
 collision_layer = 8
 radius = 0.06
@@ -42,10 +40,11 @@ material = SubResource("StandardMaterial3D_x2o37")
 script = ExtResource("1_sbg4w")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("TorusMesh_sbrgc")
 
 [node name="ProcessIcon" type="Sprite3D" parent="."]
-transform = Transform3D(-6.55671e-10, 0.015, 6.55671e-10, 0, -6.55671e-10, 0.015, 0.015, 6.55671e-10, 2.86603e-17, 0, 0.005, 0)
+transform = Transform3D(-6.55671e-10, 0.015, 6.55671e-10, 0, -6.55671e-10, 0.015, 0.015, 6.55671e-10, 2.86603e-17, 0.001, 0.005, 0)
 texture = ExtResource("2_u7c5d")
 
 [node name="AlchemicalSymbolsChoice" type="Control" parent="."]
@@ -62,7 +61,6 @@ offset_right = 150.0
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("3_ubrtl")
 
 [node name="AlchemicalSymbol_Calcination" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -96,6 +94,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -113,6 +112,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -130,8 +130,24 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Calcination"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AlchemicalSymbol_Congelation" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -166,6 +182,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -183,6 +200,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -200,8 +218,24 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Congelation"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AlchemicalSymbol_Fixation" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -236,6 +270,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -253,6 +288,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -270,8 +306,24 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Fixation"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AlchemicalSymbol_Solution" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -306,6 +358,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -323,6 +376,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -340,8 +394,24 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Solution"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AlchemicalSymbol_Digestion" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -376,6 +446,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -393,6 +464,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -410,8 +482,24 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Digestion"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AlchemicalSymbol_Distillation" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -446,6 +534,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -463,6 +552,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -480,8 +570,24 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Distillation"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AlchemicalSymbol_Sublimation" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -516,6 +622,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -533,6 +640,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -550,8 +658,24 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Sublimation"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AlchemicalSymbol_Separation" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -586,6 +710,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -603,6 +728,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -620,8 +746,24 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Separation"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AlchemicalSymbol_Ceration" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -656,6 +798,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -673,6 +816,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -690,8 +834,24 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Ceration"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AlchemicalSymbol_Fermentation" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -726,6 +886,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -743,6 +904,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -760,8 +922,24 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Fermentation"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AlchemicalSymbol_Multiplication" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -796,6 +974,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -813,6 +992,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -830,8 +1010,24 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Multiplication"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AlchemicalSymbol_Projection" type="Control" parent="AlchemicalSymbolsChoice"]
 custom_minimum_size = Vector2(80, 80)
@@ -866,6 +1062,7 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_whpm2")
 expand_mode = 2
 
@@ -883,6 +1080,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_gds8e")
 expand_mode = 2
 
@@ -900,5 +1098,34 @@ offset_right = 15.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_u7c5d")
+mouse_filter = 2
 expand_mode = 2
+
+[node name="Button" type="Button" parent="AlchemicalSymbolsChoice/AlchemicalSymbol_Projection"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Calcination/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Calcination" method="_on_button_pressed"]
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Congelation/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Congelation" method="_on_button_pressed"]
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Fixation/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Fixation" method="_on_button_pressed"]
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Solution/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Solution" method="_on_button_pressed"]
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Digestion/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Digestion" method="_on_button_pressed"]
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Distillation/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Distillation" method="_on_button_pressed"]
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Sublimation/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Sublimation" method="_on_button_pressed"]
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Separation/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Separation" method="_on_button_pressed"]
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Ceration/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Ceration" method="_on_button_pressed"]
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Fermentation/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Fermentation" method="_on_button_pressed"]
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Multiplication/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Multiplication" method="_on_button_pressed"]
+[connection signal="pressed" from="AlchemicalSymbolsChoice/AlchemicalSymbol_Projection/Button" to="AlchemicalSymbolsChoice/AlchemicalSymbol_Projection" method="_on_button_pressed"]

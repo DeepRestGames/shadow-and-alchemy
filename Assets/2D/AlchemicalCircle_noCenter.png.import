@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmd2cemv3mk2p"
-path.s3tc="res://.godot/imported/Pisces_Projection.png-9a9e1c935bfb4677794e047afc3783f4.s3tc.ctex"
-path.etc2="res://.godot/imported/Pisces_Projection.png-9a9e1c935bfb4677794e047afc3783f4.etc2.ctex"
+uid="uid://ckh6m5jtdgsdn"
+path.s3tc="res://.godot/imported/AlchemicalCircle_noCenter.png-8c39ba57df55d1effc76fc261f366225.s3tc.ctex"
+path.etc2="res://.godot/imported/AlchemicalCircle_noCenter.png-8c39ba57df55d1effc76fc261f366225.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/AlchemicalProcesses/Pisces_Projection.png"
-dest_files=["res://.godot/imported/Pisces_Projection.png-9a9e1c935bfb4677794e047afc3783f4.s3tc.ctex", "res://.godot/imported/Pisces_Projection.png-9a9e1c935bfb4677794e047afc3783f4.etc2.ctex"]
+source_file="res://Assets/2D/AlchemicalCircle_noCenter.png"
+dest_files=["res://.godot/imported/AlchemicalCircle_noCenter.png-8c39ba57df55d1effc76fc261f366225.s3tc.ctex", "res://.godot/imported/AlchemicalCircle_noCenter.png-8c39ba57df55d1effc76fc261f366225.etc2.ctex"]
 
 [params]
 
