@@ -25,10 +25,11 @@ func _ready():
 	player.connect("playerMoved", play_footstep)
 
 	# Prepare timers for ambient sounds
-	const rand_min: float = 10.0
-	const rand_max: float = 20.0
-	$Timers/ThunderStormTimer.wait_time = randf_range(rand_min, rand_max)
+	const rand_min_s: float =  60.0
+	const rand_max_s: float = 180.0
+	$Timers/ThunderStormTimer.wait_time = randf_range(rand_min_s, rand_max_s)
 	$Timers/ThunderStormTimer.connect("timeout", play_thunderstorm)
+	$Timers/ThunderStormTimer.connect("finished", on_thunderstorm_finished)
 	$Timers/ThunderStormTimer.start()
 
 
@@ -46,6 +47,10 @@ func play_footstep():
 func play_thunderstorm():
 	if not $ThunderStorm.is_playing():
 		$ThunderStorm.play()
+
+
+func on_thunderstorm_finished():
+	$Timers/ThunderStormTimer.start()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
