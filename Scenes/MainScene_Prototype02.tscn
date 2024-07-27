@@ -248,6 +248,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438814, 0.811123, -2.12823
 
 [node name="ScreamTimer" type="Timer" parent="Timers"]
 
+[node name="CreaksTimer" type="Timer" parent="Timers"]
+
 [node name="Audio" type="Node" parent="."]
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="Audio"]
@@ -267,6 +269,8 @@ unit_size = 4.0
 autoplay = true
 
 [node name="Screams" type="AudioStreamPlayer" parent="Audio"]
+
+[node name="Creaks" type="AudioStreamPlayer" parent="Audio"]
 
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointSedia"]
