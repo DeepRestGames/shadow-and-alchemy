@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/fireplace_1.mp3-142e29282f1cdb768e924192817a6
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
