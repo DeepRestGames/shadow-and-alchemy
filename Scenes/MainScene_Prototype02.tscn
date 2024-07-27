@@ -22,6 +22,7 @@
 [ext_resource type="AudioStream" uid="uid://c2pki04fd8067" path="res://Assets/Audio/Sound/fireplace_1.mp3" id="15_smehp"]
 [ext_resource type="PackedScene" path="res://Scenes/Items/PepperBottle.tscn" id="16_kj40c"]
 [ext_resource type="Resource" path="res://Resources/Puzzles/GenericPuzzle.tres" id="16_vux6x"]
+[ext_resource type="PackedScene" uid="uid://sncutmva0ga2" path="res://Assets/3D/Props/Hand.blend" id="8_q0jrn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("1_aeey2")
@@ -238,7 +239,7 @@ transform = Transform3D(-4.87482e-08, 0.20827, -0.978071, 2.75917e-09, 0.978071,
 transform = Transform3D(0.116276, 0, 0.0879257, 0, 0.145777, 0, -0.0879257, 0, 0.116276, 0.154347, 0.814066, 1.9059)
 
 [node name="BloodVialSeparated_v0_0_0" parent="." instance=ExtResource("4_sw2ho")]
-transform = Transform3D(0.145029, 0, 0.0147469, 0, 0.145777, 0, -0.0147469, 0, 0.145029, 0.0126497, 0.812451, 1.88019)
+transform = Transform3D(0.099487, 0, 0.0147695, 0, 0.146, 0, -0.0101161, 0, 0.145251, 0.0126497, 0.812451, 1.88019)
 
 [node name="BloodVial_v0_0_0" parent="." instance=ExtResource("5_dhadr")]
 transform = Transform3D(0.139245, 0, -0.033903, 0, 0.143312, 0, 0.033903, 0, 0.139245, 0.103163, 0.811071, 1.79229)
@@ -309,3 +310,10 @@ autoplay = true
 [editable path="Navigation/FocusPoints/FocusPointLibrary"]
 [editable path="Navigation/FocusPoints/FocusPointLectern"]
 [editable path="Navigation/FocusPoints/FocusPointHole"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438814, 0.811123, -2.12823)
+
+[node name="Candle" parent="Candle" instance=ExtResource("7_bbkbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876379, 0.434826, 3.95531)
+
+[node name="Hand2" parent="." instance=ExtResource("8_q0jrn")]
+transform = Transform3D(-0.02, 0, -3.01992e-09, 0, 0.02, 0, 3.01992e-09, 0, -0.02, -1.31919, 1.2208, 1.85045)

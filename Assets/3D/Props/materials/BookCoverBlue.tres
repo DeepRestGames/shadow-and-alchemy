@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dde0bs4jmh16k"]
+
+[resource]
+resource_name = "BloodVialLabel"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0, 0.301961, 0.341176, 1)
