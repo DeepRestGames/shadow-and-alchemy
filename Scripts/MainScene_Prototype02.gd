@@ -49,14 +49,14 @@ func _ready():
 	const rand_thunderstorm_max_s: float = 180.0
 	# const rand_thunderstorm_min_s: float = 5.0 # TODO: debug
 	# const rand_thunderstorm_max_s: float = 5.0 # TODO: debug
-	setup_sound($Audio/ThunderStorm, $Timers/ThunderStormTimer, rand_thunderstorm_min_s, rand_thunderstorm_max_s, thunderStorm_volume_db, on_thunderstorm_finished, play_thunderstorm)
+	setup_sound($Audio/ThunderStorm, $Audio/Timers/ThunderStormTimer, rand_thunderstorm_min_s, rand_thunderstorm_max_s, thunderStorm_volume_db, on_thunderstorm_finished, play_thunderstorm)
 
 	const scream_volume_db: float = -30.0
 	const rand_scream_min_s: float = 120.0
 	const rand_scream_max_s: float = 240.0
 	# const rand_scream_min_s: float = 2.0 # TODO: debug
 	# const rand_scream_max_s: float = 2.0 # TODO: debug
-	setup_sound($Audio/Screams, $Timers/ScreamTimer, rand_scream_min_s, rand_scream_max_s, scream_volume_db, on_scream_finished, play_scream)
+	setup_sound($Audio/Screams, $Audio/Timers/ScreamTimer, rand_scream_min_s, rand_scream_max_s, scream_volume_db, on_scream_finished, play_scream)
 
 
 	const creak_volume_db: float = -20
@@ -64,7 +64,7 @@ func _ready():
 	const rand_creak_max_s: float = 120.0
 	# const rand_creak_min_s: float = 2.0 # TODO: debug
 	# const rand_creak_max_s: float = 2.0 # TODO: debug
-	setup_sound($Audio/Creaks, $Timers/CreaksTimer, rand_creak_min_s, rand_creak_max_s, creak_volume_db, on_creak_finished, play_creak)
+	setup_sound($Audio/Creaks, $Audio/Timers/CreaksTimer, rand_creak_min_s, rand_creak_max_s, creak_volume_db, on_creak_finished, play_creak)
 
 
 ##### Functions: play sound and music #####
@@ -99,15 +99,15 @@ func play_thunderstorm():
 ##### Functions: restart timers for sound and music #####
 
 func on_thunderstorm_finished():
-	$Timers/ThunderStormTimer.start()
+	$Audio/Timers/ThunderStormTimer.start()
 
 
 func on_scream_finished():
-	$Timers/ScreamTimer.start()
+	$Audio/Timers/ScreamTimer.start()
 
 
 func on_creak_finished():
-	$Timers/CreaksTimer.start()
+	$Audio/Timers/CreaksTimer.start()
 
 
 func setup_sound(sound_type, timer, rand_min: float, rand_max: float, volume: float, callback, sound_to_play):
