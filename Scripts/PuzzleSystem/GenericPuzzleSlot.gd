@@ -6,7 +6,7 @@ extends PuzzleSlot
 
 
 func item_dropped(item: InventoryItemData):
-	("Item " + item.item_name + " dropped in slot!")
+	print("Item " + item.item_name + " dropped in slot!")
 	
 	if not item.is_reusable:
 		print("Can't put this object here!")
@@ -16,7 +16,7 @@ func item_dropped(item: InventoryItemData):
 		puzzle.add_puzzle_item(item)
 
 
-func item_removed(item: InventoryItemData):
+func item_removed(_item: InventoryItemData):
 	pass
 
 
