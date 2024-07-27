@@ -13,4 +13,4 @@ func _ready():
 
 
 func _on_button_pressed():
-	alchemical_process_symbol.new_process_chosen(process_icon.texture)
+	alchemical_process_symbol.new_process_chosen(process_name, process_icon.texture)

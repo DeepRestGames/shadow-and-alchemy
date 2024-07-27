@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ckc21cpje40gh"]
+[gd_scene load_steps=17 format=3 uid="uid://ckc21cpje40gh"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="1_g4vuj"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bab13j6o8fp2l" path="res://Scenes/Fireplace.tscn" id="6_ehu2w"]
 [ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="7_bbkbo"]
 [ext_resource type="PackedScene" uid="uid://ddvlmsgydjki2" path="res://Scenes/AlchemicalCircle.tscn" id="11_s71tp"]
+[ext_resource type="PackedScene" uid="uid://1ofvsxrma8iv" path="res://Scenes/Items/CeremonialKnife.tscn" id="12_0jcyq"]
+[ext_resource type="PackedScene" uid="uid://c334blq5lnfot" path="res://Scenes/Items/SaltBottle.tscn" id="13_omhqv"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("1_aeey2")
@@ -244,6 +246,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26041, 0.700025, -1.84998)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.940461, 0.700025, -1.85113)
 
 [node name="AlchemicalCircle" parent="." instance=ExtResource("11_s71tp")]
+
+[node name="CeremonialKnife" parent="." instance=ExtResource("12_0jcyq")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.72841, 0.829068, -1.85508)
+
+[node name="SaltBottle" parent="." instance=ExtResource("13_omhqv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.437555, 0.891044, -1.99207)
 
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointSedia"]

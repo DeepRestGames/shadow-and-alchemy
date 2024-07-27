@@ -2,7 +2,10 @@ class_name PuzzleSlot
 extends Node3D
 
 
-@export var related_puzzles: Array[Puzzle]
+#@export var related_puzzles: Array[Puzzle]
+
+@onready var alchemical_circle = $".."
+
 @onready var item_spawn_origin = $ItemSpawnOrigin
 var current_dropped_item: InventoryItemData
 var current_dropped_item_scene = null
@@ -31,7 +34,7 @@ func item_dropped(item: InventoryItemData):
 	current_dropped_item_scene = item_scene_instance
 	
 	# Add item to puzzles related to slot
-	for puzzle in related_puzzles:
+	for puzzle in alchemical_circle.related_puzzles:
 		puzzle.add_puzzle_item(item)
 
 
@@ -44,7 +47,7 @@ func item_removed(item: InventoryItemData):
 	print("Item " + item.item_name + " removed from slot!")
 	
 	# Remove item from puzzles related to slot
-	for puzzle in related_puzzles:
+	for puzzle in alchemical_circle.related_puzzles:
 		puzzle.remove_puzzle_item(item)
 	
 	current_dropped_item = null
