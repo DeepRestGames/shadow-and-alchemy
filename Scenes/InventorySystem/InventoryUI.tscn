@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4csxpsd7ukr6"]
 
 [ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryUI.gd" id="1_5wtk1"]
-[ext_resource type="Texture2D" uid="uid://c777f04304wm4" path="res://Icons/ui_interface_user_user_interface_navigate_arrow_left-512-595134033.png" id="2_4aj1m"]
+[ext_resource type="Texture2D" uid="uid://dgeu4eo2m5l60" path="res://Icons/UI_Arrow.png" id="2_eq5ge"]
 
 [node name="InventoryUI" type="Control"]
 layout_mode = 3
@@ -30,7 +30,7 @@ layout_mode = 2
 anchor_bottom = 1.0
 offset_right = 70.0
 grow_vertical = 2
-texture_normal = ExtResource("2_4aj1m")
+texture_normal = ExtResource("2_eq5ge")
 ignore_texture_size = true
 stretch_mode = 0
 flip_h = true
@@ -43,7 +43,7 @@ anchor_bottom = 1.0
 offset_left = -70.0
 grow_horizontal = 0
 grow_vertical = 2
-texture_normal = ExtResource("2_4aj1m")
+texture_normal = ExtResource("2_eq5ge")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -60,7 +60,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 rotation = -1.5708
 pivot_offset = Vector2(25, 60)
-texture_normal = ExtResource("2_4aj1m")
+texture_normal = ExtResource("2_eq5ge")
 ignore_texture_size = true
 stretch_mode = 0
 
