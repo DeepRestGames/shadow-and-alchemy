@@ -1,16 +1,20 @@
-[gd_scene load_steps=12 format=3 uid="uid://ckc21cpje40gh"]
+[gd_scene load_steps=16 format=3 uid="uid://csrmljhdpq2pu"]
 
-[ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
-[ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="2_ebig3"]
-[ext_resource type="PackedScene" uid="uid://dvdddw1tb55q" path="res://Assets/3D/Props/BloodVialEmpty_v0.0.0.blend" id="3_twbq6"]
-[ext_resource type="PackedScene" uid="uid://dppflreshnbo8" path="res://Assets/3D/Props/BloodVialSeparated_v0.0.0.blend" id="4_sw2ho"]
-[ext_resource type="PackedScene" uid="uid://tibfyewtauo3" path="res://Assets/3D/Props/BloodVial_v0.0.0.blend" id="5_dhadr"]
-[ext_resource type="PackedScene" uid="uid://bab13j6o8fp2l" path="res://Scenes/Fireplace.tscn" id="6_ehu2w"]
-[ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="7_bbkbo"]
-[ext_resource type="PackedScene" uid="uid://sncutmva0ga2" path="res://Assets/3D/Props/Hand.blend" id="8_q0jrn"]
+[ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_65ges"]
+[ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="2_aaniy"]
+[ext_resource type="PackedScene" uid="uid://dvdddw1tb55q" path="res://Assets/3D/Props/BloodVialEmpty_v0.0.0.blend" id="3_dash4"]
+[ext_resource type="PackedScene" uid="uid://dppflreshnbo8" path="res://Assets/3D/Props/BloodVialSeparated_v0.0.0.blend" id="4_gy01x"]
+[ext_resource type="PackedScene" uid="uid://tibfyewtauo3" path="res://Assets/3D/Props/BloodVial_v0.0.0.blend" id="5_db0wy"]
+[ext_resource type="PackedScene" uid="uid://bab13j6o8fp2l" path="res://Scenes/Fireplace.tscn" id="6_h48re"]
+[ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="7_cibxe"]
+[ext_resource type="PackedScene" uid="uid://sncutmva0ga2" path="res://Assets/3D/Props/Hand.blend" id="8_qnlqi"]
+[ext_resource type="PackedScene" uid="uid://b3hkdu32yh165" path="res://Assets/3D/Props/Opal_v0.0.0.blend" id="9_nuc7d"]
+[ext_resource type="PackedScene" uid="uid://6hhogeucrtfh" path="res://Assets/3D/Props/CandeHolderWall.blend" id="10_24qxj"]
+[ext_resource type="PackedScene" uid="uid://biqkt2i023ui1" path="res://Assets/3D/Props/Laurel.blend" id="11_7dw2u"]
+[ext_resource type="PackedScene" uid="uid://d0cq4kvpnenr4" path="res://Assets/3D/Props/SpiceJarFilled_v0.0.0.blend" id="12_ebrtq"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
-panorama = ExtResource("1_aeey2")
+panorama = ExtResource("1_65ges")
 filter = false
 
 [sub_resource type="Sky" id="Sky_fu3n5"]
@@ -51,7 +55,7 @@ light_energy = 0.4
 shadow_enabled = true
 shadow_opacity = 0.8
 
-[node name="Cabin_v0_0_0" parent="." instance=ExtResource("2_ebig3")]
+[node name="Cabin_v0_0_0" parent="." instance=ExtResource("2_aaniy")]
 
 [node name="Props" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.576236, 1.85896, -5.83088)
@@ -108,23 +112,55 @@ omni_attenuation = 1.18921
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.998477, 0, 0.0551768, 0, 1, 0, -0.0551768, 0, 0.998477, -0.238602, 1.26376, -0.897555)
 
-[node name="BloodVialEmpty_v0_0_0" parent="." instance=ExtResource("3_twbq6")]
+[node name="BloodVialEmpty_v0_0_0" parent="." instance=ExtResource("3_dash4")]
 transform = Transform3D(0.116276, 0, 0.0879257, 0, 0.145777, 0, -0.0879257, 0, 0.116276, 0.154347, 0.814066, 1.9059)
 
-[node name="BloodVialSeparated_v0_0_0" parent="." instance=ExtResource("4_sw2ho")]
+[node name="BloodVialSeparated_v0_0_0" parent="." instance=ExtResource("4_gy01x")]
 transform = Transform3D(0.099487, 0, 0.0147695, 0, 0.146, 0, -0.0101161, 0, 0.145251, 0.0126497, 0.812451, 1.88019)
 
-[node name="BloodVial_v0_0_0" parent="." instance=ExtResource("5_dhadr")]
+[node name="BloodVial_v0_0_0" parent="." instance=ExtResource("5_db0wy")]
 transform = Transform3D(0.139245, 0, -0.033903, 0, 0.143312, 0, 0.033903, 0, 0.139245, 0.103163, 0.811071, 1.79229)
 
-[node name="Fireplace" parent="." instance=ExtResource("6_ehu2w")]
+[node name="Fireplace" parent="." instance=ExtResource("6_h48re")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23415, 0.419572, 0.944369)
 
-[node name="Candle" parent="." instance=ExtResource("7_bbkbo")]
+[node name="Candle" parent="." instance=ExtResource("7_cibxe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438814, 0.811123, -2.12823)
 
-[node name="Candle" parent="Candle" instance=ExtResource("7_bbkbo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876379, 0.434826, 3.95531)
+[node name="Candle4" parent="." instance=ExtResource("7_cibxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60015, 1.19889, 2.25065)
 
-[node name="Hand2" parent="." instance=ExtResource("8_q0jrn")]
-transform = Transform3D(-0.02, 0, -3.01992e-09, 0, 0.02, 0, 3.01992e-09, 0, -0.02, -1.31919, 1.2208, 1.85045)
+[node name="Hand2" parent="." instance=ExtResource("8_qnlqi")]
+transform = Transform3D(-0.02, 0, -3.01992e-09, 0, 0.02, 0, 3.01992e-09, 0, -0.02, -2.32003, 1.20541, 1.87744)
+
+[node name="Opal_v0_0_0" parent="Hand2" instance=ExtResource("9_nuc7d")]
+transform = Transform3D(-0.129265, -0.208116, 14.8955, -8.93576, -4.48427, -0.311255, 4.48727, -8.93577, -0.190723, -0.332237, 4.32002, 1.21557)
+
+[node name="Candle2" parent="Hand2" instance=ExtResource("7_cibxe")]
+transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, -1.93813, 7.58157, -1.98306)
+energy_max = 0.12
+energy_min = 0.14
+
+[node name="Candle5" parent="Hand2" instance=ExtResource("7_cibxe")]
+transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, -0.716728, 8.03965, -1.98306)
+energy_max = 0.12
+energy_min = 0.14
+
+[node name="Candle6" parent="Hand2" instance=ExtResource("7_cibxe")]
+transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, 0.583641, 7.57361, -1.98306)
+energy_max = 0.12
+energy_min = 0.14
+
+[node name="Candle7" parent="Hand2" instance=ExtResource("7_cibxe")]
+transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, 1.83002, 7.00055, -1.98306)
+energy_max = 0.12
+energy_min = 0.14
+
+[node name="CandeHolderWall" parent="." instance=ExtResource("10_24qxj")]
+transform = Transform3D(-5.24536e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.24536e-08, 2.59873, 1.24595, 2.42971)
+
+[node name="Laurel" parent="." instance=ExtResource("11_7dw2u")]
+transform = Transform3D(0.676148, -0.181173, 5.11914e-08, -6.11959e-08, -3.0598e-08, 0.7, -0.181173, -0.676148, -4.5394e-08, 2.60438, 0.878867, 2.33517)
+
+[node name="SpiceJarFilled_v0_0_2" parent="." instance=ExtResource("12_ebrtq")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.83015, 0.658964, 0.0484281)
