@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dpsmn6sbj2fhw"]
+
+[resource]
+resource_name = "MushroomStem"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.906348, 0.722138, 0.613581, 1)

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://be5fmscv5e4pb"
-path="res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"
+uid="uid://bj3naiqgfy1r4"
+path="res://.godot/imported/Mushroom.blend-c9c4aa538ac5ef38f7138b88bf018f85.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/Coin.blend"
-dest_files=["res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"]
+source_file="res://Assets/3D/Props/Mushroom.blend"
+dest_files=["res://.godot/imported/Mushroom.blend-c9c4aa538ac5ef38f7138b88bf018f85.scn"]
 
 [params]
 
@@ -31,9 +31,13 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Silver": {
+"MushroomCap": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Silver.tres"
+"use_external/path": "res://Assets/3D/Props/materials/MushroomCap.tres"
+},
+"MushroomStem": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/MushroomStem.tres"
 }
 }
 }

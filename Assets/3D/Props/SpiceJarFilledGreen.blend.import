@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://be5fmscv5e4pb"
-path="res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"
+uid="uid://bvrhasn8bju08"
+path="res://.godot/imported/SpiceJarFilledGreen.blend-551d113f81e5bf8bbd5a16a811e3d9c2.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/Coin.blend"
-dest_files=["res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"]
+source_file="res://Assets/3D/Props/SpiceJarFilledGreen.blend"
+dest_files=["res://.godot/imported/SpiceJarFilledGreen.blend-551d113f81e5bf8bbd5a16a811e3d9c2.scn"]
 
 [params]
 
@@ -31,9 +31,17 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Silver": {
+"BloodVialCork": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Silver.tres"
+"use_external/path": "res://Assets/3D/Props/materials/Cork.tres"
+},
+"BloodVialGlass.001": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/Glass.tres"
+},
+"Substance": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/SpiceGreen.tres"
 }
 }
 }

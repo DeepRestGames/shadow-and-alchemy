@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://be5fmscv5e4pb"
-path="res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"
+uid="uid://cj14f2rdypuis"
+path="res://.godot/imported/BowlOfPepper.blend-96d52e6f70badb316d51bcbfec8563d8.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/Coin.blend"
-dest_files=["res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"]
+source_file="res://Assets/3D/Props/BowlOfPepper.blend"
+dest_files=["res://.godot/imported/BowlOfPepper.blend-96d52e6f70badb316d51bcbfec8563d8.scn"]
 
 [params]
 
@@ -31,9 +31,13 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Silver": {
+"Bowl": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Silver.tres"
+"use_external/path": "res://Assets/3D/Props/materials/GenericWood.tres"
+},
+"Substance": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/SpiceBlack.tres"
 }
 }
 }

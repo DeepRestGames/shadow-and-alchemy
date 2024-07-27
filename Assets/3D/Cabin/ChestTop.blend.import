@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://be5fmscv5e4pb"
-path="res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"
+uid="uid://biqg80pysppey"
+path="res://.godot/imported/ChestTop.blend-01272185382f300924e225f9e4b69d18.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/Coin.blend"
-dest_files=["res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"]
+source_file="res://Assets/3D/Cabin/ChestTop.blend"
+dest_files=["res://.godot/imported/ChestTop.blend-01272185382f300924e225f9e4b69d18.scn"]
 
 [params]
 
@@ -29,14 +29,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"materials": {
-"Silver": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Silver.tres"
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0
