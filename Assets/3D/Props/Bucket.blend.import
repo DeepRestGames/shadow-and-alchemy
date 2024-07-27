@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://be5fmscv5e4pb"
-path="res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"
+uid="uid://d2mnsurxior5l"
+path="res://.godot/imported/Bucket.blend-8aa7621c16ffae02fa834d19b6be830f.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/Coin.blend"
-dest_files=["res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"]
+source_file="res://Assets/3D/Props/Bucket.blend"
+dest_files=["res://.godot/imported/Bucket.blend-8aa7621c16ffae02fa834d19b6be830f.scn"]
 
 [params]
 
@@ -31,9 +31,13 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Silver": {
+"Water": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Silver.tres"
+"use_external/path": "res://Assets/3D/Props/materials/Liquid.tres"
+},
+"Wood": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/GenericWoodTriplanar.tres"
 }
 }
 }

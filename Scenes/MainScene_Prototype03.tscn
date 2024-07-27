@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://csrmljhdpq2pu"]
+[gd_scene load_steps=18 format=3 uid="uid://csrmljhdpq2pu"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_65ges"]
 [ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="2_aaniy"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://6hhogeucrtfh" path="res://Assets/3D/Props/CandeHolderWall.blend" id="10_24qxj"]
 [ext_resource type="PackedScene" uid="uid://biqkt2i023ui1" path="res://Assets/3D/Props/Laurel.blend" id="11_7dw2u"]
 [ext_resource type="PackedScene" uid="uid://d0cq4kvpnenr4" path="res://Assets/3D/Props/SpiceJarFilled_v0.0.0.blend" id="12_ebrtq"]
+[ext_resource type="PackedScene" uid="uid://d2mnsurxior5l" path="res://Assets/3D/Props/Bucket.blend" id="13_3u5to"]
+[ext_resource type="PackedScene" uid="uid://bj3naiqgfy1r4" path="res://Assets/3D/Props/Mushroom.blend" id="14_uif24"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("1_65ges")
@@ -26,7 +28,6 @@ background_color = Color(0, 0, 0.0470588, 1)
 sky = SubResource("Sky_fu3n5")
 sky_rotation = Vector3(0, -2.10836, 0)
 tonemap_mode = 2
-tonemap_exposure = 0.9
 tonemap_white = 8.0
 
 [node name="MainScenePrototype02" type="Node3D"]
@@ -61,7 +62,7 @@ shadow_opacity = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.576236, 1.85896, -5.83088)
 
 [node name="OmniLight3D8" type="OmniLight3D" parent="Props"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.78482, -0.537753, 4.33133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.78482, -0.537753, 5.20651)
 light_color = Color(1, 0.607867, 0.266473, 1)
 light_energy = 0.4
 omni_range = 1.758
@@ -90,13 +91,6 @@ omni_attenuation = 1.18921
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.895552, -0.311826, 7.23611)
-light_color = Color(1, 0.607867, 0.266473, 1)
-light_energy = 0.4
-omni_range = 1.758
-omni_attenuation = 1.18921
-
-[node name="OmniLight3D5" type="OmniLight3D" parent="Props"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53504, -1.09415, 6.44933)
 light_color = Color(1, 0.607867, 0.266473, 1)
 light_energy = 0.4
 omni_range = 1.758
@@ -159,8 +153,14 @@ energy_min = 0.14
 [node name="CandeHolderWall" parent="." instance=ExtResource("10_24qxj")]
 transform = Transform3D(-5.24536e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.24536e-08, 2.59873, 1.24595, 2.42971)
 
-[node name="Laurel" parent="." instance=ExtResource("11_7dw2u")]
-transform = Transform3D(0.676148, -0.181173, 5.11914e-08, -6.11959e-08, -3.0598e-08, 0.7, -0.181173, -0.676148, -4.5394e-08, 2.60438, 0.878867, 2.33517)
+[node name="Laurel" parent="CandeHolderWall" instance=ExtResource("11_7dw2u")]
+transform = Transform3D(0.150977, 0.563457, 3.78283e-08, -5.09966e-08, -2.54983e-08, 0.583333, 0.563457, -0.150977, 4.26595e-08, 0.0787832, -0.305902, 0.00470829)
 
 [node name="SpiceJarFilled_v0_0_2" parent="." instance=ExtResource("12_ebrtq")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.83015, 0.658964, 0.0484281)
+
+[node name="Bucket2" parent="." instance=ExtResource("13_3u5to")]
+transform = Transform3D(-0.869848, 0, 0.493319, 0, 1, 0, -0.493319, 0, -0.869848, -3.30294, 0.069219, 1.95691)
+
+[node name="Mushroom2" parent="." instance=ExtResource("14_uif24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.06401, 0.0640055, 1.91906)

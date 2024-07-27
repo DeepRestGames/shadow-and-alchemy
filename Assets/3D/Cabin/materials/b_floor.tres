@@ -1,4 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://b6gb35va8k3tf"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b6gb35va8k3tf"]
+
+[ext_resource type="Texture2D" uid="uid://cwo70ukpaolme" path="res://Assets/3D/Cabin/textures/Wood1_H_Light.png" id="1_72gn8"]
 
 [resource]
 resource_name = "b_floor"
@@ -6,3 +8,5 @@ cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
 albedo_color = Color(0.658824, 0.517647, 0.329412, 1)
+albedo_texture = ExtResource("1_72gn8")
+uv1_scale = Vector3(20, 20, 20)

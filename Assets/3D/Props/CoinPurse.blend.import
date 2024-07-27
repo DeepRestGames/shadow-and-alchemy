@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://be5fmscv5e4pb"
-path="res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"
+uid="uid://dhtnotvhyj8uf"
+path="res://.godot/imported/CoinPurse.blend-fcab6e6a4e4b494cad7885ffe87745d4.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/Coin.blend"
-dest_files=["res://.godot/imported/Coin.blend-b6c8631b457777b36dbef3d8a0cadd4f.scn"]
+source_file="res://Assets/3D/Props/CoinPurse.blend"
+dest_files=["res://.godot/imported/CoinPurse.blend-fcab6e6a4e4b494cad7885ffe87745d4.scn"]
 
 [params]
 
@@ -31,7 +31,7 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Silver": {
+"Silver.001": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/3D/Props/materials/Silver.tres"
 }
