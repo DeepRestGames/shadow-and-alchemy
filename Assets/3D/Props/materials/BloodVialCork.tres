@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://00qpnuie7gon"]
-
-[resource]
-resource_name = "BloodVialCork"
-cull_mode = 2
-albedo_color = Color(0.906422, 0.599402, 0.290374, 1)
-roughness = 0.5

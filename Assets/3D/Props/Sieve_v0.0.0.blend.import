@@ -29,7 +29,26 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"SieveEdge": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/GenericWoodTriplanar.tres"
+},
+"SieveHandle": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/Brass.tres"
+},
+"SieveHandle2": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/BookCoverBlack.tres"
+},
+"SieveWireMesh": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/SieveWireMesh.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0

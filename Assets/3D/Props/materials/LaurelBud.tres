@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d1grvapckvqv5"]
+
+[resource]
+resource_name = "LaurelBud"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.905882, 0.701961, 0, 1)

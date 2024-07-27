@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://00qpnuie7gon"]
+
+[resource]
+resource_name = "BloodVialCork"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.752941, 0.470588, 0.168627, 1)

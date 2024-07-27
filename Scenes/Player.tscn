@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1ngk84wlraoa"]
+[gd_scene load_steps=5 format=3 uid="uid://d1ngk84wlraoa"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_h2fim"]
-[ext_resource type="PackedScene" uid="uid://duhgac42d8866" path="res://Scenes/Diary.tscn" id="2_svcux"]
 [ext_resource type="PackedScene" uid="uid://b4csxpsd7ukr6" path="res://Scenes/InventorySystem/InventoryUI.tscn" id="3_3gjop"]
+[ext_resource type="PackedScene" uid="uid://duhgac42d8866" path="res://Scenes/UI/Diary.tscn" id="3_pymve"]
+[ext_resource type="PackedScene" uid="uid://4gxkhk21pip5" path="res://Scenes/UI/Options.tscn" id="4_la86e"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_h2fim")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+rotation_edit_mode = 2
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
@@ -25,5 +27,8 @@ layout_mode = 1
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Diary" parent="." instance=ExtResource("2_svcux")]
+[node name="Diary" parent="." instance=ExtResource("3_pymve")]
 transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 0, 0.376769, -0.901496)
+
+[node name="Options" parent="Diary" instance=ExtResource("4_la86e")]
+visible = false

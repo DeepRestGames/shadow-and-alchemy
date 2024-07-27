@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ce3b47n8n36ay"]
+
+[resource]
+resource_name = "LaurelLeaf"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.203922, 0.380392, 0.0941176, 1)
+roughness = 0.5

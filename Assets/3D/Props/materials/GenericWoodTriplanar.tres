@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://xbaeqtn6cnms"]
+
+[ext_resource type="Texture2D" uid="uid://byy8n12mvsu4s" path="res://Assets/3D/Cabin/textures/Dirt.png" id="1_v1oo0"]
+
+[resource]
+resource_name = "AlembicBase2"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.639216, 0.435294, 0.215686, 1)
+albedo_texture = ExtResource("1_v1oo0")
+roughness = 0.9
+uv1_scale = Vector3(-1.7, -1.7, -1.7)
+uv1_triplanar = true
+uv1_world_triplanar = true

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cqtxw7ledba0o"]
+
+[resource]
+resource_name = "MetalFurniture"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.486275, 0.388235, 0.215686, 1)
+metallic = 0.5
+roughness = 0.07

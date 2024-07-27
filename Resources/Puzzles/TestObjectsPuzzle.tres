@@ -1,14 +1,16 @@
-[gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://nfe0h4tn2qaf"]
+[gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://dtrbxn2iexvy"]
 
-[ext_resource type="Resource" uid="uid://yst2g71wu8b4" path="res://Resources/InventoryItems/CeremonialKnife.tres" id="1_8e8m0"]
-[ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="2_2sktw"]
-[ext_resource type="Resource" uid="uid://b2cuecbta7hjx" path="res://Resources/InventoryItems/Reward.tres" id="3_6oww4"]
-[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="3_i0xl5"]
+[ext_resource type="Resource" uid="uid://yst2g71wu8b4" path="res://Resources/InventoryItems/CeremonialKnife.tres" id="1_jm7yr"]
+[ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="2_2fpil"]
+[ext_resource type="Resource" uid="uid://b2cuecbta7hjx" path="res://Resources/InventoryItems/Reward.tres" id="3_k2olv"]
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="4_igfej"]
 
 [resource]
-script = ExtResource("3_i0xl5")
+script = ExtResource("4_igfej")
 puzzle_name = "TestObjectsPuzzle"
 puzzle_description = ""
-puzzle_solution_items = [ExtResource("1_8e8m0"), ExtResource("2_2sktw")]
+puzzle_solution_items = [ExtResource("1_jm7yr"), ExtResource("2_2fpil")]
 order_needed = false
-reward = ExtResource("3_6oww4")
+reward = ExtResource("3_k2olv")
+alchemical_process_needed = false
+alchemical_process_solution = 0

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://qhui0ibm2o5i"]
+
+[ext_resource type="Script" path="res://Scripts/UI/DiaryTag.gd" id="1_br0fs"]
+[ext_resource type="Texture2D" uid="uid://sntw8ewqgxsi" path="res://Assets/2D/Decals/old_paper.jpg" id="1_qcatd"]
+[ext_resource type="FontFile" uid="uid://c3e6xxrhi3xmf" path="res://Assets/2D/Fonts/Almendra-BoldItalic.ttf" id="2_l35rp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wrjue"]
+albedo_color = Color(0.5, 0.5, 0.5, 1)
+albedo_texture = ExtResource("1_qcatd")
+albedo_texture_force_srgb = true
+
+[node name="DiaryTag" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="ColliderBox" type="CSGBox3D" parent="."]
+material_override = SubResource("StandardMaterial3D_wrjue")
+use_collision = true
+collision_layer = 32
+size = Vector3(0.15, 0.001, 0.1)
+script = ExtResource("1_br0fs")
+
+[node name="TagName" type="Label3D" parent="ColliderBox"]
+transform = Transform3D(0.215, 0, 0, 0, -9.39795e-09, 0.215, 0, -0.215, -9.39795e-09, 0, 0.001, 0)
+double_sided = false
+alpha_antialiasing_mode = 1
+text = "Codex"
+font = ExtResource("2_l35rp")
+font_size = 48
