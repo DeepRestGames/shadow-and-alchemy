@@ -36,10 +36,8 @@ func _ready():
 
 	var background_music: AudioStreamMP3 = $Audio/BackgroundMusic.stream as AudioStreamMP3
 	var player: Node = get_node("Player")
-
 	background_music.loop = true
-	background_music.loop_offset = 21.372
-
+	background_music.loop_offset = 21.333 # measures 9 to 16 included
 	player.connect("startBackgroundMusic", play_backgroundMusic)
 	player.connect("playerMoved", play_footstep)
 
