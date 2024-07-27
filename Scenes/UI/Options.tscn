@@ -107,12 +107,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Field of view"
 
-[node name="FoVSlider" type="HSlider" parent="PanelContainer/ScrollContainer/VBoxContainer/GridContainer"]
+[node name="FOVSlider" type="HSlider" parent="PanelContainer/ScrollContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 min_value = 50.0
-value = 50.0
+value = 75.0
 
 [node name="HSeparator" type="HSeparator" parent="PanelContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -160,3 +160,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 value = 100.0
+
+[connection signal="value_changed" from="PanelContainer/ScrollContainer/VBoxContainer/GridContainer/BrightnessSlider" to="." method="_on_brightness_slider_value_changed"]
+[connection signal="value_changed" from="PanelContainer/ScrollContainer/VBoxContainer/GridContainer/ContrastSlider" to="." method="_on_contrast_slider_value_changed"]
+[connection signal="value_changed" from="PanelContainer/ScrollContainer/VBoxContainer/GridContainer/SaturationSlider" to="." method="_on_saturation_slider_value_changed"]
+[connection signal="value_changed" from="PanelContainer/ScrollContainer/VBoxContainer/GridContainer/FOVSlider" to="." method="_on_fov_slider_value_changed"]
