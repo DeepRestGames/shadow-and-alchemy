@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://qhui0ibm2o5i"]
 
-[ext_resource type="Script" path="res://Scripts/Diary/DiaryTag.gd" id="1_br0fs"]
+[ext_resource type="Script" path="res://Scripts/UI/DiaryTag.gd" id="1_br0fs"]
 [ext_resource type="Texture2D" uid="uid://sntw8ewqgxsi" path="res://Assets/2D/Decals/old_paper.jpg" id="1_qcatd"]
 [ext_resource type="FontFile" uid="uid://c3e6xxrhi3xmf" path="res://Assets/2D/Fonts/Almendra-BoldItalic.ttf" id="2_l35rp"]
 

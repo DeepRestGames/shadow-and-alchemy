@@ -7,6 +7,10 @@ extends Node3D
 @onready var left_page = $Body/Pages2Pivot/Left
 
 @onready var tags = $Tags
+@onready var collider_box_codex = $Tags/Codex/ColliderBox
+@onready var collider_box_studies = $Tags/Studies/ColliderBox
+@onready var collider_box_options = $Tags/Options/ColliderBox
+
 
 var diary_path: String = "res://Assets/DiaryPages/"
 var pages: Array[String]
@@ -49,7 +53,13 @@ func turn_left():
 
 func show_tags():
 	tags.show()
+	collider_box_codex.use_collision = true
+	collider_box_studies.use_collision = true
+	collider_box_options.use_collision = true
 	
 func hide_tags():
 	tags.hide()
+	collider_box_codex.use_collision = false
+	collider_box_studies.use_collision = false
+	collider_box_options.use_collision = false
 

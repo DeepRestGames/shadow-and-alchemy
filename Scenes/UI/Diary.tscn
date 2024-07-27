@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://duhgac42d8866"]
 
-[ext_resource type="Script" path="res://Scripts/Diary/Diary.gd" id="1_2fo65"]
+[ext_resource type="Script" path="res://Scripts/UI/Diary.gd" id="1_3gqoq"]
 [ext_resource type="Texture2D" uid="uid://cglb3g30rrg3x" path="res://Assets/2D/Decals/book_texture.jpg" id="2_n00bc"]
 [ext_resource type="Texture2D" uid="uid://sntw8ewqgxsi" path="res://Assets/2D/Decals/old_paper.jpg" id="3_3vpsv"]
 [ext_resource type="PackedScene" uid="uid://qhui0ibm2o5i" path="res://Scenes/UI/DiaryTag.tscn" id="4_g025o"]
@@ -1267,7 +1267,7 @@ size = Vector3(0.18, 0.01, 1)
 
 [node name="Diary" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
-script = ExtResource("1_2fo65")
+script = ExtResource("1_3gqoq")
 
 [node name="Candle" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45938, 6.37916e-08)
@@ -1336,6 +1336,7 @@ transform = Transform3D(-0.962965, -0.269626, -1.50996e-07, -0.269626, 0.962965,
 
 [node name="ColliderBox" parent="Tags/Codex" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19209e-07, -2.98023e-08, -0.00351566)
+use_collision = false
 size = Vector3(0.15, 0.001, 0.113477)
 
 [node name="TagName" parent="Tags/Codex/ColliderBox" index="0"]
@@ -1346,6 +1347,7 @@ transform = Transform3D(-0.958825, -0.283999, -1.50996e-07, -0.283999, 0.958825,
 
 [node name="ColliderBox" parent="Tags/Studies" index="0"]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, 3.55271e-15, -2.70006e-13, 1, 0, 0, 0.00734866)
+use_collision = false
 size = Vector3(0.15, 0.001, 0.121777)
 
 [node name="TagName" parent="Tags/Studies/ColliderBox" index="0"]
@@ -1358,6 +1360,7 @@ transform = Transform3D(-0.967369, -0.25337, -1.50996e-07, -0.25337, 0.967369, -
 
 [node name="ColliderBox" parent="Tags/Options" index="0"]
 transform = Transform3D(1, 0, 3.01981e-14, 0, 1, -7.10543e-15, -1.77636e-15, 0, 1, 0, 0, -0.00854492)
+use_collision = false
 
 [node name="TagName" parent="Tags/Options/ColliderBox" index="0"]
 transform = Transform3D(0.215, -1.66533e-15, 0, 0, -9.39795e-09, 0.215, 2.66454e-15, -0.215, -9.39795e-09, -2.98023e-08, 0.000999991, -0.00646973)
