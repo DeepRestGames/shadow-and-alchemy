@@ -32,7 +32,8 @@ const creaks = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# Prepare background music
+	##### Prepare background music #####
+
 	var background_music: AudioStreamMP3 = $Audio/BackgroundMusic.stream as AudioStreamMP3
 	var player: Node = get_node("Player")
 
@@ -42,41 +43,29 @@ func _ready():
 	player.connect("startBackgroundMusic", play_backgroundMusic)
 	player.connect("playerMoved", play_footstep)
 
-	# Prepare timers for ambient sounds
-	# TODO: MAKE FUNCTIONS FOR THESE
+	##### Setup sounds #####
+
 	const rand_thunderstorm_min_s: float =  60.0
 	const rand_thunderstorm_max_s: float = 180.0
-	# const rand_thunderstorm_min_s: float = 10.0 # TODO: debug
-	# const rand_thunderstorm_max_s: float = 10.0 # TODO: debug
-	$Audio/ThunderStorm.volume_db = -10
-	$Audio/ThunderStorm.connect("finished", on_thunderstorm_finished)
-	$Timers/ThunderStormTimer.one_shot = true
-	$Timers/ThunderStormTimer.wait_time = randf_range(rand_thunderstorm_min_s, rand_thunderstorm_max_s)
-	$Timers/ThunderStormTimer.connect("timeout", play_thunderstorm)
-	$Timers/ThunderStormTimer.start()
+	# const rand_thunderstorm_min_s: float = 5.0 # TODO: debug
+	# const rand_thunderstorm_max_s: float = 5.0 # TODO: debug
+	const thunderStorm_volume_db: float = -10.0
+	setup_sound($Audio/ThunderStorm, $Timers/ThunderStormTimer, rand_thunderstorm_min_s, rand_thunderstorm_max_s, thunderStorm_volume_db, on_thunderstorm_finished, play_thunderstorm)
 
 	const rand_scream_min_s: float = 120.0
 	const rand_scream_max_s: float = 240.0
 	# const rand_scream_min_s: float = 2.0 # TODO: debug
 	# const rand_scream_max_s: float = 2.0 # TODO: debug
-	$Audio/Screams.volume_db = -30
-	$Audio/Screams.connect("finished", on_scream_finished)
-	$Timers/ScreamTimer.one_shot = true
-	$Timers/ScreamTimer.wait_time = randf_range(rand_scream_min_s, rand_scream_max_s)
-	$Timers/ScreamTimer.connect("timeout", play_scream)
-	$Timers/ScreamTimer.start()
+	const scream_volume_db: float = -30.0
+	setup_sound($Audio/Screams, $Timers/ScreamTimer, rand_scream_min_s, rand_scream_max_s, scream_volume_db, on_scream_finished, play_scream)
 
 
-	const rand_creaks_min_s: float =  60.0
-	const rand_creaks_max_s: float = 120.0
-	# const rand_creaks_min_s: float = 2.0 # TODO: debug
-	# const rand_creaks_max_s: float = 2.0 # TODO: debug
-	$Audio/Creaks.volume_db = -20
-	$Audio/Creaks.connect("finished", on_creak_finished)
-	$Timers/CreaksTimer.one_shot = true
-	$Timers/CreaksTimer.wait_time = randf_range(rand_creaks_min_s, rand_creaks_max_s)
-	$Timers/CreaksTimer.connect("timeout", play_creak)
-	$Timers/CreaksTimer.start()
+	const rand_creak_min_s: float =  60.0
+	const rand_creak_max_s: float = 120.0
+	# const rand_creak_min_s: float = 2.0 # TODO: debug
+	# const rand_creak_max_s: float = 2.0 # TODO: debug
+	const creak_volume_db: float = -20
+	setup_sound($Audio/Creaks, $Timers/CreaksTimer, rand_creak_min_s, rand_creak_max_s, creak_volume_db, on_creak_finished, play_creak)
 
 
 ##### Functions: play sound and music #####
@@ -119,6 +108,15 @@ func on_scream_finished():
 
 func on_creak_finished():
 	$Timers/CreaksTimer.start()
+
+
+func setup_sound(sound_type, timer, rand_min: float, rand_max: float, volume: float, callback, sound_to_play):
+	sound_type.volume_db = volume
+	sound_type.connect("finished", callback)
+	timer.one_shot = true
+	timer.wait_time = randf_range(rand_min, rand_max)
+	timer.connect("timeout", sound_to_play)
+	timer.start()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
