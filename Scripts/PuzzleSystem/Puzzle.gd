@@ -37,6 +37,15 @@ func remove_puzzle_item(item: InventoryItemData):
 	current_puzzle_items.erase(item)
 
 
+func clear_all():
+	if puzzle_solved:
+		return
+	
+	print("Clear puzzles")
+	
+	current_puzzle_items.clear()
+
+
 func change_alchemical_process(process: AlchemicalProcessSymbol.AlchemicalProcesses):
 	if puzzle_solved:
 		return

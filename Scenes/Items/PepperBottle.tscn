@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5icn5i3yr3x"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_ya6is"]
+[ext_resource type="Resource" uid="uid://pyw7fm3enq7a" path="res://Resources/InventoryItems/PepperBottle.tres" id="2_bpr5j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppako"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="PepperBottle" type="CSGCylinder3D"]
+use_collision = true
+collision_layer = 2
+radius = 0.1
+height = 0.3
+material = SubResource("StandardMaterial3D_ppako")
+script = ExtResource("1_ya6is")
+inventory_item_data = ExtResource("2_bpr5j")
+item_model_height = 0.3
