@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://sqgij3kdgwu5"]
+[gd_scene load_steps=52 format=3 uid="uid://sqgij3kdgwu5"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_c5lpw"]
 [ext_resource type="PackedScene" uid="uid://dhmonnu314mp4" path="res://Assets/3D/Props/Alembic_v0.0.0.blend" id="2_84f07"]
@@ -43,6 +43,10 @@
 [ext_resource type="PackedScene" uid="uid://cwrqqwx4c4g0q" path="res://Assets/3D/Props/SpiceJarFilledGrapes.blend" id="40_b0yf5"]
 [ext_resource type="PackedScene" uid="uid://dhtnotvhyj8uf" path="res://Assets/3D/Props/CoinPurse.blend" id="41_mjetn"]
 [ext_resource type="PackedScene" uid="uid://byhimm6jf7lo0" path="res://Assets/3D/Props/GlassFlaskMercury.blend" id="43_t4vpq"]
+[ext_resource type="PackedScene" uid="uid://bp0ye040gn0v2" path="res://Assets/3D/Props/DyingEmber.blend" id="44_q563i"]
+[ext_resource type="PackedScene" uid="uid://w2o5r7xjg8tw" path="res://Assets/3D/Props/EmptyHolderPlate.blend" id="45_mqk40"]
+[ext_resource type="PackedScene" uid="uid://glmn1voquwx6" path="res://Assets/3D/Props/PileOfSubstance.blend" id="46_ry5i7"]
+[ext_resource type="PackedScene" uid="uid://d0256tpfxj4qm" path="res://Assets/3D/Props/VinegarVial.blend" id="47_5s7ca"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_sl1u7"]
 panorama = ExtResource("1_c5lpw")
@@ -244,3 +248,18 @@ transform = Transform3D(-0.12941, 0, -0.482963, 0, 0.5, 0, 0.482963, 0, -0.12941
 
 [node name="GlassFlaskMercury" parent="." instance=ExtResource("43_t4vpq")]
 transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 12.5957, -5.06639e-07, 0.00815308)
+
+[node name="DyingEmber" parent="." instance=ExtResource("44_q563i")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 12.9514, 0.00611886, -0.000220655)
+
+[node name="EmptyHolderPlate" parent="DyingEmber" instance=ExtResource("45_mqk40")]
+transform = Transform3D(1.66667, 0, 1.18424e-14, 0, 1.66667, 0, -1.18424e-14, 0, 1.66667, 0.00250053, -0.0101989, -0.00541021)
+
+[node name="PileOfBrimstone" parent="." instance=ExtResource("46_ry5i7")]
+transform = Transform3D(0.998106, -0.0615189, 0, 0.0615189, 0.998106, 0, 0, 0, 1, 13.3835, -0.0465115, -0.0113891)
+
+[node name="EmptyHolderPlate2" parent="PileOfBrimstone" instance=ExtResource("45_mqk40")]
+transform = Transform3D(0.998106, 0.0615189, 7.09197e-15, -0.0615189, 0.998106, -4.37118e-16, -7.10543e-15, 0, 1, 0.000951767, 0.0465406, 0.00792228)
+
+[node name="VinegarVial" parent="." instance=ExtResource("47_5s7ca")]
+transform = Transform3D(-0.0643402, 0, -0.0765528, 0, 0.2, 0, 0.0765528, 0, -0.0643402, 13.8159, -4.76837e-07, 0.00627333)
