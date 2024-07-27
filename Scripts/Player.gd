@@ -5,7 +5,7 @@ signal startBackgroundMusic
 
 @onready var camera_3d = $Camera3D
 var unfocus_pos: Vector3
-var unfocused_rot: Vector3
+var unfocused_rot: Basis
 
 var facing_direction: FacingDirection = FacingDirection.WEST
 var player_state: PlayerState = PlayerState.IDLE
@@ -96,7 +96,7 @@ func _process_focus_inputs():
 		if Input.is_action_just_pressed("move_forward") and player_state == PlayerState.IDLE:
 			player_state = PlayerState.MOVING
 			unfocus_pos = camera_3d.global_position
-			unfocused_rot = camera_3d.global_rotation_degrees
+			unfocused_rot = camera_3d.global_basis
 			_animate_focus(focus_point)
 		elif Input.is_action_just_pressed("move_backward") and player_state == PlayerState.FOCUSING:
 			player_state = PlayerState.MOVING
@@ -219,12 +219,9 @@ func _animate_focus(focus_point: FocusPoint):
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_parallel(true)
-	var new_rot = focus_point.focus_camera.global_rotation_degrees
-	# FIXME: patch for the spin. Bad but next time we won't use EULER
-	if abs(focus_point.focus_camera.global_rotation_degrees.y - camera_3d.global_rotation_degrees.y) == 360:
-		new_rot.y = camera_3d.global_rotation_degrees.y
+	
 	tween.tween_property(camera_3d, "global_position", focus_point.focus_camera.global_position, TIME_BETWEEN_MOVEMENTS)
-	tween.tween_property(camera_3d, "global_rotation_degrees", new_rot, TIME_BETWEEN_MOVEMENTS)
+	tween.tween_property(camera_3d, "global_basis", focus_point.focus_camera.global_basis, TIME_BETWEEN_MOVEMENTS)
 
 func _animate_defocus(_unfocus_pos, _unfocused_rot):
 	var tween = get_tree().create_tween()
@@ -232,11 +229,9 @@ func _animate_defocus(_unfocus_pos, _unfocused_rot):
 	tween.set_trans(Tween.TRANS_QUAD)
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_parallel(true)
-	# FIXME: patch for the spin. Bad but next time we won't use EULER
-	if abs(_unfocused_rot.y - camera_3d.global_rotation_degrees.y) == 360:
-		_unfocused_rot.y = camera_3d.global_rotation_degrees.y
+	
 	tween.tween_property(camera_3d, "global_position", _unfocus_pos, TIME_BETWEEN_MOVEMENTS)
-	tween.tween_property(camera_3d, "global_rotation_degrees", _unfocused_rot, TIME_BETWEEN_MOVEMENTS)
+	tween.tween_property(camera_3d, "global_basis",  _unfocused_rot, TIME_BETWEEN_MOVEMENTS)
 
 func _tween_focus_over():
 	player_state = PlayerState.FOCUSING

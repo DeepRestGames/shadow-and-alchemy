@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ckc21cpje40gh"]
+[gd_scene load_steps=27 format=3 uid="uid://ckc21cpje40gh"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
 [ext_resource type="Script" path="res://Scripts/MainScene_Prototype02.gd" id="1_cljtm"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://tibfyewtauo3" path="res://Assets/3D/Props/BloodVial_v0.0.0.blend" id="5_dhadr"]
 [ext_resource type="PackedScene" uid="uid://bab13j6o8fp2l" path="res://Scenes/Fireplace.tscn" id="6_ehu2w"]
 [ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="7_bbkbo"]
+[ext_resource type="PackedScene" uid="uid://sncutmva0ga2" path="res://Assets/3D/Props/Hand.blend" id="8_q0jrn"]
 [ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="11_i41rp"]
 [ext_resource type="PackedScene" path="res://Scenes/AlchemicalCircle.tscn" id="11_s71tp"]
 [ext_resource type="PackedScene" uid="uid://1ofvsxrma8iv" path="res://Scenes/Items/CeremonialKnife.tscn" id="12_0jcyq"]
@@ -22,7 +23,6 @@
 [ext_resource type="AudioStream" uid="uid://c2pki04fd8067" path="res://Assets/Audio/Sound/fireplace_1.mp3" id="15_smehp"]
 [ext_resource type="PackedScene" path="res://Scenes/Items/PepperBottle.tscn" id="16_kj40c"]
 [ext_resource type="Resource" path="res://Resources/Puzzles/GenericPuzzle.tres" id="16_vux6x"]
-[ext_resource type="PackedScene" uid="uid://sncutmva0ga2" path="res://Assets/3D/Props/Hand.blend" id="8_q0jrn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("1_aeey2")
@@ -250,6 +250,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23415, 0.419572, 0.944369)
 [node name="Candle" parent="." instance=ExtResource("7_bbkbo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10426, 0.700025, -2.17068)
 
+[node name="Candle" parent="Candle" instance=ExtResource("7_bbkbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876379, 0.434826, 3.95531)
+
 [node name="Candle2" parent="." instance=ExtResource("7_bbkbo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26041, 0.700025, -1.84998)
 
@@ -304,16 +307,12 @@ autoplay = true
 
 [node name="Creaks" type="AudioStreamPlayer" parent="Audio"]
 
+[node name="Hand2" parent="." instance=ExtResource("8_q0jrn")]
+transform = Transform3D(-0.02, 0, -3.01992e-09, 0, 0.02, 0, 3.01992e-09, 0, -0.02, -1.31919, 1.2208, 1.85045)
+
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointSedia"]
 [editable path="Navigation/FocusPoints/FocusPointChest"]
 [editable path="Navigation/FocusPoints/FocusPointLibrary"]
 [editable path="Navigation/FocusPoints/FocusPointLectern"]
 [editable path="Navigation/FocusPoints/FocusPointHole"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438814, 0.811123, -2.12823)
-
-[node name="Candle" parent="Candle" instance=ExtResource("7_bbkbo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876379, 0.434826, 3.95531)
-
-[node name="Hand2" parent="." instance=ExtResource("8_q0jrn")]
-transform = Transform3D(-0.02, 0, -3.01992e-09, 0, 0.02, 0, 3.01992e-09, 0, -0.02, -1.31919, 1.2208, 1.85045)
