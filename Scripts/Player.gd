@@ -47,7 +47,7 @@ func _process(_delta):
 	
 
 	# TODO: experiment to start creepy soundtrack at a scripted moment (in this example, focussing on `NavigationPoint11`)
-	if (player_state == PlayerState.FOCUSING) and ("NavigationPoint11" in str(current_navigation_point)):
+	if (player_state == PlayerState.FOCUSING) and ("Lectern" in str(current_navigation_point)):
 		startBackgroundMusic.emit()
 
 	# TODO: DEBUG/REMOVE
