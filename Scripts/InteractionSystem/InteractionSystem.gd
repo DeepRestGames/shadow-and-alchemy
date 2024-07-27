@@ -19,6 +19,10 @@ var is_dragging_item := false
 var dragged_item_data = null
 var current_intersected_puzzle_slot: PuzzleSlot
 
+# Diary interactions
+@export var diary_collision_layer := 32
+var current_intersected_tag: DiaryTag
+
 
 func _ready():
 	viewport = get_viewport()
@@ -37,7 +41,6 @@ func _input(event):
 
 
 func _process(_delta):
-	
 	if Input.is_action_just_pressed("left_click"):
 		# Check collisions with props
 		var props_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, props_collision_layer)
@@ -48,8 +51,17 @@ func _process(_delta):
 			
 			if current_intersected_prop != null:
 				current_intersected_prop._interacted()
+		# ------
+		var diary_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, diary_collision_layer)
+		var diary_collision_result := space_state.intersect_ray(diary_collision_query)
 		
+		if not diary_collision_result.is_empty():
+			current_intersected_tag = diary_collision_result["collider"] as DiaryTag
+			# TODO: !!!
+			current_intersected_tag._pressed()
+			#current_intersected_tag._highlight()
 	
+			
 	if is_dragging_item and Input.is_action_just_released("left_click"):
 		# Check collisions with puzzle slots
 		var puzzle_slots_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, puzzle_slots_collision_layer)

@@ -6,6 +6,8 @@ extends Node3D
 @onready var right_page = $Body/PagesPivot/Right
 @onready var left_page = $Body/Pages2Pivot/Left
 
+@onready var tags = $Tags
+
 var diary_path: String = "res://Assets/DiaryPages/"
 var pages: Array[String]
 var current_left_page_index: int = 0:
@@ -44,3 +46,10 @@ func turn_left():
 	left_page.texture = load(pages[current_left_page_index])
 	right_page.texture = load(pages[current_left_page_index+1])
 	
+
+func show_tags():
+	tags.show()
+	
+func hide_tags():
+	tags.hide()
+

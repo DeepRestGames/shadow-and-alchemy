@@ -80,6 +80,7 @@ turn_diary_right={
 3d_physics/layer_1="Default"
 3d_physics/layer_2="Props"
 3d_physics/layer_3="Puzzle Slots"
+3d_physics/layer_6="DiaryTags"
 
 [rendering]
 
