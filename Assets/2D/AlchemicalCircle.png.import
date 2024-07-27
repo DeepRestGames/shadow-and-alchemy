@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7qphghswk1iv"
-path.s3tc="res://.godot/imported/Aquarius_Multiplication.png-f2f134aeeea345c7e2f3734f6a264345.s3tc.ctex"
-path.etc2="res://.godot/imported/Aquarius_Multiplication.png-f2f134aeeea345c7e2f3734f6a264345.etc2.ctex"
+uid="uid://6aoyooeqvgds"
+path.s3tc="res://.godot/imported/AlchemicalCircle.png-41bdbc11f12d5a66a43e847c2fe4d4fa.s3tc.ctex"
+path.etc2="res://.godot/imported/AlchemicalCircle.png-41bdbc11f12d5a66a43e847c2fe4d4fa.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/AlchemicalProcesses/Aquarius_Multiplication.png"
-dest_files=["res://.godot/imported/Aquarius_Multiplication.png-f2f134aeeea345c7e2f3734f6a264345.s3tc.ctex", "res://.godot/imported/Aquarius_Multiplication.png-f2f134aeeea345c7e2f3734f6a264345.etc2.ctex"]
+source_file="res://Assets/2D/AlchemicalCircle.png"
+dest_files=["res://.godot/imported/AlchemicalCircle.png-41bdbc11f12d5a66a43e847c2fe4d4fa.s3tc.ctex", "res://.godot/imported/AlchemicalCircle.png-41bdbc11f12d5a66a43e847c2fe4d4fa.etc2.ctex"]
 
 [params]
 

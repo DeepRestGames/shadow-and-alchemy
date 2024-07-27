@@ -6,6 +6,13 @@ extends Node3D
 @onready var right_page = $Body/PagesPivot/Right
 @onready var left_page = $Body/Pages2Pivot/Left
 
+@onready var tags = $Tags
+@onready var collider_box_codex = $Tags/Codex/ColliderBox
+@onready var collider_box_studies = $Tags/Studies/ColliderBox
+@onready var collider_box_options = $Tags/Options/ColliderBox
+@onready var options = $Options
+
+
 var diary_path: String = "res://Assets/DiaryPages/"
 var pages: Array[String]
 var current_left_page_index: int = 0:
@@ -44,3 +51,29 @@ func turn_left():
 	left_page.texture = load(pages[current_left_page_index])
 	right_page.texture = load(pages[current_left_page_index+1])
 	
+
+func show_tags():
+	tags.show()
+	collider_box_codex.use_collision = true
+	collider_box_studies.use_collision = true
+	collider_box_options.use_collision = true
+	
+func hide_tags():
+	tags.hide()
+	collider_box_codex.use_collision = false
+	collider_box_studies.use_collision = false
+	collider_box_options.use_collision = false
+
+
+
+func _on_codex_tag_pressed():
+	pass # Replace with function body.
+
+
+func _on_studies_tag_pressed():
+	# TODO
+	options.hide()
+
+
+func _on_options_tag_pressed():
+	options.show()
