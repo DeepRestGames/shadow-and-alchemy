@@ -31,9 +31,13 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
+"BloodVialCork": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/Cork.tres"
+},
 "BloodVialGlass.001": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/BloodVialGlass.001.tres"
+"use_external/path": "res://Assets/3D/Props/materials/Glass.tres"
 }
 }
 }

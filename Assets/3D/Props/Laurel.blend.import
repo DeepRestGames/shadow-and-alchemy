@@ -29,7 +29,26 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"LaurelBud": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/LaurelBud.tres"
+},
+"LaurelLeaf": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/LaurelLeaf.tres"
+},
+"LaurelLeafNerve": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/LaurelLeafNerve.tres"
+},
+"LeurelLeafBot": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/LeurelLeafBot.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0

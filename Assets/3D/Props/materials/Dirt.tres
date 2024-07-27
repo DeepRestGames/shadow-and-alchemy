@@ -10,5 +10,6 @@ specular_mode = 1
 albedo_color = Color(0.470588, 0.305882, 0.207843, 1)
 albedo_texture = ExtResource("1_lubnu")
 roughness = 0.7
-uv1_scale = Vector3(-2.595, -2.595, -2.595)
+uv1_scale = Vector3(-12, -12, -12)
+uv1_triplanar = true
 uv1_world_triplanar = true
