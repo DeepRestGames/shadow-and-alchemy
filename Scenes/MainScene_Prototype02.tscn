@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ckc21cpje40gh"]
+[gd_scene load_steps=14 format=3 uid="uid://ckc21cpje40gh"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="1_g4vuj"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://tibfyewtauo3" path="res://Assets/3D/Props/BloodVial_v0.0.0.blend" id="5_dhadr"]
 [ext_resource type="PackedScene" uid="uid://bab13j6o8fp2l" path="res://Scenes/Fireplace.tscn" id="6_ehu2w"]
 [ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="7_bbkbo"]
-[ext_resource type="PackedScene" uid="uid://4gxkhk21pip5" path="res://Scenes/UI/Options.tscn" id="11_sw50j"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("1_aeey2")
@@ -236,9 +235,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23415, 0.419572, 0.944369)
 
 [node name="Candle" parent="." instance=ExtResource("7_bbkbo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438814, 0.811123, -2.12823)
-
-[node name="Options" parent="." instance=ExtResource("11_sw50j")]
-offset_right = 0.00012207
 
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointSedia"]

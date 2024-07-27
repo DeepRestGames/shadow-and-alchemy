@@ -1,12 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://4gxkhk21pip5"]
+[gd_scene load_steps=10 format=3 uid="uid://4gxkhk21pip5"]
 
 [ext_resource type="FontFile" uid="uid://jptr3xo23dxp" path="res://Assets/2D/Fonts/Almendra-Bold.ttf" id="1_0pbx1"]
 [ext_resource type="Script" path="res://Scripts/UI/Options.gd" id="1_enu68"]
 [ext_resource type="Texture2D" uid="uid://sntw8ewqgxsi" path="res://Assets/2D/Decals/old_paper.jpg" id="3_5atbq"]
+[ext_resource type="FontFile" uid="uid://c3e6xxrhi3xmf" path="res://Assets/2D/Fonts/Almendra-BoldItalic.ttf" id="3_u4d00"]
 [ext_resource type="FontFile" uid="uid://cj2farydupwf2" path="res://Assets/2D/Fonts/Almendra-Regular.ttf" id="4_8jf53"]
 
 [sub_resource type="Theme" id="Theme_abjt3"]
 default_font = ExtResource("1_0pbx1")
+
+[sub_resource type="Theme" id="Theme_4uxxt"]
+default_font = ExtResource("3_u4d00")
+default_font_size = 48
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fi18k"]
 texture = ExtResource("3_5atbq")
@@ -29,13 +34,29 @@ grow_vertical = 2
 theme = SubResource("Theme_abjt3")
 script = ExtResource("1_enu68")
 
+[node name="HideSettingsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -775.0
+offset_top = 204.0
+offset_right = -745.0
+offset_bottom = 275.0
+grow_horizontal = 0
+focus_mode = 0
+theme = SubResource("Theme_4uxxt")
+toggle_mode = true
+button_pressed = true
+text = "x"
+
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 200.0
+offset_left = 745.0
 offset_top = 200.0
-offset_right = 630.0
+offset_right = 1175.0
 offset_bottom = -232.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_fi18k")

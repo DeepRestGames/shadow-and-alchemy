@@ -1367,6 +1367,10 @@ transform = Transform3D(0.215, -1.66533e-15, 0, 0, -9.39795e-09, 0.215, 2.66454e
 text = "Options"
 font_size = 40
 
+[connection signal="tag_pressed" from="Tags/Codex/ColliderBox" to="." method="_on_codex_tag_pressed"]
+[connection signal="tag_pressed" from="Tags/Studies/ColliderBox" to="." method="_on_studies_tag_pressed"]
+[connection signal="tag_pressed" from="Tags/Options/ColliderBox" to="." method="_on_options_tag_pressed"]
+
 [editable path="Tags/Codex"]
 [editable path="Tags/Studies"]
 [editable path="Tags/Options"]
