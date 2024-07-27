@@ -11,16 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://tibfyewtauo3" path="res://Assets/3D/Props/BloodVial_v0.0.0.blend" id="9_ho7y3"]
 [ext_resource type="PackedScene" uid="uid://bab13j6o8fp2l" path="res://Scenes/Fireplace.tscn" id="10_6u8tf"]
 [ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="11_llow7"]
-[ext_resource type="PackedScene" path="res://Scenes/AlchemicalCircle.tscn" id="12_hwcwv"]
+[ext_resource type="PackedScene" uid="uid://ddvlmsgydjki2" path="res://Scenes/AlchemicalCircle.tscn" id="12_hwcwv"]
 [ext_resource type="PackedScene" uid="uid://1ofvsxrma8iv" path="res://Scenes/Items/CeremonialKnife.tscn" id="13_auv7v"]
 [ext_resource type="PackedScene" uid="uid://b3hkdu32yh165" path="res://Assets/3D/Props/Opal_v0.0.0.blend" id="14_7ctho"]
 [ext_resource type="PackedScene" uid="uid://c334blq5lnfot" path="res://Scenes/Items/SaltBottle.tscn" id="14_ej30i"]
 [ext_resource type="PackedScene" uid="uid://dl1o0hpwktapu" path="res://Assets/3D/Props/Sieve_v0.0.0.blend" id="15_p5chk"]
-[ext_resource type="PackedScene" path="res://Scenes/InteractionSystem/GenericPuzzleSlot.tscn" id="16_dsr2u"]
+[ext_resource type="PackedScene" uid="uid://dm136mrn7n57f" path="res://Scenes/InteractionSystem/GenericPuzzleSlot.tscn" id="16_dsr2u"]
 [ext_resource type="PackedScene" uid="uid://6hhogeucrtfh" path="res://Assets/3D/Props/CandeHolderWall.blend" id="16_irf7i"]
-[ext_resource type="Resource" path="res://Resources/Puzzles/GenericPuzzle.tres" id="17_4g4wa"]
+[ext_resource type="Resource" uid="uid://bc28owxb2cimb" path="res://Resources/Puzzles/GenericPuzzle.tres" id="17_4g4wa"]
 [ext_resource type="PackedScene" uid="uid://biqkt2i023ui1" path="res://Assets/3D/Props/Laurel.blend" id="17_86e6w"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/PepperBottle.tscn" id="18_d3p6l"]
+[ext_resource type="PackedScene" uid="uid://c5icn5i3yr3x" path="res://Scenes/Items/PepperBottle.tscn" id="18_d3p6l"]
 [ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="19_cy568"]
 [ext_resource type="AudioStream" uid="uid://t622sra4diub" path="res://Assets/Audio/Sound/footsteps_wood_single_2.mp3" id="20_awg3m"]
 [ext_resource type="AudioStream" uid="uid://dlwk5ak6u2vgr" path="res://Assets/Audio/Sound/storm_faded.mp3" id="21_nduse"]
@@ -214,36 +214,6 @@ transform = Transform3D(0.965473, -0.260505, 0, 0.260505, 0.965473, 0, 0, 0, 1, 
 [node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointHole" index="1"]
 transform = Transform3D(-4.87482e-08, 0.20827, -0.978071, 2.75917e-09, 0.978071, 0.20827, 1, 7.45414e-09, -4.82539e-08, -0.674685, 0.132381, -2.98023e-07)
 
-[node name="Timers" type="Node" parent="."]
-
-[node name="ThunderStormTimer" type="Timer" parent="Timers"]
-
-[node name="ScreamTimer" type="Timer" parent="Timers"]
-
-[node name="CreaksTimer" type="Timer" parent="Timers"]
-
-[node name="Audio" type="Node" parent="."]
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("19_cy568")
-
-[node name="Footsteps" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("20_awg3m")
-
-[node name="ThunderStorm" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("21_nduse")
-
-[node name="Fireplace" type="AudioStreamPlayer3D" parent="Audio"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.234, 0.42, 0.944)
-stream = ExtResource("22_4qygc")
-attenuation_model = 1
-unit_size = 4.0
-autoplay = true
-
-[node name="Screams" type="AudioStreamPlayer" parent="Audio"]
-
-[node name="Creaks" type="AudioStreamPlayer" parent="Audio"]
-
 [node name="Objects" type="Node3D" parent="."]
 
 [node name="Hand3" parent="Objects" instance=ExtResource("23_af127")]
@@ -313,6 +283,42 @@ transform = Transform3D(0.0529982, 0, 0.998595, 0, 1, 0, -0.998595, 0, 0.0529982
 [node name="GenericPuzzleSlot" parent="Objects/Sieve_v0_0_0" instance=ExtResource("16_dsr2u")]
 transform = Transform3D(0.4, 0, 3.72529e-09, 0, 0.4, 0, -3.72529e-09, 0, 0.4, -0.000965953, 0.0321101, -0.260425)
 related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("17_4g4wa")])
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("19_cy568")
+bus = &"Music"
+
+[node name="Footsteps" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("20_awg3m")
+bus = &"SFX"
+
+[node name="ThunderStorm" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("21_nduse")
+bus = &"SFX"
+
+[node name="Fireplace" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.234, 0.42, 0.944)
+stream = ExtResource("22_4qygc")
+attenuation_model = 1
+unit_size = 4.0
+autoplay = true
+bus = &"SFX"
+
+[node name="Screams" type="AudioStreamPlayer" parent="Audio"]
+bus = &"SFX"
+
+[node name="Creaks" type="AudioStreamPlayer" parent="Audio"]
+bus = &"SFX"
+
+[node name="Timers" type="Node" parent="Audio"]
+
+[node name="ThunderStormTimer" type="Timer" parent="Audio/Timers"]
+
+[node name="ScreamTimer" type="Timer" parent="Audio/Timers"]
+
+[node name="CreaksTimer" type="Timer" parent="Audio/Timers"]
 
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointWindow"]
