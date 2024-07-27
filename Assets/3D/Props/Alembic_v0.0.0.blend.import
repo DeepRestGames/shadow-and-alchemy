@@ -31,9 +31,17 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
+"AlembicBase1": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/DarkMetal.tres"
+},
+"AlembicBase2": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/GenericWoodTriplanar.tres"
+},
 "AlembicGlas.001": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/BloodVialGlass.001.tres"
+"use_external/path": "res://Assets/3D/Props/materials/Glass.tres"
 }
 }
 }

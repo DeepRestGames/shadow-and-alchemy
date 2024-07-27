@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dppflreshnbo8"
-path="res://.godot/imported/BloodVialSeparated_v0.0.0.blend-3da710eb6f944d77a13d1ac93ef92e2e.scn"
+uid="uid://cwr2mtw5bu8b6"
+path="res://.godot/imported/BookPurple_v0.0.0.blend-6dabc085234bc69016575f0c94704fe7.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/BloodVialSeparated_v0.0.0.blend"
-dest_files=["res://.godot/imported/BloodVialSeparated_v0.0.0.blend-3da710eb6f944d77a13d1ac93ef92e2e.scn"]
+source_file="res://Assets/3D/Props/BookPurple_v0.0.0.blend"
+dest_files=["res://.godot/imported/BookPurple_v0.0.0.blend-6dabc085234bc69016575f0c94704fe7.scn"]
 
 [params]
 
@@ -31,23 +31,11 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"BloodVialBloodAbove.001": {
+"BookCover": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/BloodVialBloodAbove.001.tres"
+"use_external/path": "res://Assets/3D/Props/materials/BookCoverPurple.tres"
 },
-"BloodVialBloodBelow": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/BloodVialBloodBelow.tres"
-},
-"BloodVialCork": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Cork.tres"
-},
-"BloodVialGlass.001": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Glass.tres"
-},
-"BloodVialLabel": {
+"BookPage": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/3D/Props/materials/Label.tres"
 }

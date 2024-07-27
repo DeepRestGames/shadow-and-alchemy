@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dppflreshnbo8"
-path="res://.godot/imported/BloodVialSeparated_v0.0.0.blend-3da710eb6f944d77a13d1ac93ef92e2e.scn"
+uid="uid://06tmis2stgmo"
+path="res://.godot/imported/BowlOfDirt.blend-b9909260c07c83c3b64a2d562049a00b.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/BloodVialSeparated_v0.0.0.blend"
-dest_files=["res://.godot/imported/BloodVialSeparated_v0.0.0.blend-3da710eb6f944d77a13d1ac93ef92e2e.scn"]
+source_file="res://Assets/3D/Props/BowlOfDirt.blend"
+dest_files=["res://.godot/imported/BowlOfDirt.blend-b9909260c07c83c3b64a2d562049a00b.scn"]
 
 [params]
 
@@ -31,25 +31,13 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"BloodVialBloodAbove.001": {
+"Bowl": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/BloodVialBloodAbove.001.tres"
+"use_external/path": "res://Assets/3D/Props/materials/GenericWood.tres"
 },
-"BloodVialBloodBelow": {
+"Substance": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/BloodVialBloodBelow.tres"
-},
-"BloodVialCork": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Cork.tres"
-},
-"BloodVialGlass.001": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Glass.tres"
-},
-"BloodVialLabel": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Label.tres"
+"use_external/path": "res://Assets/3D/Props/materials/Dirt.tres"
 }
 }
 }

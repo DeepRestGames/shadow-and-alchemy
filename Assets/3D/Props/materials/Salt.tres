@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bioqnfralu041"]
+
+[ext_resource type="Texture2D" uid="uid://bia8kakdk0xdm" path="res://Assets/3D/Cabin/textures/Stone1.png" id="1_177ji"]
+
+[resource]
+resource_name = "AlembicBase2"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(1, 0.917647, 0.894118, 1)
+albedo_texture = ExtResource("1_177ji")
+roughness = 0.7
+uv1_scale = Vector3(-2.595, -2.595, -2.595)
+uv1_world_triplanar = true
