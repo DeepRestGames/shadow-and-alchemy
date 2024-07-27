@@ -22,6 +22,9 @@ var current_intersected_puzzle_slot: PuzzleSlot
 # Diary interactions
 @export var diary_collision_layer := 32
 var current_intersected_tag: DiaryTag
+# Alchemical process symbols interactions
+@export var alchemical_process_symbols_collision_layer := 8
+var current_intersected_alchemical_process_symbols: AlchemicalProcessSymbol
 
 
 func _ready():
@@ -60,6 +63,26 @@ func _process(_delta):
 			# TODO: !!!
 			current_intersected_tag._pressed()
 			#current_intersected_tag._highlight()
+		# Check for alchemical process symbol
+		var alchemical_process_symbols_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, alchemical_process_symbols_collision_layer)
+		var alchemical_process_symbols_collision_result := space_state.intersect_ray(alchemical_process_symbols_collision_query)
+		
+		if not alchemical_process_symbols_collision_result.is_empty():
+			current_intersected_alchemical_process_symbols = alchemical_process_symbols_collision_result["collider"] as AlchemicalProcessSymbol
+			
+			if current_intersected_alchemical_process_symbols != null:
+				current_intersected_alchemical_process_symbols._interacted()
+		
+		# Check for collisions with generic puzzle slots
+		var puzzle_slots_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, puzzle_slots_collision_layer)
+		var puzzle_slots_collision_result := space_state.intersect_ray(puzzle_slots_collision_query)
+		
+		if not puzzle_slots_collision_result.is_empty():
+			current_intersected_puzzle_slot = puzzle_slots_collision_result["collider"] as GenericPuzzleSlot
+			
+			if current_intersected_puzzle_slot != null:
+				current_intersected_puzzle_slot.remove_items()
+		
 	
 			
 	if is_dragging_item and Input.is_action_just_released("left_click"):
@@ -72,7 +95,6 @@ func _process(_delta):
 			
 			if current_intersected_puzzle_slot != null:
 				current_intersected_puzzle_slot.item_dropped(dragged_item_data)
-				InventorySystem.remove_item(dragged_item_data)
 		
 		is_dragging_item = false
 		dragged_item_data = null

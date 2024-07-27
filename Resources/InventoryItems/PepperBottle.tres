@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://pyw7fm3enq7a"]
+
+[ext_resource type="Texture2D" uid="uid://bole8v4e0270l" path="res://Icons/InventoryItemPlaceholder.png" id="1_q8fx5"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_870j8"]
+
+[resource]
+script = ExtResource("2_870j8")
+item_name = "Pepper Bottle"
+item_icon = ExtResource("1_q8fx5")
+is_reusable = true
+item_model_scene_path = "res://Scenes/Items/PepperBottle.tscn"

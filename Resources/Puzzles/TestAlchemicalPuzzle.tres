@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://dtrbxn2iexvy"]
+[gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://nfe0h4tn2qaf"]
 
 [ext_resource type="Resource" uid="uid://yst2g71wu8b4" path="res://Resources/InventoryItems/CeremonialKnife.tres" id="1_jm7yr"]
 [ext_resource type="Resource" uid="uid://cuiafakro6su" path="res://Resources/InventoryItems/SaltBottle.tres" id="2_2fpil"]
@@ -7,10 +7,10 @@
 
 [resource]
 script = ExtResource("4_igfej")
-puzzle_name = "TestObjectsPuzzle"
+puzzle_name = "TestAlchemicalPuzzle"
 puzzle_description = ""
 puzzle_solution_items = [ExtResource("1_jm7yr"), ExtResource("2_2fpil")]
 order_needed = false
 reward = ExtResource("3_k2olv")
-alchemical_process_needed = false
-alchemical_process_solution = 0
+alchemical_process_needed = true
+alchemical_process_solution = 8
