@@ -21,5 +21,7 @@ func item_removed(item: InventoryItemData):
 
 
 func remove_items():
+	print("Removed items from puzzle!")
+	
 	for puzzle in related_puzzles:
 		puzzle.clear_all()

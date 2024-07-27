@@ -63,6 +63,16 @@ func _process(_delta):
 			if current_intersected_alchemical_process_symbols != null:
 				current_intersected_alchemical_process_symbols._interacted()
 		
+		# Check for collisions with generic puzzle slots
+		var puzzle_slots_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, puzzle_slots_collision_layer)
+		var puzzle_slots_collision_result := space_state.intersect_ray(puzzle_slots_collision_query)
+		
+		if not puzzle_slots_collision_result.is_empty():
+			current_intersected_puzzle_slot = puzzle_slots_collision_result["collider"] as GenericPuzzleSlot
+			
+			if current_intersected_puzzle_slot != null:
+				current_intersected_puzzle_slot.remove_items()
+		
 	
 	if is_dragging_item and Input.is_action_just_released("left_click"):
 		# Check collisions with puzzle slots
