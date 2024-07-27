@@ -12,6 +12,13 @@ var current_dropped_item_scene = null
 
 
 func item_dropped(item: InventoryItemData):
+	# Swap dropped item with already present one
+	if current_dropped_item != null:
+		InventorySystem.add_item(current_dropped_item)
+		current_dropped_item_scene.queue_free()
+		
+		item_removed(current_dropped_item)
+	
 	print("Item " + item.item_name + " dropped in slot!")
 	current_dropped_item = item
 	
