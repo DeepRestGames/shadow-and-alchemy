@@ -30,3 +30,4 @@ offset_bottom = 40.0
 transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 0, 0.376769, -0.901496)
 
 [node name="Options" parent="Diary" instance=ExtResource("4_la86e")]
+visible = false

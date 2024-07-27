@@ -39,3 +39,7 @@ func _on_music_slider_value_changed(value):
 
 func _on_sfx_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(value))
+
+
+func _on_hide_settings_button_pressed():
+	hide()

@@ -1308,7 +1308,7 @@ material_override = SubResource("StandardMaterial3D_da6ug")
 size = Vector3(0.681, 0.065, 0.959)
 
 [node name="Right" type="Sprite3D" parent="Body/PagesPivot"]
-transform = Transform3D(0.0179285, -7.03648e-11, -0.00886395, -0.00886395, -3.67726e-10, -0.0179285, -9.98985e-11, 0.02, -3.60825e-10, -0.300325, 0.209607, 3.62838e-10)
+transform = Transform3D(0.0224106, -1.13186e-10, -0.0110799, -0.0110799, -4.84319e-10, -0.0224106, -1.13186e-10, 0.025, -4.84319e-10, -0.300325, 0.209607, 3.62838e-10)
 flip_h = true
 
 [node name="Pages2Pivot" type="Node3D" parent="Body"]
@@ -1320,7 +1320,7 @@ material_override = SubResource("StandardMaterial3D_da6ug")
 size = Vector3(0.681, 0.06, 0.959)
 
 [node name="Left" type="Sprite3D" parent="Body/Pages2Pivot"]
-transform = Transform3D(0.0191568, -7.10568e-11, 0.00574621, 0.00574621, -1.55188e-10, -0.0191568, 1.12648e-10, 0.02, -1.28231e-10, 0.325177, 0.154857, 6.74538e-11)
+transform = Transform3D(0.0239459, 4.60743e-11, 0.00718274, 0.00718274, -3.13968e-10, -0.0239459, 4.60743e-11, 0.025, -3.13968e-10, 0.325177, 0.154857, 6.74538e-11)
 flip_h = true
 
 [node name="Stipite" type="MeshInstance3D" parent="Body"]
