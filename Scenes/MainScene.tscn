@@ -1,8 +1,8 @@
-[gd_scene load_steps=117 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=111 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
-[ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="3_ba04y"]
+[ext_resource type="Texture2D" uid="uid://5vv2grj3yhfy" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k_blurred.hdr" id="4_dkxga"]
 [ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="4_wff7c"]
 [ext_resource type="PackedScene" uid="uid://bhv1boykqvw23" path="res://Scenes/PlayerMovement/NavigationPoint.tscn" id="5_5eyhx"]
 [ext_resource type="PackedScene" uid="uid://b68s0qxy7ri2k" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="6_uhtdf"]
@@ -50,7 +50,7 @@
 [ext_resource type="Texture2D" uid="uid://bjfxknyjo1to4" path="res://Assets/2D/AlchemicalMaterials/Mercury_Spirit.png" id="45_20rln"]
 [ext_resource type="Texture2D" uid="uid://m3n5auvsl1eg" path="res://Assets/2D/BasicElements/Water.png" id="45_yqq5f"]
 [ext_resource type="Texture2D" uid="uid://c8fbk85aj43j1" path="res://Assets/2D/BasicElements/Fire.png" id="46_hocwh"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/BookRed.tscn" id="46_x03fn"]
+[ext_resource type="PackedScene" uid="uid://dftwsm7355x7m" path="res://Scenes/Items/BookRed.tscn" id="46_x03fn"]
 [ext_resource type="Texture2D" uid="uid://c11eae4qq7wk3" path="res://Assets/2D/BasicElements/Earth.png" id="47_wjf4x"]
 [ext_resource type="Texture2D" uid="uid://hynfrwtgbvxl" path="res://Assets/2D/AlchemicalProcesses/Taurus_Congelation.png" id="48_dcc0o"]
 [ext_resource type="PackedScene" uid="uid://i0cbyypo3vy4" path="res://Scenes/Items/BookBrown.tscn" id="48_s5nvg"]
@@ -65,7 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://ewlcjmyc4nox" path="res://Assets/2D/AlchemicalProcesses/Sagittarius_Ceration.png" id="54_dwvc6"]
 [ext_resource type="Texture2D" uid="uid://dlu0peeukk8qn" path="res://Assets/2D/Decals/Blank.png" id="55_5y37y"]
 [ext_resource type="Texture2D" uid="uid://c31yis5cdjonm" path="res://Assets/2D/AlchemicalProcesses/Capricorn_Fermentation_Putrefaction.png" id="55_djyml"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/BookBlack.tscn" id="57_1l3i3"]
+[ext_resource type="PackedScene" uid="uid://beb3g1worunrn" path="res://Scenes/Items/BookBlack.tscn" id="57_1l3i3"]
 [ext_resource type="Texture2D" uid="uid://bmd2cemv3mk2p" path="res://Assets/2D/AlchemicalProcesses/Pisces_Projection.png" id="57_uv6jf"]
 [ext_resource type="Texture2D" uid="uid://7qphghswk1iv" path="res://Assets/2D/AlchemicalProcesses/Aquarius_Multiplication.png" id="58_efy78"]
 [ext_resource type="Texture2D" uid="uid://dvkf8tp7s5461" path="res://Assets/2D/AlchemicalProcesses/Aries_Calcination.png" id="59_qei4b"]
@@ -80,15 +80,16 @@
 [ext_resource type="PackedScene" uid="uid://c877sa63qy5pe" path="res://Assets/3D/Props/Key.blend" id="83_n727y"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
-panorama = ExtResource("3_ba04y")
+panorama = ExtResource("4_dkxga")
 filter = false
 
 [sub_resource type="Sky" id="Sky_fu3n5"]
 sky_material = SubResource("PanoramaSkyMaterial_tca5b")
 
 [sub_resource type="Environment" id="Environment_nps7j"]
-background_mode = 1
+background_mode = 2
 background_color = Color(0, 0, 0.0470588, 1)
+background_energy_multiplier = 1.32
 sky = SubResource("Sky_fu3n5")
 sky_rotation = Vector3(0, -2.10836, 0)
 tonemap_mode = 3
