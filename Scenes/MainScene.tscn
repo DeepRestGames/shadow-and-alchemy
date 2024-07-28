@@ -1,6 +1,6 @@
 [gd_scene load_steps=43 format=3 uid="uid://csckcocqivyj5"]
 
-[ext_resource type="Script" path="res://Scripts/MainScene_Prototype02.gd" id="1_3wtai"]
+[ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="3_ba04y"]
 [ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="4_wff7c"]
@@ -60,7 +60,7 @@ material = ExtResource("11_cjmjh")
 [sub_resource type="QuadMesh" id="QuadMesh_gx6p0"]
 
 [node name="MainScene" type="Node3D"]
-script = ExtResource("1_3wtai")
+script = ExtResource("1_wd68j")
 
 [node name="Player" parent="." node_paths=PackedStringArray("current_navigation_point") instance=ExtResource("2_83pmb")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.87529, 1.43448, -1.35045)
