@@ -400,12 +400,7 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5.82548, 1.19247, 0.0497332)
 stream = ExtResource("19_cy568")
 bus = &"Music"
 
-[node name="Footsteps" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("20_awg3m")
-bus = &"SFX"
-
-[node name="ThunderStorm" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("21_nduse")
+[node name="Creaks" type="AudioStreamPlayer" parent="Audio"]
 bus = &"SFX"
 
 [node name="Fireplace" type="AudioStreamPlayer3D" parent="Audio"]
@@ -416,19 +411,26 @@ unit_size = 4.0
 autoplay = true
 bus = &"SFX"
 
+[node name="Footsteps" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("20_awg3m")
+bus = &"SFX"
+
+[node name="GenericSounds" type="AudioStreamPlayer" parent="Audio"]
+
 [node name="Screams" type="AudioStreamPlayer" parent="Audio"]
 bus = &"SFX"
 
-[node name="Creaks" type="AudioStreamPlayer" parent="Audio"]
+[node name="ThunderStorm" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("21_nduse")
 bus = &"SFX"
 
 [node name="Timers" type="Node" parent="Audio"]
 
-[node name="ThunderStormTimer" type="Timer" parent="Audio/Timers"]
+[node name="CreaksTimer" type="Timer" parent="Audio/Timers"]
 
 [node name="ScreamTimer" type="Timer" parent="Audio/Timers"]
 
-[node name="CreaksTimer" type="Timer" parent="Audio/Timers"]
+[node name="ThunderStormTimer" type="Timer" parent="Audio/Timers"]
 
 [node name="Chests" type="Node3D" parent="."]
 
