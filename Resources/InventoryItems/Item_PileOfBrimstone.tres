@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://cwi1dqmu5sh2v"]
+
+[ext_resource type="Texture2D" uid="uid://d38egp13p62ji" path="res://Assets/2D/InventoryItemsIcons/PileOfBrimstone.jpg" id="1_ac531"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_4j4oy"]
+
+[resource]
+script = ExtResource("2_4j4oy")
+item_name = "Pile of Brimstone"
+item_icon = ExtResource("1_ac531")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_PileOfBrimstone.tscn"

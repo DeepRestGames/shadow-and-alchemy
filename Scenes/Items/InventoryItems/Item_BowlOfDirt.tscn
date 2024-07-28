@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dv75xu325saoj"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_mdhkx"]
+[ext_resource type="Resource" uid="uid://bi6ffk7bxchk6" path="res://Resources/InventoryItems/Item_BowlOfDirt.tres" id="2_4eiqk"]
+[ext_resource type="PackedScene" uid="uid://06tmis2stgmo" path="res://Assets/3D/Props/BowlOfDirt.blend" id="3_mporn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemBowlOfDirt" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.213, 0.1, 0.192383)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_mdhkx")
+inventory_item_data = ExtResource("2_4eiqk")
+item_model_height = 0.1
+
+[node name="BowlOfDirt" parent="." instance=ExtResource("3_mporn")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -0.0481516, 0)

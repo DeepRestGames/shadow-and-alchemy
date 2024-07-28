@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://b6spexgfsmpmg"]
+
+[ext_resource type="Texture2D" uid="uid://c5rtdqvjbor72" path="res://Assets/2D/InventoryItemsIcons/VinegarVial.jpg" id="1_f3hyr"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_3jt42"]
+
+[resource]
+script = ExtResource("2_3jt42")
+item_name = "Vial of Vinegar"
+item_icon = ExtResource("1_f3hyr")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_VinegarVial.tscn"

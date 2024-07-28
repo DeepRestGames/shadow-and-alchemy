@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://chpder0st0rxv"]
+
+[ext_resource type="Texture2D" uid="uid://dkrwko0od7ofo" path="res://Assets/2D/InventoryItemsIcons/PhilosopherStone.jpg" id="1_2xgpy"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_lviul"]
+
+[resource]
+script = ExtResource("2_lviul")
+item_name = "Philosopher's Stone"
+item_icon = ExtResource("1_2xgpy")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_PhilosopherStone.tscn"

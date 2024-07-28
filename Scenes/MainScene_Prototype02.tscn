@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ckc21cpje40gh"]
+[gd_scene load_steps=24 format=3 uid="uid://ckc21cpje40gh"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
 [ext_resource type="Script" path="res://Scripts/MainScene_Prototype02.gd" id="1_cljtm"]
@@ -14,15 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://sncutmva0ga2" path="res://Assets/3D/Props/Hand.blend" id="8_q0jrn"]
 [ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="11_i41rp"]
 [ext_resource type="PackedScene" uid="uid://ddvlmsgydjki2" path="res://Scenes/AlchemicalCircle.tscn" id="11_s71tp"]
-[ext_resource type="PackedScene" uid="uid://1ofvsxrma8iv" path="res://Scenes/Items/CeremonialKnife.tscn" id="12_0jcyq"]
 [ext_resource type="AudioStream" uid="uid://t622sra4diub" path="res://Assets/Audio/Sound/footsteps_wood_single_2.mp3" id="12_iqq5d"]
 [ext_resource type="AudioStream" uid="uid://dlwk5ak6u2vgr" path="res://Assets/Audio/Sound/storm_faded.mp3" id="13_ehvq2"]
-[ext_resource type="PackedScene" uid="uid://c334blq5lnfot" path="res://Scenes/Items/SaltBottle.tscn" id="13_omhqv"]
 [ext_resource type="PackedScene" uid="uid://dl1o0hpwktapu" path="res://Assets/3D/Props/Sieve_v0.0.0.blend" id="14_dvc7e"]
 [ext_resource type="PackedScene" uid="uid://dm136mrn7n57f" path="res://Scenes/InteractionSystem/GenericPuzzleSlot.tscn" id="15_60po8"]
 [ext_resource type="AudioStream" uid="uid://c2pki04fd8067" path="res://Assets/Audio/Sound/fireplace_1.mp3" id="15_smehp"]
-[ext_resource type="PackedScene" uid="uid://c5icn5i3yr3x" path="res://Scenes/Items/PepperBottle.tscn" id="16_kj40c"]
-[ext_resource type="Resource" uid="uid://bc28owxb2cimb" path="res://Resources/Puzzles/GenericPuzzle.tres" id="16_vux6x"]
+[ext_resource type="Resource" uid="uid://bc28owxb2cimb" path="res://Resources/Puzzles/Tests/GenericPuzzle.tres" id="16_vux6x"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("1_aeey2")
@@ -261,21 +258,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.940461, 0.700025, -1.85113
 
 [node name="AlchemicalCircle" parent="." instance=ExtResource("11_s71tp")]
 
-[node name="CeremonialKnife" parent="." instance=ExtResource("12_0jcyq")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.72841, 0.829068, -1.85508)
-
-[node name="SaltBottle" parent="." instance=ExtResource("13_omhqv")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.437555, 0.891044, -1.99207)
-
 [node name="Sieve_v0_0_0" parent="." instance=ExtResource("14_dvc7e")]
 transform = Transform3D(0.0529982, 0, 0.998595, 0, 1, 0, -0.998595, 0, 0.0529982, -0.44283, 0.804017, -1.51249)
 
 [node name="GenericPuzzleSlot" parent="Sieve_v0_0_0" instance=ExtResource("15_60po8")]
 transform = Transform3D(0.4, 0, 3.72529e-09, 0, 0.4, 0, -3.72529e-09, 0, 0.4, -0.000965953, 0.0321101, -0.260425)
 related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("16_vux6x")])
-
-[node name="PepperBottle" parent="." instance=ExtResource("16_kj40c")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.63148, 0.886545, -2.15643)
 
 [node name="Audio" type="Node" parent="."]
 

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://ueg0rxfjd8hj"]
+
+[ext_resource type="Texture2D" uid="uid://b8otdqjymwm1f" path="res://Assets/2D/InventoryItemsIcons/BowlOfSalt.jpg" id="1_bcu0p"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_86keu"]
+
+[resource]
+script = ExtResource("2_86keu")
+item_name = "Bowl of Salt"
+item_icon = ExtResource("1_bcu0p")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_BowlOfSalt.tscn"

@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://ce02y63u3jcdc"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_p3x34"]
+[ext_resource type="Resource" uid="uid://dv51a05vddip3" path="res://Resources/InventoryItems/Item_Crucible.tres" id="2_atnvc"]
+[ext_resource type="PackedScene" uid="uid://cvjg0uqd02gp7" path="res://Assets/3D/Props/Crucible.blend" id="3_hasct"]
+[ext_resource type="PackedScene" uid="uid://be5fmscv5e4pb" path="res://Assets/3D/Props/Coin.blend" id="4_bq4kg"]
+[ext_resource type="Material" uid="uid://d1emby0aspm3t" path="res://Assets/3D/Props/materials/MoltenSilver.tres" id="5_jcegh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_x0igi"]
+
+[node name="ItemCrucible" type="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0412598, 0)
+use_collision = true
+collision_layer = 2
+size = Vector3(0.148438, 0.238037, 0.163086)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_p3x34")
+inventory_item_data = ExtResource("2_atnvc")
+item_model_height = 0.24
+
+[node name="Crucible" parent="." instance=ExtResource("3_hasct")]
+transform = Transform3D(0.8, 0, 0, 0, 0.799999, 0, 0, 0, 0.8, 0, -0.116381, -0.00421187)
+
+[node name="CrucibleCoin" parent="Crucible" instance=ExtResource("4_bq4kg")]
+transform = Transform3D(0.70946, -0.704746, 0, 0.704746, 0.70946, 0, 0, 0, 1, 0.0228745, 0.270484, 0.00216766)
+visible = false
+
+[node name="CrucibleCoin" parent="Crucible/CrucibleCoin" instance=ExtResource("4_bq4kg")]
+transform = Transform3D(0.962156, -0.272499, 0, 0.272499, 0.962156, 0, 0, 0, 1, -0.0418214, 0.028073, 0)
+
+[node name="MoltenSilver" type="MeshInstance3D" parent="Crucible"]
+transform = Transform3D(0.15, 2.77556e-16, 0, 0, -6.55671e-09, 0.15, 0, -0.15, -6.55671e-09, -0.00135612, 0.271979, 0.0039366)
+visible = false
+mesh = SubResource("QuadMesh_x0igi")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("5_jcegh")

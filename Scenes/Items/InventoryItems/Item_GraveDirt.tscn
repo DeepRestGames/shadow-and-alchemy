@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cckptta8oyaxr"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_6b6eb"]
+[ext_resource type="Resource" uid="uid://bfsx7w4ofk60s" path="res://Resources/InventoryItems/Item_GraveDirt.tres" id="2_xfbht"]
+[ext_resource type="PackedScene" uid="uid://d0cq4kvpnenr4" path="res://Assets/3D/Props/SpiceJarFilled_v0.0.0.blend" id="3_rsdfl"]
+[ext_resource type="Texture2D" uid="uid://d0etjo2vbf0cb" path="res://Assets/2D/AlchemicalMaterials/GraveDirt.png" id="4_ra3kw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemGraveDirt" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.170898, 0.264648, 0.174805)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_6b6eb")
+inventory_item_data = ExtResource("2_xfbht")
+item_model_height = 0.265
+
+[node name="GraveDirt" parent="." instance=ExtResource("3_rsdfl")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.131278, 0)
+
+[node name="GraveDirt_Label" type="Sprite3D" parent="GraveDirt"]
+transform = Transform3D(0.102674, 0, 0, 0, -4.48802e-09, 0.102674, 0, -0.102674, -4.48802e-09, 0.00276184, 1.29131, 0.0276218)
+texture = ExtResource("4_ra3kw")
