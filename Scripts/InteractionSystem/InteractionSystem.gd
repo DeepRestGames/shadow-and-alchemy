@@ -92,7 +92,11 @@ func _process(_delta):
 		var chest_collision_result := space_state.intersect_ray(chest_collision_query)
 		if not chest_collision_result.is_empty():
 			current_intersected_chest = chest_collision_result["collider"] as ChestTop
-			current_intersected_chest._open()
+			if not current_intersected_chest.animation_player.is_playing():
+				if not current_intersected_chest.is_open:
+					current_intersected_chest._open()
+				else:
+					current_intersected_chest._close()
 	
 			
 	if is_dragging_item and Input.is_action_just_released("left_click"):

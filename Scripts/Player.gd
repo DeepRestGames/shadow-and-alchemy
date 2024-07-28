@@ -60,7 +60,7 @@ func _process(_delta):
 
 
 func _process_pause_inputs():
-	if Input.is_action_just_pressed("open_diary"):
+	if Input.is_action_just_pressed("open_diary") and player_state not in [PlayerState.FOCUSING, PlayerState.MOVING, PlayerState.INVENTORY]:
 		if player_state == PlayerState.DIARY and not diary.animation_player.is_playing():
 			player_state = previous_state
 			diary.put_away()
