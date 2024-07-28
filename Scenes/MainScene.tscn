@@ -67,6 +67,9 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.8752
 rotation_edit_mode = 2
 current_navigation_point = NodePath("../Navigation/NavigationPoints/StartingNavigationPoint")
 
+[node name="Options" parent="Player/Diary" index="4" node_paths=PackedStringArray("world_environment")]
+world_environment = NodePath("../../../WorldEnvironment")
+
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="DirectionalLight3D_1" type="DirectionalLight3D" parent="Lights"]
@@ -435,6 +438,7 @@ bus = &"SFX"
 [node name="ChestTop" parent="Chests" instance=ExtResource("28_qwxhw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.555, 0.43, -1.329)
 
+[editable path="Player"]
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointWindow"]
 [editable path="Navigation/FocusPoints/FocusPointChest"]
