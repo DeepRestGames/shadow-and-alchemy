@@ -63,6 +63,8 @@ const rand_creak_time_max_s: float = 120.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	play_intro_sounds()
+
 	var player: Node = get_node("Player")
 	var chest_top_collision_1: Node = get_node("Chests/ChestTop/ChestTopCollision")
 	var chest_top_collision_2: Node = get_node("Props/BloodChest/ChestTop/ChestTopCollision")
@@ -142,6 +144,49 @@ func on_sound_finished(sound_timer: Timer, rand_time_min: float, rand_time_max: 
 	sound_timer.start()
 	# print("%s random time: %f" %[sound_timer.name, sound_timer.wait_time]) # TODO: debug print
 
+
+##### Function to play sounds only for the game's intro #####
+
+enum Audio_Players_Names
+{
+	WALKING = 0,
+	DOOR_OPEN,
+	DOOR_CLOSE,
+	FOUR_STEPS,
+	CANDLE_LIGHT
+}
+
+func play_intro_sounds():
+	var audio_players: Array = [
+		AudioStreamPlayer.new(), # WALKING
+		AudioStreamPlayer.new(), # DOOR_OPEN
+		AudioStreamPlayer.new(), # DOOR_CLOSE
+		AudioStreamPlayer.new(), # FOUR_STEPS
+		AudioStreamPlayer.new(), # CANDLE_LIGHT
+	]
+
+	for audio_player in audio_players:
+		add_child(audio_player)
+
+	audio_players[Audio_Players_Names.WALKING].stream = load("res://Assets/Audio/Sound/walking_outside.mp3")
+	audio_players[Audio_Players_Names.DOOR_OPEN].stream = load("res://Assets/Audio/Sound/door_open.mp3")
+	audio_players[Audio_Players_Names.DOOR_CLOSE].stream = load("res://Assets/Audio/Sound/door_close.mp3")
+	audio_players[Audio_Players_Names.FOUR_STEPS].stream = load("res://Assets/Audio/Sound/footsteps_cellar_four.mp3")
+	audio_players[Audio_Players_Names.CANDLE_LIGHT].stream = load("res://Assets/Audio/Sound/candle_lighting.mp3")
+
+	audio_players[Audio_Players_Names.WALKING].connect("finished", audio_players[Audio_Players_Names.DOOR_OPEN].play)
+	audio_players[Audio_Players_Names.DOOR_OPEN].connect("finished", audio_players[Audio_Players_Names.DOOR_CLOSE].play)
+	audio_players[Audio_Players_Names.DOOR_CLOSE].connect("finished", audio_players[Audio_Players_Names.FOUR_STEPS].play)
+	audio_players[Audio_Players_Names.FOUR_STEPS].connect("finished", audio_players[Audio_Players_Names.CANDLE_LIGHT].play)
+	audio_players[Audio_Players_Names.CANDLE_LIGHT].connect("finished", on_all_sounds_finished.bind(audio_players))
+
+	audio_players[Audio_Players_Names.FOUR_STEPS].volume_db = -10
+
+	audio_players[Audio_Players_Names.WALKING].play()
+
+func on_all_sounds_finished(audio_players: Array):
+	for audio_player in audio_players:
+		audio_player.queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
