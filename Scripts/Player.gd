@@ -101,7 +101,8 @@ func _process_focus_inputs():
 			focus_label_animation.play("appear")
 			
 		if Input.is_action_just_pressed("move_forward") and player_state == PlayerState.IDLE:
-			focus_label_animation.play("disappear")
+			#if not focus_label_animation.is_playing():
+			focus_label_animation.queue("disappear")
 			
 			player_state = PlayerState.MOVING
 			unfocus_pos = camera_3d.global_position
