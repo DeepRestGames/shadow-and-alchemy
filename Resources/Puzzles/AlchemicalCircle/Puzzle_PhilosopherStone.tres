@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://dt55qksrc1o1o"]
+
+[ext_resource type="Resource" uid="uid://ueg0rxfjd8hj" path="res://Resources/InventoryItems/Item_BowlOfSalt.tres" id="2_8pq67"]
+[ext_resource type="Resource" uid="uid://m6b4tfbg2b7g" path="res://Resources/InventoryItems/Item_BloodEssence.tres" id="2_e66gt"]
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="3_knwky"]
+[ext_resource type="Resource" uid="uid://chpder0st0rxv" path="res://Resources/InventoryItems/Item_PhilosopherStone.tres" id="3_ptfap"]
+
+[resource]
+script = ExtResource("3_knwky")
+puzzle_name = "Puzzle_PhilosopherStone"
+puzzle_description = ""
+puzzle_solution_items = [ExtResource("2_e66gt"), ExtResource("2_8pq67")]
+order_needed = false
+reward = ExtResource("3_ptfap")
+alchemical_process_needed = true
+alchemical_process_solution = 1

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=6 format=3 uid="uid://c3exsdbht001t"]
+
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="1_82x44"]
+[ext_resource type="Resource" uid="uid://dvxdxc15pf0ew" path="res://Resources/InventoryItems/Item_OpalStone.tres" id="1_unnho"]
+[ext_resource type="Resource" uid="uid://gj7n5vxe7r51" path="res://Resources/InventoryItems/Item_Laurel.tres" id="2_07lly"]
+[ext_resource type="Resource" uid="uid://bi6ffk7bxchk6" path="res://Resources/InventoryItems/Item_BowlOfDirt.tres" id="3_m63gn"]
+[ext_resource type="Resource" uid="uid://ueg0rxfjd8hj" path="res://Resources/InventoryItems/Item_BowlOfSalt.tres" id="4_lmx0w"]
+
+[resource]
+script = ExtResource("1_82x44")
+puzzle_name = "Puzzle_Salt"
+puzzle_description = ""
+puzzle_solution_items = [ExtResource("1_unnho"), ExtResource("2_07lly"), ExtResource("3_m63gn")]
+order_needed = false
+reward = ExtResource("4_lmx0w")
+alchemical_process_needed = false
+alchemical_process_solution = 0

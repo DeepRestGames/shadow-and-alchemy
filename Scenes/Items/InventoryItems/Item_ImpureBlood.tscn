@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ca4m8y7n220nj"]
 
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_mln7f"]
-[ext_resource type="Resource" uid="uid://cp11jxgijakv1" path="res://Resources/InventoryItems/Item_ImpureBlood.tres" id="2_pfn1y"]
+[ext_resource type="Resource" uid="uid://cp11jxgijakv1" path="res://Resources/InventoryItems/Item_SeparatedBlood.tres" id="2_pfn1y"]
 [ext_resource type="PackedScene" uid="uid://tibfyewtauo3" path="res://Assets/3D/Props/BloodVial_v0.0.0.blend" id="3_3vdpc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
