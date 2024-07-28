@@ -1,8 +1,14 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://ccqchuswjlex0"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ccqchuswjlex0"]
+
+[ext_resource type="Texture2D" uid="uid://c1xhjewyhbips" path="res://Assets/2D/NoiseTextures/NoiseTexturesBooks.tres" id="1_iluy7"]
 
 [resource]
 resource_name = "BloodVialLabel"
 cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.701961, 0.52549, 0.196078, 1)
+albedo_color = Color(0.7, 0.59955, 0.413, 1)
+albedo_texture = ExtResource("1_iluy7")
+uv1_scale = Vector3(-2.01, -2.01, -2.01)
+uv1_triplanar = true
+uv1_world_triplanar = true

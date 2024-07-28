@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://i0cbyypo3vy4"]
+
+[ext_resource type="Texture2D" uid="uid://x7wlw5bydj5o" path="res://Assets/2D/AlchemicalProcesses/Libra_Sublimation.png" id="1_sjkh3"]
+[ext_resource type="Script" path="res://Scripts/Items/Book.gd" id="2_o2p5p"]
+[ext_resource type="PackedScene" uid="uid://dm2f5ywbe7tlm" path="res://Assets/3D/Props/BookRed_v0.0.0.blend" id="3_5gfqq"]
+[ext_resource type="Material" uid="uid://ccqchuswjlex0" path="res://Assets/3D/Props/materials/Label.tres" id="4_em3w6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkmif"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("1_sjkh3")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1fl7a"]
+material = ExtResource("4_em3w6")
+
+[node name="ItemBookRed" type="CSGBox3D"]
+material_overlay = SubResource("StandardMaterial3D_mkmif")
+size = Vector3(0.0717891, 0.250244, 0.178955)
+material = SubResource("StandardMaterial3D_mkmif")
+script = ExtResource("2_o2p5p")
+
+[node name="BookRed" parent="." instance=ExtResource("3_5gfqq")]
+transform = Transform3D(-3.0598e-08, 0, -1, 0, 1, 0, 0.7, 0, -4.37114e-08, 0, -0.126434, 0)
+
+[node name="Lable" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0191934, 3.30348e-06, 4.01348e-05, 4.01374e-05, -1.47231e-05, -0.0191934, -3.27258e-06, 0.0191934, -1.473e-05, 0, 0.000243235, 0.0883789)
+mesh = SubResource("PlaneMesh_1fl7a")
+
+[node name="Sprite3D" type="Sprite3D" parent="Lable"]
+transform = Transform3D(0.35, 0, 0, 0, -1.5299e-08, 0.35, 0, -0.35, -1.5299e-08, 0, 0.0146484, -0.0378418)
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(-6.90235e-10, -3.56528e-15, 0.0157907, 0, 0.0157907, 3.56528e-15, -0.0157907, 1.55843e-22, -6.90235e-10, 0.0300293, -0.00341935, -0.000327386)
