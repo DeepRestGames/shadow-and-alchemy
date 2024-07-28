@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bi3j1l53gsk7j"]
 
-[ext_resource type="Script" path="res://Scripts/Items/Book.gd" id="1_oapgg"]
+[ext_resource type="Script" path="res://Scripts/Items/AnimatedBook.gd" id="1_oapgg"]
 [ext_resource type="Texture2D" uid="uid://cglb3g30rrg3x" path="res://Assets/2D/Decals/book_texture.jpg" id="2_ssxgp"]
 [ext_resource type="Texture2D" uid="uid://sntw8ewqgxsi" path="res://Assets/2D/Decals/old_paper.jpg" id="3_bilp4"]
 
