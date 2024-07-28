@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://33hg8ne8t1id"]
+
+[ext_resource type="Texture2D" uid="uid://cwv0l707hep3q" path="res://Assets/2D/InventoryItemsIcons/Coal.jpg" id="1_na2v0"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_31146"]
+
+[resource]
+script = ExtResource("2_31146")
+item_name = "Coal"
+item_icon = ExtResource("1_na2v0")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_Coal.tscn"

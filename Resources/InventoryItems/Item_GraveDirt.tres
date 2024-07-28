@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://bfsx7w4ofk60s"]
+
+[ext_resource type="Texture2D" uid="uid://bvcujim8omsgc" path="res://Assets/2D/InventoryItemsIcons/GraveDirt.jpg" id="1_ia2hx"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_2tnft"]
+
+[resource]
+script = ExtResource("2_2tnft")
+item_name = "Grave Dirt"
+item_icon = ExtResource("1_ia2hx")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_GraveDirt.tscn"

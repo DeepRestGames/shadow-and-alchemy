@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkr62oq57ffsq"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_o26na"]
+[ext_resource type="Resource" uid="uid://byo7gb486tnnw" path="res://Resources/InventoryItems/Item_MercuryFlask.tres" id="2_ny2uw"]
+[ext_resource type="PackedScene" uid="uid://byhimm6jf7lo0" path="res://Assets/3D/Props/GlassFlaskMercury.blend" id="3_00s20"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemMercuryFlask" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.166992, 0.1604, 0.0820313)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_o26na")
+inventory_item_data = ExtResource("2_ny2uw")
+item_model_height = 0.16
+
+[node name="GlassFlaskMercury" parent="." instance=ExtResource("3_00s20")]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0, -0.0775312, 0)

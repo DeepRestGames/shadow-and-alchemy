@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://dv51a05vddip3"]
+
+[ext_resource type="Texture2D" uid="uid://ci45kb4woi6w0" path="res://Assets/2D/InventoryItemsIcons/Crucible.jpg" id="1_4goiy"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_kg4yx"]
+
+[resource]
+script = ExtResource("2_kg4yx")
+item_name = "Crucible"
+item_icon = ExtResource("1_4goiy")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_Crucible.tscn"

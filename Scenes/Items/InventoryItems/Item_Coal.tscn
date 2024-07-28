@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgt7qhmb42v61"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_te02w"]
+[ext_resource type="Resource" uid="uid://33hg8ne8t1id" path="res://Resources/InventoryItems/Item_Coal.tres" id="2_gl66a"]
+[ext_resource type="PackedScene" uid="uid://bp0ye040gn0v2" path="res://Assets/3D/Props/DyingEmber.blend" id="3_oynmg"]
+[ext_resource type="PackedScene" uid="uid://w2o5r7xjg8tw" path="res://Assets/3D/Props/EmptyHolderPlate.blend" id="4_2mdvb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemCoal" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.113281, 0.106445, 0.113281)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_te02w")
+inventory_item_data = ExtResource("2_gl66a")
+item_model_height = 0.1
+
+[node name="DyingEmber" parent="." instance=ExtResource("3_oynmg")]
+transform = Transform3D(0.729922, 0, 0, 0, 0.729922, 0, 0, 0, 0.729922, -0.00560546, -0.0493283, 0.00616604)
+
+[node name="EmptyHolderPlate" parent="DyingEmber" instance=ExtResource("4_2mdvb")]
+transform = Transform3D(1.66667, 0, 1.18424e-14, 0, 1.66667, 0, -1.18424e-14, 0, 1.66667, 0.00250053, -0.0101989, -0.00541021)
+visible = false

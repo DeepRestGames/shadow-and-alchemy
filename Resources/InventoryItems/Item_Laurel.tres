@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://gj7n5vxe7r51"]
+
+[ext_resource type="Texture2D" uid="uid://dlh6dydq3s8ki" path="res://Assets/2D/InventoryItemsIcons/Laurel.jpg" id="1_q546x"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_hwduc"]
+
+[resource]
+script = ExtResource("2_hwduc")
+item_name = "Laurel"
+item_icon = ExtResource("1_q546x")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_Laurel.tscn"

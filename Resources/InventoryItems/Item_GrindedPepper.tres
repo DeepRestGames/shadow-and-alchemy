@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://bupnoduq0ua25"]
+
+[ext_resource type="Texture2D" uid="uid://bq7vax01wta6k" path="res://Assets/2D/InventoryItemsIcons/GrindedPepper.jpg" id="1_eeu0e"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_mfu0i"]
+
+[resource]
+script = ExtResource("2_mfu0i")
+item_name = "Grinded Pepper"
+item_icon = ExtResource("1_eeu0e")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_GrindedPepper.tscn"

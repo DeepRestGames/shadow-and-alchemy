@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cndhtqglibb81"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_nvqgu"]
+[ext_resource type="Resource" uid="uid://dvxdxc15pf0ew" path="res://Resources/InventoryItems/Item_OpalStone.tres" id="2_6gm0k"]
+[ext_resource type="PackedScene" uid="uid://b3hkdu32yh165" path="res://Assets/3D/Props/Opal_v0.0.0.blend" id="3_rcnfs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemOpalStone" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.065, 0.02, 0.075)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_nvqgu")
+inventory_item_data = ExtResource("2_6gm0k")
+item_model_height = 0.02
+
+[node name="Opal_v0_0_0" parent="." instance=ExtResource("3_rcnfs")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.3, 0, -0.00663973, 0)

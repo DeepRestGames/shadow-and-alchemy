@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://bi6ffk7bxchk6"]
+
+[ext_resource type="Texture2D" uid="uid://7ilf2wird348" path="res://Assets/2D/InventoryItemsIcons/BowlOfDirt.jpg" id="1_7ocge"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_ivw27"]
+
+[resource]
+script = ExtResource("2_ivw27")
+item_name = "Bowl of Dirt"
+item_icon = ExtResource("1_7ocge")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_BowlOfDirt.tscn"

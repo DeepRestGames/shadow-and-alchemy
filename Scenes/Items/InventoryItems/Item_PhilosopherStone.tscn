@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://de186nhqn27pl"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_x057r"]
+[ext_resource type="Resource" uid="uid://chpder0st0rxv" path="res://Resources/InventoryItems/Item_PhilosopherStone.tres" id="2_q5ewi"]
+[ext_resource type="PackedScene" uid="uid://cta4rodgtf63g" path="res://Assets/3D/Props/Crystal_v0.0.0.blend" id="3_trgiv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemPhilosopherStone" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.375, 0.085, 0.238)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_x057r")
+inventory_item_data = ExtResource("2_q5ewi")
+item_model_height = 0.085
+
+[node name="Crystal_v0_0_0" parent="." instance=ExtResource("3_trgiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0299706, 0)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4pe6m0uc85by"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_qowu0"]
+[ext_resource type="Resource" uid="uid://m6b4tfbg2b7g" path="res://Resources/InventoryItems/Item_BloodEssence.tres" id="2_rdksa"]
+[ext_resource type="PackedScene" uid="uid://iq3j67iux3te" path="res://Assets/3D/Props/BloodVialPure.blend" id="3_x2ykt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemBloodEssence" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.0791016, 0.137695, 0.078125)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_qowu0")
+inventory_item_data = ExtResource("2_rdksa")
+item_model_height = 0.14
+
+[node name="BloodVialPure" parent="." instance=ExtResource("3_x2ykt")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.0650694, 0)

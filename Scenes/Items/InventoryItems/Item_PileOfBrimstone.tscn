@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjelf0ibw6egr"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_s3rvi"]
+[ext_resource type="Resource" uid="uid://cwi1dqmu5sh2v" path="res://Resources/InventoryItems/Item_PileOfBrimstone.tres" id="2_bs36w"]
+[ext_resource type="PackedScene" uid="uid://glmn1voquwx6" path="res://Assets/3D/Props/PileOfSubstance.blend" id="3_ke4pf"]
+[ext_resource type="PackedScene" uid="uid://w2o5r7xjg8tw" path="res://Assets/3D/Props/EmptyHolderPlate.blend" id="4_kcahs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemBrimstone" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.353271, 0.0771484, 0.339844)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_s3rvi")
+inventory_item_data = ExtResource("2_bs36w")
+item_model_height = 0.077
+
+[node name="PileOfBrimstone" parent="." instance=ExtResource("3_ke4pf")]
+transform = Transform3D(0.998106, -0.0615189, 0, 0.0615189, 0.998106, 0, 0, 0, 1, 0, -0.0861173, -0.00782885)
+
+[node name="EmptyHolderPlate2" parent="PileOfBrimstone" instance=ExtResource("4_kcahs")]
+transform = Transform3D(0.998106, 0.0615189, 7.09197e-15, -0.0615189, 0.998106, -4.37118e-16, -7.10543e-15, 0, 1, 0.000951767, 0.0465406, 0.00792228)
