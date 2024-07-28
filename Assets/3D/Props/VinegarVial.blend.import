@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://w2o5r7xjg8tw"
-path="res://.godot/imported/EmptyHolderPlate.blend-fe78f2f1d2e09fa29e7192c82819ad96.scn"
+uid="uid://d0256tpfxj4qm"
+path="res://.godot/imported/VinegarVial.blend-dc0cfc0a0579069dae988b3494bb97a2.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/EmptyHolderPlate.blend"
-dest_files=["res://.godot/imported/EmptyHolderPlate.blend-fe78f2f1d2e09fa29e7192c82819ad96.scn"]
+source_file="res://Assets/3D/Props/VinegarVial.blend"
+dest_files=["res://.godot/imported/VinegarVial.blend-dc0cfc0a0579069dae988b3494bb97a2.scn"]
 
 [params]
 
@@ -31,9 +31,21 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Metal": {
+"BloodVialBlood": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Brass.tres"
+"use_external/path": "res://Assets/3D/Props/materials/Vinegar.tres"
+},
+"BloodVialCork": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/Cork.tres"
+},
+"BloodVialGlass.001": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/Glass.tres"
+},
+"BloodVialLabel": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/Label.tres"
 }
 }
 }

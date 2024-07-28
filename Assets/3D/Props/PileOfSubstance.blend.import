@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://w2o5r7xjg8tw"
-path="res://.godot/imported/EmptyHolderPlate.blend-fe78f2f1d2e09fa29e7192c82819ad96.scn"
+uid="uid://glmn1voquwx6"
+path="res://.godot/imported/PileOfSubstance.blend-9dcf71b50b25e833a05131cc2f38bef6.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/EmptyHolderPlate.blend"
-dest_files=["res://.godot/imported/EmptyHolderPlate.blend-fe78f2f1d2e09fa29e7192c82819ad96.scn"]
+source_file="res://Assets/3D/Props/PileOfSubstance.blend"
+dest_files=["res://.godot/imported/PileOfSubstance.blend-9dcf71b50b25e833a05131cc2f38bef6.scn"]
 
 [params]
 
@@ -31,9 +31,9 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Metal": {
+"Substance": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Brass.tres"
+"use_external/path": "res://Assets/3D/Props/materials/Brimstone.tres"
 }
 }
 }
