@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mk0guedcs5u0"
-path.s3tc="res://.godot/imported/Blood.png-482837c998bcf3a666d5cf82ef69af9b.s3tc.ctex"
-path.etc2="res://.godot/imported/Blood.png-482837c998bcf3a666d5cf82ef69af9b.etc2.ctex"
+uid="uid://d0etjo2vbf0cb"
+path.s3tc="res://.godot/imported/GraveDirt.png-f73c831be0d6677beee90a5036780644.s3tc.ctex"
+path.etc2="res://.godot/imported/GraveDirt.png-f73c831be0d6677beee90a5036780644.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/AlchemicalMaterials/Blood.png"
-dest_files=["res://.godot/imported/Blood.png-482837c998bcf3a666d5cf82ef69af9b.s3tc.ctex", "res://.godot/imported/Blood.png-482837c998bcf3a666d5cf82ef69af9b.etc2.ctex"]
+source_file="res://Assets/2D/AlchemicalMaterials/GraveDirt.png"
+dest_files=["res://.godot/imported/GraveDirt.png-f73c831be0d6677beee90a5036780644.s3tc.ctex", "res://.godot/imported/GraveDirt.png-f73c831be0d6677beee90a5036780644.etc2.ctex"]
 
 [params]
 

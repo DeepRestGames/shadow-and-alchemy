@@ -128,25 +128,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60015, 1.19889, 2.25065)
 transform = Transform3D(-0.02, 0, -3.01992e-09, 0, 0.02, 0, 3.01992e-09, 0, -0.02, -2.32003, 1.20541, 1.87744)
 
 [node name="Opal_v0_0_0" parent="Hand2" instance=ExtResource("9_nuc7d")]
-transform = Transform3D(-0.129265, -0.208116, 14.8955, -8.93576, -4.48427, -0.311255, 4.48727, -8.93577, -0.190723, -0.332237, 4.32002, 1.21557)
 
 [node name="Candle2" parent="Hand2" instance=ExtResource("7_cibxe")]
-transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, -1.93813, 7.58157, -1.98306)
 energy_max = 0.12
 energy_min = 0.14
 
 [node name="Candle5" parent="Hand2" instance=ExtResource("7_cibxe")]
-transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, -0.716728, 8.03965, -1.98306)
 energy_max = 0.12
 energy_min = 0.14
 
 [node name="Candle6" parent="Hand2" instance=ExtResource("7_cibxe")]
-transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, 0.583641, 7.57361, -1.98306)
 energy_max = 0.12
 energy_min = 0.14
 
 [node name="Candle7" parent="Hand2" instance=ExtResource("7_cibxe")]
-transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, 1.83002, 7.00055, -1.98306)
 energy_max = 0.12
 energy_min = 0.14
 

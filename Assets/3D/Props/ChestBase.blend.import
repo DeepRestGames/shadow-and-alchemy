@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://sncutmva0ga2"
-path="res://.godot/imported/Hand.blend-968ac50330d3d4730d73abb8349f34e2.scn"
+uid="uid://2vfre2wb0jdr"
+path="res://.godot/imported/ChestBase.blend-9949b6d378d69e03193817e6ae02a76d.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/Hand.blend"
-dest_files=["res://.godot/imported/Hand.blend-968ac50330d3d4730d73abb8349f34e2.scn"]
+source_file="res://Assets/3D/Props/ChestBase.blend"
+dest_files=["res://.godot/imported/ChestBase.blend-9949b6d378d69e03193817e6ae02a76d.scn"]
 
 [params]
 
@@ -31,17 +31,13 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
-"Glass": {
+"MetalFurniture": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Glass.tres"
+"use_external/path": "res://Assets/3D/Cabin/materials/furniture/MetalFurniture.tres"
 },
-"Skin": {
+"WoodFurniture": {
 "use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/Skin.tres"
-},
-"metal": {
-"use_external/enabled": true,
-"use_external/path": "res://Assets/3D/Props/materials/DarkMetal.tres"
+"use_external/path": "res://Assets/3D/Cabin/materials/furniture/WoodFurniture.tres"
 }
 }
 }
