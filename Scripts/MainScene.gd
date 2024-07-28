@@ -2,6 +2,8 @@ extends Node3D
 
 ##### Preload sounds to randomise their execution later #####
 
+const thunderstorm_array = [preload("res://Assets/Audio/Sound/storm_faded.mp3")]
+
 const footsteps_array = [
 	preload("res://Assets/Audio/Sound/footsteps_wood_single_2.mp3"),
 	preload("res://Assets/Audio/Sound/footsteps_wood_single_3.mp3"),
@@ -34,26 +36,26 @@ const creaks_array = [
 ##### Setup thunderstorm #####
 
 const thunderStorm_volume_db: float = -10.0
-# const rand_thunderstorm_time_min_s: float = 60.0
-# const rand_thunderstorm_time_max_s: float = 180.0
-const rand_thunderstorm_time_min_s: float = 5.0 # TODO: debug
-const rand_thunderstorm_time_max_s: float = 10.0 # TODO: debug
+const rand_thunderstorm_time_min_s: float = 60.0
+const rand_thunderstorm_time_max_s: float = 180.0
+# const rand_thunderstorm_time_min_s: float = 5.0 # TODO: debug
+# const rand_thunderstorm_time_max_s: float = 10.0 # TODO: debug
 
 ##### Setup screams #####
 
 const scream_volume_db: float = -30.0
-# const rand_scream_time_min_s: float = 120.0
-# const rand_scream_time_max_s: float = 240.0
-const rand_scream_time_min_s: float = 2.0 # TODO: debug
-const rand_scream_time_max_s: float = 5.0 # TODO: debug
+const rand_scream_time_min_s: float = 120.0
+const rand_scream_time_max_s: float = 240.0
+# const rand_scream_time_min_s: float = 2.0 # TODO: debug
+# const rand_scream_time_max_s: float = 5.0 # TODO: debug
 
 ##### Setup creaks #####
 
 const creak_volume_db: float = -20
-# const rand_creak_time_min_s: float = 60.0
-# const rand_creak_time_max_s: float = 120.0
-const rand_creak_time_min_s: float = 2.0 # TODO: debug
-const rand_creak_time_max_s: float = 5.0 # TODO: debug
+const rand_creak_time_min_s: float = 60.0
+const rand_creak_time_max_s: float = 120.0
+# const rand_creak_time_min_s: float = 2.0 # TODO: debug
+# const rand_creak_time_max_s: float = 5.0 # TODO: debug
 
 
 # Called when the node enters the scene tree for the first time.
@@ -74,14 +76,20 @@ func _ready():
 
 	##### Setup randomly timed sounds #####
 
-	setup_randomly_timed_sound($Audio/ThunderStorm, $Audio/Timers/ThunderStormTimer, rand_thunderstorm_time_min_s, rand_thunderstorm_time_max_s, thunderStorm_volume_db,
-														 on_sound_finished.bind($Audio/Timers/ThunderStormTimer, rand_thunderstorm_time_min_s, rand_thunderstorm_time_max_s), play_thunderstorm)
+	setup_randomly_timed_sound($Audio/ThunderStorm, $Audio/Timers/ThunderStormTimer,
+														 rand_thunderstorm_time_min_s, rand_thunderstorm_time_max_s, thunderStorm_volume_db,
+														 on_sound_finished.bind($Audio/Timers/ThunderStormTimer, rand_thunderstorm_time_min_s, rand_thunderstorm_time_max_s),
+														 play_sound_from_array.bind("thunderstorm", $Audio/ThunderStorm, thunderstorm_array))
 
-	setup_randomly_timed_sound($Audio/Screams, $Audio/Timers/ScreamTimer, rand_scream_time_min_s, rand_scream_time_max_s, scream_volume_db,
-														 on_sound_finished.bind($Audio/Timers/ScreamTimer, rand_scream_time_min_s, rand_scream_time_max_s), play_sound_from_array.bind("scream", $Audio/Screams, screams_array))
+	setup_randomly_timed_sound($Audio/Screams, $Audio/Timers/ScreamTimer,
+														 rand_scream_time_min_s, rand_scream_time_max_s, scream_volume_db,
+														 on_sound_finished.bind($Audio/Timers/ScreamTimer, rand_scream_time_min_s, rand_scream_time_max_s),
+														 play_sound_from_array.bind("scream", $Audio/Screams, screams_array))
 
-	setup_randomly_timed_sound($Audio/Creaks, $Audio/Timers/CreaksTimer, rand_creak_time_min_s, rand_creak_time_max_s, creak_volume_db,
-														 on_sound_finished.bind($Audio/Timers/CreaksTimer, rand_creak_time_min_s, rand_creak_time_max_s), play_sound_from_array.bind("creak", $Audio/Creaks, creaks_array))
+	setup_randomly_timed_sound($Audio/Creaks, $Audio/Timers/CreaksTimer,
+														 rand_creak_time_min_s, rand_creak_time_max_s, creak_volume_db,
+														 on_sound_finished.bind($Audio/Timers/CreaksTimer, rand_creak_time_min_s, rand_creak_time_max_s),
+														 play_sound_from_array.bind("creak", $Audio/Creaks, creaks_array))
 
 
 ##### Function to setup sounds which are governed by a random timer #####
@@ -107,14 +115,6 @@ func play_sound_from_array(_sound_name: String, audio_stream, sound_array: Array
 	audio_stream.stream = random_sound
 	audio_stream.play()
 	# print("%s played!" %_sound_name) # TODO: debug print
-
-func play_thunderstorm():
-	if not $Audio/ThunderStorm.is_playing():
-		$Audio/ThunderStorm.play()
-
-func play_chest_opening():
-	if not $Audio/ThunderStorm.is_playing():
-		$Audio/ThunderStorm.play()
 
 
 ##### Function randomise the timer countdown period between a minimum and maximum value in seconds #####
