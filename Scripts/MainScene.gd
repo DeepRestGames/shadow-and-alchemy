@@ -44,33 +44,43 @@ const bucket_water_drops_array = [
 
 const chest_open_array = [preload("res://Assets/Audio/Sound/chest_opening_short.mp3")]
 
+const item_interact_array = [
+	preload("res://Assets/Audio/Sound/drop_1.mp3"),
+	preload("res://Assets/Audio/Sound/drop_2.mp3"),
+	preload("res://Assets/Audio/Sound/drop_3.mp3"),
+	preload("res://Assets/Audio/Sound/drop_4.mp3"),
+	preload("res://Assets/Audio/Sound/drop_5.mp3"),
+	preload("res://Assets/Audio/Sound/drop_6.mp3"),
+]
 
-##### Setup thunderstorm #####
+
+##### Setup sounds with randomised timing #####
+
+# Setup thunderstorm
 
 const thunderStorm_volume_db: float = -10.0
-const rand_thunderstorm_time_min_s: float = 60.0
+const rand_thunderstorm_time_min_s: float = 120.0
 const rand_thunderstorm_time_max_s: float = 180.0
 # const rand_thunderstorm_time_min_s: float = 5.0 # TODO: debug
 # const rand_thunderstorm_time_max_s: float = 10.0 # TODO: debug
 
-##### Setup screams #####
+# Setup screams
 
-const scream_volume_db: float = -30.0
+const scream_volume_db: float = -40.0
 const rand_scream_time_min_s: float = 120.0
 const rand_scream_time_max_s: float = 240.0
 # const rand_scream_time_min_s: float = 2.0 # TODO: debug
 # const rand_scream_time_max_s: float = 5.0 # TODO: debug
 
-##### Setup creaks #####
+# Setup creaks
 
-const creak_volume_db: float = -20
+const creak_volume_db: float = -10
 const rand_creak_time_min_s: float = 60.0
 const rand_creak_time_max_s: float = 120.0
 # const rand_creak_time_min_s: float = 2.0 # TODO: debug
 # const rand_creak_time_max_s: float = 5.0 # TODO: debug
 
-
-##### Setup bucket water drops #####
+# Setup water drops in bucket
 
 const bucket_water_drop_volume_db: float = -10
 const rand_bucket_water_drop_time_min_s: float = 3.0
@@ -83,9 +93,37 @@ const rand_bucket_water_drop_time_max_s: float = 7.0
 func _ready():
 	# play_intro_sounds() # TODO: enable where and when required
 
+	##### Nodes required to connect signals #####
+
 	var player: Node = get_node("Player")
 	var chest_top_collision_1: Node = get_node("Chests/ChestTop/ChestTopCollision")
 	var chest_top_collision_2: Node = get_node("Props/BloodChest/ChestTop/ChestTopCollision")
+	var alchemical_circle_1 = get_node("Props/AlchemicalCircle/AlchemicalCirclePuzzleSlot1")
+	var alchemical_circle_2 = get_node("Props/AlchemicalCircle/AlchemicalCirclePuzzleSlot2")
+	var alchemical_circle_3 = get_node("Props/AlchemicalCircle/AlchemicalCirclePuzzleSlot3")
+	var opal_stone = get_node("Props/Hand3/ItemOpalStone")
+	var item_mushroom = get_node("Props/ItemMushroom")
+	var item_jarofgrapes = get_node("Props/ItemJarOfGrapes")
+	var item_coal = get_node("Props/ItemCoal")
+	# var item_bookblack_salt = get_node("Props/ItemBookBlack_Salt")
+	# var item_bookblack_surfur = get_node("Props/ItemBookBlack_Surfur")
+	# var item_bookblack_mercury = get_node("Props/ItemBookBlack_Mercury")
+	# var item_bookred_aries = get_node("Props/ItemBookRed_Aries")
+	# var item_bookred_taurus = get_node("Props/ItemBookRed_Taurus")
+	# var item_bookred_gemini = get_node("Props/ItemBookRed_Gemini")
+	# var item_bookred_cancer = get_node("Props/ItemBookRed_Cancer")
+	# var item_bookred = get_node("Props/ItemBookRed-Leo")
+	# var item_bookred_virgo = get_node("Props/ItemBookRed_Virgo")
+	# var item_bookred_libra = get_node("Props/ItemBookRed_Libra")
+	# var item_bookred_scorpio = get_node("Props/ItemBookRed_Scorpio")
+	# var item_bookred_sagittarius = get_node("Props/ItemBookRed_Sagittarius")
+	# var item_bookred_capricorn = get_node("Props/ItemBookRed_Capricorn")
+	# var item_bookred_aquarius = get_node("Props/ItemBookRed_Aquarius")
+	# var item_bookred_projection = get_node("Props/ItemBookRed_Projection")
+	# var item_crucible = get_node("Props/ItemCrucible")
+	# var item_flintandsteel = get_node("Props/ItemFlintAndSteel")
+	# var item_gravedirt = get_node("Props/ItemGraveDirt")
+	var item_peppergrains = get_node("Props/ItemPepperGrains")
 
 	##### Setup background music #####
 
@@ -111,6 +149,36 @@ func _ready():
 	$Audio/Bucket.volume_db = bucket_water_drop_volume_db
 	$Audio/Bucket.unit_size = 4
 	$Audio/Bucket.attenuation_model = $Audio/Bucket.ATTENUATION_INVERSE_SQUARE_DISTANCE
+
+	##### Setup pickup and drop item sound (they use the same sound effect) #####
+
+	$Audio/ItemInteract.volume_db = -5
+	alchemical_circle_1.connect("item_was_dropped", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	alchemical_circle_2.connect("item_was_dropped", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	alchemical_circle_3.connect("item_was_dropped", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	opal_stone.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	item_mushroom.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	item_jarofgrapes.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	item_coal.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookblack_salt.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookblack_surfur.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookblack_mercury.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred_aries.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred_taurus.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred_gemini.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred_cancer.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred_virgo.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred_libra.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred_scorpio.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred_sagittarius.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred_capricorn.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred_aquarius.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_bookred_projection.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_crucible.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_flintandsteel.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	# item_gravedirt.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	item_peppergrains.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
 
 
 	##### Setup randomly timed sounds #####

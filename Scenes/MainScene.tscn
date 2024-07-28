@@ -2216,6 +2216,8 @@ bus = &"SFX"
 stream = ExtResource("20_awg3m")
 bus = &"SFX"
 
+[node name="ItemInteract" type="AudioStreamPlayer" parent="Audio"]
+
 [node name="Screams" type="AudioStreamPlayer" parent="Audio"]
 bus = &"SFX"
 
