@@ -36,7 +36,8 @@ enum PlayerState {
 
 @onready var diary = $Diary
 @onready var debug_ui = $DEBUG_UI
-
+@onready var focus_label_animation = $Focus/FocusLabelAnimation
+var tooltip_on: bool = false
 
 func _ready():
 	diary.hide()
@@ -57,6 +58,7 @@ func _process(_delta):
 	debug_ui.text += "\nPOS: " + str(camera_3d.global_position)
 	debug_ui.text += "\nROT: " + str(camera_3d.global_position)
 	debug_ui.text += "\nCurr nav point: " + str(current_navigation_point)
+	debug_ui.text += "\ntooltip: " + str(tooltip_on)
 
 
 func _process_pause_inputs():
@@ -95,7 +97,12 @@ func _process_focus_inputs():
 		focus_point = current_navigation_point.get("west_focus_point")
 
 	if match_north or match_east or match_south or match_west:
+		if not tooltip_on and player_state == PlayerState.IDLE:
+			focus_label_animation.play("appear")
+			
 		if Input.is_action_just_pressed("move_forward") and player_state == PlayerState.IDLE:
+			focus_label_animation.play("disappear")
+			
 			player_state = PlayerState.MOVING
 			unfocus_pos = camera_3d.global_position
 			unfocused_rot = camera_3d.global_basis
@@ -103,7 +110,16 @@ func _process_focus_inputs():
 		elif Input.is_action_just_pressed("move_backward") and player_state == PlayerState.FOCUSING:
 			player_state = PlayerState.MOVING
 			_animate_defocus(unfocus_pos, unfocused_rot)
+			
+	else:
+		if tooltip_on and not focus_label_animation.is_playing():
+			focus_label_animation.play("disappear")
 
+func turn_tooltip():
+	tooltip_on = true
+
+func turn_tooltip_off():
+	tooltip_on = false
 
 func _process_movement_inputs():
 	# --- FORWARD ---
@@ -245,5 +261,7 @@ func _tween_defocus_over():
 	player_state = PlayerState.IDLE
 # -------------------------------------------------------
 func _impossible_movement():
+	pass
 	# TODO: remove debug message
-	print("It's impossible to move forward!")
+	#print("It's impossible to move forward!")
+
