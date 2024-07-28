@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=117 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -50,7 +50,7 @@
 [ext_resource type="Texture2D" uid="uid://bjfxknyjo1to4" path="res://Assets/2D/AlchemicalMaterials/Mercury_Spirit.png" id="45_20rln"]
 [ext_resource type="Texture2D" uid="uid://m3n5auvsl1eg" path="res://Assets/2D/BasicElements/Water.png" id="45_yqq5f"]
 [ext_resource type="Texture2D" uid="uid://c8fbk85aj43j1" path="res://Assets/2D/BasicElements/Fire.png" id="46_hocwh"]
-[ext_resource type="PackedScene" uid="uid://dftwsm7355x7m" path="res://Scenes/Items/BookRed.tscn" id="46_x03fn"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/BookRed.tscn" id="46_x03fn"]
 [ext_resource type="Texture2D" uid="uid://c11eae4qq7wk3" path="res://Assets/2D/BasicElements/Earth.png" id="47_wjf4x"]
 [ext_resource type="Texture2D" uid="uid://hynfrwtgbvxl" path="res://Assets/2D/AlchemicalProcesses/Taurus_Congelation.png" id="48_dcc0o"]
 [ext_resource type="PackedScene" uid="uid://i0cbyypo3vy4" path="res://Scenes/Items/BookBrown.tscn" id="48_s5nvg"]
@@ -65,7 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://ewlcjmyc4nox" path="res://Assets/2D/AlchemicalProcesses/Sagittarius_Ceration.png" id="54_dwvc6"]
 [ext_resource type="Texture2D" uid="uid://dlu0peeukk8qn" path="res://Assets/2D/Decals/Blank.png" id="55_5y37y"]
 [ext_resource type="Texture2D" uid="uid://c31yis5cdjonm" path="res://Assets/2D/AlchemicalProcesses/Capricorn_Fermentation_Putrefaction.png" id="55_djyml"]
-[ext_resource type="PackedScene" uid="uid://beb3g1worunrn" path="res://Scenes/Items/BookBlack.tscn" id="57_1l3i3"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/BookBlack.tscn" id="57_1l3i3"]
 [ext_resource type="Texture2D" uid="uid://bmd2cemv3mk2p" path="res://Assets/2D/AlchemicalProcesses/Pisces_Projection.png" id="57_uv6jf"]
 [ext_resource type="Texture2D" uid="uid://7qphghswk1iv" path="res://Assets/2D/AlchemicalProcesses/Aquarius_Multiplication.png" id="58_efy78"]
 [ext_resource type="Texture2D" uid="uid://dvkf8tp7s5461" path="res://Assets/2D/AlchemicalProcesses/Aries_Calcination.png" id="59_qei4b"]
@@ -91,8 +91,7 @@ background_mode = 1
 background_color = Color(0, 0, 0.0470588, 1)
 sky = SubResource("Sky_fu3n5")
 sky_rotation = Vector3(0, -2.10836, 0)
-tonemap_mode = 2
-tonemap_exposure = 1.5
+tonemap_mode = 3
 tonemap_white = 8.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_goo6b"]
@@ -1510,7 +1509,7 @@ transform = Transform3D(0, 0.551296, -0.83431, 1.91616e-09, 0.83431, 0.551296, 1
 transform = Transform3D(-0.661233, 0, -0.75018, 0, 1, 0, 0.75018, 0, -0.661233, -4.37098, 0.934046, 6.49486)
 
 [node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointAngolo" index="1"]
-transform = Transform3D(0.000189483, 0.344534, -0.938774, 0.00499444, 0.938762, 0.34453, 0.999987, -0.00475393, -0.00154287, -0.385422, -0.127799, 0.024433)
+transform = Transform3D(-0.016822, 0.646057, -0.763105, 0.0629755, 0.762382, 0.644056, 0.997874, -0.0372226, -0.0535105, -0.385422, -0.127799, 0.024433)
 
 [node name="FocusPointLectern" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
 transform = Transform3D(-0.965672, 0.259763, 8.44218e-08, 0.259763, 0.965672, -2.27092e-08, -8.74228e-08, 0, -1, -4.42811, 0.869934, 5.10819)
@@ -1768,10 +1767,22 @@ transform = Transform3D(-5.21386e-08, -0.131306, 1.19279, -0.020189, 1.19263, 0.
 [node name="Candle" parent="DecorationObjects/CandeHolderWall2" instance=ExtResource("11_llow7")]
 transform = Transform3D(0.000909814, -7.02832e-05, -0.833333, -0.0542045, 0.831568, -0.000129315, 0.831568, 0.0542047, 0.000903314, 0.148354, -0.0502664, -0.000857979)
 
+[node name="CandeHolderWall10" parent="DecorationObjects" instance=ExtResource("16_irf7i")]
+transform = Transform3D(-0.00135142, -0.051182, 1.1989, -0.0201437, 1.19874, 0.0511534, -1.19983, -0.0200678, -0.00220918, 0.314207, 0.61026, 1.60136)
+
+[node name="Candle" parent="DecorationObjects/CandeHolderWall10" instance=ExtResource("11_llow7")]
+transform = Transform3D(0.000909814, -7.02832e-05, -0.833333, -0.0542045, 0.831568, -0.000129315, 0.831568, 0.0542047, 0.000903314, 0.148354, -0.0502664, -0.000857979)
+
 [node name="CandeHolderWall3" parent="DecorationObjects" instance=ExtResource("16_irf7i")]
 transform = Transform3D(-0.00654724, -0.0733494, 1.19774, 0.0659086, 1.19593, 0.0735988, -1.19817, 0.0661859, -0.00249639, -2.73214, 1.7, 1.59682)
 
 [node name="Candle" parent="DecorationObjects/CandeHolderWall3" instance=ExtResource("11_llow7")]
+transform = Transform3D(-0.00340903, 0.0903834, -0.82841, 0.000185416, 0.828417, 0.0903834, 0.833326, 0.000185429, -0.00340902, 0.145587, -0.0505366, 0.00297999)
+
+[node name="CandeHolderWall5" parent="DecorationObjects" instance=ExtResource("16_irf7i")]
+transform = Transform3D(-0.00654724, -0.0733494, 1.19774, 0.0659086, 1.19593, 0.0735988, -1.19817, 0.0661859, -0.00249639, -2.73214, 0.763215, 1.59682)
+
+[node name="Candle" parent="DecorationObjects/CandeHolderWall5" instance=ExtResource("11_llow7")]
 transform = Transform3D(-0.00340903, 0.0903834, -0.82841, 0.000185416, 0.828417, 0.0903834, 0.833326, 0.000185429, -0.00340902, 0.145587, -0.0505366, 0.00297999)
 
 [node name="CandeHolderWall4" parent="DecorationObjects" instance=ExtResource("16_irf7i")]
@@ -2218,6 +2229,20 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -2.15854, 1.20351, 1.91
 
 [node name="Candle" parent="DecorationObjects/CandeHolderPlate" instance=ExtResource("11_llow7")]
 transform = Transform3D(0.830497, 0, 0, 0, 0.830497, 0, 0, 0, 0.830497, 0.00117934, -0.00968707, -0.000315547)
+
+[node name="CandeHolderPlate3" parent="DecorationObjects" instance=ExtResource("52_c80qp")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 3.8979, 0.0693631, -0.630718)
+
+[node name="Candle" parent="DecorationObjects/CandeHolderPlate3" instance=ExtResource("11_llow7")]
+transform = Transform3D(0.830497, 0, 0, 0, 0.830497, 0, 0, 0, 0.830497, 0.00117946, -0.00968707, -0.000315547)
+range_min = 1.4
+
+[node name="CandeHolderPlate8" parent="DecorationObjects" instance=ExtResource("52_c80qp")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 3.8979, 0.0693631, -2.10911)
+
+[node name="Candle" parent="DecorationObjects/CandeHolderPlate8" instance=ExtResource("11_llow7")]
+transform = Transform3D(0.830497, 0, 0, 0, 0.830497, 0, 0, 0, 0.830497, 0.00117946, -0.00968707, -0.000315547)
+range_min = 1.4
 
 [node name="CandeHolderPlate6" parent="DecorationObjects" instance=ExtResource("52_c80qp")]
 transform = Transform3D(-1.03609, 0, 0.605415, 0, 1.2, 0, -0.605415, 0, -1.03609, -0.320373, 0.918883, -1.82837)
