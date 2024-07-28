@@ -59,7 +59,7 @@ material = ExtResource("11_cjmjh")
 
 [sub_resource type="QuadMesh" id="QuadMesh_gx6p0"]
 
-[node name="MainScenePrototype02" type="Node3D"]
+[node name="MainScene" type="Node3D"]
 script = ExtResource("1_3wtai")
 
 [node name="Player" parent="." node_paths=PackedStringArray("current_navigation_point") instance=ExtResource("2_83pmb")]
