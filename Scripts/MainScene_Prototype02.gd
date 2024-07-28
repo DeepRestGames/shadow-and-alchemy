@@ -119,6 +119,3 @@ func setup_sound(sound_type, timer, rand_min: float, rand_max: float, volume: fl
 	timer.start()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass

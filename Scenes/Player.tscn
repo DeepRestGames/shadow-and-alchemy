@@ -1,10 +1,58 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1ngk84wlraoa"]
+[gd_scene load_steps=11 format=3 uid="uid://d1ngk84wlraoa"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_h2fim"]
 [ext_resource type="PackedScene" uid="uid://b4csxpsd7ukr6" path="res://Scenes/InventorySystem/InventoryUI.tscn" id="3_3gjop"]
 [ext_resource type="PackedScene" uid="uid://duhgac42d8866" path="res://Scenes/UI/Diary.tscn" id="3_pymve"]
 [ext_resource type="PackedScene" uid="uid://4gxkhk21pip5" path="res://Scenes/UI/Options.tscn" id="4_la86e"]
 [ext_resource type="FontFile" uid="uid://cb57uwfvgsqmd" path="res://Assets/2D/Fonts/Almendra-Italic.ttf" id="5_tl8ok"]
+[ext_resource type="PackedScene" uid="uid://bi3j1l53gsk7j" path="res://Scenes/Items/AnimatedBook.tscn" id="6_4dkbr"]
+
+[sub_resource type="Animation" id="Animation_w25xb"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FocusLabel:theme_override_colors/font_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FocusLabel:theme_override_colors/font_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FocusLabel:theme_override_colors/font_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FocusLabel:theme_override_colors/font_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_r724i"]
 resource_name = "appear"
@@ -130,53 +178,6 @@ tracks/4/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_w25xb"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("FocusLabel:theme_override_colors/font_color:r")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("FocusLabel:theme_override_colors/font_color:g")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("FocusLabel:theme_override_colors/font_color:b")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("FocusLabel:theme_override_colors/font_color:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yfr54"]
 _data = {
 "RESET": SubResource("Animation_w25xb"),
@@ -235,3 +236,10 @@ text = "Press [W] o [↑] to focus."
 libraries = {
 "": SubResource("AnimationLibrary_yfr54")
 }
+
+[node name="AnimatedBook" parent="." instance=ExtResource("6_4dkbr")]
+transform = Transform3D(-0.47, 4.10887e-08, 1.79604e-15, 0, -2.05444e-08, 0.47, 4.10887e-08, 0.47, 2.05444e-08, -0.014, 0.395, -0.454)
+visible = false
+
+[connection signal="sig_pulled_out" from="AnimatedBook" to="." method="_on_animated_book_sig_pulled_out"]
+[connection signal="sig_put_away" from="AnimatedBook" to="." method="_on_animated_book_sig_put_away"]

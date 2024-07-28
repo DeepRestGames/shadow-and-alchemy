@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=107 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene_Prototype02.gd" id="1_3wtai"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -36,20 +36,19 @@
 [ext_resource type="Texture2D" uid="uid://mk0guedcs5u0" path="res://Assets/2D/AlchemicalMaterials/Blood.png" id="35_cgouk"]
 [ext_resource type="PackedScene" uid="uid://bvrhasn8bju08" path="res://Assets/3D/Props/SpiceJarFilledGreen.blend" id="35_imatw"]
 [ext_resource type="PackedScene" uid="uid://2irg4q360ucu" path="res://Assets/3D/Props/SpiceJarFilledRed.blend" id="36_n8ghq"]
-[ext_resource type="PackedScene" uid="uid://3yp0qbvl62p1" path="res://Assets/3D/Props/BookBlack_v0.0.0.blend" id="37_1ro66"]
 [ext_resource type="PackedScene" uid="uid://bnah30dwuroo7" path="res://Scenes/Items/InventoryItems/Item_Mushroom.tscn" id="36_opvsd"]
+[ext_resource type="PackedScene" uid="uid://3yp0qbvl62p1" path="res://Assets/3D/Props/BookBlack_v0.0.0.blend" id="37_1ro66"]
 [ext_resource type="PackedScene" uid="uid://ebtsdp6p2iw4" path="res://Assets/3D/Props/SpiceJarFilledYellow.blend" id="37_2j1vw"]
-[ext_resource type="PackedScene" uid="uid://qe8xaa81beoh" path="res://Assets/3D/Props/BookBlue_v0.0.0.blend" id="38_3le6x"]
 [ext_resource type="PackedScene" uid="uid://cgt7qhmb42v61" path="res://Scenes/Items/InventoryItems/Item_Coal.tscn" id="37_e3q8q"]
 [ext_resource type="PackedScene" uid="uid://dns78fyxhw4g3" path="res://Scenes/Items/InventoryItems/Item_JarOfGrapes.tscn" id="37_oqlbi"]
+[ext_resource type="PackedScene" uid="uid://qe8xaa81beoh" path="res://Assets/3D/Props/BookBlue_v0.0.0.blend" id="38_3le6x"]
 [ext_resource type="PackedScene" uid="uid://dhtnotvhyj8uf" path="res://Assets/3D/Props/CoinPurse.blend" id="38_4dsmt"]
+[ext_resource type="PackedScene" uid="uid://du3dh6rb24kyv" path="res://Scenes/Items/Grimoire.tscn" id="38_t6tu7"]
+[ext_resource type="PackedScene" uid="uid://dqoc03dewm5we" path="res://Scenes/Items/Paper.tscn" id="39_l3spk"]
 [ext_resource type="PackedScene" uid="uid://dm2f5ywbe7tlm" path="res://Assets/3D/Props/BookRed_v0.0.0.blend" id="39_vbsr1"]
 [ext_resource type="PackedScene" uid="uid://cns0ulpyl4n5m" path="res://Assets/3D/Props/BookBrown_v0.0.0.blend" id="40_0nbe0"]
 [ext_resource type="PackedScene" uid="uid://ccjymunjlm84n" path="res://Assets/3D/Props/GobletsBrutti_v0.0.0.blend" id="41_3uqgs"]
 [ext_resource type="PackedScene" uid="uid://cwr2mtw5bu8b6" path="res://Assets/3D/Props/BookPurple_v0.0.0.blend" id="41_ikusa"]
-[ext_resource type="PackedScene" uid="uid://du3dh6rb24kyv" path="res://Scenes/Items/Grimoire.tscn" id="38_t6tu7"]
-[ext_resource type="PackedScene" uid="uid://dqoc03dewm5we" path="res://Scenes/Items/Paper.tscn" id="39_l3spk"]
-[ext_resource type="PackedScene" uid="uid://e1jlpvf2by57" path="res://Assets/3D/Props/Racoon_0.1.2.blend" id="42_oruya"]
 [ext_resource type="PackedScene" uid="uid://dfl30ul37jev4" path="res://Assets/3D/Props/Skull_v0.0.0.blend" id="43_oohwt"]
 [ext_resource type="Texture2D" uid="uid://bq04jmrgld06l" path="res://Assets/2D/AlchemicalMaterials/Salt_Body.png" id="43_qg3xt"]
 [ext_resource type="Texture2D" uid="uid://bmqc7os6rs7a1" path="res://Assets/2D/AlchemicalMaterials/Sulfur_Soul.png" id="44_iq5v5"]
@@ -1644,10 +1643,12 @@ transform = Transform3D(9.17939e-08, 0, 1, 0, 1, 0, -0.7, 0, 1.31134e-07, -0.898
 [node name="ItemBookBlack_Salt" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.974988, 0, 0.115277, 0, 0.98178, 0, -0.115277, 0, -0.974988, -1.92681, -0.531197, 7.6943)
 texture = ExtResource("43_qg3xt")
+pages_path = "res://Assets/2D/Books/Aries/"
 
 [node name="ItemBookBlack_Surfur" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.974988, 0, 0.115277, 0, 0.98178, 0, -0.115277, 0, -0.974988, -1.99533, -0.531486, 7.68842)
 texture = ExtResource("44_iq5v5")
+pages_path = "res://Assets/2D/Books/Pisces/"
 
 [node name="ItemBookBlack_Mercury" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.967791, -0.164959, 0.00782703, -0.164778, 0.967657, 0.0194824, -0.0109879, 0.0178911, -0.981555, -2.08207, -0.531486, 7.68282)
@@ -2233,6 +2234,9 @@ transform = Transform3D(-1.69076e-08, 0.208046, -0.341638, -1.82481e-11, 0.34163
 
 [node name="Paper" parent="." instance=ExtResource("39_l3spk")]
 transform = Transform3D(-0.257115, 0, 0.306418, 0, 0.4, 0, -0.306418, 0, -0.257115, -3.86294, 0.159394, -0.0677674)
+
+[connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Salt" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Surfur" to="Player" method="_on_book_opened"]
 
 [editable path="Player"]
 [editable path="Navigation/FocusPoints/FocusPointTable"]

@@ -16,7 +16,7 @@ const TIME_BETWEEN_ROTATIONS: float = 0.35
 
 @export var current_navigation_point: NavigationPoint
 var next_navigation_point: NavigationPoint
-
+var current_focus_point: FocusPoint
 # Movement
 enum FacingDirection {
 	NORTH,	# 0
@@ -31,10 +31,13 @@ enum PlayerState {
 	MOVING,		# 1
 	FOCUSING,	# 2
 	INVENTORY,	# 3		CAN OPEN DIARY
-	DIARY		# 4
+	DIARY,		# 4
+	READING_BOOK# 5
 }
 
 @onready var diary = $Diary
+@onready var animated_book = $AnimatedBook
+
 @onready var debug_ui = $DEBUG_UI
 @onready var focus_label_animation = $Focus/FocusLabelAnimation
 var tooltip_on: bool = false
@@ -43,11 +46,12 @@ func _ready():
 	diary.hide()
 
 
+
 func _process(_delta):
 	_process_movement_inputs()
 	_process_focus_inputs()
 	_process_pause_inputs()
-
+	_process_reading_inputs()
 
 	# TODO: experiment to start creepy soundtrack at a scripted moment (in this example, focussing on `NavigationPoint11`)
 	if (player_state == PlayerState.FOCUSING) and ("Lectern" in str(current_navigation_point)):
@@ -59,10 +63,12 @@ func _process(_delta):
 	debug_ui.text += "\nROT: " + str(camera_3d.global_position)
 	debug_ui.text += "\nCurr nav point: " + str(current_navigation_point)
 	debug_ui.text += "\ntooltip: " + str(tooltip_on)
+	debug_ui.text += "\nAnibook Pos: " + str(animated_book.global_position)
+	
 
 
 func _process_pause_inputs():
-	if Input.is_action_just_pressed("open_diary") and player_state not in [PlayerState.FOCUSING, PlayerState.MOVING, PlayerState.INVENTORY]:
+	if Input.is_action_just_pressed("open_diary") and player_state not in [PlayerState.FOCUSING, PlayerState.MOVING, PlayerState.INVENTORY, PlayerState.READING_BOOK]:
 		if player_state == PlayerState.DIARY and not diary.animation_player.is_playing():
 			player_state = previous_state
 			diary.put_away()
@@ -108,9 +114,11 @@ func _process_focus_inputs():
 			unfocus_pos = camera_3d.global_position
 			unfocused_rot = camera_3d.global_basis
 			_animate_focus(focus_point)
+			current_focus_point = focus_point
 		elif Input.is_action_just_pressed("move_backward") and player_state == PlayerState.FOCUSING:
 			player_state = PlayerState.MOVING
 			_animate_defocus(unfocus_pos, unfocused_rot)
+			current_focus_point = null
 			
 	else:
 		if tooltip_on and not focus_label_animation.is_playing():
@@ -266,3 +274,24 @@ func _impossible_movement():
 	# TODO: remove debug message
 	#print("It's impossible to move forward!")
 
+func _process_reading_inputs():
+	if Input.is_action_just_pressed("turn_diary_left") and player_state == PlayerState.READING_BOOK:
+		animated_book.turn_left()
+	if Input.is_action_just_pressed("turn_diary_right") and player_state == PlayerState.READING_BOOK:
+		animated_book.turn_right()
+	if Input.is_action_just_pressed("escape") and player_state == PlayerState.READING_BOOK:
+		animated_book.put_away()
+	
+		
+var pre_book_state 
+
+func _on_book_opened(page_path):
+	animated_book.pull_out(page_path)
+
+func _on_animated_book_sig_put_away():
+	player_state = pre_book_state
+
+
+func _on_animated_book_sig_pulled_out():
+	pre_book_state = player_state
+	player_state = PlayerState.READING_BOOK
