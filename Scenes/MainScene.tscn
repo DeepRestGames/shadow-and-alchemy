@@ -400,6 +400,8 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5.82548, 1.19247, 0.0497332)
 stream = ExtResource("19_cy568")
 bus = &"Music"
 
+[node name="ChestOpening" type="AudioStreamPlayer" parent="Audio"]
+
 [node name="Creaks" type="AudioStreamPlayer" parent="Audio"]
 bus = &"SFX"
 
@@ -414,8 +416,6 @@ bus = &"SFX"
 [node name="Footsteps" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("20_awg3m")
 bus = &"SFX"
-
-[node name="GenericSounds" type="AudioStreamPlayer" parent="Audio"]
 
 [node name="Screams" type="AudioStreamPlayer" parent="Audio"]
 bus = &"SFX"

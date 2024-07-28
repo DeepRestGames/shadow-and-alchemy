@@ -33,6 +33,9 @@ const creaks_array = [
 	preload("res://Assets/Audio/Sound/creaking_metal_3.mp3"),
 ]
 
+const chest_open_array = [preload("res://Assets/Audio/Sound/chest_opening_short.mp3")]
+
+
 ##### Setup thunderstorm #####
 
 const thunderStorm_volume_db: float = -10.0
@@ -60,11 +63,14 @@ const rand_creak_time_max_s: float = 120.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var player: Node = get_node("Player")
+	var chest_top_collision_1: Node = get_node("Chests/ChestTop/ChestTopCollision")
+	var chest_top_collision_2: Node = get_node("Props/BloodChest/ChestTop/ChestTopCollision")
+
 	##### Setup background music #####
 
 	$Audio/BackgroundMusic.volume_db = -10
 	var background_music: AudioStreamMP3 = $Audio/BackgroundMusic.stream as AudioStreamMP3
-	var player: Node = get_node("Player")
 	background_music.loop = true
 	background_music.loop_offset = 21.333 # measures 9 to 16 included
 	player.connect("creepy_event", play_background_music)
@@ -73,6 +79,12 @@ func _ready():
 
 	$Audio/Footsteps.volume_db = -10
 	player.connect("player_moved", play_sound_from_array.bind("footstep", $Audio/Footsteps, footsteps_array))
+
+	##### Setup chest opening #####
+
+	$Audio/ChestOpening.volume_db = -5
+	chest_top_collision_1.connect("chest_opened", play_sound_from_array.bind("chest opening", $Audio/ChestOpening, chest_open_array))
+	chest_top_collision_2.connect("chest_opened", play_sound_from_array.bind("chest opening", $Audio/ChestOpening, chest_open_array))
 
 	##### Setup randomly timed sounds #####
 
