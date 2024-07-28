@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnah30dwuroo7"]
+
+[ext_resource type="PackedScene" uid="uid://bj3naiqgfy1r4" path="res://Assets/3D/Props/Mushroom.blend" id="1_lryoj"]
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_r2sux"]
+[ext_resource type="Resource" uid="uid://3ja4awh1fi4p" path="res://Resources/InventoryItems/Item_Mushroom.tres" id="2_nkpti"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemMushroom" type="CSGBox3D"]
+transform = Transform3D(0.996163, -0.0875209, 0, 0.0858909, 0.977611, 0.192094, -0.0168122, -0.191357, 0.981377, 0, 0, 0)
+use_collision = true
+collision_layer = 2
+size = Vector3(0.242737, 0.270966, 0.243103)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_r2sux")
+inventory_item_data = ExtResource("2_nkpti")
+item_model_height = 0.27
+
+[node name="Mushroom" parent="." instance=ExtResource("1_lryoj")]
+transform = Transform3D(-0.709868, -0.2386, -1.25326, -0.358642, 1.41369, -0.0660022, 1.22432, 0.275772, -0.74598, 0.0450745, -0.154495, -0.0543518)

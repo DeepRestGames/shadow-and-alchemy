@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://dvxdxc15pf0ew"]
+
+[ext_resource type="Texture2D" uid="uid://p1j0ykqfcwy6" path="res://Assets/2D/InventoryItemsIcons/OpalStone.jpg" id="1_edpxu"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_u5uji"]
+
+[resource]
+script = ExtResource("2_u5uji")
+item_name = "Opal Stone"
+item_icon = ExtResource("1_edpxu")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_OpalStone.tscn"

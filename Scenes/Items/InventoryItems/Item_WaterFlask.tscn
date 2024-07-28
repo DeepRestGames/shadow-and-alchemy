@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://23e7cg446u3x"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_mtpbh"]
+[ext_resource type="Resource" uid="uid://dcuavn3lw5dxg" path="res://Resources/InventoryItems/Item_WaterFlask.tres" id="2_xidvg"]
+[ext_resource type="PackedScene" uid="uid://isfvi2mpt871" path="res://Assets/3D/Props/GlassFlaskFilled_v0.0.0.blend" id="3_2a704"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemWaterFlask" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.170898, 0.314453, 0.078125)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_mtpbh")
+inventory_item_data = ExtResource("2_xidvg")
+item_model_height = 0.314
+
+[node name="GlassFlaskFilled_v0_0_1" parent="." instance=ExtResource("3_2a704")]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.2, 0, -0.1, 0, -4.37114e-09, 0, -0.156457, 0)

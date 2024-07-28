@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/PuzzleSystem/AlchemicalCircle.gd" id="1_l6vq5"]
 [ext_resource type="Texture2D" uid="uid://ckh6m5jtdgsdn" path="res://Assets/2D/AlchemicalCircle_noCenter.png" id="1_pjbny"]
 [ext_resource type="PackedScene" uid="uid://dl24362otq47t" path="res://Scenes/InteractionSystem/AlchemicalProcessSymbol.tscn" id="3_2kur5"]
-[ext_resource type="Resource" uid="uid://nfe0h4tn2qaf" path="res://Resources/Puzzles/TestAlchemicalPuzzle.tres" id="3_xi5p8"]
-[ext_resource type="Resource" uid="uid://dtrbxn2iexvy" path="res://Resources/Puzzles/TestObjectsPuzzle.tres" id="4_fxgyt"]
+[ext_resource type="Resource" uid="uid://nfe0h4tn2qaf" path="res://Resources/Puzzles/Tests/TestAlchemicalPuzzle.tres" id="3_xi5p8"]
+[ext_resource type="Resource" uid="uid://dtrbxn2iexvy" path="res://Resources/Puzzles/Tests/TestObjectsPuzzle.tres" id="4_fxgyt"]
 [ext_resource type="PackedScene" uid="uid://cmp4gbdjt2xhj" path="res://Scenes/InteractionSystem/AlchemicalCirclePuzzleSlot.tscn" id="5_gkbj8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qaj2o"]

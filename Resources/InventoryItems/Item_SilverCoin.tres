@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://4anbu83imtd8"]
+
+[ext_resource type="Texture2D" uid="uid://cununj2p8n4ik" path="res://Assets/2D/InventoryItemsIcons/SilverCoin.jpg" id="1_2bsdn"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_0xky2"]
+
+[resource]
+script = ExtResource("2_0xky2")
+item_name = "Silver Coin"
+item_icon = ExtResource("1_2bsdn")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_SilverCoin.tscn"

@@ -1,11 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://6hoi0bkmcnyt"]
+[gd_scene load_steps=17 format=3 uid="uid://6hoi0bkmcnyt"]
 
 [ext_resource type="PackedScene" uid="uid://bhv1boykqvw23" path="res://Scenes/PlayerMovement/NavigationPoint.tscn" id="1_fg33c"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="1_jwaoo"]
 [ext_resource type="Script" path="res://Scripts/MainScene_Prototype01.gd" id="1_u3d13"]
 [ext_resource type="PackedScene" uid="uid://b68s0qxy7ri2k" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="3_8i0nq"]
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Interaction.gd" id="3_8lpg5"]
-[ext_resource type="PackedScene" uid="uid://c334blq5lnfot" path="res://Scenes/Items/SaltBottle.tscn" id="3_pi20n"]
 [ext_resource type="PackedScene" uid="uid://1ofvsxrma8iv" path="res://Scenes/Items/CeremonialKnife.tscn" id="4_nl1dk"]
 [ext_resource type="PackedScene" uid="uid://cmp4gbdjt2xhj" path="res://Scenes/InteractionSystem/AlchemicalCirclePuzzleSlot.tscn" id="8_om380"]
 [ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="9_8do2x"]
@@ -162,9 +161,6 @@ radius = 0.1
 height = 0.3
 material = SubResource("StandardMaterial3D_5dgea")
 script = ExtResource("3_8lpg5")
-
-[node name="SaltBottle" parent="Environment/Props" instance=ExtResource("3_pi20n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75746, -0.140247, 2.57278)
 
 [node name="CeremonialKnife" parent="Environment/Props" instance=ExtResource("4_nl1dk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00084585, 1.19209e-07, 1.47549)

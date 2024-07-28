@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmsll8bggsyul"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_1dh11"]
+[ext_resource type="Resource" uid="uid://ueg0rxfjd8hj" path="res://Resources/InventoryItems/Item_BowlOfSalt.tres" id="2_vx55j"]
+[ext_resource type="PackedScene" uid="uid://dh8tle68ghvh3" path="res://Assets/3D/Props/BowlOfSalt.blend" id="3_3cjkc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemBowlOfSalt" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.213, 0.1, 0.192383)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_1dh11")
+inventory_item_data = ExtResource("2_vx55j")
+item_model_height = 0.1
+
+[node name="BowlOfSalt" parent="." instance=ExtResource("3_3cjkc")]
+transform = Transform3D(0.8, 0, 0, 0, 0.799999, 0, 0, 0, 0.799999, 0, -0.0481228, 0)
