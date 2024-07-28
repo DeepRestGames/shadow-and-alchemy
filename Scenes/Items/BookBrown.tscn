@@ -13,17 +13,17 @@ albedo_texture = ExtResource("1_sjkh3")
 [sub_resource type="PlaneMesh" id="PlaneMesh_1fl7a"]
 material = ExtResource("4_em3w6")
 
-[node name="ItemBookRed" type="CSGBox3D"]
+[node name="ItemBookBrown" type="CSGBox3D"]
 material_overlay = SubResource("StandardMaterial3D_mkmif")
 size = Vector3(0.0717891, 0.250244, 0.178955)
 material = SubResource("StandardMaterial3D_mkmif")
 script = ExtResource("2_o2p5p")
 
-[node name="BookRed" parent="." instance=ExtResource("3_5gfqq")]
+[node name="BookBrown" parent="." instance=ExtResource("3_5gfqq")]
 transform = Transform3D(-3.0598e-08, 0, -1, 0, 1, 0, 0.7, 0, -4.37114e-08, 0, -0.126434, 0)
 
 [node name="Lable" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0191934, 3.30348e-06, 4.01348e-05, 4.01374e-05, -1.47231e-05, -0.0191934, -3.27258e-06, 0.0191934, -1.473e-05, 0, 0.000243235, 0.0883789)
+transform = Transform3D(0.0191934, 3.30348e-06, 4.01348e-05, 4.01374e-05, -1.47231e-05, -0.0191934, -3.27258e-06, 0.0191934, -1.473e-05, 0, -0.0648202, 0.0883789)
 mesh = SubResource("PlaneMesh_1fl7a")
 
 [node name="Sprite3D" type="Sprite3D" parent="Lable"]

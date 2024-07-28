@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw5jgv3vg4bl8"
-path.s3tc="res://.godot/imported/Sun_Gold.png-9ce765c09e6f66350046c9e59d41eb01.s3tc.ctex"
-path.etc2="res://.godot/imported/Sun_Gold.png-9ce765c09e6f66350046c9e59d41eb01.etc2.ctex"
+uid="uid://dlu0peeukk8qn"
+path.s3tc="res://.godot/imported/Blank.png-f96fd5bd66c509566d12a8b0d4065947.s3tc.ctex"
+path.etc2="res://.godot/imported/Blank.png-f96fd5bd66c509566d12a8b0d4065947.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/2D/PlanetaryMetals/Sun_Gold.png"
-dest_files=["res://.godot/imported/Sun_Gold.png-9ce765c09e6f66350046c9e59d41eb01.s3tc.ctex", "res://.godot/imported/Sun_Gold.png-9ce765c09e6f66350046c9e59d41eb01.etc2.ctex"]
+source_file="res://Assets/2D/Decals/Blank.png"
+dest_files=["res://.godot/imported/Blank.png-f96fd5bd66c509566d12a8b0d4065947.s3tc.ctex", "res://.godot/imported/Blank.png-f96fd5bd66c509566d12a8b0d4065947.etc2.ctex"]
 
 [params]
 
