@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=115 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -81,6 +81,7 @@
 [ext_resource type="PackedScene" uid="uid://coi7ttnhyc77y" path="res://Assets/3D/Props/GlassFlaskEmpty_v0.0.0.blend" id="75_0ctrt"]
 [ext_resource type="PackedScene" uid="uid://w2o5r7xjg8tw" path="res://Assets/3D/Props/EmptyHolderPlate.blend" id="76_qu3l4"]
 [ext_resource type="PackedScene" uid="uid://dvdddw1tb55q" path="res://Assets/3D/Props/BloodVialEmpty_v0.0.0.blend" id="77_j0jon"]
+[ext_resource type="AudioStream" uid="uid://ck0wwpsbje6jy" path="res://Assets/Audio/Sound/wind_1.mp3" id="82_6isw4"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("3_ba04y")
@@ -1457,7 +1458,7 @@ west_focus_point = NodePath("../../FocusPoints/FocusPointLibrary")
 
 [node name="Lectern" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("east_navigation_point", "south_navigation_point", "west_navigation_point", "north_focus_point") instance=ExtResource("5_5eyhx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0.8, 5)
-east_navigation_point = NodePath("../NavigationPoint10")
+east_navigation_point = NodePath("../Window")
 south_navigation_point = NodePath("../NavigationPoint6")
 west_navigation_point = NodePath("../NavigationPoint9")
 north_focus_point = NodePath("../../FocusPoints/FocusPointLectern")
@@ -1469,7 +1470,7 @@ south_navigation_point = NodePath("../NavigationPoint7")
 north_focus_point = NodePath("../../FocusPoints/FocusPointAngolo")
 west_focus_point = NodePath("../../FocusPoints/FocusPointAngolo")
 
-[node name="NavigationPoint10" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("west_navigation_point", "east_focus_point") instance=ExtResource("5_5eyhx")]
+[node name="Window" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("west_navigation_point", "east_focus_point") instance=ExtResource("5_5eyhx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0.8, 3.74955)
 west_navigation_point = NodePath("../Lectern")
 east_focus_point = NodePath("../../FocusPoints/FocusPointWindow")
@@ -2730,6 +2731,14 @@ bus = &"SFX"
 [node name="ThunderStorm" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("21_nduse")
 bus = &"SFX"
+
+[node name="WindowWind" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.03014, 1.57516, -2.91437)
+stream = ExtResource("82_6isw4")
+attenuation_model = 1
+volume_db = -50.0
+unit_size = 5.0
+autoplay = true
 
 [node name="Timers" type="Node" parent="Audio"]
 
