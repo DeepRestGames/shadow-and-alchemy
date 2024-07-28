@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=55 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene_Prototype02.gd" id="1_3wtai"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -45,10 +45,10 @@
 [ext_resource type="PackedScene" uid="uid://2irg4q360ucu" path="res://Assets/3D/Props/SpiceJarFilledRed.blend" id="36_n8ghq"]
 [ext_resource type="PackedScene" uid="uid://ebtsdp6p2iw4" path="res://Assets/3D/Props/SpiceJarFilledYellow.blend" id="37_2j1vw"]
 [ext_resource type="PackedScene" uid="uid://dhtnotvhyj8uf" path="res://Assets/3D/Props/CoinPurse.blend" id="38_4dsmt"]
-[ext_resource type="PackedScene" uid="uid://e1jlpvf2by57" path="res://Assets/3D/Props/Racoon_0.1.2.blend" id="42_oruya"]
-[ext_resource type="PackedScene" uid="uid://dfl30ul37jev4" path="res://Assets/3D/Props/Skull_v0.0.0.blend" id="43_oohwt"]
 [ext_resource type="PackedScene" uid="uid://du3dh6rb24kyv" path="res://Scenes/Items/Grimoire.tscn" id="38_t6tu7"]
 [ext_resource type="PackedScene" uid="uid://dqoc03dewm5we" path="res://Scenes/Items/Paper.tscn" id="39_l3spk"]
+[ext_resource type="PackedScene" uid="uid://e1jlpvf2by57" path="res://Assets/3D/Props/Racoon_0.1.2.blend" id="42_oruya"]
+[ext_resource type="PackedScene" uid="uid://dfl30ul37jev4" path="res://Assets/3D/Props/Skull_v0.0.0.blend" id="43_oohwt"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("3_ba04y")
@@ -225,7 +225,7 @@ transform = Transform3D(-0.661233, 0, -0.75018, 0, 1, 0, 0.75018, 0, -0.661233, 
 transform = Transform3D(0.000189483, 0.344534, -0.938774, 0.00499444, 0.938762, 0.34453, 0.999987, -0.00475393, -0.00154287, -0.385422, -0.127799, 0.024433)
 
 [node name="FocusPointLectern" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
-transform = Transform3D(-0.965672, 0.259763, 8.44218e-08, 0.259763, 0.965672, -2.27092e-08, -8.74228e-08, 0, -1, -4.42811, 0.869934, 5.10819)
+transform = Transform3D(-0.966645, 0.256121, 8.45068e-08, 0.256121, 0.966645, -2.23908e-08, -8.74228e-08, 1.71538e-15, -1, -4.46736, 0.787252, 5.14887)
 
 [node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointLectern" index="1"]
 transform = Transform3D(-2.71242e-08, 0.858343, -0.513077, 6.38372e-08, 0.513077, 0.858343, 1, -9.47159e-09, -6.8711e-08, 0.0623212, -0.0450239, -3.57628e-07)
@@ -249,7 +249,7 @@ transform = Transform3D(-0.869848, 0, 0.493319, 0, 1, 0, -0.493319, 0, -0.869848
 transform = Transform3D(-0.125359, 0, -0.535523, 0, 0.55, 0, 0.535523, 0, -0.125359, -1.71388, -1.71737, 7.67844)
 
 [node name="ChestTop" parent="Props/BloodChest" instance=ExtResource("28_qwxhw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.299906, 0.357113, 0.00897932)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.299906, 0.357113, 0.00897956)
 
 [node name="LabelBlood2" type="Sprite3D" parent="Props/BloodChest/ChestTop"]
 transform = Transform3D(-9.31323e-10, 0.0298071, 0.0033961, 0, 0.0033961, -0.0298072, -0.03, -9.31323e-10, -1.74623e-10, -0.498233, 0.135414, 0.431524)
@@ -569,7 +569,6 @@ bus = &"SFX"
 
 [node name="ChestTop" parent="Chests" instance=ExtResource("28_qwxhw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.555, 0.43, -1.329)
-visible = false
 
 [node name="Grimoire" parent="." instance=ExtResource("38_t6tu7")]
 transform = Transform3D(-1.69076e-08, 0.208046, -0.341638, -1.82481e-11, 0.341638, 0.208046, 0.4, 8.80949e-09, -1.44312e-08, -3.90871, 1.17938, -0.0561288)

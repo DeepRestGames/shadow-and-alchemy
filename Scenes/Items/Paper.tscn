@@ -1,22 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqoc03dewm5we"]
+[gd_scene load_steps=5 format=3 uid="uid://dqoc03dewm5we"]
 
-[ext_resource type="Texture2D" uid="uid://dil17f65fa1qf" path="res://Assets/2D/Decals/paper_ArtsyBee_Pixabay.jpg" id="1_r27vv"]
+[ext_resource type="Script" path="res://Scripts/Items/ClickableReadable.gd" id="1_ikg4c"]
+[ext_resource type="Script" path="res://Scripts/Items/Paper.gd" id="1_mmwto"]
+[ext_resource type="Texture2D" uid="uid://b7reg7n34lk10" path="res://Assets/2D/Decals/old_letter_pngwing.png" id="1_u1pwb"]
+[ext_resource type="Texture2D" uid="uid://iq3gr77ev8kj" path="res://Assets/DiaryPages/Font_Test_LMAO_04.png" id="2_3s0td"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_da6ug"]
-diffuse_mode = 3
-specular_mode = 1
-albedo_color = Color(0.454902, 0.454902, 0.454902, 1)
-albedo_texture = ExtResource("1_r27vv")
-grow_amount = 0.005
-
-[node name="Grimoire" type="Node3D"]
+[node name="Paper" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_mmwto")
 
-[node name="Pages" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999997, -0.00256646, -4.37113e-08, 0.00256646, 0.999997, -4.38236e-08, 4.38236e-08, 4.37113e-08, 1, 0.00225514, 0.0010587, 5.96509e-08)
-material_override = SubResource("StandardMaterial3D_da6ug")
-size = Vector3(0.681, 0.001, 0.959)
+[node name="Collider" type="CSGBox3D" parent="."]
+transform = Transform3D(0.999997, -0.00256646, -4.37113e-08, 0.00256646, 0.999997, -4.38236e-08, 4.38236e-08, 4.37113e-08, 1, 0.00236942, 0.0171353, 0.00160548)
+visible = false
+use_collision = true
+collision_layer = 64
+size = Vector3(0.681, 0.0148345, 0.959)
+script = ExtResource("1_ikg4c")
 
-[node name="Right" type="Sprite3D" parent="."]
-transform = Transform3D(0.0269999, -4.02818e-10, 0.000100874, 0.000100874, -6.46806e-10, -0.0269999, 4.05233e-10, 0.027, -6.45296e-10, 0, 0, 0)
+[node name="Page" type="Sprite3D" parent="."]
+transform = Transform3D(0.102, -1.52177e-09, 6.65186e-17, 0, -4.45856e-09, -0.102, 1.52177e-09, 0.102, -4.45856e-09, 0, 0.0162117, 7.08636e-10)
 flip_h = true
+modulate = Color(0.239216, 0.239216, 0.239216, 1)
+texture = ExtResource("1_u1pwb")
+
+[node name="Text" type="Sprite3D" parent="."]
+transform = Transform3D(0.024, -3.58063e-10, 1.56514e-17, 0, -1.04907e-09, -0.024, 3.58063e-10, 0.024, -1.04907e-09, 0, 0.0221637, 9.68808e-10)
+flip_h = true
+modulate = Color(0.239216, 0.239216, 0.239216, 1)
+texture = ExtResource("2_3s0td")
+
+[connection signal="has_been_clicked" from="Collider" to="." method="_on_collider_has_been_clicked"]
