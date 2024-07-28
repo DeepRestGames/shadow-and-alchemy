@@ -29,7 +29,22 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"brass_goblets_01": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/Brass.tres"
+},
+"brass_goblets_02": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/Brass.tres"
+},
+"brass_goblets_03": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/Brass.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0

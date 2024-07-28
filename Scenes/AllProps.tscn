@@ -1,0 +1,270 @@
+[gd_scene load_steps=52 format=3 uid="uid://sqgij3kdgwu5"]
+
+[ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_c5lpw"]
+[ext_resource type="PackedScene" uid="uid://dhmonnu314mp4" path="res://Assets/3D/Props/Alembic_v0.0.0.blend" id="2_84f07"]
+[ext_resource type="PackedScene" uid="uid://dvdddw1tb55q" path="res://Assets/3D/Props/BloodVialEmpty_v0.0.0.blend" id="3_l0egi"]
+[ext_resource type="PackedScene" uid="uid://dppflreshnbo8" path="res://Assets/3D/Props/BloodVialSeparated_v0.0.0.blend" id="4_texao"]
+[ext_resource type="PackedScene" uid="uid://tibfyewtauo3" path="res://Assets/3D/Props/BloodVial_v0.0.0.blend" id="5_0kynj"]
+[ext_resource type="PackedScene" uid="uid://3yp0qbvl62p1" path="res://Assets/3D/Props/BookBlack_v0.0.0.blend" id="6_o0q5j"]
+[ext_resource type="PackedScene" uid="uid://qe8xaa81beoh" path="res://Assets/3D/Props/BookBlue_v0.0.0.blend" id="7_ksd0a"]
+[ext_resource type="PackedScene" uid="uid://dm2f5ywbe7tlm" path="res://Assets/3D/Props/BookRed_v0.0.0.blend" id="8_wltm7"]
+[ext_resource type="PackedScene" uid="uid://cwr2mtw5bu8b6" path="res://Assets/3D/Props/BookPurple_v0.0.0.blend" id="9_bawiy"]
+[ext_resource type="PackedScene" uid="uid://cns0ulpyl4n5m" path="res://Assets/3D/Props/BookBrown_v0.0.0.blend" id="10_ukve4"]
+[ext_resource type="PackedScene" uid="uid://cikgffkunquyf" path="res://Assets/3D/Props/BowlOfSubstance.blend" id="11_ykbwr"]
+[ext_resource type="PackedScene" uid="uid://dh8tle68ghvh3" path="res://Assets/3D/Props/BowlOfSalt.blend" id="12_hgupn"]
+[ext_resource type="PackedScene" uid="uid://06tmis2stgmo" path="res://Assets/3D/Props/BowlOfDirt.blend" id="13_m6ycg"]
+[ext_resource type="PackedScene" uid="uid://4mdyxhrt5v7w" path="res://Assets/3D/Props/CandeHolderPlate.blend" id="14_t15ya"]
+[ext_resource type="PackedScene" uid="uid://6hhogeucrtfh" path="res://Assets/3D/Props/CandeHolderWall.blend" id="15_yclvu"]
+[ext_resource type="PackedScene" uid="uid://cvjg0uqd02gp7" path="res://Assets/3D/Props/Crucible.blend" id="16_10l6q"]
+[ext_resource type="PackedScene" uid="uid://cta4rodgtf63g" path="res://Assets/3D/Props/Crystal_v0.0.0.blend" id="17_pr7ie"]
+[ext_resource type="PackedScene" uid="uid://bmmvq5muuo2ar" path="res://Assets/3D/Props/FirewoodPiece_v0.0.0.blend" id="18_fr3wa"]
+[ext_resource type="Material" uid="uid://d1emby0aspm3t" path="res://Assets/3D/Props/materials/MoltenSilver.tres" id="18_jd7if"]
+[ext_resource type="PackedScene" uid="uid://db3luyfmuhmyy" path="res://Assets/3D/Props/Flint&Steel_v0.0.0.blend" id="19_g783b"]
+[ext_resource type="PackedScene" uid="uid://coi7ttnhyc77y" path="res://Assets/3D/Props/GlassFlaskEmpty_v0.0.0.blend" id="20_b0phv"]
+[ext_resource type="PackedScene" uid="uid://isfvi2mpt871" path="res://Assets/3D/Props/GlassFlaskFilled_v0.0.0.blend" id="21_7hmdq"]
+[ext_resource type="PackedScene" uid="uid://ccjymunjlm84n" path="res://Assets/3D/Props/GobletsBrutti_v0.0.0.blend" id="22_humul"]
+[ext_resource type="PackedScene" uid="uid://drsimt7eb0p0w" path="res://Assets/3D/Props/Kris_v0.0.0.blend" id="23_5q3rr"]
+[ext_resource type="PackedScene" uid="uid://biqkt2i023ui1" path="res://Assets/3D/Props/Laurel.blend" id="24_goxr0"]
+[ext_resource type="PackedScene" uid="uid://d0tfbw602vqkd" path="res://Assets/3D/Props/MortarPestle.blend" id="25_0wbte"]
+[ext_resource type="PackedScene" uid="uid://b3hkdu32yh165" path="res://Assets/3D/Props/Opal_v0.0.0.blend" id="26_nfv70"]
+[ext_resource type="PackedScene" uid="uid://dl1o0hpwktapu" path="res://Assets/3D/Props/Sieve_v0.0.0.blend" id="27_dy5ft"]
+[ext_resource type="PackedScene" uid="uid://dfl30ul37jev4" path="res://Assets/3D/Props/Skull_v0.0.0.blend" id="28_gt2bv"]
+[ext_resource type="Material" uid="uid://sqqass5k0d2i" path="res://Assets/3D/Props/materials/MixedSubstance.tres" id="28_krbr1"]
+[ext_resource type="PackedScene" uid="uid://cku0643md7uhn" path="res://Assets/3D/Props/SpiceJarEmpty_v0.0.0.blend" id="29_m0ig0"]
+[ext_resource type="PackedScene" uid="uid://d0cq4kvpnenr4" path="res://Assets/3D/Props/SpiceJarFilled_v0.0.0.blend" id="30_b1xyj"]
+[ext_resource type="PackedScene" uid="uid://be5fmscv5e4pb" path="res://Assets/3D/Props/Coin.blend" id="31_bkw4o"]
+[ext_resource type="PackedScene" uid="uid://d2ptlng7df3bg" path="res://Assets/3D/Props/SpiceJarFilledBlack.blend" id="32_5y18u"]
+[ext_resource type="PackedScene" uid="uid://bvrhasn8bju08" path="res://Assets/3D/Props/SpiceJarFilledGreen.blend" id="33_5rwvd"]
+[ext_resource type="Texture2D" uid="uid://d0etjo2vbf0cb" path="res://Assets/2D/AlchemicalMaterials/GraveDirt.png" id="34_fscay"]
+[ext_resource type="PackedScene" uid="uid://2irg4q360ucu" path="res://Assets/3D/Props/SpiceJarFilledRed.blend" id="34_xe2so"]
+[ext_resource type="PackedScene" uid="uid://ebtsdp6p2iw4" path="res://Assets/3D/Props/SpiceJarFilledYellow.blend" id="35_fewst"]
+[ext_resource type="PackedScene" uid="uid://cj14f2rdypuis" path="res://Assets/3D/Props/BowlOfPepper.blend" id="36_38arg"]
+[ext_resource type="PackedScene" uid="uid://d2mnsurxior5l" path="res://Assets/3D/Props/Bucket.blend" id="37_vfulb"]
+[ext_resource type="PackedScene" uid="uid://bj3naiqgfy1r4" path="res://Assets/3D/Props/Mushroom.blend" id="38_lkgej"]
+[ext_resource type="PackedScene" uid="uid://cwrqqwx4c4g0q" path="res://Assets/3D/Props/SpiceJarFilledGrapes.blend" id="40_b0yf5"]
+[ext_resource type="PackedScene" uid="uid://dhtnotvhyj8uf" path="res://Assets/3D/Props/CoinPurse.blend" id="41_mjetn"]
+[ext_resource type="PackedScene" uid="uid://byhimm6jf7lo0" path="res://Assets/3D/Props/GlassFlaskMercury.blend" id="43_t4vpq"]
+[ext_resource type="PackedScene" uid="uid://bp0ye040gn0v2" path="res://Assets/3D/Props/DyingEmber.blend" id="44_q563i"]
+[ext_resource type="PackedScene" uid="uid://w2o5r7xjg8tw" path="res://Assets/3D/Props/EmptyHolderPlate.blend" id="45_mqk40"]
+[ext_resource type="PackedScene" uid="uid://glmn1voquwx6" path="res://Assets/3D/Props/PileOfSubstance.blend" id="46_ry5i7"]
+[ext_resource type="PackedScene" uid="uid://d0256tpfxj4qm" path="res://Assets/3D/Props/VinegarVial.blend" id="47_5s7ca"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_sl1u7"]
+panorama = ExtResource("1_c5lpw")
+filter = false
+
+[sub_resource type="Sky" id="Sky_fu3n5"]
+sky_material = SubResource("PanoramaSkyMaterial_sl1u7")
+
+[sub_resource type="Environment" id="Environment_yermo"]
+background_mode = 1
+background_color = Color(0, 0, 0.0470588, 1)
+sky = SubResource("Sky_fu3n5")
+sky_rotation = Vector3(0, -2.10836, 0)
+tonemap_mode = 2
+tonemap_exposure = 4.0
+tonemap_white = 8.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_4pf10"]
+
+[node name="AllProps" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00262594, 4.76837e-07, 0.00135267)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yermo")
+
+[node name="DirectionalLight3D_1" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.994338, -0.0492318, 0.0941716, 1.55506e-09, 0.886204, 0.463296, -0.106264, 0.460673, -0.881186, -0.315615, 0, 0.0554024)
+light_color = Color(0.32549, 0.545098, 0.603922, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_opacity = 0.8
+
+[node name="DirectionalLight3D_2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.510543, 0.398366, -0.762004, 1.20129e-08, 0.886204, 0.463296, 0.859852, 0.236533, -0.452445, -0.315615, 0, 0.0554024)
+light_color = Color(0.270588, 0.196078, 0.701961, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_opacity = 0.8
+
+[node name="DirectionalLight3D_3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999903, 0.00160479, 0.0138698, 1.06689e-10, 0.993373, -0.114937, -0.0139623, 0.114926, 0.993276, -0.315615, 0, 0.0554024)
+light_color = Color(0, 0.196078, 0.701961, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_opacity = 0.8
+
+[node name="Alembic_v0_0_0" parent="." instance=ExtResource("2_84f07")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.47412, 0, -0.00569916)
+
+[node name="BloodVialEmpty_v0_0_0" parent="." instance=ExtResource("3_l0egi")]
+transform = Transform3D(-0.0866025, 0, -0.05, 0, 0.1, 0, 0.05, 0, -0.0866025, -0.996212, 0, -0.00870609)
+
+[node name="BloodVialSeparated_v0_0_0" parent="." instance=ExtResource("4_texao")]
+transform = Transform3D(-0.0707107, 0, -0.0707107, 0, 0.1, 0, 0.0707107, 0, -0.0707107, -0.885939, 0, -0.00847775)
+
+[node name="BloodVial_v0_0_0" parent="." instance=ExtResource("5_0kynj")]
+transform = Transform3D(-0.0707107, 0, -0.0707107, 0, 0.1, 0, 0.0707107, 0, -0.0707107, -0.768623, 0, -0.00867343)
+
+[node name="Book_v0_0_0" parent="." instance=ExtResource("6_o0q5j")]
+transform = Transform3D(-3.0598e-08, 0, -1, 0, 1, 0, 0.7, 0, -4.37114e-08, -0.646053, 0, -0.0725234)
+
+[node name="BookBlue_v0_0_0" parent="." instance=ExtResource("7_ksd0a")]
+transform = Transform3D(-3.0598e-08, 0, -1, 0, 1, 0, 0.7, 0, -4.37114e-08, -0.522228, 0, -0.0707857)
+
+[node name="BookRed_v0_0_0" parent="." instance=ExtResource("8_wltm7")]
+transform = Transform3D(-3.0598e-08, 0, -1, 0, 1, 0, 0.7, 0, -4.37114e-08, -0.102089, 0, -0.0736475)
+
+[node name="BookPurple_v0_0_0" parent="." instance=ExtResource("9_bawiy")]
+transform = Transform3D(-3.0598e-08, 0, -1, 0, 1, 0, 0.7, 0, -4.37114e-08, -0.238707, -2.98023e-08, -0.0727002)
+
+[node name="BookBrown_v0_0_0" parent="." instance=ExtResource("10_ukve4")]
+transform = Transform3D(-3.0598e-08, 0, -1, 0, 1, 0, 0.7, 0, -4.37114e-08, -0.37148, 0, -0.0691133)
+
+[node name="BowlOfSubstance" parent="." instance=ExtResource("11_ykbwr")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.204284, 0, 0.0161556)
+
+[node name="BowlOfSalt" parent="." instance=ExtResource("12_hgupn")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.456153, 0, 0.0105999)
+
+[node name="BowlOfDirt" parent="." instance=ExtResource("13_m6ycg")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.697702, 0, 0)
+
+[node name="CandeHolderPlate" parent="." instance=ExtResource("14_t15ya")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.963603, 0, 0.000233531)
+
+[node name="CandeHolderWall" parent="." instance=ExtResource("15_yclvu")]
+transform = Transform3D(-5.24537e-08, 0, -1.2, 0, 1.2, 0, 1.2, 0, -5.24537e-08, 1.18101, -0.00502849, 0.00790618)
+
+[node name="Crucible" parent="." instance=ExtResource("16_10l6q")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 1.46808, 5.96047e-08, -0.00686702)
+
+[node name="CrucibleCoin" parent="Crucible" instance=ExtResource("31_bkw4o")]
+transform = Transform3D(0.70946, -0.704746, 0, 0.704746, 0.70946, 0, 0, 0, 1, 0.0228745, 0.270484, 0.00216766)
+
+[node name="CrucibleCoin" parent="Crucible/CrucibleCoin" instance=ExtResource("31_bkw4o")]
+transform = Transform3D(0.962156, -0.272499, 0, 0.272499, 0.962156, 0, 0, 0, 1, -0.0418214, 0.028073, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Crucible"]
+transform = Transform3D(0.15, 2.77556e-16, 0, 0, -6.55671e-09, 0.15, 0, -0.15, -6.55671e-09, -0.00135612, 0.271979, 0.0039366)
+mesh = SubResource("QuadMesh_4pf10")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("18_jd7if")
+
+[node name="Crystal_v0_0_0" parent="." instance=ExtResource("17_pr7ie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02022, 0, -0.00928378)
+
+[node name="FirewoodPiece_v0_0_0" parent="." instance=ExtResource("18_fr3wa")]
+transform = Transform3D(-0.198849, 0.224631, 0, -0.224631, -0.198849, 0, 0, 0, 0.3, 2.49066, 0.07522, -0.000709817)
+
+[node name="Flint&Steel_v0_0_0" parent="." instance=ExtResource("19_g783b")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.92692, 1.19209e-07, -0.0341427)
+
+[node name="GlassFlaskEmpty_v0_0_0" parent="." instance=ExtResource("20_b0phv")]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 3.27395, 0, 0.00600868)
+
+[node name="GlassFlaskEmpty_v0_0_1" parent="." instance=ExtResource("20_b0phv")]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.2, 0, -0.1, 0, -4.37114e-09, 3.47798, 0, 0.00600868)
+
+[node name="GlassFlaskFilled_v0_0_0" parent="." instance=ExtResource("21_7hmdq")]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 6.58994, 0, 0.0110373)
+
+[node name="GlassFlaskFilled_v0_0_1" parent="." instance=ExtResource("21_7hmdq")]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.2, 0, -0.1, 0, -4.37114e-09, 11.3305, 0, 0.0110373)
+
+[node name="GobletsBrutti_v0_0_0" parent="." instance=ExtResource("22_humul")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 4.33135, 0, -0.00297046)
+
+[node name="Kris_v0_0_0" parent="." instance=ExtResource("23_5q3rr")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -0.914209, 0, 0.130888)
+
+[node name="Laurel" parent="." instance=ExtResource("24_goxr0")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 5.39938, -0.00502855, 0.0265793)
+
+[node name="MortarPestle" parent="." instance=ExtResource("25_0wbte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.82685, 1.19209e-07, -0.0351631)
+
+[node name="MortarFilling" type="MeshInstance3D" parent="MortarPestle"]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0.150815, 0)
+mesh = SubResource("QuadMesh_4pf10")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("28_krbr1")
+
+[node name="Opal_v0_0_0" parent="." instance=ExtResource("26_nfv70")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.3, 4.9003, 5.87106e-05, 0.0157434)
+
+[node name="Sieve_v0_0_0" parent="." instance=ExtResource("27_dy5ft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.75056, 0, 0.020261)
+
+[node name="Skull_v0_0_0" parent="." instance=ExtResource("28_gt2bv")]
+transform = Transform3D(-6.11959e-08, 0, -1.4, 0, 1.4, 0, 1.4, 0, -6.11959e-08, 7.14922, 0, -0.00318408)
+
+[node name="SpiceJarEmpty_v0_0_0" parent="." instance=ExtResource("29_m0ig0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 7.43309, 0, 0.00039503)
+
+[node name="SpiceJarEmpty_v0_0_1" parent="." instance=ExtResource("29_m0ig0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.2, 0, 0, 0, 0.1, 7.59171, 0, 0.00039503)
+
+[node name="SpiceJarEmpty_v0_0_2" parent="." instance=ExtResource("29_m0ig0")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.77876, 0, -0.0109961)
+
+[node name="SpiceJarFilled_v0_0_0" parent="." instance=ExtResource("30_b1xyj")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 8.98035, 0, -0.00278309)
+
+[node name="SpiceJarFilled_v0_0_1" parent="." instance=ExtResource("30_b1xyj")]
+transform = Transform3D(0.1, 0, 0, 0, 0.2, 0, 0, 0, 0.1, 8.20001, 0, 0.00342125)
+
+[node name="GraveDirt" parent="." instance=ExtResource("30_b1xyj")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 8.39578, 0, 0.00342125)
+
+[node name="GraveDirt_Label" type="Sprite3D" parent="GraveDirt"]
+transform = Transform3D(0.102674, 0, 0, 0, -4.48802e-09, 0.102674, 0, -0.102674, -4.48802e-09, 0.00276184, 1.29131, 0.0276218)
+texture = ExtResource("34_fscay")
+
+[node name="Coin2" parent="." instance=ExtResource("31_bkw4o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.69238, -4.76837e-07, -0.00218611)
+
+[node name="SpiceJarFilledBlack" parent="." instance=ExtResource("32_5y18u")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 9.07611, -4.76837e-07, -0.00207355)
+
+[node name="SpiceJarFilledGreen" parent="." instance=ExtResource("33_5rwvd")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 9.16965, -4.47035e-07, -0.00102778)
+
+[node name="SpiceJarFilledRed" parent="." instance=ExtResource("34_xe2so")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 9.26169, -4.76837e-07, -0.003352)
+
+[node name="SpiceJarFilledYellow" parent="." instance=ExtResource("35_fewst")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 9.35772, -4.76837e-07, -0.00315525)
+
+[node name="BowlOfPepper" parent="." instance=ExtResource("36_38arg")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 9.55796, -4.76837e-07, -0.000325663)
+
+[node name="Bucket2" parent="." instance=ExtResource("37_vfulb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5196, -4.76837e-07, -0.00050092)
+
+[node name="Mushroom2" parent="." instance=ExtResource("38_lkgej")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5897, -4.76837e-07, 0.0150381)
+
+[node name="SpiceJarFilledGrapes" parent="." instance=ExtResource("40_b0yf5")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 11.88, -4.76837e-07, -0.00336771)
+
+[node name="CoinPurse" parent="." instance=ExtResource("41_mjetn")]
+transform = Transform3D(-0.12941, 0, -0.482963, 0, 0.5, 0, 0.482963, 0, -0.12941, 12.2521, -4.76837e-07, -0.0054017)
+
+[node name="GlassFlaskMercury" parent="." instance=ExtResource("43_t4vpq")]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 12.5957, -5.06639e-07, 0.00815308)
+
+[node name="DyingEmber" parent="." instance=ExtResource("44_q563i")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 12.9514, 0.00611886, -0.000220655)
+
+[node name="EmptyHolderPlate" parent="DyingEmber" instance=ExtResource("45_mqk40")]
+transform = Transform3D(1.66667, 0, 1.18424e-14, 0, 1.66667, 0, -1.18424e-14, 0, 1.66667, 0.00250053, -0.0101989, -0.00541021)
+
+[node name="PileOfBrimstone" parent="." instance=ExtResource("46_ry5i7")]
+transform = Transform3D(0.998106, -0.0615189, 0, 0.0615189, 0.998106, 0, 0, 0, 1, 13.3835, -0.0465115, -0.0113891)
+
+[node name="EmptyHolderPlate2" parent="PileOfBrimstone" instance=ExtResource("45_mqk40")]
+transform = Transform3D(0.998106, 0.0615189, 7.09197e-15, -0.0615189, 0.998106, -4.37118e-16, -7.10543e-15, 0, 1, 0.000951767, 0.0465406, 0.00792228)
+
+[node name="VinegarVial" parent="." instance=ExtResource("47_5s7ca")]
+transform = Transform3D(-0.0643402, 0, -0.0765528, 0, 0.2, 0, 0.0765528, 0, -0.0643402, 13.8159, -4.76837e-07, 0.00627333)

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ceqcaae3wn6vt"]
+
+[resource]
+resource_name = "BloodVialBloodAbove.001"
+transparency = 1
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.368627, 0.470588, 0.333333, 0.219608)
+roughness = 0.59
+emission_energy_multiplier = 0.68

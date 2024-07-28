@@ -1,0 +1,445 @@
+[gd_scene load_steps=43 format=3 uid="uid://csckcocqivyj5"]
+
+[ext_resource type="Script" path="res://Scripts/MainScene_Prototype02.gd" id="1_3wtai"]
+[ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
+[ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="3_ba04y"]
+[ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="4_wff7c"]
+[ext_resource type="PackedScene" uid="uid://bhv1boykqvw23" path="res://Scenes/PlayerMovement/NavigationPoint.tscn" id="5_5eyhx"]
+[ext_resource type="PackedScene" uid="uid://b68s0qxy7ri2k" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="6_uhtdf"]
+[ext_resource type="PackedScene" uid="uid://drsimt7eb0p0w" path="res://Assets/3D/Props/Kris_v0.0.0.blend" id="10_2sou4"]
+[ext_resource type="PackedScene" uid="uid://bab13j6o8fp2l" path="res://Scenes/Fireplace.tscn" id="10_6u8tf"]
+[ext_resource type="Material" uid="uid://b28h3ell5m6t0" path="res://Assets/3D/Props/materials/BookCoverRed.tres" id="11_cjmjh"]
+[ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="11_llow7"]
+[ext_resource type="PackedScene" uid="uid://ddvlmsgydjki2" path="res://Scenes/AlchemicalCircle.tscn" id="12_hwcwv"]
+[ext_resource type="PackedScene" uid="uid://1ofvsxrma8iv" path="res://Scenes/Items/CeremonialKnife.tscn" id="13_auv7v"]
+[ext_resource type="PackedScene" uid="uid://d0cq4kvpnenr4" path="res://Assets/3D/Props/SpiceJarFilled_v0.0.0.blend" id="13_pyh8a"]
+[ext_resource type="Texture2D" uid="uid://d0etjo2vbf0cb" path="res://Assets/2D/AlchemicalMaterials/GraveDirt.png" id="14_2ewl6"]
+[ext_resource type="PackedScene" uid="uid://b3hkdu32yh165" path="res://Assets/3D/Props/Opal_v0.0.0.blend" id="14_7ctho"]
+[ext_resource type="PackedScene" uid="uid://c334blq5lnfot" path="res://Scenes/Items/SaltBottle.tscn" id="14_ej30i"]
+[ext_resource type="PackedScene" uid="uid://dl1o0hpwktapu" path="res://Assets/3D/Props/Sieve_v0.0.0.blend" id="15_p5chk"]
+[ext_resource type="PackedScene" uid="uid://dm136mrn7n57f" path="res://Scenes/InteractionSystem/GenericPuzzleSlot.tscn" id="16_dsr2u"]
+[ext_resource type="PackedScene" uid="uid://6hhogeucrtfh" path="res://Assets/3D/Props/CandeHolderWall.blend" id="16_irf7i"]
+[ext_resource type="Resource" uid="uid://bc28owxb2cimb" path="res://Resources/Puzzles/GenericPuzzle.tres" id="17_4g4wa"]
+[ext_resource type="PackedScene" uid="uid://biqkt2i023ui1" path="res://Assets/3D/Props/Laurel.blend" id="17_86e6w"]
+[ext_resource type="PackedScene" uid="uid://c5icn5i3yr3x" path="res://Scenes/Items/PepperBottle.tscn" id="18_d3p6l"]
+[ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="19_cy568"]
+[ext_resource type="AudioStream" uid="uid://t622sra4diub" path="res://Assets/Audio/Sound/footsteps_wood_single_2.mp3" id="20_awg3m"]
+[ext_resource type="PackedScene" uid="uid://cvjg0uqd02gp7" path="res://Assets/3D/Props/Crucible.blend" id="21_ceelo"]
+[ext_resource type="AudioStream" uid="uid://dlwk5ak6u2vgr" path="res://Assets/Audio/Sound/storm_faded.mp3" id="21_nduse"]
+[ext_resource type="AudioStream" uid="uid://c2pki04fd8067" path="res://Assets/Audio/Sound/fireplace_1.mp3" id="22_4qygc"]
+[ext_resource type="PackedScene" uid="uid://be5fmscv5e4pb" path="res://Assets/3D/Props/Coin.blend" id="22_yq000"]
+[ext_resource type="PackedScene" uid="uid://sncutmva0ga2" path="res://Assets/3D/Props/Hand.blend" id="23_af127"]
+[ext_resource type="PackedScene" uid="uid://dhmonnu314mp4" path="res://Assets/3D/Props/Alembic_v0.0.0.blend" id="23_krjlx"]
+[ext_resource type="Material" uid="uid://d1emby0aspm3t" path="res://Assets/3D/Props/materials/MoltenSilver.tres" id="23_rbxbw"]
+[ext_resource type="PackedScene" uid="uid://db3luyfmuhmyy" path="res://Assets/3D/Props/Flint&Steel_v0.0.0.blend" id="24_usiem"]
+[ext_resource type="PackedScene" uid="uid://d0tfbw602vqkd" path="res://Assets/3D/Props/MortarPestle.blend" id="25_up3bp"]
+[ext_resource type="Material" uid="uid://sqqass5k0d2i" path="res://Assets/3D/Props/materials/MixedSubstance.tres" id="26_ttlky"]
+[ext_resource type="PackedScene" uid="uid://ba2mn58i5i0ml" path="res://Scenes/Items/ChestTop.tscn" id="28_qwxhw"]
+[ext_resource type="PackedScene" uid="uid://2vfre2wb0jdr" path="res://Assets/3D/Props/ChestBase.blend" id="35_5ec4v"]
+[ext_resource type="Texture2D" uid="uid://mk0guedcs5u0" path="res://Assets/2D/AlchemicalMaterials/Blood.png" id="35_cgouk"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
+panorama = ExtResource("3_ba04y")
+filter = false
+
+[sub_resource type="Sky" id="Sky_fu3n5"]
+sky_material = SubResource("PanoramaSkyMaterial_tca5b")
+
+[sub_resource type="Environment" id="Environment_nps7j"]
+background_mode = 1
+background_color = Color(0, 0, 0.0470588, 1)
+sky = SubResource("Sky_fu3n5")
+sky_rotation = Vector3(0, -2.10836, 0)
+tonemap_mode = 2
+tonemap_exposure = 2.0
+tonemap_white = 8.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_goo6b"]
+material = ExtResource("11_cjmjh")
+
+[sub_resource type="QuadMesh" id="QuadMesh_gx6p0"]
+
+[node name="MainScenePrototype02" type="Node3D"]
+script = ExtResource("1_3wtai")
+
+[node name="Player" parent="." node_paths=PackedStringArray("current_navigation_point") instance=ExtResource("2_83pmb")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.87529, 1.43448, -1.35045)
+rotation_edit_mode = 2
+current_navigation_point = NodePath("../Navigation/NavigationPoints/StartingNavigationPoint")
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D_1" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(-0.106264, 0.460673, -0.881186, 0, 0.886204, 0.463296, 0.994338, 0.0492317, -0.0941715, 0, 0, 0)
+light_color = Color(0.32549, 0.545098, 0.603922, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_opacity = 0.8
+
+[node name="DirectionalLight3D_2" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0.859852, 0.236533, -0.452445, 0, 0.886204, 0.463296, 0.510543, -0.398366, 0.762004, 0, 0, 0)
+light_color = Color(0.270588, 0.196078, 0.701961, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_opacity = 0.8
+
+[node name="DirectionalLight3D_3" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(-0.0139623, 0.114926, 0.993276, 0, 0.993373, -0.114937, -0.999903, -0.00160479, -0.0138698, 0, 0, 0)
+light_color = Color(0, 0.196078, 0.701961, 1)
+light_energy = 0.4
+shadow_enabled = true
+shadow_opacity = 0.8
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nps7j")
+
+[node name="Cabin_v0_0_0" parent="." instance=ExtResource("4_wff7c")]
+
+[node name="Navigation" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.928081, 0.647132, -5.18842)
+
+[node name="NavigationPoints" type="Node3D" parent="Navigation"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.552707, 0, 0)
+
+[node name="StartingNavigationPoint" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "west_navigation_point", "south_focus_point") instance=ExtResource("5_5eyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.8, 3.74955)
+north_navigation_point = NodePath("../NavigationPoint3")
+west_navigation_point = NodePath("../NavigationPoint1")
+south_focus_point = NodePath("../../FocusPoints/FocusPointChest")
+
+[node name="NavigationPoint1" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "west_navigation_point") instance=ExtResource("5_5eyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.8, 5)
+north_navigation_point = NodePath("../NavigationPoint4")
+east_navigation_point = NodePath("../StartingNavigationPoint")
+west_navigation_point = NodePath("../NavigationPoint2")
+
+[node name="NavigationPoint2" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_focus_point", "west_focus_point") instance=ExtResource("5_5eyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.8, 6.253)
+north_navigation_point = NodePath("../NavigationPoint5")
+east_navigation_point = NodePath("../NavigationPoint1")
+south_focus_point = NodePath("../../FocusPoints/FocusPointHole")
+west_focus_point = NodePath("../../FocusPoints/FocusPointSedia")
+
+[node name="NavigationPoint3" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("south_navigation_point", "west_navigation_point") instance=ExtResource("5_5eyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.8, 3.74955)
+south_navigation_point = NodePath("../StartingNavigationPoint")
+west_navigation_point = NodePath("../NavigationPoint4")
+
+[node name="NavigationPoint4" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_navigation_point", "west_navigation_point") instance=ExtResource("5_5eyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.8, 5)
+north_navigation_point = NodePath("../NavigationPoint6")
+east_navigation_point = NodePath("../NavigationPoint3")
+south_navigation_point = NodePath("../NavigationPoint1")
+west_navigation_point = NodePath("../NavigationPoint5")
+
+[node name="NavigationPoint5" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_navigation_point") instance=ExtResource("5_5eyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.8, 6.253)
+north_navigation_point = NodePath("../NavigationPoint7")
+east_navigation_point = NodePath("../NavigationPoint4")
+south_navigation_point = NodePath("../NavigationPoint2")
+
+[node name="NavigationPoint6" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "south_navigation_point", "west_navigation_point", "east_focus_point") instance=ExtResource("5_5eyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.8, 5)
+north_navigation_point = NodePath("../Lectern")
+south_navigation_point = NodePath("../NavigationPoint4")
+west_navigation_point = NodePath("../NavigationPoint7")
+east_focus_point = NodePath("../../FocusPoints/FocusPointTable")
+
+[node name="NavigationPoint7" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("north_navigation_point", "east_navigation_point", "south_navigation_point", "west_focus_point") instance=ExtResource("5_5eyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.8, 6.253)
+north_navigation_point = NodePath("../NavigationPoint9")
+east_navigation_point = NodePath("../NavigationPoint6")
+south_navigation_point = NodePath("../NavigationPoint5")
+west_focus_point = NodePath("../../FocusPoints/FocusPointLibrary")
+
+[node name="Lectern" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("east_navigation_point", "south_navigation_point", "west_navigation_point", "north_focus_point") instance=ExtResource("5_5eyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0.8, 5)
+east_navigation_point = NodePath("../NavigationPoint10")
+south_navigation_point = NodePath("../NavigationPoint6")
+west_navigation_point = NodePath("../NavigationPoint9")
+north_focus_point = NodePath("../../FocusPoints/FocusPointLectern")
+
+[node name="NavigationPoint9" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("east_navigation_point", "south_navigation_point", "north_focus_point", "west_focus_point") instance=ExtResource("5_5eyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0.8, 6.253)
+east_navigation_point = NodePath("../Lectern")
+south_navigation_point = NodePath("../NavigationPoint7")
+north_focus_point = NodePath("../../FocusPoints/FocusPointAngolo")
+west_focus_point = NodePath("../../FocusPoints/FocusPointAngolo")
+
+[node name="NavigationPoint10" parent="Navigation/NavigationPoints" node_paths=PackedStringArray("west_navigation_point", "east_focus_point") instance=ExtResource("5_5eyhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0.8, 3.74955)
+west_navigation_point = NodePath("../Lectern")
+east_focus_point = NodePath("../../FocusPoints/FocusPointWindow")
+
+[node name="FocusPoints" type="Node3D" parent="Navigation"]
+
+[node name="FocusPointTable" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.04234, 0.56229, 3.15789)
+
+[node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointTable" index="1"]
+transform = Transform3D(-1.17398e-08, 0.681922, -0.731425, -2.98078e-08, 0.731425, 0.681922, 1, 2.98078e-08, 1.17398e-08, -0.92803, 0.595943, 0.007581)
+
+[node name="FocusPointWindow" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.04234, 0.56229, 3.15789)
+
+[node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointWindow" index="1"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.0393779, 0.421286, -1.84633)
+
+[node name="FocusPointChest" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.14781, 0.0851541, 4.46798)
+
+[node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointChest" index="1"]
+transform = Transform3D(-4.37722e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18861e-08, -3.79078e-08, -0.695602, 0.389964, -0.597232)
+
+[node name="FocusPointLibrary" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.2121, 0.398716, 6.64091)
+
+[node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointLibrary" index="1"]
+transform = Transform3D(-4.21174e-08, 0.20412, -0.978946, -9.93963e-09, 0.978946, 0.20412, 1, 1.83274e-08, -3.92017e-08, -1.08839, 0.389964, 1.19209e-07)
+
+[node name="FocusPointSedia" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
+transform = Transform3D(-0.571988, 0, -0.820262, 0, 1, 0, 0.820262, 0, -0.571988, 1.93265, 0.461976, 6.49486)
+
+[node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointSedia" index="1"]
+transform = Transform3D(0, 0.551296, -0.83431, 1.91616e-09, 0.83431, 0.551296, 1, 0, 2.98023e-08, -0.279488, -0.127799, 0.0429516)
+
+[node name="FocusPointAngolo" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
+transform = Transform3D(-0.661233, 0, -0.75018, 0, 1, 0, 0.75018, 0, -0.661233, -4.37098, 0.934046, 6.49486)
+
+[node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointAngolo" index="1"]
+transform = Transform3D(0.000189483, 0.344534, -0.938774, 0.00499444, 0.938762, 0.34453, 0.999987, -0.00475393, -0.00154287, -0.385422, -0.127799, 0.024433)
+
+[node name="FocusPointLectern" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
+transform = Transform3D(-0.965672, 0.259763, 8.44218e-08, 0.259763, 0.965672, -2.27092e-08, -8.74228e-08, 0, -1, -4.42811, 0.869934, 5.10819)
+
+[node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointLectern" index="1"]
+transform = Transform3D(-4.10045e-08, 0.664735, -0.747079, 2.65072e-08, 0.747079, 0.664735, 1, 7.45414e-09, -4.82539e-08, -0.418263, -0.0492154, -2.83122e-07)
+
+[node name="FocusPointHole" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
+transform = Transform3D(0.965473, -0.260505, 0, 0.260505, 0.965473, 0, 0, 0, 1, 3.82003, 0.00454384, 6.14579)
+
+[node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointHole" index="1"]
+transform = Transform3D(-4.87482e-08, 0.20827, -0.978071, 2.75917e-09, 0.978071, 0.20827, 1, 7.45414e-09, -4.82539e-08, -0.674685, 0.132381, -2.98023e-07)
+
+[node name="Props" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.576236, 1.85896, -5.83088)
+
+[node name="BloodChest" parent="Props" instance=ExtResource("35_5ec4v")]
+transform = Transform3D(-0.125359, 0, -0.535523, 0, 0.55, 0, 0.535523, 0, -0.125359, -1.71388, -1.71737, 7.67844)
+
+[node name="ChestTop" parent="Props/BloodChest" instance=ExtResource("28_qwxhw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.299906, 0.357113, 0.00897932)
+
+[node name="LabelBlood2" type="Sprite3D" parent="Props/BloodChest/ChestTop"]
+transform = Transform3D(-9.31323e-10, 0.0298071, 0.0033961, 0, 0.0033961, -0.0298072, -0.03, -9.31323e-10, -1.74623e-10, -0.498233, 0.135414, 0.431524)
+texture = ExtResource("35_cgouk")
+
+[node name="Kris_v0_0_0" parent="Props/BloodChest" instance=ExtResource("10_2sou4")]
+transform = Transform3D(0.843148, 0, -2.35353, 0, 2.5, 0, 2.35353, 0, 0.843148, 0.0106139, 0.274471, 0.0097084)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/BloodChest"]
+transform = Transform3D(0.555, 1.49012e-08, 0, 0, -4.34928e-08, -1, 7.45058e-09, 0.995, -4.37114e-08, 0, 0.277769, 0)
+mesh = SubResource("QuadMesh_goo6b")
+
+[node name="AlchemicalCircle" parent="Props" instance=ExtResource("12_hwcwv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522614, -1.04896, 3.98658)
+
+[node name="Candle" parent="Props/AlchemicalCircle" instance=ExtResource("11_llow7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00540996, -0.109975, -0.222986)
+
+[node name="Candle2" parent="Props/AlchemicalCircle" instance=ExtResource("11_llow7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16156, -0.109975, 0.0977143)
+
+[node name="Candle3" parent="Props/AlchemicalCircle" instance=ExtResource("11_llow7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.158389, -0.109975, 0.0965643)
+
+[node name="CandeHolderWall" parent="Props" instance=ExtResource("16_irf7i")]
+transform = Transform3D(-5.24536e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.24536e-08, 3.17524, -0.15896, 8.26088)
+
+[node name="Candle" parent="Props/CandeHolderWall" instance=ExtResource("11_llow7")]
+transform = Transform3D(-3.64261e-08, 0, -0.833333, 0, 0.833333, 0, 0.833333, 0, -3.64261e-08, 0.148354, -0.0506894, 0.00298572)
+
+[node name="Laurel" parent="Props/CandeHolderWall" instance=ExtResource("17_86e6w")]
+transform = Transform3D(0.150977, 0.563457, 3.78283e-08, -5.09966e-08, -2.54983e-08, 0.583333, 0.563457, -0.150977, 4.26595e-08, 0.0787832, -0.305902, 0.00470829)
+
+[node name="Hand3" parent="Props" instance=ExtResource("23_af127")]
+transform = Transform3D(-0.02, 0, -3.01992e-09, 0, 0.02, 0, 3.01992e-09, 0, -0.02, -1.74379, -0.65355, 7.70832)
+
+[node name="Opal_v0_0_0" parent="Props/Hand3" instance=ExtResource("14_7ctho")]
+transform = Transform3D(-0.129265, -0.208116, 14.8955, -8.93576, -4.48427, -0.311255, 4.48727, -8.93577, -0.190723, -0.33223, 4.32002, 1.21558)
+
+[node name="Candle2" parent="Props/Hand3" instance=ExtResource("11_llow7")]
+transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, -1.93813, 7.58157, -1.98306)
+energy_max = 0.12
+energy_min = 0.14
+
+[node name="Candle5" parent="Props/Hand3" instance=ExtResource("11_llow7")]
+transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, -0.716728, 8.03965, -1.98306)
+energy_max = 0.12
+energy_min = 0.14
+
+[node name="Candle6" parent="Props/Hand3" instance=ExtResource("11_llow7")]
+transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, 0.583641, 7.57361, -1.98306)
+energy_max = 0.12
+energy_min = 0.14
+
+[node name="Candle7" parent="Props/Hand3" instance=ExtResource("11_llow7")]
+transform = Transform3D(-16.4362, 0, 2.48179e-06, 0, 16.4362, 0, -2.48179e-06, 0, -16.4362, 1.83002, 7.00055, -1.98306)
+energy_max = 0.12
+energy_min = 0.14
+
+[node name="GraveDirt" parent="Props" instance=ExtResource("13_pyh8a")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 4.97294, -1.76966, 4.88553)
+
+[node name="GraveDirt_Label" type="Sprite3D" parent="Props/GraveDirt"]
+transform = Transform3D(0.102674, 0, 0, 0, -4.48802e-09, 0.102674, 0, -0.102674, -4.48802e-09, 0.00276184, 1.29131, 0.0276218)
+texture = ExtResource("14_2ewl6")
+
+[node name="Fireplace" parent="Props" instance=ExtResource("10_6u8tf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81039, -1.43939, 6.77525)
+
+[node name="Sieve_v0_0_0" parent="Props" instance=ExtResource("15_p5chk")]
+transform = Transform3D(1, 0, 0, 0, 0.277549, -0.960711, 0, 0.960711, 0.277549, 0.321552, -0.680957, 3.32012)
+
+[node name="GenericPuzzleSlot" parent="Props/Sieve_v0_0_0" instance=ExtResource("16_dsr2u")]
+transform = Transform3D(0.4, 0, 3.72529e-09, 0, 0.4, 0, -3.72529e-09, 0, 0.4, -0.000965953, 0.0321101, -0.260425)
+related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("17_4g4wa")])
+
+[node name="SaltBottle" parent="Props" instance=ExtResource("14_ej30i")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.196905, -0.967916, 3.49113)
+
+[node name="PepperBottle" parent="Props" instance=ExtResource("18_d3p6l")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.333607, -0.972415, 3.41272)
+
+[node name="Crucible" parent="Props" instance=ExtResource("21_ceelo")]
+transform = Transform3D(-0.8, 0, 6.99382e-08, 0, 0.8, 0, -6.99382e-08, 0, -0.8, -1.40893, -1.05224, 3.76691)
+
+[node name="CrucibleCoin" parent="Props/Crucible" instance=ExtResource("22_yq000")]
+transform = Transform3D(0.70946, -0.704746, 0, 0.704746, 0.70946, 0, 0, 0, 1, 0.0228745, 0.270484, 0.00216766)
+
+[node name="CrucibleCoin" parent="Props/Crucible/CrucibleCoin" instance=ExtResource("22_yq000")]
+transform = Transform3D(0.962156, -0.272499, 0, 0.272499, 0.962156, 0, 0, 0, 1, -0.0418214, 0.028073, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Props/Crucible"]
+transform = Transform3D(0.15, 2.77556e-16, 0, 0, -6.55671e-09, 0.15, 0, -0.15, -6.55671e-09, -0.00135612, 0.271979, 0.0039366)
+mesh = SubResource("QuadMesh_gx6p0")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("23_rbxbw")
+
+[node name="Flint&Steel_v0_0_0" parent="Props" instance=ExtResource("24_usiem")]
+transform = Transform3D(-0.308703, 0, 0.393322, 0, 0.5, 0, -0.393322, 0, -0.308703, 3.35765, -1.41166, 7.74347)
+
+[node name="MortarPestle" parent="Props" instance=ExtResource("25_up3bp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.232631, -1.05224, 4.02441)
+
+[node name="MortarFilling" type="MeshInstance3D" parent="Props/MortarPestle"]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0.150815, 0)
+mesh = SubResource("QuadMesh_gx6p0")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("26_ttlky")
+
+[node name="DecorationObjects" type="Node3D" parent="."]
+
+[node name="CandeHolderWall2" parent="DecorationObjects" instance=ExtResource("16_irf7i")]
+transform = Transform3D(-5.24536e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.24536e-08, 0.312844, 1.7, 1.60136)
+
+[node name="Candle" parent="DecorationObjects/CandeHolderWall2" instance=ExtResource("11_llow7")]
+transform = Transform3D(-3.64261e-08, 0, -0.833333, 0, 0.833333, 0, 0.833333, 0, -3.64261e-08, 0.148354, -0.0506894, 0.00298572)
+
+[node name="CandeHolderWall3" parent="DecorationObjects" instance=ExtResource("16_irf7i")]
+transform = Transform3D(-5.24536e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.24536e-08, -2.73214, 1.7, 1.60136)
+
+[node name="Candle" parent="DecorationObjects/CandeHolderWall3" instance=ExtResource("11_llow7")]
+transform = Transform3D(-3.64261e-08, 0, -0.833333, 0, 0.833333, 0, 0.833333, 0, -3.64261e-08, 0.148354, -0.0506894, 0.00298572)
+
+[node name="CandeHolderWall4" parent="DecorationObjects" instance=ExtResource("16_irf7i")]
+transform = Transform3D(1.2, 0, -7.10543e-14, 0, 1.2, 0, 7.10543e-14, 0, 1.2, -4.62204, 1.7, 0.370773)
+
+[node name="Candle" parent="DecorationObjects/CandeHolderWall4" instance=ExtResource("11_llow7")]
+transform = Transform3D(-3.64261e-08, 0, -0.833333, 0, 0.833333, 0, 0.833333, 0, -3.64261e-08, 0.148354, -0.0506894, 0.00298572)
+
+[node name="CandeHolderWall8" parent="DecorationObjects" instance=ExtResource("16_irf7i")]
+transform = Transform3D(1.2, 0, -7.10543e-14, 0, 1.2, 0, 7.10543e-14, 0, 1.2, -4.622, 1.7, -0.0792462)
+
+[node name="Candle" parent="DecorationObjects/CandeHolderWall8" instance=ExtResource("11_llow7")]
+transform = Transform3D(-3.64261e-08, 0, -0.833333, 0, 0.833333, 0, 0.833333, 0, -3.64261e-08, 0.148354, -0.0506894, 0.00298572)
+
+[node name="CandeHolderWall9" parent="DecorationObjects" instance=ExtResource("16_irf7i")]
+transform = Transform3D(1.2, 0, -7.10543e-14, 0, 1.2, 0, 7.10543e-14, 0, 1.2, -4.622, 1.7, -0.529246)
+
+[node name="Candle" parent="DecorationObjects/CandeHolderWall9" instance=ExtResource("11_llow7")]
+transform = Transform3D(-3.64261e-08, 0, -0.833333, 0, 0.833333, 0, 0.833333, 0, -3.64261e-08, 0.148354, -0.0506894, 0.00298572)
+
+[node name="CandeHolderWall6" parent="DecorationObjects" instance=ExtResource("16_irf7i")]
+transform = Transform3D(-5.24537e-08, 0, -1.2, 0, 1.2, 0, 1.2, 0, -5.24537e-08, -2.43246, 1.7, -2.58156)
+
+[node name="Candle" parent="DecorationObjects/CandeHolderWall6" instance=ExtResource("11_llow7")]
+transform = Transform3D(-3.64261e-08, 0, -0.833333, 0, 0.833333, 0, 0.833333, 0, -3.64261e-08, 0.148355, -0.0506893, 0.00298572)
+
+[node name="CandeHolderWall7" parent="DecorationObjects" instance=ExtResource("16_irf7i")]
+transform = Transform3D(-5.24537e-08, 0, -1.2, 0, 1.2, 0, 1.2, 0, -5.24537e-08, 0.153514, 1.7, -2.58156)
+
+[node name="Candle" parent="DecorationObjects/CandeHolderWall7" instance=ExtResource("11_llow7")]
+transform = Transform3D(-3.64261e-08, 0, -0.833333, 0, 0.833333, 0, 0.833333, 0, -3.64261e-08, 0.148354, -0.0506894, 0.00298572)
+
+[node name="Candle" parent="DecorationObjects" instance=ExtResource("11_llow7")]
+transform = Transform3D(0.735, 0, 0, 0, 0.735, 0, 0, 0, 0.735, -0.131012, 1.19926, 1.78463)
+
+[node name="CeremonialKnife" parent="DecorationObjects" instance=ExtResource("13_auv7v")]
+transform = Transform3D(-0.154874, 0, 0.475409, 0, 0.5, 0, -0.475409, 0, -0.154874, -1.8765, 0.829068, -1.87301)
+
+[node name="Alembic_v0_0_0" parent="DecorationObjects" instance=ExtResource("23_krjlx")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.550785, 0.79646, -2.21937)
+
+[node name="Candle4" parent="DecorationObjects/Alembic_v0_0_0" instance=ExtResource("11_llow7")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -5.82548, 1.19247, 0.0497332)
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("19_cy568")
+bus = &"Music"
+
+[node name="Footsteps" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("20_awg3m")
+bus = &"SFX"
+
+[node name="ThunderStorm" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("21_nduse")
+bus = &"SFX"
+
+[node name="Fireplace" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.234, 0.42, 0.944)
+stream = ExtResource("22_4qygc")
+attenuation_model = 1
+unit_size = 4.0
+autoplay = true
+bus = &"SFX"
+
+[node name="Screams" type="AudioStreamPlayer" parent="Audio"]
+bus = &"SFX"
+
+[node name="Creaks" type="AudioStreamPlayer" parent="Audio"]
+bus = &"SFX"
+
+[node name="Timers" type="Node" parent="Audio"]
+
+[node name="ThunderStormTimer" type="Timer" parent="Audio/Timers"]
+
+[node name="ScreamTimer" type="Timer" parent="Audio/Timers"]
+
+[node name="CreaksTimer" type="Timer" parent="Audio/Timers"]
+
+[node name="Chests" type="Node3D" parent="."]
+
+[node name="ChestTop" parent="Chests" instance=ExtResource("28_qwxhw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.555, 0.43, -1.329)
+
+[editable path="Navigation/FocusPoints/FocusPointTable"]
+[editable path="Navigation/FocusPoints/FocusPointWindow"]
+[editable path="Navigation/FocusPoints/FocusPointChest"]
+[editable path="Navigation/FocusPoints/FocusPointLibrary"]
+[editable path="Navigation/FocusPoints/FocusPointSedia"]
+[editable path="Navigation/FocusPoints/FocusPointAngolo"]
+[editable path="Navigation/FocusPoints/FocusPointLectern"]
+[editable path="Navigation/FocusPoints/FocusPointHole"]

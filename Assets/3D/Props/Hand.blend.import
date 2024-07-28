@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://3yp0qbvl62p1"
-path="res://.godot/imported/Book_v0.0.0.blend-400035465998cd9b32c7f62759586392.scn"
+uid="uid://sncutmva0ga2"
+path="res://.godot/imported/Hand.blend-968ac50330d3d4730d73abb8349f34e2.scn"
 
 [deps]
 
-source_file="res://Assets/3D/Props/Book_v0.0.0.blend"
-dest_files=["res://.godot/imported/Book_v0.0.0.blend-400035465998cd9b32c7f62759586392.scn"]
+source_file="res://Assets/3D/Props/Hand.blend"
+dest_files=["res://.godot/imported/Hand.blend-968ac50330d3d4730d73abb8349f34e2.scn"]
 
 [params]
 
@@ -29,7 +29,22 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Glass": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/Glass.tres"
+},
+"Skin": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/Skin.tres"
+},
+"metal": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/3D/Props/materials/DarkMetal.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0

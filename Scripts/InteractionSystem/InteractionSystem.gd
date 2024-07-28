@@ -22,9 +22,14 @@ var current_intersected_puzzle_slot: PuzzleSlot
 # Diary interactions
 @export var diary_collision_layer := 32
 var current_intersected_tag: DiaryTag
+
 # Alchemical process symbols interactions
 @export var alchemical_process_symbols_collision_layer := 8
 var current_intersected_alchemical_process_symbols: AlchemicalProcessSymbol
+
+# Diary interactions
+@export var chest_collision_layer := 128
+var current_intersected_chest: ChestTop
 
 
 func _ready():
@@ -60,7 +65,6 @@ func _process(_delta):
 		
 		if not diary_collision_result.is_empty():
 			current_intersected_tag = diary_collision_result["collider"] as DiaryTag
-			# TODO: !!!
 			current_intersected_tag._pressed()
 			#current_intersected_tag._highlight()
 		# Check for alchemical process symbol
@@ -82,7 +86,13 @@ func _process(_delta):
 			
 			if current_intersected_puzzle_slot != null:
 				current_intersected_puzzle_slot.remove_items()
-		
+				
+		# ---------------------------------
+		var chest_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, chest_collision_layer)
+		var chest_collision_result := space_state.intersect_ray(chest_collision_query)
+		if not chest_collision_result.is_empty():
+			current_intersected_chest = chest_collision_result["collider"] as ChestTop
+			current_intersected_chest._open()
 	
 			
 	if is_dragging_item and Input.is_action_just_released("left_click"):

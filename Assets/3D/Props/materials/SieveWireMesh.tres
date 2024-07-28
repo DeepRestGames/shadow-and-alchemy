@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://0q85r1bpg7yr"]
+
+[ext_resource type="Texture2D" uid="uid://clytmpnjxiowb" path="res://Assets/3D/Cabin/textures/Grid.png" id="1_f0oy4"]
+
+[resource]
+resource_name = "SieveWireMesh"
+transparency = 1
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.639216, 0.447059, 0.254902, 0.501961)
+albedo_texture = ExtResource("1_f0oy4")
+roughness = 0.5
+uv1_scale = Vector3(12.675, 12.675, 12.675)
+uv1_triplanar = true

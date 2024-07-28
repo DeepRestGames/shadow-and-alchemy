@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dqkmaccf0b7cc"]
+
+[resource]
+resource_name = "LaurelLeafNerve"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.6, 0.533333, 0.168627, 1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ckc21cpje40gh"]
+[gd_scene load_steps=27 format=3 uid="uid://ckc21cpje40gh"]
 
 [ext_resource type="Texture2D" uid="uid://swwq4h0q8aui" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k.hdr" id="1_aeey2"]
 [ext_resource type="Script" path="res://Scripts/MainScene_Prototype02.gd" id="1_cljtm"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://tibfyewtauo3" path="res://Assets/3D/Props/BloodVial_v0.0.0.blend" id="5_dhadr"]
 [ext_resource type="PackedScene" uid="uid://bab13j6o8fp2l" path="res://Scenes/Fireplace.tscn" id="6_ehu2w"]
 [ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="7_bbkbo"]
+[ext_resource type="PackedScene" uid="uid://sncutmva0ga2" path="res://Assets/3D/Props/Hand.blend" id="8_q0jrn"]
 [ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="11_i41rp"]
 [ext_resource type="PackedScene" uid="uid://ddvlmsgydjki2" path="res://Scenes/AlchemicalCircle.tscn" id="11_s71tp"]
 [ext_resource type="PackedScene" uid="uid://1ofvsxrma8iv" path="res://Scenes/Items/CeremonialKnife.tscn" id="12_0jcyq"]
@@ -238,7 +239,7 @@ transform = Transform3D(-4.87482e-08, 0.20827, -0.978071, 2.75917e-09, 0.978071,
 transform = Transform3D(0.116276, 0, 0.0879257, 0, 0.145777, 0, -0.0879257, 0, 0.116276, 0.154347, 0.814066, 1.9059)
 
 [node name="BloodVialSeparated_v0_0_0" parent="." instance=ExtResource("4_sw2ho")]
-transform = Transform3D(0.145029, 0, 0.0147469, 0, 0.145777, 0, -0.0147469, 0, 0.145029, 0.0126497, 0.812451, 1.88019)
+transform = Transform3D(0.099487, 0, 0.0147695, 0, 0.146, 0, -0.0101161, 0, 0.145251, 0.0126497, 0.812451, 1.88019)
 
 [node name="BloodVial_v0_0_0" parent="." instance=ExtResource("5_dhadr")]
 transform = Transform3D(0.139245, 0, -0.033903, 0, 0.143312, 0, 0.033903, 0, 0.139245, 0.103163, 0.811071, 1.79229)
@@ -248,6 +249,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23415, 0.419572, 0.944369)
 
 [node name="Candle" parent="." instance=ExtResource("7_bbkbo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10426, 0.700025, -2.17068)
+
+[node name="Candle" parent="Candle" instance=ExtResource("7_bbkbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876379, 0.434826, 3.95531)
 
 [node name="Candle2" parent="." instance=ExtResource("7_bbkbo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26041, 0.700025, -1.84998)
@@ -308,6 +312,9 @@ bus = &"SFX"
 [node name="ScreamTimer" type="Timer" parent="Audio/Timers"]
 
 [node name="CreaksTimer" type="Timer" parent="Audio/Timers"]
+
+[node name="Hand2" parent="." instance=ExtResource("8_q0jrn")]
+transform = Transform3D(-0.02, 0, -3.01992e-09, 0, 0.02, 0, 3.01992e-09, 0, -0.02, -1.31919, 1.2208, 1.85045)
 
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointSedia"]

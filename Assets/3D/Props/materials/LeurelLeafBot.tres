@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://coq73bnvyf5kp"]
+
+[resource]
+resource_name = "LeurelLeafBot"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.478431, 0.521569, 0.207843, 1)

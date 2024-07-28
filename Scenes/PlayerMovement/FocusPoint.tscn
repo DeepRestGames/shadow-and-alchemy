@@ -14,3 +14,4 @@ radius = 0.05
 material = SubResource("StandardMaterial3D_thnij")
 
 [node name="FocusCamera" type="Camera3D" parent="."]
+rotation_edit_mode = 2
