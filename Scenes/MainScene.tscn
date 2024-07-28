@@ -586,6 +586,12 @@ transform = Transform3D(0.0958663, 0, 0.421141, 0, 0.431914, 0, -0.421141, 0, 0.
 stream = ExtResource("19_cy568")
 bus = &"Music"
 
+[node name="Bucket" type="AudioStreamPlayer3D" parent="Audio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.32303, 0.236597, 1.99142)
+attenuation_model = 1
+volume_db = -10.0
+unit_size = 4.0
+
 [node name="ChestOpening" type="AudioStreamPlayer" parent="Audio"]
 
 [node name="Creaks" type="AudioStreamPlayer" parent="Audio"]
@@ -611,6 +617,8 @@ stream = ExtResource("21_nduse")
 bus = &"SFX"
 
 [node name="Timers" type="Node" parent="Audio"]
+
+[node name="Bucket" type="Timer" parent="Audio/Timers"]
 
 [node name="CreaksTimer" type="Timer" parent="Audio/Timers"]
 

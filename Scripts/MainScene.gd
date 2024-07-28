@@ -33,6 +33,15 @@ const creaks_array = [
 	preload("res://Assets/Audio/Sound/creaking_metal_3.mp3"),
 ]
 
+const bucket_water_drops_array = [
+	preload("res://Assets/Audio/Sound/water_drop_1.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_2.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_3.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_4.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_5.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_6.mp3"),
+]
+
 const chest_open_array = [preload("res://Assets/Audio/Sound/chest_opening_short.mp3")]
 
 
@@ -61,9 +70,18 @@ const rand_creak_time_max_s: float = 120.0
 # const rand_creak_time_max_s: float = 5.0 # TODO: debug
 
 
+##### Setup bucket water drops #####
+
+const bucket_water_drop_volume_db: float = -10
+const rand_bucket_water_drop_time_min_s: float = 3.0
+const rand_bucket_water_drop_time_max_s: float = 7.0
+# const rand_bucket_water_drop_time_min_s: float = 1.0 # TODO: debug
+# const rand_bucket_water_drop_time_max_s: float = 2.0 # TODO: debug
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	play_intro_sounds()
+	# play_intro_sounds() # TODO: enable where and when required
 
 	var player: Node = get_node("Player")
 	var chest_top_collision_1: Node = get_node("Chests/ChestTop/ChestTopCollision")
@@ -88,6 +106,13 @@ func _ready():
 	chest_top_collision_1.connect("chest_opened", play_sound_from_array.bind("chest opening", $Audio/ChestOpening, chest_open_array))
 	chest_top_collision_2.connect("chest_opened", play_sound_from_array.bind("chest opening", $Audio/ChestOpening, chest_open_array))
 
+	##### Setup bucket water drops #####
+
+	$Audio/Bucket.volume_db = bucket_water_drop_volume_db
+	$Audio/Bucket.unit_size = 4
+	$Audio/Bucket.attenuation_model = $Audio/Bucket.ATTENUATION_INVERSE_SQUARE_DISTANCE
+
+
 	##### Setup randomly timed sounds #####
 
 	setup_randomly_timed_sound($Audio/ThunderStorm, $Audio/Timers/ThunderStormTimer,
@@ -104,6 +129,11 @@ func _ready():
 														 rand_creak_time_min_s, rand_creak_time_max_s, creak_volume_db,
 														 on_sound_finished.bind($Audio/Timers/CreaksTimer, rand_creak_time_min_s, rand_creak_time_max_s),
 														 play_sound_from_array.bind("creak", $Audio/Creaks, creaks_array))
+
+	setup_randomly_timed_sound($Audio/Bucket, $Audio/Timers/Bucket,
+														 rand_bucket_water_drop_time_min_s, rand_bucket_water_drop_time_max_s, bucket_water_drop_volume_db,
+														 on_sound_finished.bind($Audio/Timers/Bucket, rand_bucket_water_drop_time_min_s, rand_bucket_water_drop_time_max_s),
+														 play_sound_from_array.bind("bucket_water_drop", $Audio/Bucket, bucket_water_drops_array))
 
 
 ##### Function to setup sounds which are governed by a random timer #####
