@@ -51,7 +51,7 @@ background_color = Color(0, 0, 0.0470588, 1)
 sky = SubResource("Sky_fu3n5")
 sky_rotation = Vector3(0, -2.10836, 0)
 tonemap_mode = 2
-tonemap_exposure = 8.0
+tonemap_exposure = 2.0
 tonemap_white = 8.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_goo6b"]
