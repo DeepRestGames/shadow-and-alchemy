@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqoc03dewm5we"]
+
+[ext_resource type="Texture2D" uid="uid://dil17f65fa1qf" path="res://Assets/2D/Decals/paper_ArtsyBee_Pixabay.jpg" id="1_r27vv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_da6ug"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.454902, 0.454902, 0.454902, 1)
+albedo_texture = ExtResource("1_r27vv")
+grow_amount = 0.005
+
+[node name="Grimoire" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+
+[node name="Pages" type="CSGBox3D" parent="."]
+transform = Transform3D(0.999997, -0.00256646, -4.37113e-08, 0.00256646, 0.999997, -4.38236e-08, 4.38236e-08, 4.37113e-08, 1, 0.00225514, 0.0010587, 5.96509e-08)
+material_override = SubResource("StandardMaterial3D_da6ug")
+size = Vector3(0.681, 0.001, 0.959)
+
+[node name="Right" type="Sprite3D" parent="."]
+transform = Transform3D(0.0269999, -4.02818e-10, 0.000100874, 0.000100874, -6.46806e-10, -0.0269999, 4.05233e-10, 0.027, -6.45296e-10, 0, 0, 0)
+flip_h = true
