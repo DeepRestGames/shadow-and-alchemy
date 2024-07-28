@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://3ja4awh1fi4p"]
+
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="1_030td"]
+[ext_resource type="Texture2D" uid="uid://c0bf0mcnjbrh3" path="res://Assets/2D/InventoryItemsIcons/Mushroom.jpg" id="1_ylb50"]
+
+[resource]
+script = ExtResource("1_030td")
+item_name = "Mushroom"
+item_icon = ExtResource("1_ylb50")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_Mushroom.tscn"

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpn1o2iqs3wea"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_uhjy4"]
+[ext_resource type="Resource" uid="uid://gj7n5vxe7r51" path="res://Resources/InventoryItems/Item_Laurel.tres" id="2_wmymb"]
+[ext_resource type="PackedScene" uid="uid://biqkt2i023ui1" path="res://Assets/3D/Props/Laurel.blend" id="3_eonly"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemLaurel" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.152588, 0.0622559, 0.421631)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_uhjy4")
+inventory_item_data = ExtResource("2_wmymb")
+item_model_height = 0.06
+
+[node name="Laurel" parent="." instance=ExtResource("3_eonly")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.00422966, -0.0203655, 0.0626308)

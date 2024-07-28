@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvulad34h7pga"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_o6v26"]
+[ext_resource type="Resource" uid="uid://b6spexgfsmpmg" path="res://Resources/InventoryItems/Item_VinegarVial.tres" id="2_neudq"]
+[ext_resource type="PackedScene" uid="uid://d0256tpfxj4qm" path="res://Assets/3D/Props/VinegarVial.blend" id="3_wxols"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemVinegarVial" type="CSGBox3D"]
+use_collision = true
+collision_layer = 2
+size = Vector3(0.0800781, 0.263672, 0.078125)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_o6v26")
+inventory_item_data = ExtResource("2_neudq")
+item_model_height = 0.264
+
+[node name="VinegarVial" parent="." instance=ExtResource("3_wxols")]
+transform = Transform3D(-0.0643402, 0, -0.0765528, 0, 0.2, 0, 0.0765528, 0, -0.0643402, 0, -0.13076, 0)
