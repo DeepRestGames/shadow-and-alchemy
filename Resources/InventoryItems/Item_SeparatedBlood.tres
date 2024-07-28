@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://doehsdyskj24i"]
 
-[ext_resource type="Texture2D" uid="uid://pusgjglu8k1h" path="res://Assets/2D/InventoryItemsIcons/ImpureBlood.jpg" id="1_v7r2p"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_36lsv"]
+[ext_resource type="Texture2D" uid="uid://bp6irqtf721nb" path="res://Assets/2D/InventoryItemsIcons/SeparatedBlood.jpg" id="1_td4q0"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_xsruo"]
 
 [resource]
-script = ExtResource("2_36lsv")
-item_name = "Impure Blood"
-item_icon = ExtResource("1_v7r2p")
+script = ExtResource("2_xsruo")
+item_name = "Separated Blood"
+item_icon = ExtResource("1_td4q0")
 is_reusable = false
-item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_SeparatedBlood.tscn"
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_ImpureBlood.tscn"

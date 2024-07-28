@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://dypkc8ccciu07"]
+
+[ext_resource type="Resource" uid="uid://dv51a05vddip3" path="res://Resources/InventoryItems/Item_Crucible.tres" id="1_dyshg"]
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="1_jfuh4"]
+[ext_resource type="Resource" uid="uid://4anbu83imtd8" path="res://Resources/InventoryItems/Item_SilverCoin.tres" id="2_20ses"]
+[ext_resource type="Resource" uid="uid://t0soatc27kgj" path="res://Resources/InventoryItems/Item_CrucibleWithMoltenCoins.tres" id="3_d4ogg"]
+
+[resource]
+script = ExtResource("1_jfuh4")
+puzzle_name = "Puzzle_MeltedSilver"
+puzzle_description = ""
+puzzle_solution_items = [ExtResource("1_dyshg"), ExtResource("2_20ses")]
+order_needed = false
+reward = ExtResource("3_d4ogg")
+alchemical_process_needed = false
+alchemical_process_solution = 0
