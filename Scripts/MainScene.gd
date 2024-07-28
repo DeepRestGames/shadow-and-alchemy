@@ -121,8 +121,8 @@ func _ready():
 	# var item_bookred_aquarius = get_node("Props/ItemBookRed_Aquarius")
 	# var item_bookred_projection = get_node("Props/ItemBookRed_Projection")
 	# var item_crucible = get_node("Props/ItemCrucible")
-	# var item_flintandsteel = get_node("Props/ItemFlintAndSteel")
-	# var item_gravedirt = get_node("Props/ItemGraveDirt")
+	var item_flintandsteel = get_node("Props/ItemFlintAndSteel")
+	var item_gravedirt = get_node("Props/ItemGraveDirt")
 	var item_peppergrains = get_node("Props/ItemPepperGrains")
 
 	##### Setup background music #####
@@ -176,8 +176,8 @@ func _ready():
 	# item_bookred_aquarius.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
 	# item_bookred_projection.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
 	# item_crucible.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
-	# item_flintandsteel.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
-	# item_gravedirt.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	item_flintandsteel.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
+	item_gravedirt.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
 	item_peppergrains.connect("item_was_picked", play_sound_from_array.bind("item drop", $Audio/ItemInteract, item_interact_array))
 
 
