@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=44 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene_Prototype02.gd" id="1_3wtai"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://ba2mn58i5i0ml" path="res://Scenes/Items/ChestTop.tscn" id="28_qwxhw"]
 [ext_resource type="PackedScene" uid="uid://2vfre2wb0jdr" path="res://Assets/3D/Props/ChestBase.blend" id="35_5ec4v"]
 [ext_resource type="Texture2D" uid="uid://mk0guedcs5u0" path="res://Assets/2D/AlchemicalMaterials/Blood.png" id="35_cgouk"]
+[ext_resource type="PackedScene" uid="uid://du3dh6rb24kyv" path="res://Scenes/UI/Grimoire.tscn" id="38_t6tu7"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("3_ba04y")
@@ -437,6 +438,9 @@ bus = &"SFX"
 
 [node name="ChestTop" parent="Chests" instance=ExtResource("28_qwxhw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.555, 0.43, -1.329)
+
+[node name="Grimoire" parent="." instance=ExtResource("38_t6tu7")]
+transform = Transform3D(-1.69076e-08, 0.208046, -0.341638, -1.82481e-11, 0.341638, 0.208046, 0.4, 8.80949e-09, -1.44312e-08, -3.90871, 1.17938, -0.0561288)
 
 [editable path="Player"]
 [editable path="Navigation/FocusPoints/FocusPointTable"]

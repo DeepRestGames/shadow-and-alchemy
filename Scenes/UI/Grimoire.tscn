@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://du3dh6rb24kyv"]
+
+[ext_resource type="Texture2D" uid="uid://cglb3g30rrg3x" path="res://Assets/2D/Decals/book_texture.jpg" id="2_j2g35"]
+[ext_resource type="Texture2D" uid="uid://sntw8ewqgxsi" path="res://Assets/2D/Decals/old_paper.jpg" id="3_64ywr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lqut7"]
+size = Vector3(0.18, 0.01, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l2db"]
+albedo_color = Color(0.34902, 0.219608, 0.0235294, 1)
+albedo_texture = ExtResource("2_j2g35")
+roughness = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_btvvn"]
+size = Vector3(0.7, 0.01, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_da6ug"]
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.454902, 0.454902, 0.454902, 1)
+albedo_texture = ExtResource("3_64ywr")
+
+[node name="Grimoire" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+
+[node name="Body" type="Node3D" parent="."]
+transform = Transform3D(1, 4.27318e-16, -8.88178e-16, -4.27318e-16, 1, 0, 8.88178e-16, 0, 1, 0, 0, 0)
+
+[node name="Stipite" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(0.99998, 0.00637041, 2.7846e-10, -0.00637041, 0.99998, -8.88178e-13, -2.7846e-10, -8.84626e-13, 1, 0.00242621, 0.000209751, 9.16777e-12)
+mesh = SubResource("BoxMesh_lqut7")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_2l2db")
+
+[node name="L" type="Node3D" parent="Body"]
+transform = Transform3D(0.981195, 0.193019, 8.43711e-09, -0.193019, 0.981195, -8.21988e-10, -8.43711e-09, -8.21988e-10, 1, -7.65026e-18, 0.017903, 7.82564e-10)
+
+[node name="Cover1Pivot" type="Node3D" parent="Body/L"]
+transform = Transform3D(0.203423, 0.979091, 4.27975e-08, -0.979091, 0.203423, -3.48197e-08, -4.27976e-08, -3.48195e-08, 1, 0.0947679, 0.0632186, 2.76338e-09)
+
+[node name="Cover1" type="MeshInstance3D" parent="Body/L/Cover1Pivot"]
+transform = Transform3D(-0.00452044, -0.99999, -4.3711e-08, 0.99999, -0.00452044, -4.3909e-08, 4.3711e-08, -4.3909e-08, 1, 0.0598864, 0.32987, 1.44191e-08)
+mesh = SubResource("BoxMesh_btvvn")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_2l2db")
+
+[node name="Pages2Pivot" type="Node3D" parent="Body/L"]
+transform = Transform3D(0.996768, 0.0803381, 3.51169e-09, -0.0803381, 0.996768, -1.41299e-10, -3.51169e-09, -1.41288e-10, 1, -0.0204711, -0.00636955, -2.78422e-10)
+
+[node name="Pages2" type="CSGBox3D" parent="Body/L/Pages2Pivot"]
+transform = Transform3D(0.957415, -0.288714, 4.185e-08, 0.288714, 0.957415, -3.10913e-08, -3.10912e-08, 4.18499e-08, 1, 0.338784, 0.121266, -0.00131225)
+material_override = SubResource("StandardMaterial3D_da6ug")
+size = Vector3(0.681, 0.06, 0.959)
+
+[node name="Left" type="Sprite3D" parent="Body/L/Pages2Pivot"]
+transform = Transform3D(0.0258616, 4.97603e-11, 0.00775737, 0.00775737, -3.39086e-10, -0.0258616, 4.97603e-11, 0.027, -3.39086e-10, 0.325177, 0.154857, -0.0122266)
+flip_h = true
+
+[node name="R" type="Node3D" parent="Body"]
+transform = Transform3D(0.97022, -0.242227, -1.05881e-08, 0.242227, 0.97022, -1.30174e-09, 1.05881e-08, -1.30174e-09, 1, 0.00197497, 0.0127118, 5.55649e-10)
+
+[node name="Cover2Pivot" type="Node3D" parent="Body/R"]
+transform = Transform3D(0.976488, -0.215571, -9.42288e-09, 0.215571, 0.976488, -1.02773e-09, 9.42289e-09, -1.02773e-09, 1, -0.0182057, 0.0115185, 5.03491e-10)
+
+[node name="Cover2" type="MeshInstance3D" parent="Body/R/Cover2Pivot"]
+transform = Transform3D(0.904185, 0.427137, -3.95233e-08, -0.427137, 0.904185, -2.50406e-08, 2.50406e-08, 3.95232e-08, 1, -0.378282, 0.159523, -4.94022e-06)
+mesh = SubResource("BoxMesh_btvvn")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_2l2db")
+
+[node name="PagesPivot" type="Node3D" parent="Body/R"]
+transform = Transform3D(0.976281, -0.216508, -9.46385e-09, 0.216508, 0.976281, -1.03681e-09, 9.46385e-09, -1.0368e-09, 1, 0.0200598, -0.00857663, -3.74896e-10)
+
+[node name="Pages" type="CSGBox3D" parent="Body/R/PagesPivot"]
+transform = Transform3D(0.895906, 0.444244, -3.91613e-08, -0.444244, 0.895906, -2.42929e-08, 2.42929e-08, 3.91613e-08, 1, -0.318531, 0.184083, -0.00131225)
+material_override = SubResource("StandardMaterial3D_da6ug")
+size = Vector3(0.681, 0.065, 0.959)
+
+[node name="Right" type="Sprite3D" parent="Body/R/PagesPivot"]
+transform = Transform3D(0.0242035, -1.2224e-10, -0.0119663, -0.0119663, -5.23064e-10, -0.0242035, -1.2224e-10, 0.027, -5.23064e-10, -0.300325, 0.209607, -0.0122266)
+flip_h = true
