@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=116 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -14,19 +14,30 @@
 [ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="11_llow7"]
 [ext_resource type="PackedScene" uid="uid://ddvlmsgydjki2" path="res://Scenes/AlchemicalCircle.tscn" id="12_hwcwv"]
 [ext_resource type="PackedScene" uid="uid://d0cq4kvpnenr4" path="res://Assets/3D/Props/SpiceJarFilled_v0.0.0.blend" id="13_pyh8a"]
+[ext_resource type="Resource" uid="uid://085vrd1f3j7n" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_BloodDistillation.tres" id="14_bpxoe"]
+[ext_resource type="Resource" uid="uid://dbiec6p24dgo2" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_BloodSeparation.tres" id="15_mm4yd"]
 [ext_resource type="PackedScene" uid="uid://dl1o0hpwktapu" path="res://Assets/3D/Props/Sieve_v0.0.0.blend" id="15_p5chk"]
 [ext_resource type="PackedScene" uid="uid://6hhogeucrtfh" path="res://Assets/3D/Props/CandeHolderWall.blend" id="16_irf7i"]
+[ext_resource type="Resource" uid="uid://cvgju2vwnuacr" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Homunculus.tres" id="16_wch61"]
+[ext_resource type="Resource" uid="uid://cpseljbvj58x5" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Mercury.tres" id="17_p1gj2"]
 [ext_resource type="PackedScene" uid="uid://dpn1o2iqs3wea" path="res://Scenes/Items/InventoryItems/Item_Laurel.tscn" id="17_q0rhj"]
+[ext_resource type="Resource" uid="uid://b4y8lpp7yljn7" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_PhilosopherStone.tres" id="18_2l2kk"]
 [ext_resource type="PackedScene" uid="uid://cndhtqglibb81" path="res://Scenes/Items/InventoryItems/Item_OpalStone.tscn" id="18_j6jlu"]
+[ext_resource type="Resource" uid="uid://cfy7k11vb1jg5" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Sulfur.tres" id="19_2ajug"]
 [ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="19_cy568"]
 [ext_resource type="AudioStream" uid="uid://t622sra4diub" path="res://Assets/Audio/Sound/footsteps_wood_single_2.mp3" id="20_awg3m"]
+[ext_resource type="Resource" uid="uid://ojg3m3wpmidh" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Vinegar.tres" id="20_ugjht"]
 [ext_resource type="AudioStream" uid="uid://dlwk5ak6u2vgr" path="res://Assets/Audio/Sound/storm_faded.mp3" id="21_nduse"]
 [ext_resource type="AudioStream" uid="uid://c2pki04fd8067" path="res://Assets/Audio/Sound/fireplace_1.mp3" id="22_4qygc"]
 [ext_resource type="PackedScene" uid="uid://sncutmva0ga2" path="res://Assets/3D/Props/Hand.blend" id="23_af127"]
 [ext_resource type="PackedScene" uid="uid://dhmonnu314mp4" path="res://Assets/3D/Props/Alembic_v0.0.0.blend" id="23_krjlx"]
 [ext_resource type="PackedScene" uid="uid://d0tfbw602vqkd" path="res://Assets/3D/Props/MortarPestle.blend" id="25_up3bp"]
 [ext_resource type="Material" uid="uid://sqqass5k0d2i" path="res://Assets/3D/Props/materials/MixedSubstance.tres" id="26_ttlky"]
+[ext_resource type="PackedScene" uid="uid://dm136mrn7n57f" path="res://Scenes/InteractionSystem/GenericPuzzleSlot.tscn" id="27_5agl3"]
 [ext_resource type="PackedScene" uid="uid://ba2mn58i5i0ml" path="res://Scenes/Items/ChestTop.tscn" id="28_qwxhw"]
+[ext_resource type="Resource" uid="uid://dypkc8ccciu07" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_MeltedSilver.tres" id="28_x6iog"]
+[ext_resource type="Resource" uid="uid://c3exsdbht001t" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_Salt.tres" id="31_dcr5l"]
+[ext_resource type="Resource" uid="uid://cn410ukpg4c6t" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_Pepper.tres" id="32_1xrty"]
 [ext_resource type="PackedScene" uid="uid://cckptta8oyaxr" path="res://Scenes/Items/InventoryItems/Item_GraveDirt.tscn" id="32_05yfd"]
 [ext_resource type="PackedScene" uid="uid://btcxh60x7v105" path="res://Scenes/Items/InventoryItems/Item_PepperGrains.tscn" id="32_pc1hi"]
 [ext_resource type="PackedScene" uid="uid://ce02y63u3jcdc" path="res://Scenes/Items/InventoryItems/Item_Crucible.tscn" id="33_6slmt"]
@@ -37,9 +48,11 @@
 [ext_resource type="PackedScene" uid="uid://bvrhasn8bju08" path="res://Assets/3D/Props/SpiceJarFilledGreen.blend" id="35_imatw"]
 [ext_resource type="PackedScene" uid="uid://2irg4q360ucu" path="res://Assets/3D/Props/SpiceJarFilledRed.blend" id="36_n8ghq"]
 [ext_resource type="PackedScene" uid="uid://bnah30dwuroo7" path="res://Scenes/Items/InventoryItems/Item_Mushroom.tscn" id="36_opvsd"]
+[ext_resource type="PackedScene" uid="uid://3yp0qbvl62p1" path="res://Assets/3D/Props/BookBlack_v0.0.0.blend" id="37_1ro66"]
 [ext_resource type="PackedScene" uid="uid://ebtsdp6p2iw4" path="res://Assets/3D/Props/SpiceJarFilledYellow.blend" id="37_2j1vw"]
 [ext_resource type="PackedScene" uid="uid://cgt7qhmb42v61" path="res://Scenes/Items/InventoryItems/Item_Coal.tscn" id="37_e3q8q"]
 [ext_resource type="PackedScene" uid="uid://dns78fyxhw4g3" path="res://Scenes/Items/InventoryItems/Item_JarOfGrapes.tscn" id="37_oqlbi"]
+[ext_resource type="PackedScene" uid="uid://qe8xaa81beoh" path="res://Assets/3D/Props/BookBlue_v0.0.0.blend" id="38_3le6x"]
 [ext_resource type="PackedScene" uid="uid://dhtnotvhyj8uf" path="res://Assets/3D/Props/CoinPurse.blend" id="38_4dsmt"]
 [ext_resource type="PackedScene" uid="uid://ccjymunjlm84n" path="res://Assets/3D/Props/GobletsBrutti_v0.0.0.blend" id="41_3uqgs"]
 [ext_resource type="PackedScene" uid="uid://dfl30ul37jev4" path="res://Assets/3D/Props/Skull_v0.0.0.blend" id="43_oohwt"]
@@ -50,7 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://bjfxknyjo1to4" path="res://Assets/2D/AlchemicalMaterials/Mercury_Spirit.png" id="45_20rln"]
 [ext_resource type="Texture2D" uid="uid://m3n5auvsl1eg" path="res://Assets/2D/BasicElements/Water.png" id="45_yqq5f"]
 [ext_resource type="Texture2D" uid="uid://c8fbk85aj43j1" path="res://Assets/2D/BasicElements/Fire.png" id="46_hocwh"]
-[ext_resource type="PackedScene" uid="uid://dftwsm7355x7m" path="res://Scenes/Items/BookRed.tscn" id="46_x03fn"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/BookRed.tscn" id="46_x03fn"]
 [ext_resource type="Texture2D" uid="uid://c11eae4qq7wk3" path="res://Assets/2D/BasicElements/Earth.png" id="47_wjf4x"]
 [ext_resource type="Texture2D" uid="uid://hynfrwtgbvxl" path="res://Assets/2D/AlchemicalProcesses/Taurus_Congelation.png" id="48_dcc0o"]
 [ext_resource type="PackedScene" uid="uid://i0cbyypo3vy4" path="res://Scenes/Items/BookBrown.tscn" id="48_s5nvg"]
@@ -65,7 +78,7 @@
 [ext_resource type="Texture2D" uid="uid://ewlcjmyc4nox" path="res://Assets/2D/AlchemicalProcesses/Sagittarius_Ceration.png" id="54_dwvc6"]
 [ext_resource type="Texture2D" uid="uid://dlu0peeukk8qn" path="res://Assets/2D/Decals/Blank.png" id="55_5y37y"]
 [ext_resource type="Texture2D" uid="uid://c31yis5cdjonm" path="res://Assets/2D/AlchemicalProcesses/Capricorn_Fermentation_Putrefaction.png" id="55_djyml"]
-[ext_resource type="PackedScene" uid="uid://beb3g1worunrn" path="res://Scenes/Items/BookBlack.tscn" id="57_1l3i3"]
+[ext_resource type="PackedScene" path="res://Scenes/Items/BookBlack.tscn" id="57_1l3i3"]
 [ext_resource type="Texture2D" uid="uid://bmd2cemv3mk2p" path="res://Assets/2D/AlchemicalProcesses/Pisces_Projection.png" id="57_uv6jf"]
 [ext_resource type="Texture2D" uid="uid://7qphghswk1iv" path="res://Assets/2D/AlchemicalProcesses/Aquarius_Multiplication.png" id="58_efy78"]
 [ext_resource type="Texture2D" uid="uid://dvkf8tp7s5461" path="res://Assets/2D/AlchemicalProcesses/Aries_Calcination.png" id="59_qei4b"]
@@ -1549,6 +1562,7 @@ mesh = SubResource("QuadMesh_goo6b")
 
 [node name="AlchemicalCircle" parent="Props" instance=ExtResource("12_hwcwv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522614, -1.04896, 3.98658)
+related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("14_bpxoe"), ExtResource("15_mm4yd"), ExtResource("16_wch61"), ExtResource("17_p1gj2"), ExtResource("18_2l2kk"), ExtResource("19_2ajug"), ExtResource("20_ugjht")])
 
 [node name="Candle" parent="Props/AlchemicalCircle" instance=ExtResource("11_llow7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00540996, -0.109975, -0.222986)
@@ -1597,6 +1611,9 @@ transform = Transform3D(-0.620473, -0.998954, 47.9856, -42.8916, -21.5245, -1.00
 [node name="Fireplace" parent="Props" instance=ExtResource("10_6u8tf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81039, -1.43939, 6.77525)
 
+[node name="GenericPuzzleSlot" parent="Props/Fireplace" instance=ExtResource("27_5agl3")]
+related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("28_x6iog")])
+
 [node name="Sieve_v0_0_0" parent="Props" instance=ExtResource("15_p5chk")]
 transform = Transform3D(0.990466, -0.0788701, 0.112946, 0.0817966, 0.996417, -0.0215079, -0.110845, 0.0305414, 0.993368, -1.43614, -1.04679, 4.10043)
 
@@ -1609,6 +1626,13 @@ visible = false
 mesh = SubResource("QuadMesh_gx6p0")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("26_ttlky")
+
+[node name="GenericPuzzleSlot" parent="Props/MortarPestle" node_paths=PackedStringArray("model_variation") instance=ExtResource("27_5agl3")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.0954993, 0)
+radius = 0.3
+height = 0.4
+related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("31_dcr5l"), ExtResource("32_1xrty")])
+model_variation = NodePath("../MortarFilling")
 
 [node name="CoinPurse" parent="Props" instance=ExtResource("38_4dsmt")]
 transform = Transform3D(-0.316258, -0.00683831, -0.387214, 0.117278, 0.474757, -0.104171, 0.36909, -0.156713, -0.298687, 4.9898, -1.76401, 4.19853)

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://bw3c6fyb7btwx"]
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://085vrd1f3j7n"]
 
 [ext_resource type="Resource" uid="uid://doehsdyskj24i" path="res://Resources/InventoryItems/Item_SeparatedBlood.tres" id="2_c8gqy"]
 [ext_resource type="Resource" uid="uid://m6b4tfbg2b7g" path="res://Resources/InventoryItems/Item_BloodEssence.tres" id="2_eqh6m"]
