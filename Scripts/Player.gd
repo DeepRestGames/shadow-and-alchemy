@@ -38,6 +38,8 @@ enum PlayerState {
 @onready var diary = $Diary
 @onready var debug_ui = $DEBUG_UI
 
+@onready var inventory_ui = $HUD/InventoryUI
+
 
 func _ready():
 	diary.hide()
@@ -50,8 +52,8 @@ func _process(_delta):
 	_process_movement_inputs()
 	_process_focus_inputs()
 	_process_pause_inputs()
-
-
+	_process_inventory_inputs()
+	
 	# TODO: experiment to start creepy soundtrack at a scripted moment (in this example, focussing on `NavigationPoint11`)
 	if (player_state == PlayerState.FOCUSING) and ("Lectern" in str(current_navigation_point)):
 		creepy_event.emit()
@@ -61,6 +63,11 @@ func _process(_delta):
 	debug_ui.text += "\nPOS: " + str(camera_3d.global_position)
 	debug_ui.text += "\nROT: " + str(camera_3d.global_position)
 	debug_ui.text += "\nCurr nav point: " + str(current_navigation_point)
+
+
+func _process_inventory_inputs():
+	if Input.is_action_just_pressed("open_inventory"):
+		inventory_ui.open_inventory_called()
 
 
 func _process_pause_inputs():

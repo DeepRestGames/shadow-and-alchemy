@@ -14,7 +14,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [node name="InventoryItemUI" type="Control" node_paths=PackedStringArray("icon")]
-custom_minimum_size = Vector2(70, 70)
+custom_minimum_size = Vector2(130, 130)
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -31,7 +31,7 @@ script = ExtResource("1_nxoxs")
 icon = NodePath("Icon")
 
 [node name="Panel" type="Panel" parent="."]
-custom_minimum_size = Vector2(70, 70)
+custom_minimum_size = Vector2(130, 130)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -47,6 +47,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mr6fi")
 
 [node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(110, 110)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

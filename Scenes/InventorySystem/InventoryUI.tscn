@@ -1,67 +1,147 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4csxpsd7ukr6"]
+[gd_scene load_steps=6 format=3 uid="uid://b4csxpsd7ukr6"]
 
 [ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryUI.gd" id="1_5wtk1"]
 [ext_resource type="Texture2D" uid="uid://dgeu4eo2m5l60" path="res://Icons/UI_Arrow.png" id="2_eq5ge"]
 
+[sub_resource type="Animation" id="Animation_ahkmi"]
+resource_name = "InventorySlideIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1080), Vector2(0, 950)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CentralArrow:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.5708, 0.0, 1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_xewa2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 1080)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CentralArrow:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5708]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgnac"]
+_data = {
+"InventorySlideIn": SubResource("Animation_ahkmi"),
+"RESET": SubResource("Animation_xewa2")
+}
+
 [node name="InventoryUI" type="Control"]
 layout_mode = 3
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -78.0
-offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5wtk1")
+metadata/_edit_use_anchors_ = true
+
+[node name="InventoryUIContainer" type="Control" parent="."]
+custom_minimum_size = Vector2(1920, 130)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_right = 960.0
+offset_bottom = 130.0
 grow_horizontal = 2
 grow_vertical = 0
-script = ExtResource("1_5wtk1")
 
-[node name="InventoryItemsCarousel" type="HBoxContainer" parent="."]
+[node name="InventoryItemsCarousel" type="HBoxContainer" parent="InventoryUIContainer"]
 layout_mode = 2
-anchor_right = 1.0
+anchor_left = 0.0395833
+anchor_right = 0.960417
 anchor_bottom = 1.0
-offset_left = 76.0
-offset_right = -76.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="LeftArrow" type="TextureButton" parent="."]
+[node name="LeftArrow" type="TextureButton" parent="InventoryUIContainer"]
 layout_mode = 2
+anchor_right = 0.0364583
 anchor_bottom = 1.0
-offset_right = 70.0
 grow_vertical = 2
 texture_normal = ExtResource("2_eq5ge")
 ignore_texture_size = true
 stretch_mode = 0
 flip_h = true
+metadata/_edit_use_anchors_ = true
 
-[node name="RightArrow" type="TextureButton" parent="."]
+[node name="RightArrow" type="TextureButton" parent="InventoryUIContainer"]
 layout_mode = 2
-anchor_left = 1.0
+anchor_left = 0.963542
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -70.0
 grow_horizontal = 0
 grow_vertical = 2
 texture_normal = ExtResource("2_eq5ge")
 ignore_texture_size = true
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
-[node name="CentralArrow" type="TextureButton" parent="."]
-custom_minimum_size = Vector2(50, 120)
+[node name="CentralArrow" type="TextureButton" parent="InventoryUIContainer"]
+custom_minimum_size = Vector2(60, 120)
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -25.0
-offset_top = -100.0
-offset_right = 25.0
-offset_bottom = 20.0
+anchors_preset = -1
+anchor_left = 0.46875
+anchor_top = -0.500002
+anchor_right = 0.53125
+anchor_bottom = -0.500002
+offset_left = 29.9999
+offset_top = -29.9998
+offset_right = -29.9999
+offset_bottom = 90.0002
 grow_horizontal = 2
 rotation = -1.5708
-pivot_offset = Vector2(25, 60)
+pivot_offset = Vector2(30, 60)
 texture_normal = ExtResource("2_eq5ge")
 ignore_texture_size = true
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../InventoryUIContainer")
+libraries = {
+"": SubResource("AnimationLibrary_fgnac")
+}

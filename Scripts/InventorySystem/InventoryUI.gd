@@ -1,8 +1,11 @@
 extends Control
 
-@onready var inventory_items_carousel = $InventoryItemsCarousel
+@onready var inventory_items_carousel = $InventoryUIContainer/InventoryItemsCarousel
 @onready var inventory_item_scene = preload("res://Scenes/InventorySystem/InventoryItemUI.tscn")
 var inventory_items: Array[InventoryItemUI]
+
+var is_opened := false
+@onready var animation_player = $AnimationPlayer
 
 
 func _ready():
@@ -24,4 +27,12 @@ func _update_inventory_ui():
 		
 		inventory_items_carousel.add_child(current_item_scene)
 		inventory_items.append(current_item_scene)
-	
+
+
+func open_inventory_called():
+	if is_opened:
+		animation_player.play_backwards("InventorySlideIn")
+		is_opened = false
+	else:
+		animation_player.play("InventorySlideIn")
+		is_opened = true
