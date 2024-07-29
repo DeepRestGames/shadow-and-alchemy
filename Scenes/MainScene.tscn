@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=124 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://085vrd1f3j7n" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_BloodDistillation.tres" id="14_bpxoe"]
 [ext_resource type="Resource" uid="uid://dbiec6p24dgo2" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_BloodSeparation.tres" id="15_mm4yd"]
 [ext_resource type="PackedScene" uid="uid://dl1o0hpwktapu" path="res://Assets/3D/Props/Sieve_v0.0.0.blend" id="15_p5chk"]
+[ext_resource type="PackedScene" uid="uid://ca4m8y7n220nj" path="res://Scenes/Items/InventoryItems/Item_ImpureBlood.tscn" id="16_i2r0i"]
 [ext_resource type="PackedScene" uid="uid://6hhogeucrtfh" path="res://Assets/3D/Props/CandeHolderWall.blend" id="16_irf7i"]
 [ext_resource type="Resource" uid="uid://cvgju2vwnuacr" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Homunculus.tres" id="16_wch61"]
 [ext_resource type="Resource" uid="uid://cpseljbvj58x5" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Mercury.tres" id="17_p1gj2"]
@@ -32,12 +33,9 @@
 [ext_resource type="Material" uid="uid://sqqass5k0d2i" path="res://Assets/3D/Props/materials/MixedSubstance.tres" id="26_ttlky"]
 [ext_resource type="PackedScene" uid="uid://dm136mrn7n57f" path="res://Scenes/InteractionSystem/GenericPuzzleSlot.tscn" id="27_5agl3"]
 [ext_resource type="PackedScene" uid="uid://ba2mn58i5i0ml" path="res://Scenes/Items/ChestTop.tscn" id="28_qwxhw"]
-[ext_resource type="Resource" uid="uid://dypkc8ccciu07" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_MeltedSilver.tres" id="28_x6iog"]
 [ext_resource type="PackedScene" uid="uid://cvjg0uqd02gp7" path="res://Assets/3D/Props/Crucible.blend" id="29_aipy0"]
 [ext_resource type="PackedScene" uid="uid://be5fmscv5e4pb" path="res://Assets/3D/Props/Coin.blend" id="30_2rej2"]
-[ext_resource type="Resource" uid="uid://c3exsdbht001t" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_Salt.tres" id="31_dcr5l"]
 [ext_resource type="Material" uid="uid://d1emby0aspm3t" path="res://Assets/3D/Props/materials/MoltenSilver.tres" id="31_gqid4"]
-[ext_resource type="Resource" uid="uid://cn410ukpg4c6t" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_Pepper.tres" id="32_1xrty"]
 [ext_resource type="PackedScene" uid="uid://btcxh60x7v105" path="res://Scenes/Items/InventoryItems/Item_PepperGrains.tscn" id="32_pc1hi"]
 [ext_resource type="PackedScene" uid="uid://ce02y63u3jcdc" path="res://Scenes/Items/InventoryItems/Item_Crucible.tscn" id="33_6slmt"]
 [ext_resource type="PackedScene" uid="uid://b02svl0bdaf0u" path="res://Scenes/Items/InventoryItems/Item_FlintAndSteel.tscn" id="33_td4b1"]
@@ -81,6 +79,7 @@
 [ext_resource type="Texture2D" uid="uid://7qphghswk1iv" path="res://Assets/2D/AlchemicalProcesses/Aquarius_Multiplication.png" id="58_efy78"]
 [ext_resource type="Texture2D" uid="uid://dvkf8tp7s5461" path="res://Assets/2D/AlchemicalProcesses/Aries_Calcination.png" id="59_qei4b"]
 [ext_resource type="Texture2D" uid="uid://d2u0efwywjjgn" path="res://Assets/2D/AlchemicalProcesses/Cancer_Solution.png" id="60_n24rn"]
+[ext_resource type="PackedScene" uid="uid://dh3nrycjoird3" path="res://Scenes/Items/InventoryItems/Item_ChestKey.tscn" id="69_olkeo"]
 [ext_resource type="Texture2D" uid="uid://d0etjo2vbf0cb" path="res://Assets/2D/AlchemicalMaterials/GraveDirt.png" id="70_yaheh"]
 [ext_resource type="PackedScene" uid="uid://cku0643md7uhn" path="res://Assets/3D/Props/SpiceJarEmpty_v0.0.0.blend" id="71_4eaec"]
 [ext_resource type="PackedScene" uid="uid://dv75xu325saoj" path="res://Scenes/Items/InventoryItems/Item_BowlOfDirt.tscn" id="71_h7c0c"]
@@ -89,7 +88,6 @@
 [ext_resource type="PackedScene" uid="uid://coi7ttnhyc77y" path="res://Assets/3D/Props/GlassFlaskEmpty_v0.0.0.blend" id="75_0ctrt"]
 [ext_resource type="PackedScene" uid="uid://w2o5r7xjg8tw" path="res://Assets/3D/Props/EmptyHolderPlate.blend" id="76_qu3l4"]
 [ext_resource type="PackedScene" uid="uid://dvdddw1tb55q" path="res://Assets/3D/Props/BloodVialEmpty_v0.0.0.blend" id="77_j0jon"]
-[ext_resource type="PackedScene" uid="uid://c877sa63qy5pe" path="res://Assets/3D/Props/Key.blend" id="83_n727y"]
 [ext_resource type="PackedScene" uid="uid://cggn12ohdi7hp" path="res://Scenes/Audio.tscn" id="88_yilx3"]
 [ext_resource type="Script" path="res://Scripts/Audio.gd" id="89_jxhjo"]
 
@@ -1380,10 +1378,15 @@ current_navigation_point = NodePath("../Navigation/NavigationPoints/StartingNavi
 
 [node name="ChestTop" parent="Chests" instance=ExtResource("28_qwxhw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.555, 0.43, -1.329)
-visible = false
 
-[node name="ChestTop2" parent="Chests" instance=ExtResource("28_qwxhw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.555, 0.43, -1.329)
+[node name="ChestTopCollision" parent="Chests/ChestTop" index="2"]
+collision_layer = 2
+
+[node name="Keypad" parent="Chests/ChestTop" instance=ExtResource("53_ed8k5")]
+transform = Transform3D(0.0973193, 0.818015, -1.25355, 0.475028, 1.17438, 0.803232, 1.41946, -0.449094, -0.182861, -0.712486, -0.15388, 0.12008)
+
+[node name="GenericPuzzleSlot" parent="Chests/ChestTop/Keypad" instance=ExtResource("27_5agl3")]
+transform = Transform3D(0.369774, -0.128807, 0.0817084, -0.0350937, 0.136679, 0.374282, -0.148445, -0.353168, 0.11505, 0.00359023, 0.0621988, 0.0135549)
 
 [node name="Lights" type="Node3D" parent="."]
 
@@ -1415,6 +1418,7 @@ environment = SubResource("Environment_nps7j")
 
 [node name="Navigation" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.928081, 0.647132, -5.18842)
+visible = false
 
 [node name="NavigationPoints" type="Node3D" parent="Navigation"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.552707, 0, 0)
@@ -1565,6 +1569,10 @@ transform = Transform3D(0.843148, 0, -2.35353, 0, 2.5, 0, 2.35353, 0, 0.843148, 
 transform = Transform3D(0.555, 1.49012e-08, 0, 0, -4.34928e-08, -1, 7.45058e-09, 0.995, -4.37114e-08, 0, 0.277769, 0)
 mesh = SubResource("QuadMesh_goo6b")
 
+[node name="ItemImpureBlood" parent="Props/BloodChest" instance=ExtResource("16_i2r0i")]
+transform = Transform3D(5.35089, 0.448954, 0.105772, 0.161918, -0.0998301, -3.62795, -0.353536, 6.74935, -0.0606971, 0, 0.207219, 0)
+visible = false
+
 [node name="AlchemicalCircle" parent="Props" instance=ExtResource("12_hwcwv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522614, -1.04896, 3.98658)
 related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("14_bpxoe"), ExtResource("15_mm4yd"), ExtResource("16_wch61"), ExtResource("17_p1gj2"), ExtResource("18_2l2kk"), ExtResource("19_2ajug"), ExtResource("20_ugjht")])
@@ -1620,7 +1628,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81039, -1.43939, 6.77525)
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.239007, 0.148682, 0)
 radius = 0.572
 height = 0.831
-related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("28_x6iog")])
 
 [node name="Crucible" parent="Props/Fireplace" instance=ExtResource("29_aipy0")]
 transform = Transform3D(-0.125672, 0, 0.790067, 0, 0.799999, 0, -0.790067, 0, -0.125672, -0.250997, -0.0597747, 0.0248411)
@@ -1653,12 +1660,10 @@ mesh = SubResource("QuadMesh_gx6p0")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("26_ttlky")
 
-[node name="GenericPuzzleSlot" parent="Props/MortarPestle" node_paths=PackedStringArray("model_variation") instance=ExtResource("27_5agl3")]
+[node name="GenericPuzzleSlot" parent="Props/MortarPestle" instance=ExtResource("27_5agl3")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.0954993, 0)
 radius = 0.3
 height = 0.4
-related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("31_dcr5l"), ExtResource("32_1xrty")])
-model_variation = NodePath("../MortarFilling")
 
 [node name="CoinPurse" parent="Props" instance=ExtResource("38_4dsmt")]
 transform = Transform3D(-0.316258, -0.00683831, -0.387214, 0.117278, 0.474757, -0.104171, 0.36909, -0.156713, -0.298687, 4.9898, -1.76401, 4.19853)
@@ -1761,9 +1766,6 @@ texture = ExtResource("45_yqq5f")
 transform = Transform3D(-1.29819, 0, 0.0685803, 0, 1.3, 0, -0.0685803, 0, -1.29819, -0.81959, -0.48961, 7.74737)
 texture = ExtResource("46_hocwh")
 
-[node name="Lock2" parent="Props" instance=ExtResource("53_ed8k5")]
-transform = Transform3D(0.0973193, 0.818015, -1.25355, 0.475028, 1.17438, 0.803232, 1.41946, -0.449094, -0.182861, 4.41875, -1.58284, 4.62196)
-
 [node name="GraveDirt" parent="Props" instance=ExtResource("13_pyh8a")]
 transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 4.97294, -1.7614, 4.88553)
 
@@ -1774,6 +1776,9 @@ texture = ExtResource("70_yaheh")
 [node name="ItemBowlOfDirt" parent="Props/GraveDirt" instance=ExtResource("71_h7c0c")]
 transform = Transform3D(3.18, -5.68434e-14, 2.5411e-21, 0, -1.39002e-07, -6.015, 5.68434e-14, 3.18, -2.62924e-07, 0.00363016, 0.588504, -0.0268574)
 visible = false
+
+[node name="ItemChestKey" parent="Props" instance=ExtResource("69_olkeo")]
+transform = Transform3D(1.14151, 0, -0.973116, 0, 1.5, 0, 0.973116, 0, 1.14151, -1.06959, -1.04664, 3.46661)
 
 [node name="DecorationObjects" type="Node3D" parent="."]
 
@@ -1959,7 +1964,7 @@ transform = Transform3D(0.199714, 0, 0.0106938, 0, 0.1, 0, -0.0106938, 0, 0.1997
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.141022, 1.2041, 1.96306)
 
 [node name="SpiceJarFilledYellow3" parent="DecorationObjects" instance=ExtResource("37_2j1vw")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.0279, 0.801044, -2.45826)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.05864, 0.801044, -2.39146)
 
 [node name="SpiceJarFilledYellow2" parent="DecorationObjects" instance=ExtResource("37_2j1vw")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.75015, 1.59463, 2.03435)
@@ -2774,9 +2779,7 @@ transform = Transform3D(-0.099946, 0, -0.00328414, 0.000815344, 0.0968692, -0.02
 [node name="Audio" parent="." instance=ExtResource("88_yilx3")]
 script = ExtResource("89_jxhjo")
 
-[node name="Key2" parent="." instance=ExtResource("83_n727y")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.85315, 0.812321, -2.43294)
-
+[editable path="Chests/ChestTop"]
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointWindow"]
 [editable path="Navigation/FocusPoints/FocusPointChest"]

@@ -5,6 +5,7 @@ extends CSGBox3D
 
 signal chest_opened
 
+
 func _open():
 	animation_player.play("open")
 	chest_opened.emit()

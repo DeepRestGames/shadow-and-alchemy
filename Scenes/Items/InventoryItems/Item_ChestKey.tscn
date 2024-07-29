@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dh3nrycjoird3"]
+
+[ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_m4pyc"]
+[ext_resource type="Resource" uid="uid://dtbwixmffjpi2" path="res://Resources/InventoryItems/Item_ChestKey.tres" id="2_ro0mo"]
+[ext_resource type="PackedScene" uid="uid://c877sa63qy5pe" path="res://Assets/3D/Props/Key.blend" id="3_hvq7n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="ItemChestKey" type="CSGBox3D"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+use_collision = true
+collision_layer = 2
+size = Vector3(0.138672, 0.00952148, 0.0527344)
+material = SubResource("StandardMaterial3D_ibd1i")
+script = ExtResource("1_m4pyc")
+inventory_item_data = ExtResource("2_ro0mo")
+item_model_height = 0.01
+
+[node name="Key2" parent="." instance=ExtResource("3_hvq7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0529952, 0, 0.0126466)

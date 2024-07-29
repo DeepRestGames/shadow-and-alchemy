@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://t0soatc27kgj"]
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://bqktvw280o6do"]
 
-[ext_resource type="Texture2D" uid="uid://c8jqlh1qcotmm" path="res://Assets/2D/InventoryItemsIcons/CrucibleWithCoins.jpg" id="1_t1h47"]
-[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_7ha5g"]
+[ext_resource type="Texture2D" uid="uid://divpa544qf055" path="res://Assets/2D/InventoryItemsIcons/CrucibleWithMoltenCoins.jpg" id="1_mg3bc"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_ep3t8"]
 
 [resource]
-script = ExtResource("2_7ha5g")
-item_name = "Crucible with Coins"
-item_icon = ExtResource("1_t1h47")
+script = ExtResource("2_ep3t8")
+item_name = "Molten Coins"
+item_icon = ExtResource("1_mg3bc")
 is_reusable = false
-item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_CrucibleMolten.tscn"
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_CrucibleCoins.tscn"
