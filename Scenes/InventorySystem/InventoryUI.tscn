@@ -25,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_5wtk1")
 metadata/_edit_use_anchors_ = true
 
@@ -38,6 +39,7 @@ offset_top = -0.00012207
 offset_bottom = 0.000244141
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 1
 
 [node name="Panel" type="Panel" parent="InventoryUIContainer"]
 custom_minimum_size = Vector2(1700, 130)
@@ -46,8 +48,11 @@ anchors_preset = -1
 anchor_left = 0.0572917
 anchor_right = 0.942708
 anchor_bottom = 1.0
+offset_left = -0.000366211
+offset_right = 0.000366211
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_qwmtx")
 metadata/_edit_use_anchors_ = true
 
