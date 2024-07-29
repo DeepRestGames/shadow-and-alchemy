@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=129 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b68s0qxy7ri2k" path="res://Scenes/PlayerMovement/FocusPoint.tscn" id="6_uhtdf"]
 [ext_resource type="PackedScene" uid="uid://bj3naiqgfy1r4" path="res://Assets/3D/Props/Mushroom.blend" id="7_3ubul"]
 [ext_resource type="PackedScene" uid="uid://d2mnsurxior5l" path="res://Assets/3D/Props/Bucket.blend" id="8_ayvw5"]
+[ext_resource type="PackedScene" uid="uid://23e7cg446u3x" path="res://Scenes/Items/InventoryItems/Item_WaterFlask.tscn" id="9_hou2r"]
 [ext_resource type="PackedScene" uid="uid://drsimt7eb0p0w" path="res://Assets/3D/Props/Kris_v0.0.0.blend" id="10_2sou4"]
 [ext_resource type="PackedScene" uid="uid://bab13j6o8fp2l" path="res://Scenes/Fireplace.tscn" id="10_6u8tf"]
 [ext_resource type="Material" uid="uid://b28h3ell5m6t0" path="res://Assets/3D/Props/materials/BookCoverRed.tres" id="11_cjmjh"]
@@ -41,7 +42,6 @@
 [ext_resource type="Resource" uid="uid://c3exsdbht001t" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_Salt.tres" id="31_dcr5l"]
 [ext_resource type="Material" uid="uid://d1emby0aspm3t" path="res://Assets/3D/Props/materials/MoltenSilver.tres" id="31_gqid4"]
 [ext_resource type="Resource" uid="uid://cn410ukpg4c6t" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_Pepper.tres" id="32_1xrty"]
-[ext_resource type="PackedScene" uid="uid://cckptta8oyaxr" path="res://Scenes/Items/InventoryItems/Item_GraveDirt.tscn" id="32_05yfd"]
 [ext_resource type="PackedScene" uid="uid://btcxh60x7v105" path="res://Scenes/Items/InventoryItems/Item_PepperGrains.tscn" id="32_pc1hi"]
 [ext_resource type="PackedScene" uid="uid://ce02y63u3jcdc" path="res://Scenes/Items/InventoryItems/Item_Crucible.tscn" id="33_6slmt"]
 [ext_resource type="PackedScene" uid="uid://b02svl0bdaf0u" path="res://Scenes/Items/InventoryItems/Item_FlintAndSteel.tscn" id="33_td4b1"]
@@ -65,7 +65,7 @@
 [ext_resource type="Texture2D" uid="uid://bjfxknyjo1to4" path="res://Assets/2D/AlchemicalMaterials/Mercury_Spirit.png" id="45_20rln"]
 [ext_resource type="Texture2D" uid="uid://m3n5auvsl1eg" path="res://Assets/2D/BasicElements/Water.png" id="45_yqq5f"]
 [ext_resource type="Texture2D" uid="uid://c8fbk85aj43j1" path="res://Assets/2D/BasicElements/Fire.png" id="46_hocwh"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/BookRed.tscn" id="46_x03fn"]
+[ext_resource type="PackedScene" uid="uid://dftwsm7355x7m" path="res://Scenes/Items/BookRed.tscn" id="46_x03fn"]
 [ext_resource type="Texture2D" uid="uid://c11eae4qq7wk3" path="res://Assets/2D/BasicElements/Earth.png" id="47_wjf4x"]
 [ext_resource type="Texture2D" uid="uid://hynfrwtgbvxl" path="res://Assets/2D/AlchemicalProcesses/Taurus_Congelation.png" id="48_dcc0o"]
 [ext_resource type="PackedScene" uid="uid://i0cbyypo3vy4" path="res://Scenes/Items/BookBrown.tscn" id="48_s5nvg"]
@@ -80,12 +80,14 @@
 [ext_resource type="Texture2D" uid="uid://ewlcjmyc4nox" path="res://Assets/2D/AlchemicalProcesses/Sagittarius_Ceration.png" id="54_dwvc6"]
 [ext_resource type="Texture2D" uid="uid://dlu0peeukk8qn" path="res://Assets/2D/Decals/Blank.png" id="55_5y37y"]
 [ext_resource type="Texture2D" uid="uid://c31yis5cdjonm" path="res://Assets/2D/AlchemicalProcesses/Capricorn_Fermentation_Putrefaction.png" id="55_djyml"]
-[ext_resource type="PackedScene" path="res://Scenes/Items/BookBlack.tscn" id="57_1l3i3"]
+[ext_resource type="PackedScene" uid="uid://beb3g1worunrn" path="res://Scenes/Items/BookBlack.tscn" id="57_1l3i3"]
 [ext_resource type="Texture2D" uid="uid://bmd2cemv3mk2p" path="res://Assets/2D/AlchemicalProcesses/Pisces_Projection.png" id="57_uv6jf"]
 [ext_resource type="Texture2D" uid="uid://7qphghswk1iv" path="res://Assets/2D/AlchemicalProcesses/Aquarius_Multiplication.png" id="58_efy78"]
 [ext_resource type="Texture2D" uid="uid://dvkf8tp7s5461" path="res://Assets/2D/AlchemicalProcesses/Aries_Calcination.png" id="59_qei4b"]
 [ext_resource type="Texture2D" uid="uid://d2u0efwywjjgn" path="res://Assets/2D/AlchemicalProcesses/Cancer_Solution.png" id="60_n24rn"]
+[ext_resource type="Texture2D" uid="uid://d0etjo2vbf0cb" path="res://Assets/2D/AlchemicalMaterials/GraveDirt.png" id="70_yaheh"]
 [ext_resource type="PackedScene" uid="uid://cku0643md7uhn" path="res://Assets/3D/Props/SpiceJarEmpty_v0.0.0.blend" id="71_4eaec"]
+[ext_resource type="PackedScene" uid="uid://dv75xu325saoj" path="res://Scenes/Items/InventoryItems/Item_BowlOfDirt.tscn" id="71_h7c0c"]
 [ext_resource type="PackedScene" uid="uid://cwr2mtw5bu8b6" path="res://Assets/3D/Props/BookPurple_v0.0.0.blend" id="73_6vknn"]
 [ext_resource type="PackedScene" uid="uid://cikgffkunquyf" path="res://Assets/3D/Props/BowlOfSubstance.blend" id="74_a1sr8"]
 [ext_resource type="PackedScene" uid="uid://coi7ttnhyc77y" path="res://Assets/3D/Props/GlassFlaskEmpty_v0.0.0.blend" id="75_0ctrt"]
@@ -1497,7 +1499,7 @@ east_focus_point = NodePath("../../FocusPoints/FocusPointWindow")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.04234, 0.56229, 3.15789)
 
 [node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointTable" index="1"]
-transform = Transform3D(-1.17398e-08, 0.681922, -0.731425, -2.98078e-08, 0.731425, 0.681922, 1, 2.98078e-08, 1.17398e-08, -0.92803, 0.595943, 0.00758088)
+transform = Transform3D(-1.24483e-08, 0.698903, -0.715217, -3.055e-08, 0.715217, 0.698903, 1, 3.055e-08, 1.24483e-08, -0.92803, 0.559378, 0.00757897)
 
 [node name="FocusPointWindow" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.04234, 0.56229, 3.15789)
@@ -1546,6 +1548,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.576236, 1.85896, -5.83088)
 
 [node name="Bucket" parent="Props" instance=ExtResource("8_ayvw5")]
 transform = Transform3D(-0.869848, 0, 0.493319, 0, 1, 0, -0.493319, 0, -0.869848, -2.7267, -1.78974, 7.78779)
+
+[node name="ItemWaterFlask" parent="Props/Bucket" instance=ExtResource("9_hou2r")]
+transform = Transform3D(1.71849, -1.01858, -0.0962918, 0.0691436, -0.0721789, 1.9975, -1.02079, -1.71967, -0.0268051, -0.0969609, -0.154895, -0.185117)
 
 [node name="BloodChest" parent="Props" instance=ExtResource("35_5ec4v")]
 transform = Transform3D(-0.125359, 0, -0.535523, 0, 0.55, 0, 0.535523, 0, -0.125359, -1.71388, -1.71737, 7.67844)
@@ -1663,7 +1668,7 @@ model_variation = NodePath("../MortarFilling")
 transform = Transform3D(-0.316258, -0.00683831, -0.387214, 0.117278, 0.474757, -0.104171, 0.36909, -0.156713, -0.298687, 4.9898, -1.76401, 4.19853)
 
 [node name="ItemSilverCoin" parent="Props/CoinPurse" instance=ExtResource("38_gmr18")]
-transform = Transform3D(1.07535, 2.0041, -0.666417, -1.77638, 1.26275, 0.93103, 1.14236, 0.077059, 2.07508, 0.0521841, 0.342249, 0.0211258)
+transform = Transform3D(0.577013, 2.17589, -1.98307, -2.67334, 1.23362, 0.575706, 1.23301, 1.65641, 2.17623, -0.0295253, 0.218327, -0.0148253)
 
 [node name="ItemMushroom" parent="Props" instance=ExtResource("36_opvsd")]
 transform = Transform3D(0.960977, 0, 0.276627, 0, 1, 0, -0.276627, 0, 0.960977, -3.36227, -1.65878, 7.8108)
@@ -1741,9 +1746,6 @@ transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0.684524
 [node name="ItemFlintAndSteel" parent="Props" instance=ExtResource("33_td4b1")]
 transform = Transform3D(-0.658939, 0, 0.752196, 0, 1, 0, -0.752196, 0, -0.658939, 3.35765, -1.39485, 7.5401)
 
-[node name="ItemGraveDirt" parent="Props" instance=ExtResource("32_05yfd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.97294, -1.63135, 4.88553)
-
 [node name="ItemPepperGrains" parent="Props" instance=ExtResource("32_pc1hi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.276165, -0.58826, 7.79819)
 
@@ -1765,6 +1767,17 @@ texture = ExtResource("46_hocwh")
 
 [node name="Lock2" parent="Props" instance=ExtResource("53_ed8k5")]
 transform = Transform3D(0.0973193, 0.818015, -1.25355, 0.475028, 1.17438, 0.803232, 1.41946, -0.449094, -0.182861, 4.41875, -1.58284, 4.62196)
+
+[node name="GraveDirt" parent="Props" instance=ExtResource("13_pyh8a")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 4.97294, -1.7614, 4.88553)
+
+[node name="GraveDirt_Label" type="Sprite3D" parent="Props/GraveDirt"]
+transform = Transform3D(0.102674, 0, 0, 0, -4.48802e-09, 0.102674, 0, -0.102674, -4.48802e-09, 0.00276184, 1.29131, 0.0276218)
+texture = ExtResource("70_yaheh")
+
+[node name="ItemBowlOfDirt" parent="Props/GraveDirt" instance=ExtResource("71_h7c0c")]
+transform = Transform3D(3.18, -5.68434e-14, 2.5411e-21, 0, -1.39002e-07, -6.015, 5.68434e-14, 3.18, -2.62924e-07, 0.00363016, 0.588504, -0.0268574)
+visible = false
 
 [node name="DecorationObjects" type="Node3D" parent="."]
 

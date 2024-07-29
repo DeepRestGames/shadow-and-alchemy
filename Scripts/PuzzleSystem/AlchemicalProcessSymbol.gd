@@ -42,3 +42,4 @@ func new_process_chosen(process: AlchemicalProcesses, icon: Texture2D):
 		puzzle.change_alchemical_process(selected_alchemical_process)
 	
 	alchemical_symbols_choice.hide()
+	InteractionSystem.alchemical_process_choice_closed.emit()
