@@ -122,7 +122,7 @@ func _ready():
 	# var item_bookred_projection = get_node("Props/ItemBookRed_Projection")
 	var item_crucible = get_node("Props/ItemCrucible")
 	var item_flintandsteel = get_node("Props/ItemFlintAndSteel")
-	var item_gravedirt = get_node("Props/ItemGraveDirt")
+	var item_gravedirt = get_node("Props/GraveDirt/ItemBowlOfDirt")
 	var item_peppergrains = get_node("Props/ItemPepperGrains")
 
 	##### Setup background music #####
