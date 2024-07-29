@@ -1,5 +1,7 @@
 extends Node3D
 
+signal interacted
+
 @onready var animation_player = $AnimationPlayer
 @onready var candle = $Candle
 
@@ -23,9 +25,11 @@ var current_left_page_index: int = 0:
 
 func put_away():
 	animation_player.play("disappear")
-	
+	interacted.emit()
+
 func pull_out():
 	animation_player.play("appear")
+	interacted.emit()
 
 func _ready():
 	var dir = DirAccess.open(diary_path)
@@ -40,24 +44,24 @@ func _ready():
 			pages.append((diary_path + file_name))
 	left_page.texture = load(pages[current_left_page_index])
 	right_page.texture = load(pages[current_left_page_index+1])
-	
+
 func turn_right():
 	current_left_page_index+=2
 	left_page.texture = load(pages[current_left_page_index])
 	right_page.texture = load(pages[current_left_page_index+1])
-	
+
 func turn_left():
 	current_left_page_index-=2
 	left_page.texture = load(pages[current_left_page_index])
 	right_page.texture = load(pages[current_left_page_index+1])
-	
+
 
 func show_tags():
 	tags.show()
 	collider_box_codex.use_collision = true
 	collider_box_studies.use_collision = true
 	collider_box_options.use_collision = true
-	
+
 func hide_tags():
 	tags.hide()
 	collider_box_codex.use_collision = false

@@ -53,6 +53,19 @@ const item_interact_array = [
 	preload("res://Assets/Audio/Sound/drop_6.mp3"),
 ]
 
+const book_turn_page_array = [
+	preload("res://Assets/Audio/Sound/book_turn_1.mp3"),
+	preload("res://Assets/Audio/Sound/book_turn_2.mp3"),
+	preload("res://Assets/Audio/Sound/book_turn_3.mp3"),
+	preload("res://Assets/Audio/Sound/book_turn_4.mp3"),
+]
+
+const book_pickup = [
+	preload("res://Assets/Audio/Sound/book_pickup_1.mp3"),
+	preload("res://Assets/Audio/Sound/book_pickup_2.mp3"),
+	preload("res://Assets/Audio/Sound/book_pickup_3.mp3"),
+]
+
 
 ##### Setup sounds with randomised timing #####
 
@@ -126,6 +139,7 @@ func _ready():
 	var item_gravedirt = get_node("../Props/ItemGraveDirt")
 	var item_peppergrains = get_node("../Props/ItemPepperGrains")
 	var item_fireplace_slot = get_node("../Props/Fireplace/GenericPuzzleSlot")
+	var diary = get_node("../Player/Diary")
 
 	##### Setup background music #####
 
@@ -182,6 +196,7 @@ func _ready():
 	item_gravedirt.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	item_peppergrains.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	item_fireplace_slot.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Diary, book_turn_page_array))
 
 
 	##### Setup randomly timed sounds #####

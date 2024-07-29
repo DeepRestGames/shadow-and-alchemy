@@ -23,6 +23,8 @@ unit_size = 4.0
 [node name="Creaks" type="AudioStreamPlayer" parent="."]
 bus = &"SFX"
 
+[node name="Diary" type="AudioStreamPlayer" parent="."]
+
 [node name="Fireplace" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.234, 0.42, 0.944)
 stream = ExtResource("2_qp4p5")
