@@ -27,11 +27,12 @@ enum FacingDirection {
 
 # State of the player
 enum PlayerState {
-	IDLE,		# 0		CAN OPEN DIARY
-	MOVING,		# 1
-	FOCUSING,	# 2
-	INVENTORY,	# 3		CAN OPEN DIARY
-	DIARY		# 4
+	IDLE,						# 0		CAN OPEN DIARY
+	MOVING,						# 1
+	FOCUSING,					# 2
+	INVENTORY,					# 3		CAN OPEN DIARY
+	DIARY,						# 4
+	ALCHEMICAL_PROCESS_CHOICE	# 5
 }
 
 @onready var diary = $Diary
@@ -40,6 +41,9 @@ enum PlayerState {
 
 func _ready():
 	diary.hide()
+	
+	InteractionSystem.alchemical_process_choice_opened.connect(alchemical_process_choice_opened)
+	InteractionSystem.alchemical_process_choice_closed.connect(alchemical_process_choice_closed)
 
 
 func _process(_delta):
@@ -247,3 +251,13 @@ func _tween_defocus_over():
 func _impossible_movement():
 	# TODO: remove debug message
 	print("It's impossible to move forward!")
+
+
+# --------------------------------------------------------------------
+# ------------------ PLAYER STATE ALCHEMICAL CIRCLE ------------------
+func alchemical_process_choice_opened():
+	previous_state = player_state
+	player_state = PlayerState.ALCHEMICAL_PROCESS_CHOICE
+
+func alchemical_process_choice_closed():
+	player_state = previous_state
