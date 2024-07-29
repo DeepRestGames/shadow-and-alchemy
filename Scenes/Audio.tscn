@@ -39,6 +39,8 @@ bus = &"SFX"
 
 [node name="ItemInteract" type="AudioStreamPlayer" parent="."]
 
+[node name="Melting" type="AudioStreamPlayer" parent="."]
+
 [node name="Screams" type="AudioStreamPlayer" parent="."]
 bus = &"SFX"
 

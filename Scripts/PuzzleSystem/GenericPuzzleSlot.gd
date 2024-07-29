@@ -2,6 +2,7 @@ class_name GenericPuzzleSlot
 extends PuzzleSlot
 
 signal item_was_interacted
+signal puzzle_molten_coin
 
 @export var related_puzzles: Array[Puzzle]
 var currently_dropped_items: Array[InventoryItemData]
@@ -42,6 +43,7 @@ func item_dropped(item: InventoryItemData):
 				await get_tree().create_timer(1.5).timeout
 				crucible_coin.hide()
 				crucible_melt.show()
+				puzzle_molten_coin.emit()
 				await get_tree().create_timer(1.5).timeout
 				crucible.hide()
 
