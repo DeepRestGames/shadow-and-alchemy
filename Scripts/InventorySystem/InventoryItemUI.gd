@@ -3,6 +3,7 @@ extends Control
 
 
 @export var icon: TextureRect
+@export var item_name_label: Label
 var item_data: InventoryItemData
 
 
