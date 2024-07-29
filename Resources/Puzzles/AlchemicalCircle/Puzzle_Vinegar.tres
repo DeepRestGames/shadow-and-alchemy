@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://ojg3m3wpmidh"]
+
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="1_jqa7r"]
+[ext_resource type="Resource" uid="uid://3ja4awh1fi4p" path="res://Resources/InventoryItems/Item_Mushroom.tres" id="1_tqbo6"]
+[ext_resource type="Resource" uid="uid://dfw7ssl6mjjsr" path="res://Resources/InventoryItems/Item_JarOfGrapes.tres" id="2_spukg"]
+[ext_resource type="Resource" uid="uid://b6spexgfsmpmg" path="res://Resources/InventoryItems/Item_VinegarVial.tres" id="3_cqjgn"]
+
+[resource]
+script = ExtResource("1_jqa7r")
+puzzle_name = "Puzzle_Vinegar"
+puzzle_description = ""
+puzzle_solution_items = [ExtResource("1_tqbo6"), ExtResource("2_spukg")]
+order_needed = false
+reward = ExtResource("3_cqjgn")
+alchemical_process_needed = true
+alchemical_process_solution = 9

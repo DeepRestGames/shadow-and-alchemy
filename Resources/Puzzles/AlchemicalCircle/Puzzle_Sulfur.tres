@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://cfy7k11vb1jg5"]
+
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="1_hda76"]
+[ext_resource type="Resource" uid="uid://b6spexgfsmpmg" path="res://Resources/InventoryItems/Item_VinegarVial.tres" id="1_v0324"]
+[ext_resource type="Resource" uid="uid://33hg8ne8t1id" path="res://Resources/InventoryItems/Item_Coal.tres" id="2_eh4eb"]
+[ext_resource type="Resource" uid="uid://cwi1dqmu5sh2v" path="res://Resources/InventoryItems/Item_PileOfBrimstone.tres" id="3_vkht3"]
+
+[resource]
+script = ExtResource("1_hda76")
+puzzle_name = "Puzzle_Sulfur"
+puzzle_description = ""
+puzzle_solution_items = [ExtResource("1_v0324"), ExtResource("2_eh4eb")]
+order_needed = false
+reward = ExtResource("3_vkht3")
+alchemical_process_needed = true
+alchemical_process_solution = 0
