@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://cggn12ohdi7hp"]
+
+[ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="1_lm14q"]
+[ext_resource type="AudioStream" uid="uid://c2pki04fd8067" path="res://Assets/Audio/Sound/fireplace_1.mp3" id="2_qp4p5"]
+[ext_resource type="AudioStream" uid="uid://t622sra4diub" path="res://Assets/Audio/Sound/footsteps_wood_single_2.mp3" id="3_xu7in"]
+[ext_resource type="AudioStream" uid="uid://dlwk5ak6u2vgr" path="res://Assets/Audio/Sound/storm_faded.mp3" id="4_0xhh3"]
+[ext_resource type="AudioStream" uid="uid://ck0wwpsbje6jy" path="res://Assets/Audio/Sound/wind_1.mp3" id="5_puino"]
+
+[node name="Audio" type="Node"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_lm14q")
+bus = &"Music"
+
+[node name="Bucket" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.32303, 0.236597, 1.99142)
+attenuation_model = 1
+volume_db = -10.0
+unit_size = 4.0
+
+[node name="ChestOpening" type="AudioStreamPlayer" parent="."]
+
+[node name="Creaks" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="Fireplace" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.234, 0.42, 0.944)
+stream = ExtResource("2_qp4p5")
+attenuation_model = 1
+unit_size = 4.0
+autoplay = true
+bus = &"SFX"
+
+[node name="Footsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xu7in")
+bus = &"SFX"
+
+[node name="ItemInteract" type="AudioStreamPlayer" parent="."]
+
+[node name="Screams" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="ThunderStorm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0xhh3")
+bus = &"SFX"
+
+[node name="WindowWind" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.03014, 1.57516, -2.91437)
+stream = ExtResource("5_puino")
+attenuation_model = 1
+volume_db = -50.0
+unit_size = 5.0
+autoplay = true
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="Bucket" type="Timer" parent="Timers"]
+
+[node name="CreaksTimer" type="Timer" parent="Timers"]
+
+[node name="ScreamTimer" type="Timer" parent="Timers"]
+
+[node name="ThunderStormTimer" type="Timer" parent="Timers"]
