@@ -1,4 +1,4 @@
-[gd_scene load_steps=129 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=126 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -25,11 +25,7 @@
 [ext_resource type="Resource" uid="uid://b4y8lpp7yljn7" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_PhilosopherStone.tres" id="18_2l2kk"]
 [ext_resource type="PackedScene" uid="uid://cndhtqglibb81" path="res://Scenes/Items/InventoryItems/Item_OpalStone.tscn" id="18_j6jlu"]
 [ext_resource type="Resource" uid="uid://cfy7k11vb1jg5" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Sulfur.tres" id="19_2ajug"]
-[ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="19_cy568"]
-[ext_resource type="AudioStream" uid="uid://t622sra4diub" path="res://Assets/Audio/Sound/footsteps_wood_single_2.mp3" id="20_awg3m"]
 [ext_resource type="Resource" uid="uid://ojg3m3wpmidh" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Vinegar.tres" id="20_ugjht"]
-[ext_resource type="AudioStream" uid="uid://dlwk5ak6u2vgr" path="res://Assets/Audio/Sound/storm_faded.mp3" id="21_nduse"]
-[ext_resource type="AudioStream" uid="uid://c2pki04fd8067" path="res://Assets/Audio/Sound/fireplace_1.mp3" id="22_4qygc"]
 [ext_resource type="PackedScene" uid="uid://sncutmva0ga2" path="res://Assets/3D/Props/Hand.blend" id="23_af127"]
 [ext_resource type="PackedScene" uid="uid://dhmonnu314mp4" path="res://Assets/3D/Props/Alembic_v0.0.0.blend" id="23_krjlx"]
 [ext_resource type="PackedScene" uid="uid://d0tfbw602vqkd" path="res://Assets/3D/Props/MortarPestle.blend" id="25_up3bp"]
@@ -93,8 +89,9 @@
 [ext_resource type="PackedScene" uid="uid://coi7ttnhyc77y" path="res://Assets/3D/Props/GlassFlaskEmpty_v0.0.0.blend" id="75_0ctrt"]
 [ext_resource type="PackedScene" uid="uid://w2o5r7xjg8tw" path="res://Assets/3D/Props/EmptyHolderPlate.blend" id="76_qu3l4"]
 [ext_resource type="PackedScene" uid="uid://dvdddw1tb55q" path="res://Assets/3D/Props/BloodVialEmpty_v0.0.0.blend" id="77_j0jon"]
-[ext_resource type="AudioStream" uid="uid://ck0wwpsbje6jy" path="res://Assets/Audio/Sound/wind_1.mp3" id="82_6isw4"]
 [ext_resource type="PackedScene" uid="uid://c877sa63qy5pe" path="res://Assets/3D/Props/Key.blend" id="83_n727y"]
+[ext_resource type="PackedScene" uid="uid://cggn12ohdi7hp" path="res://Scenes/Audio.tscn" id="88_yilx3"]
+[ext_resource type="Script" path="res://Scripts/Audio.gd" id="89_jxhjo"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("4_dkxga")
@@ -1418,7 +1415,6 @@ environment = SubResource("Environment_nps7j")
 
 [node name="Navigation" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.928081, 0.647132, -5.18842)
-visible = false
 
 [node name="NavigationPoints" type="Node3D" parent="Navigation"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.552707, 0, 0)
@@ -2775,61 +2771,8 @@ transform = Transform3D(-0.0321877, -0.00949984, -0.0942003, -0.0165147, 0.09853
 [node name="BloodVialEmpty_v0_0_7" parent="DecorationObjects" instance=ExtResource("77_j0jon")]
 transform = Transform3D(-0.099946, 0, -0.00328414, 0.000815344, 0.0968692, -0.0248133, 0.00318132, -0.0248267, -0.0968168, -1.77294, 1.34307, 2.02833)
 
-[node name="Audio" type="Node" parent="."]
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("19_cy568")
-bus = &"Music"
-
-[node name="Bucket" type="AudioStreamPlayer3D" parent="Audio"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.32303, 0.236597, 1.99142)
-attenuation_model = 1
-volume_db = -10.0
-unit_size = 4.0
-
-[node name="ChestOpening" type="AudioStreamPlayer" parent="Audio"]
-
-[node name="Creaks" type="AudioStreamPlayer" parent="Audio"]
-bus = &"SFX"
-
-[node name="Fireplace" type="AudioStreamPlayer3D" parent="Audio"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.234, 0.42, 0.944)
-stream = ExtResource("22_4qygc")
-attenuation_model = 1
-unit_size = 4.0
-autoplay = true
-bus = &"SFX"
-
-[node name="Footsteps" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("20_awg3m")
-bus = &"SFX"
-
-[node name="ItemInteract" type="AudioStreamPlayer" parent="Audio"]
-
-[node name="Screams" type="AudioStreamPlayer" parent="Audio"]
-bus = &"SFX"
-
-[node name="ThunderStorm" type="AudioStreamPlayer" parent="Audio"]
-stream = ExtResource("21_nduse")
-bus = &"SFX"
-
-[node name="WindowWind" type="AudioStreamPlayer3D" parent="Audio"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.03014, 1.57516, -2.91437)
-stream = ExtResource("82_6isw4")
-attenuation_model = 1
-volume_db = -50.0
-unit_size = 5.0
-autoplay = true
-
-[node name="Timers" type="Node" parent="Audio"]
-
-[node name="Bucket" type="Timer" parent="Audio/Timers"]
-
-[node name="CreaksTimer" type="Timer" parent="Audio/Timers"]
-
-[node name="ScreamTimer" type="Timer" parent="Audio/Timers"]
-
-[node name="ThunderStormTimer" type="Timer" parent="Audio/Timers"]
+[node name="Audio" parent="." instance=ExtResource("88_yilx3")]
+script = ExtResource("89_jxhjo")
 
 [node name="Key2" parent="." instance=ExtResource("83_n727y")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.85315, 0.812321, -2.43294)
