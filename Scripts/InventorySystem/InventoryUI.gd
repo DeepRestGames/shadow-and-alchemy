@@ -51,3 +51,11 @@ func open_inventory_called():
 
 func _on_central_arrow_pressed():
 	open_inventory_called()
+
+
+func _on_right_arrow_pressed():
+	InventorySystem.move_items_right()
+
+
+func _on_left_arrow_pressed():
+	InventorySystem.move_items_left()

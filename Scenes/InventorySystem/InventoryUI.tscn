@@ -77,4 +77,6 @@ ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
+[connection signal="pressed" from="InventoryUIContainer/LeftArrow" to="." method="_on_left_arrow_pressed"]
+[connection signal="pressed" from="InventoryUIContainer/RightArrow" to="." method="_on_right_arrow_pressed"]
 [connection signal="pressed" from="InventoryUIContainer/CentralArrow" to="." method="_on_central_arrow_pressed"]
