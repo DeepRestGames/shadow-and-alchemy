@@ -5,11 +5,18 @@ extends Control
 var inventory_items: Array[InventoryItemUI]
 
 var is_opened := false
-@onready var animation_player = $AnimationPlayer
+var viewport_height: float
+var opened_position: Vector2
+var closed_position: Vector2
+@onready var inventory_ui_container = $InventoryUIContainer
 
 
 func _ready():
 	InventorySystem.inventory_changed.connect(_update_inventory_ui)
+	
+	viewport_height = get_viewport_rect().size.y
+	closed_position = Vector2(0, viewport_height)
+	opened_position = Vector2(0, viewport_height - inventory_ui_container.size.y)
 
 
 func _update_inventory_ui():
@@ -31,8 +38,16 @@ func _update_inventory_ui():
 
 func open_inventory_called():
 	if is_opened:
-		animation_player.play_backwards("InventorySlideIn")
+		var tween = get_tree().create_tween()
+		tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT).tween_property(inventory_ui_container, "position", closed_position, 1)
+		
 		is_opened = false
 	else:
-		animation_player.play("InventorySlideIn")
+		var tween = get_tree().create_tween()
+		tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT).tween_property(inventory_ui_container, "position", opened_position, 1)
+		
 		is_opened = true
+
+
+func _on_central_arrow_pressed():
+	open_inventory_called()
