@@ -1,6 +1,9 @@
 extends Node3D
 
 
+signal alchemical_process_choice_opened
+signal alchemical_process_choice_closed
+
 var viewport: Viewport
 var camera: Camera3D
 var space_state: PhysicsDirectSpaceState3D
@@ -76,6 +79,7 @@ func _process(_delta):
 			
 			if current_intersected_alchemical_process_symbols != null:
 				current_intersected_alchemical_process_symbols._interacted()
+				alchemical_process_choice_opened.emit()
 		
 		# Check for collisions with generic puzzle slots
 		var puzzle_slots_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, puzzle_slots_collision_layer)
