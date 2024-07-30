@@ -63,10 +63,8 @@ const book_pickup_array = [
 const melting_array = [preload("res://Assets/Audio/Sound/melting.mp3")]
 
 const mortar_array = [
-	preload("res://Assets/Audio/Sound/crushing_4.mp3"),
-	preload("res://Assets/Audio/Sound/crushing_3.mp3"),
-	preload("res://Assets/Audio/Sound/crushing_2.mp3"),
-	preload("res://Assets/Audio/Sound/crushing_1.mp3"),
+	preload("res://Assets/Audio/Sound/crushing_new_1.mp3"),
+	preload("res://Assets/Audio/Sound/crushing_new_2.mp3"),
 ]
 
 
