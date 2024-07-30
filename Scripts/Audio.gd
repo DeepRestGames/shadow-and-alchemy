@@ -68,6 +68,13 @@ const book_pickup_array = [
 
 const melting_array = [preload("res://Assets/Audio/Sound/melting.mp3")]
 
+const mortar_array = [
+	preload("res://Assets/Audio/Sound/crushing_4.mp3"),
+	preload("res://Assets/Audio/Sound/crushing_3.mp3"),
+	preload("res://Assets/Audio/Sound/crushing_2.mp3"),
+	preload("res://Assets/Audio/Sound/crushing_1.mp3"),
+]
+
 ##### Setup sounds with randomised timing #####
 
 # Setup thunderstorm
@@ -140,6 +147,7 @@ func _ready():
 	var item_gravedirt = get_node("../Props/GraveDirt/ItemBowlOfDirt")
 	var item_peppergrains = get_node("../Props/ItemPepperGrains")
 	var item_fireplace_slot = get_node("../Props/Fireplace/GenericPuzzleSlot")
+	var item_mortar_slot = get_node("../Props/MortarPestle/GenericPuzzleSlot")
 	var diary = get_node("../Player/Diary")
 	var animated_book = get_node("../Player/AnimatedBook")
 
@@ -199,6 +207,8 @@ func _ready():
 	item_peppergrains.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	item_fireplace_slot.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	item_fireplace_slot.connect("puzzle_molten_coin", play_sound_from_array.bind("molten coin", $Melting, melting_array))
+	item_mortar_slot.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_mortar_slot.connect("puzzle_mortar", play_sound_from_array.bind("mortar crushing", $Melting, mortar_array))
 	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Diary, book_turn_page_array))
 	animated_book.connect("turn_page", play_sound_from_array.bind("book interacted", $Diary, book_turn_page_array))
 	animated_book.connect("interacted", play_sound_from_array.bind("book picked up", $Diary, book_pickup_array))
