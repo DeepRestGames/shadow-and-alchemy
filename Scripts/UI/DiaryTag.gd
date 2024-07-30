@@ -16,5 +16,4 @@ signal tag_pressed
 	#collider_box.material_override["albedo_color"] = non_highlighted_color
 
 func _pressed():
-	print("Pressed: %s" % tag_name.text )
 	tag_pressed.emit()
