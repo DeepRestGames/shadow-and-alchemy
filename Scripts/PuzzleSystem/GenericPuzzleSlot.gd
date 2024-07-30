@@ -1,7 +1,7 @@
 class_name GenericPuzzleSlot
 extends PuzzleSlot
 
-signal item_was_interacted
+signal interacted
 signal puzzle_molten_coin
 signal puzzle_mortar
 
@@ -42,8 +42,8 @@ func _ready():
 
 
 func item_dropped(item: InventoryItemData):
-	item_was_interacted.emit()
-	print("GENERIC PUZZLE item_was_interacted") # TODO: debug print
+	interacted.emit()
+	print("GENERIC PUZZLE interacted") # TODO: debug print
 	print("Item " + item.item_name + " dropped in slot!")
 
 	# Super ugly logic just for crucible
