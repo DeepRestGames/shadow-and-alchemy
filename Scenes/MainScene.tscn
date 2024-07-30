@@ -1818,7 +1818,7 @@ transform = Transform3D(-0.661233, 0, -0.75018, 0, 1, 0, 0.75018, 0, -0.661233, 
 transform = Transform3D(-0.016822, 0.646057, -0.763105, 0.0629755, 0.762382, 0.644056, 0.997874, -0.0372226, -0.0535105, -0.385422, -0.127799, 0.024433)
 
 [node name="FocusPointLectern" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
-transform = Transform3D(-0.966645, 0.256121, 8.45068e-08, 0.256121, 0.966645, -2.23908e-08, -8.74228e-08, 1.71538e-15, -1, -4.46736, 0.787252, 5.14887)
+transform = Transform3D(-0.966645, 0.256121, 8.45068e-08, 0.256121, 0.966645, -2.23908e-08, -8.74228e-08, 1.71538e-15, -1, -4.51733, 0.752562, 5.14887)
 
 [node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointLectern" index="1"]
 transform = Transform3D(-2.71242e-08, 0.858343, -0.513077, 6.38372e-08, 0.513077, 0.858343, 1, -9.47159e-09, -6.8711e-08, 0.0623212, -0.0450239, -3.57628e-07)

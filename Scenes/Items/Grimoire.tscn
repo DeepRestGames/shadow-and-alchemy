@@ -20,7 +20,7 @@ size = Vector3(0.7, 0.01, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_da6ug"]
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.431373, 0.431373, 0.431373, 1)
+albedo_color = Color(0.521569, 0.521569, 0.521569, 1)
 albedo_texture = ExtResource("3_64ywr")
 
 [sub_resource type="Animation" id="Animation_wb4b5"]
@@ -539,6 +539,13 @@ _data = {
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_jtc6x")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217045, 9.48733e-09)
+light_color = Color(0.513726, 0.376471, 0.168627, 1)
+light_energy = 2.25
+omni_range = 1.0
+omni_attenuation = 0.176777
+
 [node name="Body" type="Node3D" parent="."]
 transform = Transform3D(1, 4.27318e-16, -8.88178e-16, -4.27318e-16, 1, 0, 8.88178e-16, 0, 1, 0, 0, 0)
 
@@ -554,6 +561,7 @@ transform = Transform3D(-0.978272, -0.207328, -9.06273e-09, 0.207328, -0.978272,
 [node name="CoverImage" type="Sprite3D" parent="Body/L"]
 transform = Transform3D(0.0264012, 1.17174e-10, 0.00565463, 0.00565463, -3.45803e-10, -0.0264012, -4.21544e-11, 0.027, -3.62674e-10, 0.332668, 0.0436673, -0.0122266)
 flip_h = true
+modulate = Color(0.615686, 0.615686, 0.615686, 1)
 texture = ExtResource("3_aqkud")
 
 [node name="Cover1Pivot" type="Node3D" parent="Body/L"]
