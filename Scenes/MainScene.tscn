@@ -3081,10 +3081,10 @@ transform = Transform3D(-1.69076e-08, 0.208046, -0.341638, -1.82481e-11, 0.34163
 script = ExtResource("94_v0irr")
 
 [node name="ColorRect" type="ColorRect" parent="SplashScreen"]
-offset_left = -83.0
-offset_top = -51.0
-offset_right = 2064.0
-offset_bottom = 1181.0
+offset_left = -6039.0
+offset_top = -5612.0
+offset_right = 58041.0
+offset_bottom = 33667.0
 color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SplashScreen"]
