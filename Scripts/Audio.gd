@@ -206,13 +206,22 @@ func _ready():
 	item_gravedirt.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	item_peppergrains.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	item_fireplace_slot.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_fireplace_slot.connect("puzzle_molten_coin", play_sound_from_array.bind("molten coin", $Melting, melting_array))
 	item_mortar_slot.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_mortar_slot.connect("puzzle_mortar", play_sound_from_array.bind("mortar crushing", $Melting, mortar_array))
 	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Diary, book_turn_page_array))
-	animated_book.connect("turn_page", play_sound_from_array.bind("book interacted", $Diary, book_turn_page_array))
 	animated_book.connect("interacted", play_sound_from_array.bind("book picked up", $Diary, book_pickup_array))
 
+	##### Setup melting coin sound #####
+
+	item_fireplace_slot.connect("puzzle_molten_coin", play_sound_from_array.bind("molten coin", $Melting, melting_array))
+
+	##### Setup mortar crushing sound #####
+
+	$Mortar.volume_db = -20
+	item_mortar_slot.connect("puzzle_mortar", play_sound_from_array.bind("mortar crushing", $Mortar, mortar_array))
+
+	##### Setup turning pages sound (they use the same sound effect) #####
+
+	animated_book.connect("turn_page", play_sound_from_array.bind("book interacted", $Diary, book_turn_page_array))
 
 	##### Setup randomly timed sounds #####
 
