@@ -10,6 +10,7 @@ func _ready():
 	animation_player.queue("fade_out")
 	
 #
-#func _process(_delta):
-	#if not animation_player.is_playing():
-		#get_tree().change_scene_to_file("res://Scenes/MainScene.tscn")
+func _process(_delta):
+	if not animation_player.is_playing():		
+		queue_free()
+

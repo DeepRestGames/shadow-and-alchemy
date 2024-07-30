@@ -7,6 +7,7 @@ var is_open: bool = false
 
 signal chest_opened
 
+
 func _open():
 	animation_player.play("open")
 	is_open = true

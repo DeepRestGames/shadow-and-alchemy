@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b68s0qxy7ri2k"]
+[gd_scene load_steps=3 format=3 uid="uid://b68s0qxy7ri2k"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerMovement/FocusPosition.gd" id="1_a3eva"]
-[ext_resource type="PackedScene" uid="uid://bi3j1l53gsk7j" path="res://Scenes/Items/AnimatedBook.tscn" id="2_c7atq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thnij"]
 albedo_color = Color(0.501961, 0.764706, 0, 1)
@@ -16,7 +15,3 @@ material = SubResource("StandardMaterial3D_thnij")
 
 [node name="FocusCamera" type="Camera3D" parent="."]
 rotation_edit_mode = 2
-
-[node name="AnimatedBook" parent="." instance=ExtResource("2_c7atq")]
-transform = Transform3D(-0.47, -7.0968e-08, -3.10211e-15, 0, -2.05444e-08, 0.47, -7.0968e-08, 0.47, 2.05444e-08, 0, 0, -0.455994)
-visible = false
