@@ -15,12 +15,6 @@ const footsteps_array = [
 	preload("res://Assets/Audio/Sound/footsteps_cellar_single_5.mp3"),
 ]
 
-const screams_array = [
-	preload("res://Assets/Audio/Sound/scream_banshee.mp3"),
-	preload("res://Assets/Audio/Sound/scream_delay_1.mp3"),
-	preload("res://Assets/Audio/Sound/scream_delay_2.mp3"),
-]
-
 const creaks_array = [
 	preload("res://Assets/Audio/Sound/creaking_creepy_3.mp3"),
 	preload("res://Assets/Audio/Sound/creaking_creepy_4.mp3"),
@@ -84,14 +78,6 @@ const rand_thunderstorm_time_min_s: float = 120.0
 const rand_thunderstorm_time_max_s: float = 180.0
 # const rand_thunderstorm_time_min_s: float = 5.0 # TODO: debug
 # const rand_thunderstorm_time_max_s: float = 10.0 # TODO: debug
-
-# Setup screams
-
-const scream_volume_db: float = -40.0
-const rand_scream_time_min_s: float = 120.0
-const rand_scream_time_max_s: float = 240.0
-# const rand_scream_time_min_s: float = 2.0 # TODO: debug
-# const rand_scream_time_max_s: float = 5.0 # TODO: debug
 
 # Setup creaks
 
@@ -229,11 +215,6 @@ func _ready():
 	rand_thunderstorm_time_min_s, rand_thunderstorm_time_max_s, thunderStorm_volume_db,
 	on_sound_finished.bind($Timers/ThunderStormTimer, rand_thunderstorm_time_min_s, rand_thunderstorm_time_max_s),
 	play_sound_from_array.bind("thunderstorm", $ThunderStorm, thunderstorm_array))
-
-	setup_randomly_timed_sound($Screams, $Timers/ScreamTimer,
-	rand_scream_time_min_s, rand_scream_time_max_s, scream_volume_db,
-	on_sound_finished.bind($Timers/ScreamTimer, rand_scream_time_min_s, rand_scream_time_max_s),
-	play_sound_from_array.bind("scream", $Screams, screams_array))
 
 	setup_randomly_timed_sound($Creaks, $Timers/CreaksTimer,
 	rand_creak_time_min_s, rand_creak_time_max_s, creak_volume_db,
