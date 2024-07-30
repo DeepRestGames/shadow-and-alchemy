@@ -1667,6 +1667,9 @@ world_environment = NodePath("../../../WorldEnvironment")
 [node name="ChestTop" parent="Chests" instance=ExtResource("28_qwxhw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.555, 0.43, -1.329)
 
+[node name="ChestTopCollision" parent="Chests/ChestTop" index="2"]
+collision_layer = 2
+
 [node name="Keypad" parent="Chests/ChestTop" instance=ExtResource("53_ed8k5")]
 transform = Transform3D(0.0973193, 0.818015, -1.25355, 0.475028, 1.17438, 0.803232, 1.41946, -0.449094, -0.182861, -0.712486, -0.15388, 0.12008)
 
@@ -3126,6 +3129,7 @@ vertical_alignment = 1
 [connection signal="animation_finished" from="SplashScreen/AnimationPlayer" to="Player" method="_on_animation_player_animation_finished"]
 
 [editable path="Player"]
+[editable path="Chests/ChestTop"]
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointWindow"]
 [editable path="Navigation/FocusPoints/FocusPointChest"]
