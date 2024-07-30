@@ -1,6 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dm136mrn7n57f"]
+[gd_scene load_steps=7 format=3 uid="uid://dm136mrn7n57f"]
 
 [ext_resource type="Script" path="res://Scripts/PuzzleSystem/GenericPuzzleSlot.gd" id="1_ur26r"]
+[ext_resource type="Resource" uid="uid://dypkc8ccciu07" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_MeltedSilver.tres" id="2_3vjdd"]
+[ext_resource type="Resource" uid="uid://cn410ukpg4c6t" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_Pepper.tres" id="3_1qi1l"]
+[ext_resource type="Resource" uid="uid://c3exsdbht001t" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_Salt.tres" id="4_8x6du"]
+[ext_resource type="Resource" uid="uid://c3byh0uvlui5q" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_ChestKey.tres" id="5_vnl2a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drqjr"]
 transparency = 1
@@ -14,5 +18,9 @@ radius = 0.2
 height = 0.01
 material = SubResource("StandardMaterial3D_drqjr")
 script = ExtResource("1_ur26r")
+crucible_puzzle = ExtResource("2_3vjdd")
+pepper_puzzle = ExtResource("3_1qi1l")
+salt_puzzle = ExtResource("4_8x6du")
+keypad_puzzle = ExtResource("5_vnl2a")
 
 [node name="ItemSpawnOrigin" type="Node3D" parent="."]

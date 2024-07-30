@@ -1,5 +1,7 @@
 extends Control
 
+@export var world_environment: WorldEnvironment
+
 @onready var camera_3d = $"../../Camera3D"
 
 # When the screen changes size, we need to update the 3D
@@ -32,6 +34,8 @@ func _on_fov_slider_value_changed(value: float) -> void:
 func _on_master_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(value))
 
+func _on_sat_slider_value_changed(value):
+	world_environment.environment.tonemap_exposure = value
 
 func _on_music_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(value))
@@ -43,3 +47,6 @@ func _on_sfx_slider_value_changed(value):
 
 func _on_hide_settings_button_pressed():
 	hide()
+
+
+

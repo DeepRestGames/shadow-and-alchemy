@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItemData" load_steps=3 format=3 uid="uid://dtbwixmffjpi2"]
+
+[ext_resource type="Texture2D" uid="uid://ddbda3iv5lq8u" path="res://Assets/2D/InventoryItemsIcons/ChestKey.jpg" id="1_x1h0i"]
+[ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryItemData.gd" id="2_fvmwh"]
+
+[resource]
+script = ExtResource("2_fvmwh")
+item_name = "Chest Key"
+item_icon = ExtResource("1_x1h0i")
+is_reusable = false
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_ChestKey.tscn"

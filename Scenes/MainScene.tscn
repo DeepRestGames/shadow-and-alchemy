@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=133 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://085vrd1f3j7n" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_BloodDistillation.tres" id="14_bpxoe"]
 [ext_resource type="Resource" uid="uid://dbiec6p24dgo2" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_BloodSeparation.tres" id="15_mm4yd"]
 [ext_resource type="PackedScene" uid="uid://dl1o0hpwktapu" path="res://Assets/3D/Props/Sieve_v0.0.0.blend" id="15_p5chk"]
+[ext_resource type="PackedScene" uid="uid://ca4m8y7n220nj" path="res://Scenes/Items/InventoryItems/Item_ImpureBlood.tscn" id="16_i2r0i"]
 [ext_resource type="PackedScene" uid="uid://6hhogeucrtfh" path="res://Assets/3D/Props/CandeHolderWall.blend" id="16_irf7i"]
 [ext_resource type="Resource" uid="uid://cvgju2vwnuacr" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Homunculus.tres" id="16_wch61"]
 [ext_resource type="Resource" uid="uid://cpseljbvj58x5" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Mercury.tres" id="17_p1gj2"]
@@ -32,12 +33,9 @@
 [ext_resource type="Material" uid="uid://sqqass5k0d2i" path="res://Assets/3D/Props/materials/MixedSubstance.tres" id="26_ttlky"]
 [ext_resource type="PackedScene" uid="uid://dm136mrn7n57f" path="res://Scenes/InteractionSystem/GenericPuzzleSlot.tscn" id="27_5agl3"]
 [ext_resource type="PackedScene" uid="uid://ba2mn58i5i0ml" path="res://Scenes/Items/ChestTop.tscn" id="28_qwxhw"]
-[ext_resource type="Resource" uid="uid://dypkc8ccciu07" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_MeltedSilver.tres" id="28_x6iog"]
 [ext_resource type="PackedScene" uid="uid://cvjg0uqd02gp7" path="res://Assets/3D/Props/Crucible.blend" id="29_aipy0"]
 [ext_resource type="PackedScene" uid="uid://be5fmscv5e4pb" path="res://Assets/3D/Props/Coin.blend" id="30_2rej2"]
-[ext_resource type="Resource" uid="uid://c3exsdbht001t" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_Salt.tres" id="31_dcr5l"]
 [ext_resource type="Material" uid="uid://d1emby0aspm3t" path="res://Assets/3D/Props/materials/MoltenSilver.tres" id="31_gqid4"]
-[ext_resource type="Resource" uid="uid://cn410ukpg4c6t" path="res://Resources/Puzzles/GenericPuzzles/Puzzle_Pepper.tres" id="32_1xrty"]
 [ext_resource type="PackedScene" uid="uid://btcxh60x7v105" path="res://Scenes/Items/InventoryItems/Item_PepperGrains.tscn" id="32_pc1hi"]
 [ext_resource type="PackedScene" uid="uid://ce02y63u3jcdc" path="res://Scenes/Items/InventoryItems/Item_Crucible.tscn" id="33_6slmt"]
 [ext_resource type="PackedScene" uid="uid://b02svl0bdaf0u" path="res://Scenes/Items/InventoryItems/Item_FlintAndSteel.tscn" id="33_td4b1"]
@@ -52,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://dns78fyxhw4g3" path="res://Scenes/Items/InventoryItems/Item_JarOfGrapes.tscn" id="37_oqlbi"]
 [ext_resource type="PackedScene" uid="uid://dhtnotvhyj8uf" path="res://Assets/3D/Props/CoinPurse.blend" id="38_4dsmt"]
 [ext_resource type="PackedScene" uid="uid://b6q56y10tfq5m" path="res://Scenes/Items/InventoryItems/Item_SilverCoin.tscn" id="38_gmr18"]
+[ext_resource type="PackedScene" uid="uid://du3dh6rb24kyv" path="res://Scenes/Items/Grimoire.tscn" id="38_t6tu7"]
 [ext_resource type="PackedScene" uid="uid://ccjymunjlm84n" path="res://Assets/3D/Props/GobletsBrutti_v0.0.0.blend" id="41_3uqgs"]
 [ext_resource type="PackedScene" uid="uid://dfl30ul37jev4" path="res://Assets/3D/Props/Skull_v0.0.0.blend" id="43_oohwt"]
 [ext_resource type="Texture2D" uid="uid://bq04jmrgld06l" path="res://Assets/2D/AlchemicalMaterials/Salt_Body.png" id="43_qg3xt"]
@@ -81,6 +80,7 @@
 [ext_resource type="Texture2D" uid="uid://7qphghswk1iv" path="res://Assets/2D/AlchemicalProcesses/Aquarius_Multiplication.png" id="58_efy78"]
 [ext_resource type="Texture2D" uid="uid://dvkf8tp7s5461" path="res://Assets/2D/AlchemicalProcesses/Aries_Calcination.png" id="59_qei4b"]
 [ext_resource type="Texture2D" uid="uid://d2u0efwywjjgn" path="res://Assets/2D/AlchemicalProcesses/Cancer_Solution.png" id="60_n24rn"]
+[ext_resource type="PackedScene" uid="uid://dh3nrycjoird3" path="res://Scenes/Items/InventoryItems/Item_ChestKey.tscn" id="69_olkeo"]
 [ext_resource type="Texture2D" uid="uid://d0etjo2vbf0cb" path="res://Assets/2D/AlchemicalMaterials/GraveDirt.png" id="70_yaheh"]
 [ext_resource type="PackedScene" uid="uid://cku0643md7uhn" path="res://Assets/3D/Props/SpiceJarEmpty_v0.0.0.blend" id="71_4eaec"]
 [ext_resource type="PackedScene" uid="uid://dv75xu325saoj" path="res://Scenes/Items/InventoryItems/Item_BowlOfDirt.tscn" id="71_h7c0c"]
@@ -89,9 +89,10 @@
 [ext_resource type="PackedScene" uid="uid://coi7ttnhyc77y" path="res://Assets/3D/Props/GlassFlaskEmpty_v0.0.0.blend" id="75_0ctrt"]
 [ext_resource type="PackedScene" uid="uid://w2o5r7xjg8tw" path="res://Assets/3D/Props/EmptyHolderPlate.blend" id="76_qu3l4"]
 [ext_resource type="PackedScene" uid="uid://dvdddw1tb55q" path="res://Assets/3D/Props/BloodVialEmpty_v0.0.0.blend" id="77_j0jon"]
-[ext_resource type="PackedScene" uid="uid://c877sa63qy5pe" path="res://Assets/3D/Props/Key.blend" id="83_n727y"]
 [ext_resource type="PackedScene" uid="uid://cggn12ohdi7hp" path="res://Scenes/Audio.tscn" id="88_yilx3"]
 [ext_resource type="Script" path="res://Scripts/Audio.gd" id="89_jxhjo"]
+[ext_resource type="FontFile" uid="uid://cb57uwfvgsqmd" path="res://Assets/2D/Fonts/Almendra-Italic.ttf" id="94_63wl0"]
+[ext_resource type="Script" path="res://Scripts/SplashScreen.gd" id="94_v0irr"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("4_dkxga")
@@ -1368,22 +1369,312 @@ _data = {
 "Walk": SubResource("Animation_7umuj")
 }
 
+[sub_resource type="Animation" id="Animation_o6u1e"]
+resource_name = "fade_in"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_colors/font_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:theme_override_colors/font_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_colors/font_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:theme_override_colors/font_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:color:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect:color:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ColorRect:color:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ColorRect:color:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_ls4ph"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_colors/font_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:theme_override_colors/font_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_colors/font_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:theme_override_colors/font_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:color:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect:color:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ColorRect:color:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ColorRect:color:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_1rst7"]
+resource_name = "fade_out"
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_colors/font_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 2.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:theme_override_colors/font_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 2.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_colors/font_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 2.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:theme_override_colors/font_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2, 2.5)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:color:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.5, 4)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect:color:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.5, 4)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ColorRect:color:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.5, 4)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ColorRect:color:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.5, 4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_si8yh"]
+_data = {
+"RESET": SubResource("Animation_ls4ph"),
+"fade_in": SubResource("Animation_o6u1e"),
+"fade_out": SubResource("Animation_1rst7")
+}
+
 [node name="MainScene" type="Node3D"]
 script = ExtResource("1_wd68j")
 
 [node name="Player" parent="." node_paths=PackedStringArray("current_navigation_point") instance=ExtResource("2_83pmb")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2.87529, 1.43448, -1.35045)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -3.125, 1.434, -0.188)
 rotation_edit_mode = 2
-current_navigation_point = NodePath("../Navigation/NavigationPoints/StartingNavigationPoint")
+current_navigation_point = NodePath("../Navigation/NavigationPoints/Lectern")
+
+[node name="Options" parent="Player/Diary" index="4" node_paths=PackedStringArray("world_environment")]
+world_environment = NodePath("../../../WorldEnvironment")
 
 [node name="Chests" type="Node3D" parent="."]
 
 [node name="ChestTop" parent="Chests" instance=ExtResource("28_qwxhw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.555, 0.43, -1.329)
-visible = false
 
-[node name="ChestTop2" parent="Chests" instance=ExtResource("28_qwxhw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.555, 0.43, -1.329)
+[node name="ChestTopCollision" parent="Chests/ChestTop" index="2"]
+collision_layer = 2
+
+[node name="Keypad" parent="Chests/ChestTop" instance=ExtResource("53_ed8k5")]
+transform = Transform3D(0.0973193, 0.818015, -1.25355, 0.475028, 1.17438, 0.803232, 1.41946, -0.449094, -0.182861, -0.712486, -0.15388, 0.12008)
+
+[node name="GenericPuzzleSlot" parent="Chests/ChestTop/Keypad" instance=ExtResource("27_5agl3")]
+transform = Transform3D(0.369774, -0.128807, 0.0817084, -0.0350937, 0.136679, 0.374282, -0.148445, -0.353168, 0.11505, 0.00359023, 0.0621988, 0.0135549)
 
 [node name="Lights" type="Node3D" parent="."]
 
@@ -1415,6 +1706,7 @@ environment = SubResource("Environment_nps7j")
 
 [node name="Navigation" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.928081, 0.647132, -5.18842)
+visible = false
 
 [node name="NavigationPoints" type="Node3D" parent="Navigation"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.552707, 0, 0)
@@ -1510,10 +1802,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.14781, 0.0851541, 4.46798)
 transform = Transform3D(-4.37722e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18861e-08, -3.79078e-08, -0.695602, 0.389964, -0.597232)
 
 [node name="FocusPointLibrary" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -2.2121, 0.398716, 6.64091)
+transform = Transform3D(1.19249e-08, 0, -1, 0.0586966, 0.998276, 6.99951e-10, 0.998276, -0.0586966, 1.19043e-08, -2.2121, 0.398716, 6.64091)
 
 [node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointLibrary" index="1"]
-transform = Transform3D(-4.21174e-08, 0.20412, -0.978946, -9.93963e-09, 0.978946, 0.20412, 1, 1.83274e-08, -3.92017e-08, -1.08839, 0.389964, 1.19209e-07)
+transform = Transform3D(-4.21174e-08, 0.20412, -0.978946, -9.93963e-09, 0.978946, 0.20412, 1, 1.83274e-08, -3.92018e-08, -1.14469, 0.501908, 1.19209e-07)
+fov = 80.0
 
 [node name="FocusPointSedia" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
 transform = Transform3D(-0.571988, 0, -0.820262, 0, 1, 0, 0.820262, 0, -0.571988, 1.93265, 0.461976, 6.49486)
@@ -1528,10 +1821,10 @@ transform = Transform3D(-0.661233, 0, -0.75018, 0, 1, 0, 0.75018, 0, -0.661233, 
 transform = Transform3D(-0.016822, 0.646057, -0.763105, 0.0629755, 0.762382, 0.644056, 0.997874, -0.0372226, -0.0535105, -0.385422, -0.127799, 0.024433)
 
 [node name="FocusPointLectern" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
-transform = Transform3D(-0.965672, 0.259763, 8.44218e-08, 0.259763, 0.965672, -2.27092e-08, -8.74228e-08, 0, -1, -4.42811, 0.869934, 5.10819)
+transform = Transform3D(-0.966645, 0.256121, 8.45068e-08, 0.256121, 0.966645, -2.23908e-08, -8.74228e-08, 1.71538e-15, -1, -4.46736, 0.787252, 5.14887)
 
 [node name="FocusCamera" parent="Navigation/FocusPoints/FocusPointLectern" index="1"]
-transform = Transform3D(-4.10045e-08, 0.664735, -0.747079, 2.65072e-08, 0.747079, 0.664735, 1, 7.45414e-09, -4.82539e-08, -0.418263, -0.0492154, -2.83122e-07)
+transform = Transform3D(-2.71242e-08, 0.858343, -0.513077, 6.38372e-08, 0.513077, 0.858343, 1, -9.47159e-09, -6.8711e-08, 0.0623212, -0.0450239, -3.57628e-07)
 
 [node name="FocusPointHole" parent="Navigation/FocusPoints" instance=ExtResource("6_uhtdf")]
 transform = Transform3D(0.965473, -0.260505, 0, 0.260505, 0.965473, 0, 0, 0, 1, 3.82003, 0.00454384, 6.14579)
@@ -1552,7 +1845,7 @@ transform = Transform3D(1.71849, -1.01858, -0.0962918, 0.0691436, -0.0721789, 1.
 transform = Transform3D(-0.125359, 0, -0.535523, 0, 0.55, 0, 0.535523, 0, -0.125359, -1.71388, -1.71737, 7.67844)
 
 [node name="ChestTop" parent="Props/BloodChest" instance=ExtResource("28_qwxhw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.299906, 0.357113, 0.00897932)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.299906, 0.357113, 0.00897956)
 
 [node name="LabelBlood2" type="Sprite3D" parent="Props/BloodChest/ChestTop"]
 transform = Transform3D(-9.31323e-10, 0.0298071, 0.0033961, 0, 0.0033961, -0.0298072, -0.03, -9.31323e-10, -1.74623e-10, -0.498233, 0.135414, 0.431524)
@@ -1564,6 +1857,10 @@ transform = Transform3D(0.843148, 0, -2.35353, 0, 2.5, 0, 2.35353, 0, 0.843148, 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Props/BloodChest"]
 transform = Transform3D(0.555, 1.49012e-08, 0, 0, -4.34928e-08, -1, 7.45058e-09, 0.995, -4.37114e-08, 0, 0.277769, 0)
 mesh = SubResource("QuadMesh_goo6b")
+
+[node name="ItemImpureBlood" parent="Props/BloodChest" instance=ExtResource("16_i2r0i")]
+transform = Transform3D(5.35089, 0.448954, 0.105772, 0.161918, -0.0998301, -3.62795, -0.353536, 6.74935, -0.0606971, 0, 0.207219, 0)
+visible = false
 
 [node name="AlchemicalCircle" parent="Props" instance=ExtResource("12_hwcwv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522614, -1.04896, 3.98658)
@@ -1620,7 +1917,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.81039, -1.43939, 6.77525)
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.239007, 0.148682, 0)
 radius = 0.572
 height = 0.831
-related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("28_x6iog")])
 
 [node name="Crucible" parent="Props/Fireplace" instance=ExtResource("29_aipy0")]
 transform = Transform3D(-0.125672, 0, 0.790067, 0, 0.799999, 0, -0.790067, 0, -0.125672, -0.250997, -0.0597747, 0.0248411)
@@ -1653,12 +1949,10 @@ mesh = SubResource("QuadMesh_gx6p0")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("26_ttlky")
 
-[node name="GenericPuzzleSlot" parent="Props/MortarPestle" node_paths=PackedStringArray("model_variation") instance=ExtResource("27_5agl3")]
+[node name="GenericPuzzleSlot" parent="Props/MortarPestle" instance=ExtResource("27_5agl3")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.0954993, 0)
 radius = 0.3
 height = 0.4
-related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("31_dcr5l"), ExtResource("32_1xrty")])
-model_variation = NodePath("../MortarFilling")
 
 [node name="CoinPurse" parent="Props" instance=ExtResource("38_4dsmt")]
 transform = Transform3D(-0.316258, -0.00683831, -0.387214, 0.117278, 0.474757, -0.104171, 0.36909, -0.156713, -0.298687, 4.9898, -1.76401, 4.19853)
@@ -1679,14 +1973,17 @@ item_model_height = 0.5
 [node name="ItemBookBlack_Salt" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.974988, 0, 0.115277, 0, 0.98178, 0, -0.115277, 0, -0.974988, -1.92681, -0.531197, 7.6943)
 texture = ExtResource("43_qg3xt")
+pages_path = "res://Assets/2D/Books/Salt/"
 
 [node name="ItemBookBlack_Surfur" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.974988, 0, 0.115277, 0, 0.98178, 0, -0.115277, 0, -0.974988, -1.99533, -0.531486, 7.68842)
 texture = ExtResource("44_iq5v5")
+pages_path = "res://Assets/2D/Books/Sulfur/"
 
 [node name="ItemBookBlack_Mercury" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.967791, -0.164959, 0.00782703, -0.164778, 0.967657, 0.0194824, -0.0109879, 0.0178911, -0.981555, -2.08207, -0.531486, 7.68282)
 texture = ExtResource("45_20rln")
+pages_path = "res://Assets/2D/Books/Mercury/"
 
 [node name="ItemBookRed_Aries" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.836417, -0.928486, 7.55917)
@@ -1703,10 +2000,12 @@ texture = ExtResource("49_y4q8n")
 [node name="ItemBookRed_Cancer" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-0.799233, 0.412717, 0.43691, 0.46286, 0.886382, 0.00940226, -0.383389, 0.209743, -0.899456, 0.443116, -0.134974, 7.71259)
 texture = ExtResource("60_n24rn")
+pages_path = "res://Assets/2D/Books/Cancer/"
 
 [node name="ItemBookRed-Leo" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-0.973734, 0.227688, 8.51265e-08, 0.227688, 0.973734, -1.99051e-08, -8.74228e-08, -8.50512e-16, -1, 0.661298, -0.928486, 7.55917)
 texture = ExtResource("51_c2ucd")
+pages_path = "res://Assets/2D/Books/Leo/"
 
 [node name="ItemBookRed_Virgo" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.58636, -0.928486, 7.55917)
@@ -1761,9 +2060,6 @@ texture = ExtResource("45_yqq5f")
 transform = Transform3D(-1.29819, 0, 0.0685803, 0, 1.3, 0, -0.0685803, 0, -1.29819, -0.81959, -0.48961, 7.74737)
 texture = ExtResource("46_hocwh")
 
-[node name="Lock2" parent="Props" instance=ExtResource("53_ed8k5")]
-transform = Transform3D(0.0973193, 0.818015, -1.25355, 0.475028, 1.17438, 0.803232, 1.41946, -0.449094, -0.182861, 4.41875, -1.58284, 4.62196)
-
 [node name="GraveDirt" parent="Props" instance=ExtResource("13_pyh8a")]
 transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 4.97294, -1.7614, 4.88553)
 
@@ -1774,6 +2070,9 @@ texture = ExtResource("70_yaheh")
 [node name="ItemBowlOfDirt" parent="Props/GraveDirt" instance=ExtResource("71_h7c0c")]
 transform = Transform3D(3.18, -5.68434e-14, 2.5411e-21, 0, -1.39002e-07, -6.015, 5.68434e-14, 3.18, -2.62924e-07, 0.00363016, 0.588504, -0.0268574)
 visible = false
+
+[node name="ItemChestKey" parent="Props" instance=ExtResource("69_olkeo")]
+transform = Transform3D(1.14151, 0, -0.973116, 0, 1.5, 0, 0.973116, 0, 1.14151, -1.06959, -1.04664, 3.46661)
 
 [node name="DecorationObjects" type="Node3D" parent="."]
 
@@ -1959,7 +2258,7 @@ transform = Transform3D(0.199714, 0, 0.0106938, 0, 0.1, 0, -0.0106938, 0, 0.1997
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.141022, 1.2041, 1.96306)
 
 [node name="SpiceJarFilledYellow3" parent="DecorationObjects" instance=ExtResource("37_2j1vw")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.0279, 0.801044, -2.45826)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.05864, 0.801044, -2.39146)
 
 [node name="SpiceJarFilledYellow2" parent="DecorationObjects" instance=ExtResource("37_2j1vw")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.75015, 1.59463, 2.03435)
@@ -2774,9 +3073,61 @@ transform = Transform3D(-0.099946, 0, -0.00328414, 0.000815344, 0.0968692, -0.02
 [node name="Audio" parent="." instance=ExtResource("88_yilx3")]
 script = ExtResource("89_jxhjo")
 
-[node name="Key2" parent="." instance=ExtResource("83_n727y")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.85315, 0.812321, -2.43294)
+[node name="Grimoire" parent="." instance=ExtResource("38_t6tu7")]
+transform = Transform3D(-1.69076e-08, 0.208046, -0.341638, -1.82481e-11, 0.341638, 0.208046, 0.4, 8.80949e-09, -1.44312e-08, -3.90871, 1.17938, -0.0561288)
 
+[node name="SplashScreen" type="Node3D" parent="."]
+script = ExtResource("94_v0irr")
+
+[node name="ColorRect" type="ColorRect" parent="SplashScreen"]
+offset_left = -83.0
+offset_top = -51.0
+offset_right = 2064.0
+offset_bottom = 1181.0
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SplashScreen"]
+libraries = {
+"": SubResource("AnimationLibrary_si8yh")
+}
+
+[node name="Label" type="Label" parent="SplashScreen"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("94_63wl0")
+theme_override_font_sizes/font_size = 64
+text = "Best played with headphones"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Salt" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Surfur" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Mercury" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Aries" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Taurus" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Gemini" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Cancer" to="Player" method="_process"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed-Leo" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Virgo" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Libra" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Scorpio" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Sagittarius" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Capricorn" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Aquarius" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Projection" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Earth" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Air" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Water" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Fire" to="Player" method="_on_book_opened"]
+[connection signal="animation_finished" from="SplashScreen/AnimationPlayer" to="Player" method="_on_animation_player_animation_finished"]
+
+[editable path="Player"]
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointWindow"]
 [editable path="Navigation/FocusPoints/FocusPointChest"]
