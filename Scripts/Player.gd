@@ -286,6 +286,9 @@ func _process_reading_inputs():
 var pre_book_state 
 
 func _on_book_opened(page_path):
+	# TODO: need to move the book here somehow
+	#animated_book.global_position -= (animated_book.global_position-current_focus_point.focus_animation_pos.global_position)
+	#animated_book.global_rotation_degrees = current_focus_point.focus_animation_pos.global_rotation_degrees
 	animated_book.pull_out(page_path)
 
 func _on_animated_book_sig_put_away():

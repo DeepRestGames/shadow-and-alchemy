@@ -238,7 +238,7 @@ libraries = {
 }
 
 [node name="AnimatedBook" parent="." instance=ExtResource("6_4dkbr")]
-transform = Transform3D(-0.47, 4.10887e-08, 1.79604e-15, 0, -2.05444e-08, 0.47, 4.10887e-08, 0.47, 2.05444e-08, -0.014, 0.395, -0.454)
+transform = Transform3D(-0.47, 4.10887e-08, 1.79604e-15, 4.02169e-09, 0.0460027, 0.467743, 4.08914e-08, 0.467743, -0.0460027, 0.153865, -0.0681878, 0.256732)
 visible = false
 
 [connection signal="sig_pulled_out" from="AnimatedBook" to="." method="_on_animated_book_sig_pulled_out"]

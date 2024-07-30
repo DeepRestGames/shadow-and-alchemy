@@ -2237,6 +2237,7 @@ transform = Transform3D(-0.257115, 0, 0.306418, 0, 0.4, 0, -0.306418, 0, -0.2571
 
 [connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Salt" to="Player" method="_on_book_opened"]
 [connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Surfur" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Mercury" to="Player" method="_on_book_opened"]
 
 [editable path="Player"]
 [editable path="Navigation/FocusPoints/FocusPointTable"]
