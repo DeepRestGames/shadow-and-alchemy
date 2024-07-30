@@ -3,6 +3,7 @@ extends PuzzleSlot
 
 signal item_was_interacted
 signal puzzle_molten_coin
+signal puzzle_mortar
 
 var currently_dropped_items: Array[InventoryItemData]
 
@@ -29,11 +30,11 @@ func _ready():
 		crucible = $"../Crucible"
 		crucible_coin = $"../Crucible/CrucibleCoin"
 		crucible_melt = $"../Crucible/MoltenSilver"
-	
+
 	# Super ugly logic just for mortar and pestle
 	if get_parent() != null and get_parent().name == "MortarPestle":
 		mortar_filling = $"../MortarFilling"
-	
+
 	# Super ugly logic just for keypad
 	if get_parent() != null and get_parent().name == "Keypad":
 		keypad = $"../"
@@ -53,7 +54,7 @@ func item_dropped(item: InventoryItemData):
 	if mortar_filling != null:
 		item_dropped_mortar(item)
 		return
-	
+
 	if keypad != null:
 		item_dropped_keypad(item)
 		return
@@ -96,22 +97,24 @@ func item_dropped_mortar(item: InventoryItemData):
 			reaction_happening = true
 			currently_dropped_items.append(item)
 			InventorySystem.remove_item(item)
-			
+
 			mortar_filling.show()
+			puzzle_mortar.emit()
 			await get_tree().create_timer(1.5).timeout
-			
+
 			pepper_puzzle.add_puzzle_item(item)
 			currently_dropped_items.clear()
 			mortar_filling.hide()
-			
+
 			reaction_happening = false
 			return
-	
+
 	if item.item_name == "Opal Stone" or item.item_name == "Laurel" or item.item_name == "Bowl of Dirt":
 		currently_dropped_items.append(item)
 		InventorySystem.remove_item(item)
 		mortar_filling.show()
-		
+		puzzle_mortar.emit()
+
 		# Add item to puzzles related to slot
 		salt_puzzle.add_puzzle_item(item)
 		if salt_puzzle.puzzle_solved:
@@ -125,11 +128,11 @@ func item_dropped_keypad(item: InventoryItemData):
 		# Animation would be nice
 		reaction_happening = true
 		InventorySystem.remove_item(item)
-		
+
 		keypad_puzzle.add_puzzle_item(item)
 		keypad.hide()
 		chest_top_collision._open()
-		
+
 		reaction_happening = false
 		return
 
@@ -141,17 +144,17 @@ func item_removed(_item: InventoryItemData):
 func remove_items():
 	if reaction_happening:
 		return
-	
+
 	if crucible != null:
 		crucible.hide()
 		crucible_puzzle.clear_all()
-	
+
 	if mortar_filling != null:
 		salt_puzzle.clear_all()
 		mortar_filling.hide()
-	
+
 	for item in currently_dropped_items:
 		InventorySystem.add_item(item)
 	currently_dropped_items.clear()
-	
+
 	print("Removed items from puzzle!")
