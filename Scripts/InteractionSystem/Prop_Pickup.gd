@@ -2,6 +2,7 @@ class_name Prop_Pickup
 extends Prop
 
 signal interacted
+signal water_flask
 
 @export var inventory_item_data: InventoryItemData
 @export var item_model_height: float
@@ -15,6 +16,8 @@ func _interacted():
 		if not InventorySystem.inventory_items.has(inventory_item_data):
 			InventorySystem.add_item(inventory_item_data)
 	else:
+		if inventory_item_data.item_name == "Water Flask":
+			water_flask.emit()
 		InventorySystem.add_item(inventory_item_data)
 
 	if dropped_in_puzzle_slot != null:

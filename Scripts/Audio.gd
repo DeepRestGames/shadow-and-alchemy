@@ -67,6 +67,7 @@ const object_interaction_array = [
 
 const thunderstorm_array = [preload("res://Assets/Audio/Sound/storm_faded.mp3")]
 
+const water_flask_array = [preload("res://Assets/Audio/Sound/bottle_open.mp3")]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -79,6 +80,7 @@ func _ready():
 	var alchemical_circle_2 = get_node("../Props/AlchemicalCircle/AlchemicalCirclePuzzleSlot2")
 	var alchemical_circle_3 = get_node("../Props/AlchemicalCircle/AlchemicalCirclePuzzleSlot3")
 	var animated_book = get_node("../Player/AnimatedBook")
+	var water_flask = get_node("../Props/Bucket/ItemWaterFlask")
 	var chest_top_collision_1: Node = get_node("../Chests/ChestTop/ChestTopCollision")
 	var chest_top_collision_2: Node = get_node("../Props/BloodChest/ChestTop/ChestTopCollision")
 	var diary = get_node("../Player/Diary")
@@ -133,16 +135,17 @@ func _ready():
 	const thunderStorm_volume_db: float = -15.0
 	const creak_volume_db: float = -10
 	const bucket_water_drop_volume_db: float = -20
-	$Fireplace.volume_db = -15
-	$Fireplace.attenuation_model = $Fireplace.ATTENUATION_INVERSE_SQUARE_DISTANCE
 	$BackgroundMusic.volume_db = -15
-	$Footsteps.volume_db = -15
-	$ChestOpening.volume_db = -5
-	$Bucket.volume_db = -15
-	$Bucket.unit_size = 4
 	$Bucket.attenuation_model = $Bucket.ATTENUATION_INVERSE_SQUARE_DISTANCE
+	$Bucket.unit_size = 4
+	$Bucket.volume_db = -15
+	$ChestOpening.volume_db = -5
+	$Fireplace.attenuation_model = $Fireplace.ATTENUATION_INVERSE_SQUARE_DISTANCE
+	$Fireplace.volume_db = -15
+	$Footsteps.volume_db = -15
 	$ItemInteract.volume_db = -5
 	$Mortar.volume_db = -10
+	$WaterFlask.volume_db = -10
 
 
 	##### Setup background music #####
@@ -159,6 +162,7 @@ func _ready():
 	alchemical_circle_3.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
 	animated_book.connect("interacted", play_sound_from_array.bind("book picked up", $Books, book_pickup_array))
 	animated_book.connect("turn_page", play_sound_from_array.bind("book interacted", $Books, book_turn_page_array))
+	water_flask.connect("water_flask", play_sound_from_array.bind("water flask", $WaterFlask, water_flask_array))
 	chest_top_collision_1.connect("chest_opened", play_sound_from_array.bind("chest opening", $ChestOpening, chest_open_array))
 	chest_top_collision_2.connect("chest_opened", play_sound_from_array.bind("chest opening", $ChestOpening, chest_open_array))
 	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Books, book_turn_page_array))
