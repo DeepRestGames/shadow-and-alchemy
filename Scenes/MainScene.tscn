@@ -3172,6 +3172,10 @@ vertical_alignment = 1
 [connection signal="open_diary_with_pages" from="Props/ItemBookRed_Capricorn" to="Player" method="_on_book_opened"]
 [connection signal="open_diary_with_pages" from="Props/ItemBookRed_Aquarius" to="Player" method="_on_book_opened"]
 [connection signal="open_diary_with_pages" from="Props/ItemBookRed_Projection" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Earth" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Air" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Water" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Fire" to="Player" method="_on_book_opened"]
 [connection signal="animation_finished" from="SplashScreen/AnimationPlayer" to="Player" method="_on_animation_player_animation_finished"]
 
 [editable path="Player"]
