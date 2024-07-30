@@ -46,7 +46,7 @@ func _ready():
 
 
 func _input(event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and camera != null:
 		# Cast a ray 3D to current mouse position
 		var mouse_position := viewport.get_mouse_position()
 		
@@ -56,6 +56,8 @@ func _input(event):
 
 
 func _process(_delta):
+	#if get_tree().current_scene.name != "MainScene":
+		#return
 	if Input.is_action_just_pressed("left_click"):
 		# Check collisions with props
 		var props_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, props_collision_layer)

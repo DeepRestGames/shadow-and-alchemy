@@ -232,7 +232,7 @@ size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 0)
 theme_override_fonts/font = ExtResource("5_tl8ok")
 theme_override_font_sizes/font_size = 36
-text = "Press [W] o [↑] to focus."
+text = "Press [W]/[↑] to focus."
 
 [node name="FocusLabelAnimation" type="AnimationPlayer" parent="Focus"]
 libraries = {

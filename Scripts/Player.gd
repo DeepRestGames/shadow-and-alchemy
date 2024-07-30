@@ -7,7 +7,7 @@ signal creepy_event
 var unfocus_pos: Vector3
 var unfocused_rot: Basis
 
-var facing_direction: FacingDirection = FacingDirection.WEST
+var facing_direction: FacingDirection = FacingDirection.NORTH
 var player_state: PlayerState = PlayerState.IDLE
 var previous_state: PlayerState
 
@@ -17,6 +17,7 @@ const TIME_BETWEEN_ROTATIONS: float = 0.35
 @export var current_navigation_point: NavigationPoint
 var next_navigation_point: NavigationPoint
 var current_focus_point: FocusPoint
+var playing_intro: bool = true
 # Movement
 enum FacingDirection {
 	NORTH,	# 0
@@ -54,6 +55,8 @@ func _ready():
 
 
 func _process(_delta):
+	if playing_intro:
+		return
 	_process_movement_inputs()
 	_process_focus_inputs()
 	_process_pause_inputs()
@@ -317,3 +320,8 @@ func alchemical_process_choice_opened():
 func alchemical_process_choice_closed():
 	player_state = previous_state
 
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "fade_out":
+		playing_intro = false

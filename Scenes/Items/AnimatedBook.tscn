@@ -1028,3 +1028,5 @@ transform = Transform3D(0.99998, 0.00637041, 2.7846e-10, -0.00637041, 0.99998, -
 mesh = SubResource("BoxMesh_lqut7")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_2l2db")
+
+[node name="SplashScreen" type="Node3D" parent="."]
