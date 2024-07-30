@@ -89,7 +89,7 @@ const rand_creak_time_max_s: float = 120.0
 
 # Setup water drops in bucket
 
-const bucket_water_drop_volume_db: float = -10
+const bucket_water_drop_volume_db: float = -15
 const rand_bucket_water_drop_time_min_s: float = 3.0
 const rand_bucket_water_drop_time_max_s: float = 7.0
 # const rand_bucket_water_drop_time_min_s: float = 1.0 # TODO: debug
@@ -136,6 +136,12 @@ func _ready():
 	var item_mortar_slot = get_node("../Props/MortarPestle/GenericPuzzleSlot")
 	var diary = get_node("../Player/Diary")
 	var animated_book = get_node("../Player/AnimatedBook")
+
+
+	# Setup fireplace
+
+	$Fireplace.volume_db = -15
+
 
 	##### Setup background music #####
 
@@ -202,7 +208,7 @@ func _ready():
 
 	##### Setup mortar crushing sound #####
 
-	$Mortar.volume_db = -20
+	$Mortar.volume_db = -10
 	item_mortar_slot.connect("puzzle_mortar", play_sound_from_array.bind("mortar crushing", $Mortar, mortar_array))
 
 	##### Setup turning pages sound (they use the same sound effect) #####
