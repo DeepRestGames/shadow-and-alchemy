@@ -15,9 +15,15 @@ signal interacted
 @onready var options = $Options
 
 
-var studies_path: String = "res://Assets/2D/Books/Journal/"
-var codex_path: String = "res://Assets/2D/Books/Codex/"
-var pages: Array[String]
+#var studies_path: String = "res://Assets/2D/Books/Journal/"
+#var codex_path: String = "res://Assets/2D/Books/Codex/"
+var studies_name: String = "STUDIES"
+var codex_name: String = "CODEX"
+
+@export var studies_array: Array[Texture2D]
+@export var codex_array: Array[Texture2D]
+
+var pages: Array[Texture2D]
 var current_left_page_index: int = 0:
 	# Clamp
 	set(value):
@@ -33,31 +39,35 @@ func pull_out():
 	interacted.emit()
 	
 func _load_pages(pages_path):
-	var dir = DirAccess.open(pages_path)
-	dir.list_dir_begin()
-	while true:
-		var file_name = dir.get_next()
-		if file_name == "":
-			#break the while loop when get_next() returns ""
-			break
-		elif !file_name.begins_with(".") and !file_name.ends_with(".import"):
-			#get_next() returns a string so this can be used to load the images into an array.
-			pages.append((pages_path + file_name))
-	left_page.texture = load(pages[current_left_page_index])
-	right_page.texture = load(pages[current_left_page_index+1])
+	#var dir = DirAccess.open(pages_path)
+	#dir.list_dir_begin()
+	#while true:
+		#var file_name = dir.get_next()
+		#if file_name == "":
+			##break the while loop when get_next() returns ""
+			#break
+		#elif !file_name.begins_with(".") and !file_name.ends_with(".import"):
+			##get_next() returns a string so this can be used to load the images into an array.
+			#pages.append((pages_path + file_name))
+	if pages_path == codex_name:
+		pages = codex_array
+	elif pages_path == studies_name:
+		pages = studies_array
+	left_page.texture = pages[current_left_page_index]
+	right_page.texture = pages[current_left_page_index+1]
 
 func _ready():
-	_load_pages(codex_path)
+	_load_pages(codex_name)
 
 func turn_right():
 	current_left_page_index+=2
-	left_page.texture = load(pages[current_left_page_index])
-	right_page.texture = load(pages[current_left_page_index+1])
+	left_page.texture = pages[current_left_page_index]
+	right_page.texture = pages[current_left_page_index+1]
 
 func turn_left():
 	current_left_page_index-=2
-	left_page.texture = load(pages[current_left_page_index])
-	right_page.texture = load(pages[current_left_page_index+1])
+	left_page.texture = pages[current_left_page_index]
+	right_page.texture = pages[current_left_page_index+1]
 
 
 func show_tags():
@@ -76,15 +86,13 @@ func hide_tags():
 
 func _on_codex_tag_pressed():
 	current_left_page_index =0
-	pages.clear()
-	_load_pages(codex_path)
+	_load_pages(codex_name)
 
 
 
 func _on_studies_tag_pressed():
 	current_left_page_index =0
-	pages.clear()
-	_load_pages(studies_path)
+	_load_pages(studies_name)
 
 
 

@@ -1,9 +1,21 @@
-[gd_scene load_steps=13 format=3 uid="uid://duhgac42d8866"]
+[gd_scene load_steps=25 format=3 uid="uid://duhgac42d8866"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Diary.gd" id="1_3gqoq"]
+[ext_resource type="Texture2D" uid="uid://binl57wom704j" path="res://Assets/2D/Books/Journal/Journal_01.png" id="2_5t154"]
 [ext_resource type="Texture2D" uid="uid://cglb3g30rrg3x" path="res://Assets/2D/Decals/book_texture.jpg" id="2_n00bc"]
 [ext_resource type="Texture2D" uid="uid://sntw8ewqgxsi" path="res://Assets/2D/Decals/old_paper.jpg" id="3_3vpsv"]
+[ext_resource type="Texture2D" uid="uid://bdxj4eofkhnvo" path="res://Assets/2D/Books/Journal/Journal_02.png" id="3_r0w37"]
+[ext_resource type="Texture2D" uid="uid://bmqgofp8hl1fc" path="res://Assets/2D/Books/Journal/Journal_03.png" id="4_c320k"]
 [ext_resource type="PackedScene" uid="uid://qhui0ibm2o5i" path="res://Scenes/UI/DiaryTag.tscn" id="4_g025o"]
+[ext_resource type="Texture2D" uid="uid://b5tckeb8mwgh8" path="res://Assets/2D/Books/Journal/Journal_04.png" id="5_o4wby"]
+[ext_resource type="Texture2D" uid="uid://c2caep7xsip1p" path="res://Assets/2D/Books/Journal/Journal_05.png" id="6_ma74p"]
+[ext_resource type="Texture2D" uid="uid://bg3otjxoherav" path="res://Assets/2D/Books/Journal/Journal_06.png" id="7_cibdw"]
+[ext_resource type="Texture2D" uid="uid://65oygx6j8dhx" path="res://Assets/2D/Books/Journal/Journal_07.png" id="8_w2voh"]
+[ext_resource type="Texture2D" uid="uid://du7asok8gls0t" path="res://Assets/2D/Books/Journal/Journal_08.png" id="9_73h6a"]
+[ext_resource type="Texture2D" uid="uid://cb7bs3ct1iyds" path="res://Assets/2D/Books/Codex/Codex_01.png" id="11_b4a7f"]
+[ext_resource type="Texture2D" uid="uid://crorkb3soh2sy" path="res://Assets/2D/Books/Codex/Codex_02.png" id="12_hm45w"]
+[ext_resource type="Texture2D" uid="uid://m83ec381k1qo" path="res://Assets/2D/Books/Codex/Codex_03.png" id="13_3aaj6"]
+[ext_resource type="Texture2D" uid="uid://ccs2yjuoqeuef" path="res://Assets/2D/Books/Codex/Codex_04.png" id="14_6lo66"]
 
 [sub_resource type="Animation" id="Animation_rwdd7"]
 length = 0.001
@@ -1267,6 +1279,8 @@ size = Vector3(0.18, 0.01, 1)
 [node name="Diary" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_3gqoq")
+studies_array = Array[Texture2D]([ExtResource("2_5t154"), ExtResource("3_r0w37"), ExtResource("4_c320k"), ExtResource("5_o4wby"), ExtResource("6_ma74p"), ExtResource("7_cibdw"), ExtResource("8_w2voh"), ExtResource("9_73h6a")])
+codex_array = Array[Texture2D]([ExtResource("11_b4a7f"), ExtResource("12_hm45w"), ExtResource("13_3aaj6"), ExtResource("14_6lo66")])
 
 [node name="Candle" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.955391, 4.17616e-08)

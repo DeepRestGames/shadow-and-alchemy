@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=136 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -41,24 +41,36 @@
 [ext_resource type="PackedScene" uid="uid://ebtsdp6p2iw4" path="res://Assets/3D/Props/SpiceJarFilledYellow.blend" id="37_2j1vw"]
 [ext_resource type="PackedScene" uid="uid://cgt7qhmb42v61" path="res://Scenes/Items/InventoryItems/Item_Coal.tscn" id="37_e3q8q"]
 [ext_resource type="PackedScene" uid="uid://dns78fyxhw4g3" path="res://Scenes/Items/InventoryItems/Item_JarOfGrapes.tscn" id="37_oqlbi"]
+[ext_resource type="Texture2D" uid="uid://c51dbkw0xp760" path="res://Assets/2D/Books/Salt/Salt_01.png" id="37_qea6j"]
+[ext_resource type="Texture2D" uid="uid://kxe7dftio4il" path="res://Assets/2D/Books/Salt/Salt_02.png" id="38_0ifgp"]
 [ext_resource type="PackedScene" uid="uid://dhtnotvhyj8uf" path="res://Assets/3D/Props/CoinPurse.blend" id="38_4dsmt"]
 [ext_resource type="PackedScene" uid="uid://b6q56y10tfq5m" path="res://Scenes/Items/InventoryItems/Item_SilverCoin.tscn" id="38_gmr18"]
 [ext_resource type="PackedScene" uid="uid://du3dh6rb24kyv" path="res://Scenes/Items/Grimoire.tscn" id="38_t6tu7"]
+[ext_resource type="Texture2D" uid="uid://1ihy2j7dqwxh" path="res://Assets/2D/Books/Salt/Salt_03.png" id="39_3xi63"]
+[ext_resource type="Texture2D" uid="uid://c6ddlb4l6ulhq" path="res://Assets/2D/Books/Salt/Salt_04.png" id="40_7g4ot"]
 [ext_resource type="PackedScene" uid="uid://ccjymunjlm84n" path="res://Assets/3D/Props/GobletsBrutti_v0.0.0.blend" id="41_3uqgs"]
+[ext_resource type="Texture2D" uid="uid://cbuqhueusrdud" path="res://Assets/2D/Books/Sulfur/Sulfur_01.png" id="42_2budf"]
+[ext_resource type="Texture2D" uid="uid://uihbhdjm77sw" path="res://Assets/2D/Books/Sulfur/Sulfur_02.png" id="43_1irep"]
 [ext_resource type="PackedScene" uid="uid://dfl30ul37jev4" path="res://Assets/3D/Props/Skull_v0.0.0.blend" id="43_oohwt"]
 [ext_resource type="Texture2D" uid="uid://bq04jmrgld06l" path="res://Assets/2D/AlchemicalMaterials/Salt_Body.png" id="43_qg3xt"]
+[ext_resource type="Texture2D" uid="uid://hxhh0ugws4gn" path="res://Assets/2D/Books/Sulfur/Sulfur_03.png" id="44_fp6cr"]
 [ext_resource type="Texture2D" uid="uid://bmqc7os6rs7a1" path="res://Assets/2D/AlchemicalMaterials/Sulfur_Soul.png" id="44_iq5v5"]
 [ext_resource type="Texture2D" uid="uid://7uovpfgyhqag" path="res://Assets/2D/BasicElements/Air.png" id="44_mkhsd"]
 [ext_resource type="PackedScene" uid="uid://bmmvq5muuo2ar" path="res://Assets/3D/Props/FirewoodPiece_v0.0.0.blend" id="44_wpeks"]
 [ext_resource type="Texture2D" uid="uid://bjfxknyjo1to4" path="res://Assets/2D/AlchemicalMaterials/Mercury_Spirit.png" id="45_20rln"]
+[ext_resource type="Texture2D" uid="uid://cl4iiwv82eeio" path="res://Assets/2D/Books/Sulfur/Sulfur_04.png" id="45_j2ytf"]
 [ext_resource type="Texture2D" uid="uid://m3n5auvsl1eg" path="res://Assets/2D/BasicElements/Water.png" id="45_yqq5f"]
 [ext_resource type="Texture2D" uid="uid://c8fbk85aj43j1" path="res://Assets/2D/BasicElements/Fire.png" id="46_hocwh"]
 [ext_resource type="PackedScene" uid="uid://dftwsm7355x7m" path="res://Scenes/Items/BookRed.tscn" id="46_x03fn"]
+[ext_resource type="Texture2D" uid="uid://eagsqii78246" path="res://Assets/2D/Books/Mercury/Mercury_01.png" id="47_g3cg2"]
 [ext_resource type="Texture2D" uid="uid://c11eae4qq7wk3" path="res://Assets/2D/BasicElements/Earth.png" id="47_wjf4x"]
 [ext_resource type="Texture2D" uid="uid://hynfrwtgbvxl" path="res://Assets/2D/AlchemicalProcesses/Taurus_Congelation.png" id="48_dcc0o"]
+[ext_resource type="Texture2D" uid="uid://b4pahcus45vd8" path="res://Assets/2D/Books/Mercury/Mercury_02.png" id="48_pamsd"]
 [ext_resource type="PackedScene" uid="uid://i0cbyypo3vy4" path="res://Scenes/Items/BookBrown.tscn" id="48_s5nvg"]
 [ext_resource type="PackedScene" uid="uid://c31eb5bdtyrlb" path="res://Scenes/Items/BookBlue.tscn" id="48_s6rts"]
+[ext_resource type="Texture2D" uid="uid://cdpv00l2yl8v3" path="res://Assets/2D/Books/Mercury/Mercury_03.png" id="49_7nlqh"]
 [ext_resource type="Texture2D" uid="uid://cub380tu2ni0t" path="res://Assets/2D/AlchemicalProcesses/Gemini_Fixation.png" id="49_y4q8n"]
+[ext_resource type="Texture2D" uid="uid://i5r3jhc63qum" path="res://Assets/2D/Books/Mercury/Mercury_04.png" id="50_ifheb"]
 [ext_resource type="Texture2D" uid="uid://bpaywf238lnt1" path="res://Assets/2D/AlchemicalProcesses/Leo_Digestion.png" id="51_c2ucd"]
 [ext_resource type="Texture2D" uid="uid://b8l5h3avop15d" path="res://Assets/2D/AlchemicalProcesses/Virgo_Distillation.png" id="51_fjui4"]
 [ext_resource type="PackedScene" uid="uid://4mdyxhrt5v7w" path="res://Assets/3D/Props/CandeHolderPlate.blend" id="52_c80qp"]
@@ -1966,16 +1978,19 @@ item_model_height = 0.5
 transform = Transform3D(-0.974988, 0, 0.115277, 0, 0.98178, 0, -0.115277, 0, -0.974988, -1.92681, -0.531197, 7.6943)
 texture = ExtResource("43_qg3xt")
 pages_path = "res://Assets/2D/Books/Salt/"
+pages_array = Array[Texture2D]([ExtResource("37_qea6j"), ExtResource("38_0ifgp"), ExtResource("39_3xi63"), ExtResource("40_7g4ot")])
 
 [node name="ItemBookBlack_Surfur" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.974988, 0, 0.115277, 0, 0.98178, 0, -0.115277, 0, -0.974988, -1.99533, -0.531486, 7.68842)
 texture = ExtResource("44_iq5v5")
 pages_path = "res://Assets/2D/Books/Sulfur/"
+pages_array = Array[Texture2D]([ExtResource("42_2budf"), ExtResource("43_1irep"), ExtResource("44_fp6cr"), ExtResource("45_j2ytf")])
 
 [node name="ItemBookBlack_Mercury" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.967791, -0.164959, 0.00782703, -0.164778, 0.967657, 0.0194824, -0.0109879, 0.0178911, -0.981555, -2.08207, -0.531486, 7.68282)
 texture = ExtResource("45_20rln")
 pages_path = "res://Assets/2D/Books/Mercury/"
+pages_array = Array[Texture2D]([ExtResource("47_g3cg2"), ExtResource("48_pamsd"), ExtResource("49_7nlqh"), ExtResource("50_ifheb")])
 
 [node name="ItemBookRed_Aries" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.836417, -0.928486, 7.55917)

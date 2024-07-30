@@ -6,8 +6,9 @@ extends ClickableReadable
 @export var texture: Texture2D
 
 @export var pages_path: String
+@export var pages_array: Array[Texture2D]
 
-signal open_diary_with_pages(page_path)
+signal open_diary_with_pages(pages_array)
 
 func _ready():
 	sprite_3d.texture=texture
@@ -15,4 +16,4 @@ func _ready():
 	
 
 func _clicked():
-	open_diary_with_pages.emit(pages_path)
+	open_diary_with_pages.emit(pages_array)
