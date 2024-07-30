@@ -43,9 +43,6 @@ bus = &"SFX"
 
 [node name="Mortar" type="AudioStreamPlayer" parent="."]
 
-[node name="Screams" type="AudioStreamPlayer" parent="."]
-bus = &"SFX"
-
 [node name="ThunderStorm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_0xhh3")
 bus = &"SFX"
@@ -63,7 +60,5 @@ autoplay = true
 [node name="Bucket" type="Timer" parent="Timers"]
 
 [node name="CreaksTimer" type="Timer" parent="Timers"]
-
-[node name="ScreamTimer" type="Timer" parent="Timers"]
 
 [node name="ThunderStormTimer" type="Timer" parent="Timers"]
