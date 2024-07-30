@@ -15,6 +15,7 @@ material = ExtResource("4_em3w6")
 
 [node name="ItemBookBrown" type="CSGBox3D"]
 material_overlay = SubResource("StandardMaterial3D_mkmif")
+use_collision = true
 size = Vector3(0.0717891, 0.250244, 0.178955)
 material = SubResource("StandardMaterial3D_mkmif")
 script = ExtResource("2_o2p5p")
