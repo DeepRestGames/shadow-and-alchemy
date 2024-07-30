@@ -69,32 +69,6 @@ const mortar_array = [
 	preload("res://Assets/Audio/Sound/crushing_1.mp3"),
 ]
 
-##### Setup sounds with randomised timing #####
-
-# Setup thunderstorm
-
-const thunderStorm_volume_db: float = -10.0
-const rand_thunderstorm_time_min_s: float = 120.0
-const rand_thunderstorm_time_max_s: float = 180.0
-# const rand_thunderstorm_time_min_s: float = 5.0 # TODO: debug
-# const rand_thunderstorm_time_max_s: float = 10.0 # TODO: debug
-
-# Setup creaks
-
-const creak_volume_db: float = -10
-const rand_creak_time_min_s: float = 60.0
-const rand_creak_time_max_s: float = 120.0
-# const rand_creak_time_min_s: float = 2.0 # TODO: debug
-# const rand_creak_time_max_s: float = 5.0 # TODO: debug
-
-# Setup water drops in bucket
-
-const bucket_water_drop_volume_db: float = -15
-const rand_bucket_water_drop_time_min_s: float = 3.0
-const rand_bucket_water_drop_time_max_s: float = 7.0
-# const rand_bucket_water_drop_time_min_s: float = 1.0 # TODO: debug
-# const rand_bucket_water_drop_time_max_s: float = 2.0 # TODO: debug
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -103,81 +77,107 @@ func _ready():
 
 	##### Nodes required to connect signals #####
 
-	var player: Node = get_node("../Player")
-	var chest_top_collision_1: Node = get_node("../Chests/ChestTop/ChestTopCollision")
-	var chest_top_collision_2: Node = get_node("../Props/BloodChest/ChestTop/ChestTopCollision")
 	var alchemical_circle_1 = get_node("../Props/AlchemicalCircle/AlchemicalCirclePuzzleSlot1")
 	var alchemical_circle_2 = get_node("../Props/AlchemicalCircle/AlchemicalCirclePuzzleSlot2")
 	var alchemical_circle_3 = get_node("../Props/AlchemicalCircle/AlchemicalCirclePuzzleSlot3")
-	var opal_stone = get_node("../Props/Hand3/ItemOpalStone")
-	var item_mushroom = get_node("../Props/ItemMushroom")
-	var item_jarofgrapes = get_node("../Props/ItemJarOfGrapes")
+	var animated_book = get_node("../Player/AnimatedBook")
+	var chest_top_collision_1: Node = get_node("../Chests/ChestTop/ChestTopCollision")
+	var chest_top_collision_2: Node = get_node("../Props/BloodChest/ChestTop/ChestTopCollision")
+	var diary = get_node("../Player/Diary")
 	var item_coal = get_node("../Props/ItemCoal")
-	# var item_bookblack_salt = get_node("../Props/ItemBookBlack_Salt")
-	# var item_bookblack_surfur = get_node("../Props/ItemBookBlack_Surfur")
-	# var item_bookblack_mercury = get_node("../Props/ItemBookBlack_Mercury")
-	# var item_bookred_aries = get_node("../Props/ItemBookRed_Aries")
-	# var item_bookred_taurus = get_node("../Props/ItemBookRed_Taurus")
-	# var item_bookred_gemini = get_node("../Props/ItemBookRed_Gemini")
-	# var item_bookred_cancer = get_node("../Props/ItemBookRed_Cancer")
-	# var item_bookred = get_node("../Props/ItemBookRed-Leo")
-	# var item_bookred_virgo = get_node("../Props/ItemBookRed_Virgo")
-	# var item_bookred_libra = get_node("../Props/ItemBookRed_Libra")
-	# var item_bookred_scorpio = get_node("../Props/ItemBookRed_Scorpio")
-	# var item_bookred_sagittarius = get_node("../Props/ItemBookRed_Sagittarius")
-	# var item_bookred_capricorn = get_node("../Props/ItemBookRed_Capricorn")
-	# var item_bookred_aquarius = get_node("../Props/ItemBookRed_Aquarius")
-	# var item_bookred_projection = get_node("../Props/ItemBookRed_Projection")
 	var item_crucible = get_node("../Props/ItemCrucible")
+	var item_fireplace_slot = get_node("../Props/Fireplace/GenericPuzzleSlot")
 	var item_flintandsteel = get_node("../Props/ItemFlintAndSteel")
 	var item_gravedirt = get_node("../Props/GraveDirt/ItemBowlOfDirt")
-	var item_peppergrains = get_node("../Props/ItemPepperGrains")
-	var item_fireplace_slot = get_node("../Props/Fireplace/GenericPuzzleSlot")
+	var item_jarofgrapes = get_node("../Props/ItemJarOfGrapes")
 	var item_mortar_slot = get_node("../Props/MortarPestle/GenericPuzzleSlot")
-	var diary = get_node("../Player/Diary")
-	var animated_book = get_node("../Player/AnimatedBook")
+	var item_mushroom = get_node("../Props/ItemMushroom")
+	var item_peppergrains = get_node("../Props/ItemPepperGrains")
+	var opal_stone = get_node("../Props/Hand3/ItemOpalStone")
+	var player: Node = get_node("../Player")
+	# var item_bookblack_mercury = get_node("../Props/ItemBookBlack_Mercury")
+	# var item_bookblack_salt = get_node("../Props/ItemBookBlack_Salt")
+	# var item_bookblack_surfur = get_node("../Props/ItemBookBlack_Surfur")
+	# var item_bookred = get_node("../Props/ItemBookRed-Leo")
+	# var item_bookred_aquarius = get_node("../Props/ItemBookRed_Aquarius")
+	# var item_bookred_aries = get_node("../Props/ItemBookRed_Aries")
+	# var item_bookred_cancer = get_node("../Props/ItemBookRed_Cancer")
+	# var item_bookred_capricorn = get_node("../Props/ItemBookRed_Capricorn")
+	# var item_bookred_gemini = get_node("../Props/ItemBookRed_Gemini")
+	# var item_bookred_libra = get_node("../Props/ItemBookRed_Libra")
+	# var item_bookred_projection = get_node("../Props/ItemBookRed_Projection")
+	# var item_bookred_sagittarius = get_node("../Props/ItemBookRed_Sagittarius")
+	# var item_bookred_scorpio = get_node("../Props/ItemBookRed_Scorpio")
+	# var item_bookred_taurus = get_node("../Props/ItemBookRed_Taurus")
+	# var item_bookred_virgo = get_node("../Props/ItemBookRed_Virgo")
 
 
-	# Setup fireplace
+	##### Setup randomised timings #####
 
+	const rand_thunderstorm_time_min_s: float = 120.0
+	const rand_thunderstorm_time_max_s: float = 180.0
+	# const rand_thunderstorm_time_min_s: float = 5.0 # TODO: debug
+	# const rand_thunderstorm_time_max_s: float = 10.0 # TODO: debug
+
+	const rand_creak_time_min_s: float = 60.0
+	const rand_creak_time_max_s: float = 120.0
+	# const rand_creak_time_min_s: float = 2.0 # TODO: debug
+	# const rand_creak_time_max_s: float = 5.0 # TODO: debug
+
+	const rand_bucket_water_drop_time_min_s: float = 3.0
+	const rand_bucket_water_drop_time_max_s: float = 7.0
+	# const rand_bucket_water_drop_time_min_s: float = 1.0 # TODO: debug
+	# const rand_bucket_water_drop_time_max_s: float = 2.0 # TODO: debug
+
+
+	##### Setup volumes #####
+
+	const thunderStorm_volume_db: float = -15.0
+	const creak_volume_db: float = -10
+	const bucket_water_drop_volume_db: float = -20
 	$Fireplace.volume_db = -15
+	$Fireplace.attenuation_model = $Fireplace.ATTENUATION_INVERSE_SQUARE_DISTANCE
+	$BackgroundMusic.volume_db = -15
+	$Footsteps.volume_db = -15
+	$ChestOpening.volume_db = -5
+	$Bucket.volume_db = -15
+	$Bucket.unit_size = 4
+	$Bucket.attenuation_model = $Bucket.ATTENUATION_INVERSE_SQUARE_DISTANCE
+	$ItemInteract.volume_db = -5
+	$Mortar.volume_db = -10
 
 
 	##### Setup background music #####
 
-	$BackgroundMusic.volume_db = -15
 	var background_music: AudioStreamMP3 = $BackgroundMusic.stream as AudioStreamMP3
 	background_music.loop = true
 	background_music.loop_offset = 21.333 # measures 9 to 16 included
-	player.connect("creepy_event", play_background_music)
 
-	##### Setup footsteps #####
 
-	$Footsteps.volume_db = -15
-	player.connect("player_moved", play_sound_from_array.bind("footstep", $Footsteps, footsteps_array))
+	##### Setup interaction sounds (connections) #####
 
-	##### Setup chest opening #####
-
-	$ChestOpening.volume_db = -5
-	chest_top_collision_1.connect("chest_opened", play_sound_from_array.bind("chest opening", $ChestOpening, chest_open_array))
-	chest_top_collision_2.connect("chest_opened", play_sound_from_array.bind("chest opening", $ChestOpening, chest_open_array))
-
-	##### Setup bucket water drops #####
-
-	$Bucket.volume_db = bucket_water_drop_volume_db
-	$Bucket.unit_size = 4
-	$Bucket.attenuation_model = $Bucket.ATTENUATION_INVERSE_SQUARE_DISTANCE
-
-	##### Setup pickup and drop item sound (they use the same sound effect) #####
-
-	$ItemInteract.volume_db = -5
 	alchemical_circle_1.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	alchemical_circle_2.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	alchemical_circle_3.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	opal_stone.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_mushroom.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_jarofgrapes.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	animated_book.connect("interacted", play_sound_from_array.bind("book picked up", $Books, book_pickup_array))
+	animated_book.connect("turn_page", play_sound_from_array.bind("book interacted", $Books, book_turn_page_array))
+	chest_top_collision_1.connect("chest_opened", play_sound_from_array.bind("chest opening", $ChestOpening, chest_open_array))
+	chest_top_collision_2.connect("chest_opened", play_sound_from_array.bind("chest opening", $ChestOpening, chest_open_array))
+	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Books, book_turn_page_array))
 	item_coal.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_crucible.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_fireplace_slot.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_fireplace_slot.connect("puzzle_molten_coin", play_sound_from_array.bind("molten coin", $Melting, melting_array))
+	item_flintandsteel.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_gravedirt.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_jarofgrapes.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_mortar_slot.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_mortar_slot.connect("puzzle_mortar", play_sound_from_array.bind("mortar crushing", $Mortar, mortar_array))
+	item_mushroom.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_peppergrains.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	opal_stone.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	player.connect("creepy_event", play_background_music)
+	player.connect("player_moved", play_sound_from_array.bind("footstep", $Footsteps, footsteps_array))
 	# item_bookblack_salt.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	# item_bookblack_surfur.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	# item_bookblack_mercury.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
@@ -193,48 +193,29 @@ func _ready():
 	# item_bookred_capricorn.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	# item_bookred_aquarius.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	# item_bookred_projection.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_crucible.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_flintandsteel.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_gravedirt.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_peppergrains.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_fireplace_slot.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_mortar_slot.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Books, book_turn_page_array))
-	animated_book.connect("interacted", play_sound_from_array.bind("book picked up", $Books, book_pickup_array))
 
-	##### Setup melting coin sound #####
-
-	item_fireplace_slot.connect("puzzle_molten_coin", play_sound_from_array.bind("molten coin", $Melting, melting_array))
-
-	##### Setup mortar crushing sound #####
-
-	$Mortar.volume_db = -10
-	item_mortar_slot.connect("puzzle_mortar", play_sound_from_array.bind("mortar crushing", $Mortar, mortar_array))
-
-	##### Setup turning pages sound (they use the same sound effect) #####
-
-	animated_book.connect("turn_page", play_sound_from_array.bind("book interacted", $Books, book_turn_page_array))
 
 	##### Setup randomly timed sounds #####
 
 	setup_randomly_timed_sound($ThunderStorm, $Timers/ThunderStormTimer,
-	rand_thunderstorm_time_min_s, rand_thunderstorm_time_max_s, thunderStorm_volume_db,
-	on_sound_finished.bind($Timers/ThunderStormTimer, rand_thunderstorm_time_min_s, rand_thunderstorm_time_max_s),
-	play_sound_from_array.bind("thunderstorm", $ThunderStorm, thunderstorm_array))
+		rand_thunderstorm_time_min_s, rand_thunderstorm_time_max_s, thunderStorm_volume_db,
+		on_sound_finished.bind($Timers/ThunderStormTimer, rand_thunderstorm_time_min_s, rand_thunderstorm_time_max_s),
+		play_sound_from_array.bind("thunderstorm", $ThunderStorm, thunderstorm_array))
 
 	setup_randomly_timed_sound($Creaks, $Timers/CreaksTimer,
-	rand_creak_time_min_s, rand_creak_time_max_s, creak_volume_db,
-	on_sound_finished.bind($Timers/CreaksTimer, rand_creak_time_min_s, rand_creak_time_max_s),
-	play_sound_from_array.bind("creak", $Creaks, creaks_array))
+		rand_creak_time_min_s, rand_creak_time_max_s, creak_volume_db,
+		on_sound_finished.bind($Timers/CreaksTimer, rand_creak_time_min_s, rand_creak_time_max_s),
+		play_sound_from_array.bind("creak", $Creaks, creaks_array))
 
 	setup_randomly_timed_sound($Bucket, $Timers/Bucket,
-	rand_bucket_water_drop_time_min_s, rand_bucket_water_drop_time_max_s, bucket_water_drop_volume_db,
-	on_sound_finished.bind($Timers/Bucket, rand_bucket_water_drop_time_min_s, rand_bucket_water_drop_time_max_s),
-	play_sound_from_array.bind("bucket_water_drop", $Bucket, bucket_water_drops_array))
+		rand_bucket_water_drop_time_min_s, rand_bucket_water_drop_time_max_s, bucket_water_drop_volume_db,
+		on_sound_finished.bind($Timers/Bucket, rand_bucket_water_drop_time_min_s, rand_bucket_water_drop_time_max_s),
+		play_sound_from_array.bind("bucket_water_drop", $Bucket, bucket_water_drops_array))
 
 
-##### Function to setup sounds which are governed by a random timer #####
+##### Helper Functions #####
 
+# setup sounds which are governed by a random timer
 func setup_randomly_timed_sound(sound_stream, timer, rand_time_min: float, rand_time_max: float, volume: float, callback, sound_to_play):
 	sound_stream.volume_db = volume
 	sound_stream.connect("finished", callback)
@@ -244,13 +225,13 @@ func setup_randomly_timed_sound(sound_stream, timer, rand_time_min: float, rand_
 	timer.start()
 
 
-##### Functions to play sound and music #####
-
+# play sound and music
 func play_background_music():
 	if not $BackgroundMusic.is_playing():
 		$BackgroundMusic.play()
 
-# Used to play randomisable sounds from an array of similar sounds
+
+# play randomisable sounds from an array of similar sounds
 func play_sound_from_array(_sound_name: String, audio_stream, sound_array: Array):
 	var random_sound = sound_array[randi() % sound_array.size()]
 	audio_stream.stream = random_sound
@@ -258,21 +239,19 @@ func play_sound_from_array(_sound_name: String, audio_stream, sound_array: Array
 	# print("%s played!" %_sound_name) # TODO: debug print
 
 
-##### Function randomise the timer countdown period between a minimum and maximum value in seconds #####
-
+# randomise the timer countdown period between a minimum and maximum value in seconds
 func generate_random_time(rand_time_min: float, rand_time_max: float) -> float:
 	return randf_range(rand_time_min, rand_time_max)
 
 
-##### Function to restart timers for sound and music #####
-
+# restart timers for sound and music
 func on_sound_finished(sound_timer: Timer, rand_time_min: float, rand_time_max: float):
 	sound_timer.wait_time = generate_random_time(rand_time_min, rand_time_max)
 	sound_timer.start()
 	# print("%s random time: %f" %[sound_timer.name, sound_timer.wait_time]) # TODO: debug print
 
 
-##### Function to play sounds only for the game's intro #####
+##### Play sounds only for the game's intro #####
 
 enum Audio_Players_Names
 {
