@@ -7,7 +7,7 @@ signal creepy_event
 var unfocus_pos: Vector3
 var unfocused_rot: Basis
 
-var facing_direction: FacingDirection = FacingDirection.WEST
+var facing_direction: FacingDirection = FacingDirection.NORTH
 var player_state: PlayerState = PlayerState.IDLE
 var previous_state: PlayerState
 
@@ -16,7 +16,8 @@ const TIME_BETWEEN_ROTATIONS: float = 0.35
 
 @export var current_navigation_point: NavigationPoint
 var next_navigation_point: NavigationPoint
-
+var current_focus_point: FocusPoint
+var playing_intro: bool = true
 # Movement
 enum FacingDirection {
 	NORTH,	# 0
@@ -27,17 +28,21 @@ enum FacingDirection {
 
 # State of the player
 enum PlayerState {
-	IDLE,						# 0		CAN OPEN DIARY
-	MOVING,						# 1
-	FOCUSING,					# 2
-	INVENTORY,					# 3		CAN OPEN DIARY
-	DIARY,						# 4
-	ALCHEMICAL_PROCESS_CHOICE	# 5
+	IDLE,		# 0		CAN OPEN DIARY
+	MOVING,		# 1
+	FOCUSING,	# 2
+	INVENTORY,	# 3		CAN OPEN DIARY
+	DIARY,		# 4
+	ALCHEMICAL_PROCESS_CHOICE,	# 5
+	READING_BOOK# 6
 }
 
 @onready var diary = $Diary
-@onready var debug_ui = $DEBUG_UI
+@onready var animated_book = $AnimatedBook
 
+@onready var debug_ui = $DEBUG_UI
+@onready var focus_label_animation = $Focus/FocusLabelAnimation
+var tooltip_on: bool = false
 @onready var inventory_ui = $HUD/InventoryUI
 
 
@@ -48,10 +53,15 @@ func _ready():
 	InteractionSystem.alchemical_process_choice_closed.connect(alchemical_process_choice_closed)
 
 
+
 func _process(_delta):
+	if playing_intro:
+		return
 	_process_movement_inputs()
 	_process_focus_inputs()
 	_process_pause_inputs()
+	_process_reading_inputs()
+
 	_process_inventory_inputs()
 	
 	# TODO: experiment to start creepy soundtrack at a scripted moment (in this example, focussing on `NavigationPoint11`)
@@ -63,6 +73,9 @@ func _process(_delta):
 	debug_ui.text += "\nPOS: " + str(camera_3d.global_position)
 	debug_ui.text += "\nROT: " + str(camera_3d.global_position)
 	debug_ui.text += "\nCurr nav point: " + str(current_navigation_point)
+	debug_ui.text += "\ntooltip: " + str(tooltip_on)
+	debug_ui.text += "\nAnibook Pos: " + str(animated_book.global_position)
+	
 
 
 func _process_inventory_inputs():
@@ -71,7 +84,7 @@ func _process_inventory_inputs():
 
 
 func _process_pause_inputs():
-	if Input.is_action_just_pressed("open_diary"):
+	if Input.is_action_just_pressed("open_diary") and player_state not in [PlayerState.FOCUSING, PlayerState.MOVING, PlayerState.INVENTORY, PlayerState.READING_BOOK]:
 		if player_state == PlayerState.DIARY and not diary.animation_player.is_playing():
 			player_state = previous_state
 			diary.put_away()
@@ -106,15 +119,32 @@ func _process_focus_inputs():
 		focus_point = current_navigation_point.get("west_focus_point")
 
 	if match_north or match_east or match_south or match_west:
+		if not tooltip_on and player_state == PlayerState.IDLE:
+			focus_label_animation.play("appear")
+			
 		if Input.is_action_just_pressed("move_forward") and player_state == PlayerState.IDLE:
+			#if not focus_label_animation.is_playing():
+			focus_label_animation.queue("disappear")
+			
 			player_state = PlayerState.MOVING
 			unfocus_pos = camera_3d.global_position
 			unfocused_rot = camera_3d.global_basis
 			_animate_focus(focus_point)
+			current_focus_point = focus_point
 		elif Input.is_action_just_pressed("move_backward") and player_state == PlayerState.FOCUSING:
 			player_state = PlayerState.MOVING
 			_animate_defocus(unfocus_pos, unfocused_rot)
+			current_focus_point = null
+			
+	else:
+		if tooltip_on and not focus_label_animation.is_playing():
+			focus_label_animation.play("disappear")
 
+func turn_tooltip():
+	tooltip_on = true
+
+func turn_tooltip_off():
+	tooltip_on = false
 
 func _process_movement_inputs():
 	# --- FORWARD ---
@@ -256,8 +286,29 @@ func _tween_defocus_over():
 	player_state = PlayerState.IDLE
 # -------------------------------------------------------
 func _impossible_movement():
-	# TODO: remove debug message
-	print("It's impossible to move forward!")
+	pass
+
+func _process_reading_inputs():
+	if Input.is_action_just_pressed("turn_diary_left") and player_state == PlayerState.READING_BOOK:
+		animated_book.turn_left()
+	if Input.is_action_just_pressed("turn_diary_right") and player_state == PlayerState.READING_BOOK:
+		animated_book.turn_right()
+	if Input.is_action_just_pressed("escape") and player_state == PlayerState.READING_BOOK:
+		animated_book.put_away()
+	
+		
+var pre_book_state 
+
+func _on_book_opened(page_path):
+	animated_book.pull_out(page_path)
+
+func _on_animated_book_sig_put_away():
+	player_state = pre_book_state
+
+
+func _on_animated_book_sig_pulled_out():
+	pre_book_state = player_state
+	player_state = PlayerState.READING_BOOK
 
 
 # --------------------------------------------------------------------
@@ -268,3 +319,9 @@ func alchemical_process_choice_opened():
 
 func alchemical_process_choice_closed():
 	player_state = previous_state
+
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "fade_out":
+		playing_intro = false

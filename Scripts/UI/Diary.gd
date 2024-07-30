@@ -75,8 +75,7 @@ func _on_codex_tag_pressed():
 
 
 func _on_studies_tag_pressed():
-	# TODO
-	options.hide()
+	pass
 
 
 func _on_options_tag_pressed():
