@@ -2,51 +2,6 @@ extends Node
 
 ##### Preload sounds to randomise their execution later #####
 
-const thunderstorm_array = [preload("res://Assets/Audio/Sound/storm_faded.mp3")]
-
-const footsteps_array = [
-	preload("res://Assets/Audio/Sound/footsteps_wood_single_2.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_wood_single_3.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_wood_single_4.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_cellar_single_1.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_cellar_single_2.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_cellar_single_3.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_cellar_single_4.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_cellar_single_5.mp3"),
-]
-
-const creaks_array = [
-	preload("res://Assets/Audio/Sound/creaking_creepy_3.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_creepy_4.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_creepy_5.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_creepy_6.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_door_1.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_door_2.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_metal_1.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_metal_2.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_metal_3.mp3"),
-]
-
-const bucket_water_drops_array = [
-	preload("res://Assets/Audio/Sound/water_drop_1.mp3"),
-	preload("res://Assets/Audio/Sound/water_drop_2.mp3"),
-	preload("res://Assets/Audio/Sound/water_drop_3.mp3"),
-	preload("res://Assets/Audio/Sound/water_drop_4.mp3"),
-	preload("res://Assets/Audio/Sound/water_drop_5.mp3"),
-	preload("res://Assets/Audio/Sound/water_drop_6.mp3"),
-]
-
-const chest_open_array = [preload("res://Assets/Audio/Sound/chest_opening_short.mp3")]
-
-const object_interaction_array = [
-	preload("res://Assets/Audio/Sound/drop_1.mp3"),
-	preload("res://Assets/Audio/Sound/drop_2.mp3"),
-	preload("res://Assets/Audio/Sound/drop_3.mp3"),
-	preload("res://Assets/Audio/Sound/drop_4.mp3"),
-	preload("res://Assets/Audio/Sound/drop_5.mp3"),
-	preload("res://Assets/Audio/Sound/drop_6.mp3"),
-]
-
 const book_turn_page_array = [
 	preload("res://Assets/Audio/Sound/book_turn_1.mp3"),
 	preload("res://Assets/Audio/Sound/book_turn_2.mp3"),
@@ -60,12 +15,57 @@ const book_pickup_array = [
 	preload("res://Assets/Audio/Sound/book_pickup_3.mp3"),
 ]
 
+const bucket_water_drops_array = [
+	preload("res://Assets/Audio/Sound/water_drop_1.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_2.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_3.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_4.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_5.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_6.mp3"),
+]
+
+const chest_open_array = [preload("res://Assets/Audio/Sound/chest_opening_short.mp3")]
+
+const creaks_array = [
+	preload("res://Assets/Audio/Sound/creaking_creepy_3.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_creepy_4.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_creepy_5.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_creepy_6.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_door_1.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_door_2.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_metal_1.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_metal_2.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_metal_3.mp3"),
+]
+
+const footsteps_array = [
+	preload("res://Assets/Audio/Sound/footsteps_wood_single_2.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_wood_single_3.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_wood_single_4.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_cellar_single_1.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_cellar_single_2.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_cellar_single_3.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_cellar_single_4.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_cellar_single_5.mp3"),
+]
+
 const melting_array = [preload("res://Assets/Audio/Sound/melting.mp3")]
 
 const mortar_array = [
 	preload("res://Assets/Audio/Sound/crushing_new_1.mp3"),
 	preload("res://Assets/Audio/Sound/crushing_new_2.mp3"),
 ]
+
+const object_interaction_array = [
+	preload("res://Assets/Audio/Sound/drop_1.mp3"),
+	preload("res://Assets/Audio/Sound/drop_2.mp3"),
+	preload("res://Assets/Audio/Sound/drop_3.mp3"),
+	preload("res://Assets/Audio/Sound/drop_4.mp3"),
+	preload("res://Assets/Audio/Sound/drop_5.mp3"),
+	preload("res://Assets/Audio/Sound/drop_6.mp3"),
+]
+
+const thunderstorm_array = [preload("res://Assets/Audio/Sound/storm_faded.mp3")]
 
 
 # Called when the node enters the scene tree for the first time.
