@@ -12,6 +12,8 @@
 stream = ExtResource("1_lm14q")
 bus = &"Music"
 
+[node name="Books" type="AudioStreamPlayer" parent="."]
+
 [node name="Bucket" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.32303, 0.236597, 1.99142)
 attenuation_model = 1
@@ -22,8 +24,6 @@ unit_size = 4.0
 
 [node name="Creaks" type="AudioStreamPlayer" parent="."]
 bus = &"SFX"
-
-[node name="Diary" type="AudioStreamPlayer" parent="."]
 
 [node name="Fireplace" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.234, 0.42, 0.944)

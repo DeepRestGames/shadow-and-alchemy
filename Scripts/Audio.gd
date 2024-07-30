@@ -207,8 +207,8 @@ func _ready():
 	item_peppergrains.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	item_fireplace_slot.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	item_mortar_slot.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Diary, book_turn_page_array))
-	animated_book.connect("interacted", play_sound_from_array.bind("book picked up", $Diary, book_pickup_array))
+	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Books, book_turn_page_array))
+	animated_book.connect("interacted", play_sound_from_array.bind("book picked up", $Books, book_pickup_array))
 
 	##### Setup melting coin sound #####
 
@@ -221,7 +221,7 @@ func _ready():
 
 	##### Setup turning pages sound (they use the same sound effect) #####
 
-	animated_book.connect("turn_page", play_sound_from_array.bind("book interacted", $Diary, book_turn_page_array))
+	animated_book.connect("turn_page", play_sound_from_array.bind("book interacted", $Books, book_turn_page_array))
 
 	##### Setup randomly timed sounds #####
 
