@@ -191,6 +191,7 @@ script = ExtResource("1_h2fim")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 rotation_edit_mode = 2
+fov = 80.0
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
@@ -239,7 +240,7 @@ libraries = {
 }
 
 [node name="AnimatedBook" parent="." instance=ExtResource("6_4dkbr")]
-transform = Transform3D(-0.47, 4.10887e-08, 1.79604e-15, 4.02169e-09, 0.0460027, 0.467743, 4.08914e-08, 0.467743, -0.0460027, 0.153865, -0.0681878, 0.256732)
+transform = Transform3D(-0.46966, 0.0177925, -0.0017499, 3.99767e-09, 0.0460027, 0.467743, 0.0178784, 0.467404, -0.0459694, 0.153865, -0.0267514, 0.383972)
 visible = false
 
 [connection signal="sig_pulled_out" from="AnimatedBook" to="." method="_on_animated_book_sig_pulled_out"]

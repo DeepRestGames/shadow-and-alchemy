@@ -967,9 +967,9 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 
 script = ExtResource("1_oapgg")
 
 [node name="Candle" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45938, 6.37916e-08)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.927212, 4.05298e-08)
 layers = 2
-light_color = Color(0.439216, 0.439216, 0.439216, 1)
+light_color = Color(0.529412, 0.529412, 0.529412, 1)
 light_cull_mask = 4294966274
 omni_range = 1.91495
 
