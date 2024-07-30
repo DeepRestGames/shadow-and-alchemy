@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Puzzle" load_steps=6 format=3 uid="uid://cpseljbvj58x5"]
 
+[ext_resource type="Resource" uid="uid://bqktvw280o6do" path="res://Resources/InventoryItems/Item_CrucibleWithMoltenCoins.tres" id="1_0l6e6"]
 [ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="1_c4rsy"]
-[ext_resource type="Resource" uid="uid://t0soatc27kgj" path="res://Resources/InventoryItems/Item_CrucibleWithCoins.tres" id="1_hb4g2"]
 [ext_resource type="Resource" uid="uid://bupnoduq0ua25" path="res://Resources/InventoryItems/Item_GrindedPepper.tres" id="2_3opd8"]
 [ext_resource type="Resource" uid="uid://dcuavn3lw5dxg" path="res://Resources/InventoryItems/Item_WaterFlask.tres" id="3_w8wsu"]
 [ext_resource type="Resource" uid="uid://byo7gb486tnnw" path="res://Resources/InventoryItems/Item_MercuryFlask.tres" id="4_ubb2y"]
@@ -10,7 +10,7 @@
 script = ExtResource("1_c4rsy")
 puzzle_name = "Puzzle_Mercury"
 puzzle_description = ""
-puzzle_solution_items = [ExtResource("1_hb4g2"), ExtResource("2_3opd8"), ExtResource("3_w8wsu")]
+puzzle_solution_items = [ExtResource("1_0l6e6"), ExtResource("2_3opd8"), ExtResource("3_w8wsu")]
 order_needed = false
 reward = ExtResource("4_ubb2y")
 alchemical_process_needed = true

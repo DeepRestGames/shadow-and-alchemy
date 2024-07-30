@@ -1859,9 +1859,10 @@ mesh = SubResource("QuadMesh_goo6b")
 transform = Transform3D(5.35089, 0.448954, 0.105772, 0.161918, -0.0998301, -3.62795, -0.353536, 6.74935, -0.0606971, 0, 0.207219, 0)
 visible = false
 
-[node name="AlchemicalCircle" parent="Props" instance=ExtResource("12_hwcwv")]
+[node name="AlchemicalCircle" parent="Props" node_paths=PackedStringArray("puzzle_slots") instance=ExtResource("12_hwcwv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522614, -1.04896, 3.98658)
 related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("14_bpxoe"), ExtResource("15_mm4yd"), ExtResource("16_wch61"), ExtResource("17_p1gj2"), ExtResource("18_2l2kk"), ExtResource("19_2ajug"), ExtResource("20_ugjht")])
+puzzle_slots = [NodePath("AlchemicalCirclePuzzleSlot1"), NodePath("AlchemicalCirclePuzzleSlot2"), NodePath("AlchemicalCirclePuzzleSlot3")]
 
 [node name="Candle" parent="Props/AlchemicalCircle" instance=ExtResource("11_llow7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00540996, -0.109975, -0.222986)
