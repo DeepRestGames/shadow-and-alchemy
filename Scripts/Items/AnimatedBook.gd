@@ -31,7 +31,7 @@ func put_away():
 	animation_player.play("disappear")
 	
 func pull_out(d_path: String):
-	if not is_book_open:
+	if not is_book_open and player.player_state == player.PlayerState.FOCUSING:
 		animation_player.play("appear")
 		pages.clear()
 		_load_pages(d_path)
