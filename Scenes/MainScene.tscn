@@ -3073,9 +3073,6 @@ transform = Transform3D(-0.099946, 0, -0.00328414, 0.000815344, 0.0968692, -0.02
 [node name="Audio" parent="." instance=ExtResource("88_yilx3")]
 script = ExtResource("89_jxhjo")
 
-[node name="Key2" parent="." instance=ExtResource("83_n727y")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.85315, 0.812321, -2.43294)
-
 [node name="Grimoire" parent="." instance=ExtResource("38_t6tu7")]
 transform = Transform3D(-1.69076e-08, 0.208046, -0.341638, -1.82481e-11, 0.341638, 0.208046, 0.4, 8.80949e-09, -1.44312e-08, -3.90871, 1.17938, -0.0561288)
 
