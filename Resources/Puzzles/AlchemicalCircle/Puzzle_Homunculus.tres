@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="Puzzle" load_steps=5 format=3 uid="uid://cvgju2vwnuacr"]
+[gd_resource type="Resource" script_class="Puzzle" load_steps=6 format=3 uid="uid://cvgju2vwnuacr"]
 
 [ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="1_kc1hn"]
 [ext_resource type="Resource" uid="uid://cwi1dqmu5sh2v" path="res://Resources/InventoryItems/Item_PileOfBrimstone.tres" id="1_rktwq"]
 [ext_resource type="Resource" uid="uid://byo7gb486tnnw" path="res://Resources/InventoryItems/Item_MercuryFlask.tres" id="2_51jjv"]
 [ext_resource type="Resource" uid="uid://chpder0st0rxv" path="res://Resources/InventoryItems/Item_PhilosopherStone.tres" id="3_mcgrb"]
+[ext_resource type="Resource" uid="uid://bvlfdy7sfpgqi" path="res://Resources/InventoryItems/FinalReward.tres" id="4_47ga6"]
 
 [resource]
 script = ExtResource("1_kc1hn")
@@ -11,5 +12,6 @@ puzzle_name = "Puzzle_Homunculus"
 puzzle_description = ""
 puzzle_solution_items = [ExtResource("1_rktwq"), ExtResource("2_51jjv"), ExtResource("3_mcgrb")]
 order_needed = false
-alchemical_process_needed = false
-alchemical_process_solution = 0
+reward = ExtResource("4_47ga6")
+alchemical_process_needed = true
+alchemical_process_solution = 11

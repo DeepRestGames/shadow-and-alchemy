@@ -8,4 +8,4 @@ script = ExtResource("2_ep3t8")
 item_name = "Molten Coins"
 item_icon = ExtResource("1_mg3bc")
 is_reusable = false
-item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_CrucibleCoins.tscn"
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_CrucibleMolten.tscn"

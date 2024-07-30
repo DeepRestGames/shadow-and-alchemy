@@ -1667,6 +1667,9 @@ world_environment = NodePath("../../../WorldEnvironment")
 [node name="ChestTop" parent="Chests" instance=ExtResource("28_qwxhw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.555, 0.43, -1.329)
 
+[node name="ChestTopCollision" parent="Chests/ChestTop" index="2"]
+collision_layer = 2
+
 [node name="Keypad" parent="Chests/ChestTop" instance=ExtResource("53_ed8k5")]
 transform = Transform3D(0.0973193, 0.818015, -1.25355, 0.475028, 1.17438, 0.803232, 1.41946, -0.449094, -0.182861, -0.712486, -0.15388, 0.12008)
 
@@ -1859,9 +1862,10 @@ mesh = SubResource("QuadMesh_goo6b")
 transform = Transform3D(5.35089, 0.448954, 0.105772, 0.161918, -0.0998301, -3.62795, -0.353536, 6.74935, -0.0606971, 0, 0.207219, 0)
 visible = false
 
-[node name="AlchemicalCircle" parent="Props" instance=ExtResource("12_hwcwv")]
+[node name="AlchemicalCircle" parent="Props" node_paths=PackedStringArray("puzzle_slots") instance=ExtResource("12_hwcwv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522614, -1.04896, 3.98658)
 related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("14_bpxoe"), ExtResource("15_mm4yd"), ExtResource("16_wch61"), ExtResource("17_p1gj2"), ExtResource("18_2l2kk"), ExtResource("19_2ajug"), ExtResource("20_ugjht")])
+puzzle_slots = [NodePath("AlchemicalCirclePuzzleSlot1"), NodePath("AlchemicalCirclePuzzleSlot2"), NodePath("AlchemicalCirclePuzzleSlot3")]
 
 [node name="Candle" parent="Props/AlchemicalCircle" instance=ExtResource("11_llow7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00540996, -0.109975, -0.222986)
@@ -3125,6 +3129,7 @@ vertical_alignment = 1
 [connection signal="animation_finished" from="SplashScreen/AnimationPlayer" to="Player" method="_on_animation_player_animation_finished"]
 
 [editable path="Player"]
+[editable path="Chests/ChestTop"]
 [editable path="Navigation/FocusPoints/FocusPointTable"]
 [editable path="Navigation/FocusPoints/FocusPointWindow"]
 [editable path="Navigation/FocusPoints/FocusPointChest"]

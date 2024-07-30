@@ -29,6 +29,8 @@ func item_dropped(item: InventoryItemData):
 
 	print("Item " + item.item_name + " dropped in slot!")
 	current_dropped_item = item
+	
+	InventorySystem.remove_item(current_dropped_item)
 
 	# Instantiate item 3D model on top of current puzzle slot
 	var item_scene = load(item.item_model_scene_path)
@@ -52,10 +54,6 @@ func item_dropped(item: InventoryItemData):
 	for puzzle in alchemical_circle.related_puzzles:
 		puzzle.add_puzzle_item(item)
 
-	# Remove from inventory if item is not reusable
-	if not current_dropped_item.is_reusable:
-		InventorySystem.remove_item(current_dropped_item)
-
 
 func item_removed(item: InventoryItemData):
 	item_was_interacted.emit()
@@ -68,3 +66,9 @@ func item_removed(item: InventoryItemData):
 	current_dropped_item = null
 	current_dropped_item_scene = null
 	current_prop_pickup_scene = null
+
+
+func erase_used_item():
+	current_dropped_item = null
+	current_dropped_item_scene.queue_free()
+	current_prop_pickup_scene.queue_free()
