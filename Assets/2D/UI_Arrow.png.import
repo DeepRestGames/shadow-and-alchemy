@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c41gqprfgq0c8"
-path="res://.godot/imported/Ceremonial_knife.png-1ce5b7a2330c857704806847360121ad.ctex"
+uid="uid://dgeu4eo2m5l60"
+path="res://.godot/imported/UI_Arrow.png-9673d3ad9ee27adbabb8cb8f33b0c56e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Icons/Ceremonial_knife.png"
-dest_files=["res://.godot/imported/Ceremonial_knife.png-1ce5b7a2330c857704806847360121ad.ctex"]
+source_file="res://Assets/2D/UI_Arrow.png"
+dest_files=["res://.godot/imported/UI_Arrow.png-9673d3ad9ee27adbabb8cb8f33b0c56e.ctex"]
 
 [params]
 

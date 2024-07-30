@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=124 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -15,18 +15,11 @@
 [ext_resource type="PackedScene" uid="uid://cnxvs6h6003rk" path="res://Scenes/Candle.tscn" id="11_llow7"]
 [ext_resource type="PackedScene" uid="uid://ddvlmsgydjki2" path="res://Scenes/AlchemicalCircle.tscn" id="12_hwcwv"]
 [ext_resource type="PackedScene" uid="uid://d0cq4kvpnenr4" path="res://Assets/3D/Props/SpiceJarFilled_v0.0.0.blend" id="13_pyh8a"]
-[ext_resource type="Resource" uid="uid://085vrd1f3j7n" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_BloodDistillation.tres" id="14_bpxoe"]
-[ext_resource type="Resource" uid="uid://dbiec6p24dgo2" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_BloodSeparation.tres" id="15_mm4yd"]
 [ext_resource type="PackedScene" uid="uid://dl1o0hpwktapu" path="res://Assets/3D/Props/Sieve_v0.0.0.blend" id="15_p5chk"]
 [ext_resource type="PackedScene" uid="uid://ca4m8y7n220nj" path="res://Scenes/Items/InventoryItems/Item_ImpureBlood.tscn" id="16_i2r0i"]
 [ext_resource type="PackedScene" uid="uid://6hhogeucrtfh" path="res://Assets/3D/Props/CandeHolderWall.blend" id="16_irf7i"]
-[ext_resource type="Resource" uid="uid://cvgju2vwnuacr" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Homunculus.tres" id="16_wch61"]
-[ext_resource type="Resource" uid="uid://cpseljbvj58x5" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Mercury.tres" id="17_p1gj2"]
 [ext_resource type="PackedScene" uid="uid://dpn1o2iqs3wea" path="res://Scenes/Items/InventoryItems/Item_Laurel.tscn" id="17_q0rhj"]
-[ext_resource type="Resource" uid="uid://b4y8lpp7yljn7" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_PhilosopherStone.tres" id="18_2l2kk"]
 [ext_resource type="PackedScene" uid="uid://cndhtqglibb81" path="res://Scenes/Items/InventoryItems/Item_OpalStone.tscn" id="18_j6jlu"]
-[ext_resource type="Resource" uid="uid://cfy7k11vb1jg5" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Sulfur.tres" id="19_2ajug"]
-[ext_resource type="Resource" uid="uid://ojg3m3wpmidh" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Vinegar.tres" id="20_ugjht"]
 [ext_resource type="PackedScene" uid="uid://sncutmva0ga2" path="res://Assets/3D/Props/Hand.blend" id="23_af127"]
 [ext_resource type="PackedScene" uid="uid://dhmonnu314mp4" path="res://Assets/3D/Props/Alembic_v0.0.0.blend" id="23_krjlx"]
 [ext_resource type="PackedScene" uid="uid://d0tfbw602vqkd" path="res://Assets/3D/Props/MortarPestle.blend" id="25_up3bp"]
@@ -1862,10 +1855,8 @@ mesh = SubResource("QuadMesh_goo6b")
 transform = Transform3D(5.35089, 0.448954, 0.105772, 0.161918, -0.0998301, -3.62795, -0.353536, 6.74935, -0.0606971, 0, 0.207219, 0)
 visible = false
 
-[node name="AlchemicalCircle" parent="Props" node_paths=PackedStringArray("puzzle_slots") instance=ExtResource("12_hwcwv")]
+[node name="AlchemicalCircle" parent="Props" instance=ExtResource("12_hwcwv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522614, -1.04896, 3.98658)
-related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("14_bpxoe"), ExtResource("15_mm4yd"), ExtResource("16_wch61"), ExtResource("17_p1gj2"), ExtResource("18_2l2kk"), ExtResource("19_2ajug"), ExtResource("20_ugjht")])
-puzzle_slots = [NodePath("AlchemicalCirclePuzzleSlot1"), NodePath("AlchemicalCirclePuzzleSlot2"), NodePath("AlchemicalCirclePuzzleSlot3")]
 
 [node name="Candle" parent="Props/AlchemicalCircle" instance=ExtResource("11_llow7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00540996, -0.109975, -0.222986)

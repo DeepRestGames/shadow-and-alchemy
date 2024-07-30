@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c777f04304wm4"
-path="res://.godot/imported/ui_interface_user_user_interface_navigate_arrow_left-512-595134033.png-1ab9d5ed0b37fdb976d7b44922156918.ctex"
+uid="uid://b48r5r7sh7kck"
+path="res://.godot/imported/tile_0154.png-f848b3081b1b9abea796f4699e3e52c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Icons/ui_interface_user_user_interface_navigate_arrow_left-512-595134033.png"
-dest_files=["res://.godot/imported/ui_interface_user_user_interface_navigate_arrow_left-512-595134033.png-1ab9d5ed0b37fdb976d7b44922156918.ctex"]
+source_file="res://Assets/2D/Cursors/tile_0154.png"
+dest_files=["res://.godot/imported/tile_0154.png-f848b3081b1b9abea796f4699e3e52c3.ctex"]
 
 [params]
 
