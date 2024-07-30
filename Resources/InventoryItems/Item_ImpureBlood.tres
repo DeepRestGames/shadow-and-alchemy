@@ -8,4 +8,4 @@ script = ExtResource("2_36lsv")
 item_name = "Impure Blood"
 item_icon = ExtResource("1_v7r2p")
 is_reusable = false
-item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_SeparatedBlood.tscn"
+item_model_scene_path = "res://Scenes/Items/InventoryItems/Item_ImpureBlood.tscn"

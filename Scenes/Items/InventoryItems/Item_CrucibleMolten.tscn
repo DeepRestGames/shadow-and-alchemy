@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://kh1j3uogev62"]
 
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_hxyxi"]
-[ext_resource type="Resource" uid="uid://t0soatc27kgj" path="res://Resources/InventoryItems/Item_CrucibleWithMoltenCoins.tres" id="2_hx2l1"]
+[ext_resource type="Resource" uid="uid://t0soatc27kgj" path="res://Resources/InventoryItems/Item_CrucibleWithCoins.tres" id="2_hx2l1"]
 [ext_resource type="PackedScene" uid="uid://cvjg0uqd02gp7" path="res://Assets/3D/Props/Crucible.blend" id="3_tf6ah"]
 [ext_resource type="PackedScene" uid="uid://be5fmscv5e4pb" path="res://Assets/3D/Props/Coin.blend" id="4_eybrf"]
 [ext_resource type="Material" uid="uid://d1emby0aspm3t" path="res://Assets/3D/Props/materials/MoltenSilver.tres" id="5_omeat"]

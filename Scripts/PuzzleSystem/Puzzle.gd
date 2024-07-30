@@ -73,6 +73,7 @@ func check_puzzle_solution():
 				puzzle_solved = true
 		else:
 			print("Puzzle solved!")
-			InventorySystem.add_item(reward)
+			if reward != null:
+				InventorySystem.add_item(reward)
 			puzzle_solved = true
 

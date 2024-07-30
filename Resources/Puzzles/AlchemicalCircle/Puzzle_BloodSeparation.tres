@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Puzzle" load_steps=3 format=3 uid="uid://dbiec6p24dgo2"]
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://dbiec6p24dgo2"]
 
+[ext_resource type="Resource" uid="uid://cp11jxgijakv1" path="res://Resources/InventoryItems/Item_ImpureBlood.tres" id="1_i8fga"]
 [ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="1_voxqn"]
 [ext_resource type="Resource" uid="uid://doehsdyskj24i" path="res://Resources/InventoryItems/Item_SeparatedBlood.tres" id="2_hpkay"]
 
@@ -7,7 +8,7 @@
 script = ExtResource("1_voxqn")
 puzzle_name = "Puzzle_BloodSeparation"
 puzzle_description = ""
-puzzle_solution_items = [ExtResource("2_hpkay")]
+puzzle_solution_items = [ExtResource("1_i8fga")]
 order_needed = false
 reward = ExtResource("2_hpkay")
 alchemical_process_needed = true

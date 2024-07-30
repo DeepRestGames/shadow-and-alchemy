@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=3 format=3 uid="uid://c3byh0uvlui5q"]
+
+[ext_resource type="Resource" uid="uid://dtbwixmffjpi2" path="res://Resources/InventoryItems/Item_ChestKey.tres" id="2_vr1jq"]
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="3_6exvp"]
+
+[resource]
+script = ExtResource("3_6exvp")
+puzzle_name = "Puzzle_ChestKey"
+puzzle_description = ""
+puzzle_solution_items = [ExtResource("2_vr1jq")]
+order_needed = false
+alchemical_process_needed = false
+alchemical_process_solution = 0
