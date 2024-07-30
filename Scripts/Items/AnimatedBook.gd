@@ -34,10 +34,10 @@ func put_away():
 	animation_player.play("disappear")
 
 func pull_out(p_array): #  d_path: String):
+	current_left_page_index = 0
 	if not is_book_open and player.player_state == player.PlayerState.FOCUSING:
 		interacted.emit()
 		animation_player.play("appear")
-		pages.clear()
 		_load_pages(p_array)
 
 func _load_pages(p_array):
