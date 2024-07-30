@@ -1,8 +1,8 @@
 extends Node3D
 
 
-var mouse_cursor_default = preload("res://Assets/2D/Cursors/tile_0154.png")
-var mouse_cursor_drag = preload("res://Assets/2D/Cursors/tile_0156.png")
+var mouse_cursor_default = preload("res://Assets/2D/Cursors/Tblu_Cursor-03.png")
+var mouse_cursor_drag = preload("res://Assets/2D/Cursors/Tblu_Cursor-04.png")
 
 signal alchemical_process_choice_opened
 signal alchemical_process_choice_closed
