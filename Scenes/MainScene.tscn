@@ -1,4 +1,4 @@
-[gd_scene load_steps=159 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=167 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
 [ext_resource type="Texture2D" uid="uid://5vv2grj3yhfy" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k_blurred.hdr" id="4_dkxga"]
@@ -119,8 +119,16 @@
 [ext_resource type="Texture2D" uid="uid://n5wpxp5hkqc8" path="res://Assets/2D/Books/Pisces/Pisces_02.png" id="86_gs4kd"]
 [ext_resource type="PackedScene" uid="uid://cggn12ohdi7hp" path="res://Scenes/Audio.tscn" id="88_yilx3"]
 [ext_resource type="Script" path="res://Scripts/Audio.gd" id="89_jxhjo"]
+[ext_resource type="Texture2D" uid="uid://d3rcv7kd8ogx5" path="res://Assets/2D/Books/Earth/Earth_01.png" id="92_hu0o3"]
+[ext_resource type="Texture2D" uid="uid://dtf1bqkugmmf8" path="res://Assets/2D/Books/Earth/Earth_02.png" id="93_ob4on"]
 [ext_resource type="FontFile" uid="uid://cb57uwfvgsqmd" path="res://Assets/2D/Fonts/Almendra-Italic.ttf" id="94_63wl0"]
 [ext_resource type="Script" path="res://Scripts/SplashScreen.gd" id="94_v0irr"]
+[ext_resource type="Texture2D" uid="uid://drg04saijig0t" path="res://Assets/2D/Books/Air/Air_01.png" id="95_08513"]
+[ext_resource type="Texture2D" uid="uid://e2r5ft87ni3g" path="res://Assets/2D/Books/Air/Air_02.png" id="96_rv5qa"]
+[ext_resource type="Texture2D" uid="uid://cixxdl25e81cn" path="res://Assets/2D/Books/Water/Water_01.png" id="98_2it06"]
+[ext_resource type="Texture2D" uid="uid://dusvucn5i5r6u" path="res://Assets/2D/Books/Water/Water_02.png" id="99_cmrqo"]
+[ext_resource type="Texture2D" uid="uid://bu8rquc606li5" path="res://Assets/2D/Books/Fire/Fire_01.png" id="101_wxcqu"]
+[ext_resource type="Texture2D" uid="uid://qsrdi4fpw7qf" path="res://Assets/2D/Books/Fire/Fire_02.png" id="102_gnphg"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("4_dkxga")
@@ -2098,18 +2106,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.276165, -0.58826, 7.79819)
 [node name="ItemBookBrown_Earth" parent="Props" instance=ExtResource("48_s5nvg")]
 transform = Transform3D(-1.29949, 0, -0.0362983, 0, 1.3, 0, 0.0362983, 0, -1.29949, -0.554228, -0.48961, 7.7493)
 texture = ExtResource("47_wjf4x")
+pages_array = Array[Texture2D]([ExtResource("92_hu0o3"), ExtResource("93_ob4on")])
 
 [node name="ItemBookBrown_Air" parent="Props" instance=ExtResource("48_s5nvg")]
 transform = Transform3D(-1.29949, 0, -0.0362983, 0, 1.3, 0, 0.0362983, 0, -1.29949, -0.636873, -0.48961, 7.75161)
 texture = ExtResource("44_mkhsd")
+pages_array = Array[Texture2D]([ExtResource("95_08513"), ExtResource("96_rv5qa")])
 
 [node name="ItemBookBrown_Water" parent="Props" instance=ExtResource("48_s5nvg")]
 transform = Transform3D(-1.29669, 0, -0.0926753, 0, 1.3, 0, 0.0926753, 0, -1.29669, -0.723769, -0.48961, 7.75962)
 texture = ExtResource("45_yqq5f")
+pages_array = Array[Texture2D]([ExtResource("98_2it06"), ExtResource("99_cmrqo")])
 
 [node name="ItemBookBrown_Fire" parent="Props" instance=ExtResource("48_s5nvg")]
 transform = Transform3D(-1.29819, 0, 0.0685803, 0, 1.3, 0, -0.0685803, 0, -1.29819, -0.81959, -0.48961, 7.74737)
 texture = ExtResource("46_hocwh")
+pages_array = Array[Texture2D]([ExtResource("101_wxcqu"), ExtResource("102_gnphg")])
 
 [node name="GraveDirt" parent="Props" instance=ExtResource("13_pyh8a")]
 transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 4.97294, -1.7614, 4.88553)
