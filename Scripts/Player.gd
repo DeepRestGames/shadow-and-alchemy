@@ -299,8 +299,8 @@ func _process_reading_inputs():
 		
 var pre_book_state 
 
-func _on_book_opened(page_path):
-	animated_book.pull_out(page_path)
+func _on_book_opened(page_array):
+	animated_book.pull_out(page_array)
 
 func _on_animated_book_sig_put_away():
 	player_state = pre_book_state
@@ -321,7 +321,9 @@ func alchemical_process_choice_closed():
 	player_state = previous_state
 
 
+@onready var animation_player = $Focus/AnimationPlayer
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fade_out":
 		playing_intro = false
+		animation_player.play("fade_in")
