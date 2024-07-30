@@ -1,7 +1,7 @@
 class_name Puzzle
 extends Resource
 
-signal item_was_interacted
+signal interacted
 
 @export var puzzle_name: String
 @export_multiline var puzzle_description: String
@@ -30,7 +30,7 @@ func add_puzzle_item(item: InventoryItemData):
 
 
 func remove_puzzle_item(item: InventoryItemData):
-	item_was_interacted.emit()
+	interacted.emit()
 	if puzzle_solved:
 		return
 

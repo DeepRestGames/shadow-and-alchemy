@@ -139,7 +139,7 @@ func _ready():
 
 	##### Setup background music #####
 
-	$BackgroundMusic.volume_db = -10
+	$BackgroundMusic.volume_db = -15
 	var background_music: AudioStreamMP3 = $BackgroundMusic.stream as AudioStreamMP3
 	background_music.loop = true
 	background_music.loop_offset = 21.333 # measures 9 to 16 included
@@ -147,7 +147,7 @@ func _ready():
 
 	##### Setup footsteps #####
 
-	$Footsteps.volume_db = -10
+	$Footsteps.volume_db = -15
 	player.connect("player_moved", play_sound_from_array.bind("footstep", $Footsteps, footsteps_array))
 
 	##### Setup chest opening #####
@@ -165,34 +165,34 @@ func _ready():
 	##### Setup pickup and drop item sound (they use the same sound effect) #####
 
 	$ItemInteract.volume_db = -5
-	alchemical_circle_1.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	alchemical_circle_2.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	alchemical_circle_3.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	opal_stone.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_mushroom.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_jarofgrapes.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_coal.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookblack_salt.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookblack_surfur.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookblack_mercury.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_aries.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_taurus.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_gemini.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_cancer.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_virgo.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_libra.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_scorpio.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_sagittarius.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_capricorn.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_aquarius.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_projection.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_crucible.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_flintandsteel.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_gravedirt.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_peppergrains.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_fireplace_slot.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_mortar_slot.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	alchemical_circle_1.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	alchemical_circle_2.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	alchemical_circle_3.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	opal_stone.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_mushroom.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_jarofgrapes.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_coal.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookblack_salt.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookblack_surfur.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookblack_mercury.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred_aries.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred_taurus.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred_gemini.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred_cancer.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred_virgo.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred_libra.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred_scorpio.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred_sagittarius.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred_capricorn.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred_aquarius.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	# item_bookred_projection.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_crucible.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_flintandsteel.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_gravedirt.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_peppergrains.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_fireplace_slot.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	item_mortar_slot.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Books, book_turn_page_array))
 	animated_book.connect("interacted", play_sound_from_array.bind("book picked up", $Books, book_pickup_array))
 

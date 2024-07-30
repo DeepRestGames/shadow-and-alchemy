@@ -9,11 +9,11 @@ var current_dropped_item: InventoryItemData
 var current_dropped_item_scene = null
 var current_prop_pickup_scene: Prop_Pickup = null
 
-signal item_was_interacted
+signal interacted
 
 func item_dropped(item: InventoryItemData):
-	item_was_interacted.emit()
-	# print("ALCHEMICAL CIRCLE item_was_interacted") # TODO: debug print
+	interacted.emit()
+	# print("ALCHEMICAL CIRCLE interacted") # TODO: debug print
 
 	# Swap dropped item with already present one
 	if current_dropped_item != null:
@@ -58,7 +58,7 @@ func item_dropped(item: InventoryItemData):
 
 
 func item_removed(item: InventoryItemData):
-	item_was_interacted.emit()
+	interacted.emit()
 	print("Item " + item.item_name + " removed from slot!")
 
 	# Remove item from puzzles related to slot
