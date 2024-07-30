@@ -26,6 +26,8 @@ const bucket_water_drops_array = [
 
 const chest_open_array = [preload("res://Assets/Audio/Sound/chest_opening_short.mp3")]
 
+const coin_array = [preload("res://Assets/Audio/Sound/coin_purse.mp3")]
+
 const creaks_array = [
 	preload("res://Assets/Audio/Sound/creaking_creepy_3.mp3"),
 	preload("res://Assets/Audio/Sound/creaking_creepy_4.mp3"),
@@ -71,7 +73,7 @@ const water_flask_array = [preload("res://Assets/Audio/Sound/bottle_open.mp3")]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("Audio scene loaded") # TODO: debug print
+	# print("Audio scene loaded") # TODO: debug print
 	# play_intro_sounds() # TODO: enable where and when required
 
 	##### Nodes required to connect signals #####
@@ -80,21 +82,22 @@ func _ready():
 	var alchemical_circle_2 = get_node("../Props/AlchemicalCircle/AlchemicalCirclePuzzleSlot2")
 	var alchemical_circle_3 = get_node("../Props/AlchemicalCircle/AlchemicalCirclePuzzleSlot3")
 	var animated_book = get_node("../Player/AnimatedBook")
-	var water_flask = get_node("../Props/Bucket/ItemWaterFlask")
 	var chest_top_collision_1: Node = get_node("../Chests/ChestTop/ChestTopCollision")
 	var chest_top_collision_2: Node = get_node("../Props/BloodChest/ChestTop/ChestTopCollision")
-	var diary = get_node("../Player/Diary")
 	var coal = get_node("../Props/ItemCoal")
+	var coin = get_node("../Props/CoinPurse/ItemSilverCoin")
 	var crucible = get_node("../Props/ItemCrucible")
+	var diary = get_node("../Player/Diary")
 	var fireplace_slot = get_node("../Props/Fireplace/GenericPuzzleSlot")
 	var flintandsteel = get_node("../Props/ItemFlintAndSteel")
 	var gravedirt = get_node("../Props/GraveDirt/ItemBowlOfDirt")
 	var jarofgrapes = get_node("../Props/ItemJarOfGrapes")
 	var mortar_slot = get_node("../Props/MortarPestle/GenericPuzzleSlot")
 	var mushroom = get_node("../Props/ItemMushroom")
-	var peppergrains = get_node("../Props/ItemPepperGrains")
 	var opal_stone = get_node("../Props/Hand3/ItemOpalStone")
+	var peppergrains = get_node("../Props/ItemPepperGrains")
 	var player: Node = get_node("../Player")
+	var water_flask = get_node("../Props/Bucket/ItemWaterFlask")
 	# var bookblack_mercury = get_node("../Props/ItemBookBlack_Mercury")
 	# var bookblack_salt = get_node("../Props/ItemBookBlack_Salt")
 	# var bookblack_surfur = get_node("../Props/ItemBookBlack_Surfur")
@@ -162,6 +165,7 @@ func _ready():
 	alchemical_circle_3.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
 	animated_book.connect("interacted", play_sound_from_array.bind("book picked up", $Books, book_pickup_array))
 	animated_book.connect("turn_page", play_sound_from_array.bind("book interacted", $Books, book_turn_page_array))
+	coin.connect("coin_purse", play_sound_from_array.bind("coin", $WaterFlask, coin_array))
 	water_flask.connect("water_flask", play_sound_from_array.bind("water flask", $WaterFlask, water_flask_array))
 	chest_top_collision_1.connect("chest_opened", play_sound_from_array.bind("chest opening", $ChestOpening, chest_open_array))
 	chest_top_collision_2.connect("chest_opened", play_sound_from_array.bind("chest opening", $ChestOpening, chest_open_array))

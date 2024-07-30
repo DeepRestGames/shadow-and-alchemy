@@ -3,6 +3,7 @@ extends Prop
 
 signal interacted
 signal water_flask
+signal coin_purse
 
 @export var inventory_item_data: InventoryItemData
 @export var item_model_height: float
@@ -12,12 +13,14 @@ var dropped_in_puzzle_slot: PuzzleSlot = null
 
 func _interacted():
 	interacted.emit()
+	if inventory_item_data.item_name == "Water Flask":
+		water_flask.emit()
+	if inventory_item_data.item_name == "Silver Coin":
+		coin_purse.emit()
 	if inventory_item_data.is_reusable:
 		if not InventorySystem.inventory_items.has(inventory_item_data):
 			InventorySystem.add_item(inventory_item_data)
 	else:
-		if inventory_item_data.item_name == "Water Flask":
-			water_flask.emit()
 		InventorySystem.add_item(inventory_item_data)
 
 	if dropped_in_puzzle_slot != null:
