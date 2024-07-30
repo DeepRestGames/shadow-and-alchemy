@@ -15,10 +15,12 @@ var current_left_page_index: int = 0:
 	set(value):
 		# -2 cause 1 for 0 start and 2 because 2 pages at a time
 		current_left_page_index = clamp(value, 0, (len(pages)-2))
-	
+
 signal sig_put_away
 signal sig_pulled_out
-	
+signal interacted
+signal turn_page
+
 func done_putting_away():
 	sig_put_away.emit()
 	is_book_open = false
@@ -26,16 +28,18 @@ func done_putting_away():
 func done_pulling_out():
 	sig_pulled_out.emit()
 	is_book_open = true
-	
+
 func put_away():
+	interacted.emit()
 	animation_player.play("disappear")
-	
+
 func pull_out(d_path: String):
 	if not is_book_open and player.player_state == player.PlayerState.FOCUSING:
+		interacted.emit()
 		animation_player.play("appear")
 		pages.clear()
 		_load_pages(d_path)
-	
+
 func _load_pages(d_path):
 	var dir = DirAccess.open(d_path)
 	dir.list_dir_begin()
@@ -49,14 +53,16 @@ func _load_pages(d_path):
 			pages.append((d_path + file_name))
 	left_page.texture = load(pages[current_left_page_index])
 	right_page.texture = load(pages[current_left_page_index+1])
-	
+
 func turn_right():
+	turn_page.emit()
 	current_left_page_index+=2
 	left_page.texture = load(pages[current_left_page_index])
 	right_page.texture = load(pages[current_left_page_index+1])
-	
+
 func turn_left():
+	turn_page.emit()
 	current_left_page_index-=2
 	left_page.texture = load(pages[current_left_page_index])
 	right_page.texture = load(pages[current_left_page_index+1])
-	
+
