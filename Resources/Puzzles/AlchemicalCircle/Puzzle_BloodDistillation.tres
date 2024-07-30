@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://085vrd1f3j7n"]
+
+[ext_resource type="Resource" uid="uid://doehsdyskj24i" path="res://Resources/InventoryItems/Item_SeparatedBlood.tres" id="2_c8gqy"]
+[ext_resource type="Resource" uid="uid://m6b4tfbg2b7g" path="res://Resources/InventoryItems/Item_BloodEssence.tres" id="2_eqh6m"]
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="3_ntw16"]
+
+[resource]
+script = ExtResource("3_ntw16")
+puzzle_name = "Puzzle_BloodDistillation"
+puzzle_description = ""
+puzzle_solution_items = [ExtResource("2_c8gqy")]
+order_needed = false
+reward = ExtResource("2_eqh6m")
+alchemical_process_needed = true
+alchemical_process_solution = 5

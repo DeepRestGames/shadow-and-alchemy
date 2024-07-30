@@ -5,9 +5,12 @@ extends CSGBox3D
 
 var is_open: bool = false
 
+signal chest_opened
+
 func _open():
 	animation_player.play("open")
 	is_open = true
+	chest_opened.emit()
 
 
 func _close():

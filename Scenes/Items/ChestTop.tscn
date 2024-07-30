@@ -127,7 +127,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.624
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.314222, 0.0771748, -0.00288671)
 visible = false
 use_collision = true
-collision_layer = 128
+collision_layer = 130
 size = Vector3(0.625122, 0.128174, 1.08734)
 script = ExtResource("1_6at8m")
 

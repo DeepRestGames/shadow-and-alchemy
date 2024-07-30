@@ -32,7 +32,9 @@ enum PlayerState {
 	FOCUSING,	# 2
 	INVENTORY,	# 3		CAN OPEN DIARY
 	DIARY,		# 4
-	READING_BOOK# 5
+	ALCHEMICAL_PROCESS_CHOICE	# 5
+	READING_BOOK# 6
+
 }
 
 @onready var diary = $Diary
@@ -41,9 +43,14 @@ enum PlayerState {
 @onready var debug_ui = $DEBUG_UI
 @onready var focus_label_animation = $Focus/FocusLabelAnimation
 var tooltip_on: bool = false
+@onready var inventory_ui = $HUD/InventoryUI
+
 
 func _ready():
 	diary.hide()
+	
+	InteractionSystem.alchemical_process_choice_opened.connect(alchemical_process_choice_opened)
+	InteractionSystem.alchemical_process_choice_closed.connect(alchemical_process_choice_closed)
 
 
 
@@ -53,6 +60,8 @@ func _process(_delta):
 	_process_pause_inputs()
 	_process_reading_inputs()
 
+	_process_inventory_inputs()
+	
 	# TODO: experiment to start creepy soundtrack at a scripted moment (in this example, focussing on `NavigationPoint11`)
 	if (player_state == PlayerState.FOCUSING) and ("Lectern" in str(current_navigation_point)):
 		creepy_event.emit()
@@ -65,6 +74,11 @@ func _process(_delta):
 	debug_ui.text += "\ntooltip: " + str(tooltip_on)
 	debug_ui.text += "\nAnibook Pos: " + str(animated_book.global_position)
 	
+
+
+func _process_inventory_inputs():
+	if Input.is_action_just_pressed("open_inventory"):
+		inventory_ui.open_inventory_called()
 
 
 func _process_pause_inputs():
@@ -271,8 +285,6 @@ func _tween_defocus_over():
 # -------------------------------------------------------
 func _impossible_movement():
 	pass
-	# TODO: remove debug message
-	#print("It's impossible to move forward!")
 
 func _process_reading_inputs():
 	if Input.is_action_just_pressed("turn_diary_left") and player_state == PlayerState.READING_BOOK:
@@ -298,3 +310,13 @@ func _on_animated_book_sig_put_away():
 func _on_animated_book_sig_pulled_out():
 	pre_book_state = player_state
 	player_state = PlayerState.READING_BOOK
+
+
+# --------------------------------------------------------------------
+# ------------------ PLAYER STATE ALCHEMICAL CIRCLE ------------------
+func alchemical_process_choice_opened():
+	previous_state = player_state
+	player_state = PlayerState.ALCHEMICAL_PROCESS_CHOICE
+
+func alchemical_process_choice_closed():
+	player_state = previous_state

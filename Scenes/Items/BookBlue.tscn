@@ -13,7 +13,7 @@ albedo_texture = ExtResource("1_fr7bx")
 [sub_resource type="PlaneMesh" id="PlaneMesh_1fl7a"]
 material = ExtResource("4_guoud")
 
-[node name="ItemBookRed" type="CSGBox3D"]
+[node name="ItemBookBlue" type="CSGBox3D"]
 material_overlay = SubResource("StandardMaterial3D_mkmif")
 use_collision = true
 collision_layer = 64
@@ -21,15 +21,15 @@ size = Vector3(0.0717891, 0.250244, 0.178955)
 material = SubResource("StandardMaterial3D_mkmif")
 script = ExtResource("2_bc45u")
 
-[node name="BookBlue_v0_0_0" parent="." instance=ExtResource("3_mc5ov")]
+[node name="BookBlue" parent="." instance=ExtResource("3_mc5ov")]
 transform = Transform3D(-3.0598e-08, 0, -1, 0, 1, 0, 0.7, 0, -4.37114e-08, 0, -0.126434, 0)
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(-1.82622e-08, -2.21815e-07, 0.000106077, 8.13662e-08, 0.000106077, 2.21829e-07, -0.000106077, 8.14044e-08, -1.80913e-08, 0.000200305, 0.0660866, 0.0886583)
 
 [node name="Lable" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.024, 3.27009e-06, -2.18172e-13, 0, -8.30516e-10, -0.029, -4.13064e-06, 0.019, -1.26763e-09, 0, 0.065383, 0.0883789)
 mesh = SubResource("PlaneMesh_1fl7a")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.00671769, -1.40472e-05, 1.15622e-06, 1.40481e-05, 0.00671769, -5.15279e-06, -1.1454e-06, 5.15521e-06, 0.00671769, -1.47038e-06, 0.0661091, 0.0886606)
-
-[node name="Sprite3D2" type="Sprite3D" parent="Sprite3D"]
-transform = Transform3D(-6.90235e-10, -3.56528e-15, 0.0157907, 0, 0.0157907, 3.56528e-15, -0.0157907, 1.55843e-22, -6.90235e-10, 0.0300293, -0.00341935, -0.000327386)
+[node name="Sprite3D" type="Sprite3D" parent="Lable"]
+transform = Transform3D(0.279904, -0.000585337, 1.59707e-09, 5.67416e-07, 0.000271184, 0.353563, -0.000484417, -0.231644, 0.000177672, -6.3286e-05, 0.0148258, -0.0250378)

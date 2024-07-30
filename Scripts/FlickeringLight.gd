@@ -3,14 +3,17 @@ extends Node3D
 
 @onready var light = $OmniLight3D
 
-@export var range_max := 0.61
-@export var range_min := 0.59
+#@export var range_max := 0.61
+#@export var range_min := 0.59
+@export var range_max := 1.7
+@export var range_min := 1.4
 
-@export var energy_max := 0.42
-@export var energy_min := 0.38
 
+@export var energy_max := 0.15
+@export var energy_min := 0.08
+
+@export var change_time_max := 0.8
 @export var change_time_min := 0.4
-@export var change_time_max := 0.6
 
 var current_change_time := 0.0
 

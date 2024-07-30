@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Puzzle" load_steps=4 format=3 uid="uid://cn410ukpg4c6t"]
+
+[ext_resource type="Script" path="res://Scripts/PuzzleSystem/Puzzle.gd" id="1_iu65q"]
+[ext_resource type="Resource" uid="uid://c2td0xb078eeu" path="res://Resources/InventoryItems/Item_PepperGrains.tres" id="1_nn7i6"]
+[ext_resource type="Resource" uid="uid://bupnoduq0ua25" path="res://Resources/InventoryItems/Item_GrindedPepper.tres" id="2_ms0st"]
+
+[resource]
+script = ExtResource("1_iu65q")
+puzzle_name = "Puzzle_Pepper"
+puzzle_description = ""
+puzzle_solution_items = [ExtResource("1_nn7i6")]
+order_needed = false
+reward = ExtResource("2_ms0st")
+alchemical_process_needed = false
+alchemical_process_solution = 0
