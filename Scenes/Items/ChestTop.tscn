@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba2mn58i5i0ml"]
+[gd_scene load_steps=7 format=3 uid="uid://ba2mn58i5i0ml"]
 
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/ChestTop.gd" id="1_6at8m"]
 [ext_resource type="PackedScene" uid="uid://biqg80pysppey" path="res://Assets/3D/Cabin/ChestTop.blend" id="1_8875r"]
@@ -37,6 +37,42 @@ tracks/2/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_o7nyd"]
+resource_name = "close"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1.70213, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
 }
 
 [sub_resource type="Animation" id="Animation_u50ah"]
@@ -78,6 +114,7 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wn4fm"]
 _data = {
 "RESET": SubResource("Animation_u6x3n"),
+"close": SubResource("Animation_o7nyd"),
 "open": SubResource("Animation_u50ah")
 }
 
