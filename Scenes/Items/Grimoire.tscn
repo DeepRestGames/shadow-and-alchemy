@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://du3dh6rb24kyv"]
+[gd_scene load_steps=15 format=3 uid="uid://du3dh6rb24kyv"]
 
 [ext_resource type="Script" path="res://Scripts/Items/Grimoire.gd" id="1_jtc6x"]
 [ext_resource type="Script" path="res://Scripts/Items/ClickableReadable.gd" id="1_oqghv"]
 [ext_resource type="Texture2D" uid="uid://cglb3g30rrg3x" path="res://Assets/2D/Decals/book_texture.jpg" id="2_j2g35"]
 [ext_resource type="Texture2D" uid="uid://sntw8ewqgxsi" path="res://Assets/2D/Decals/old_paper.jpg" id="3_64ywr"]
 [ext_resource type="Texture2D" uid="uid://cau3pwauawe6" path="res://Assets/2D/Books/Grimoire_COVER.png" id="3_aqkud"]
+[ext_resource type="Texture2D" uid="uid://dbu10ff5c0srq" path="res://Assets/2D/BLANK.png" id="5_8scjq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lqut7"]
 size = Vector3(0.14, 0.01, 1)
@@ -20,7 +21,7 @@ size = Vector3(0.7, 0.01, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_da6ug"]
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.431373, 0.431373, 0.431373, 1)
+albedo_color = Color(0.635294, 0.635294, 0.635294, 1)
 albedo_texture = ExtResource("3_64ywr")
 
 [sub_resource type="Animation" id="Animation_wb4b5"]
@@ -539,6 +540,13 @@ _data = {
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_jtc6x")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217045, 9.48733e-09)
+light_color = Color(0.513726, 0.376471, 0.168627, 1)
+light_energy = 2.25
+omni_range = 1.0
+omni_attenuation = 0.176777
+
 [node name="Body" type="Node3D" parent="."]
 transform = Transform3D(1, 4.27318e-16, -8.88178e-16, -4.27318e-16, 1, 0, 8.88178e-16, 0, 1, 0, 0, 0)
 
@@ -554,6 +562,7 @@ transform = Transform3D(-0.978272, -0.207328, -9.06273e-09, 0.207328, -0.978272,
 [node name="CoverImage" type="Sprite3D" parent="Body/L"]
 transform = Transform3D(0.0264012, 1.17174e-10, 0.00565463, 0.00565463, -3.45803e-10, -0.0264012, -4.21544e-11, 0.027, -3.62674e-10, 0.332668, 0.0436673, -0.0122266)
 flip_h = true
+modulate = Color(0.615686, 0.615686, 0.615686, 1)
 texture = ExtResource("3_aqkud")
 
 [node name="Cover1Pivot" type="Node3D" parent="Body/L"]
@@ -577,6 +586,7 @@ size = Vector3(0.681, 0.06, 0.959)
 [node name="Left" type="Sprite3D" parent="Body/L/Pages2Pivot"]
 transform = Transform3D(0.0258616, 4.97603e-11, 0.00775737, 0.00775737, -3.39086e-10, -0.0258616, 4.97603e-11, 0.027, -3.39086e-10, 0.325177, 0.154857, -0.0122266)
 flip_h = true
+texture = ExtResource("5_8scjq")
 
 [node name="R" type="Node3D" parent="Body"]
 transform = Transform3D(0.97022, -0.242227, -1.05881e-08, 0.242227, 0.97022, -1.30174e-09, 1.05881e-08, -1.30174e-09, 1, 0.00197497, 0.0127118, 5.55649e-10)
@@ -601,6 +611,7 @@ size = Vector3(0.681, 0.065, 0.959)
 [node name="Right" type="Sprite3D" parent="Body/R/PagesPivot"]
 transform = Transform3D(0.0242035, -1.2224e-10, -0.0119663, -0.0119663, -5.23064e-10, -0.0242035, -1.2224e-10, 0.027, -5.23064e-10, -0.298608, 0.213048, -0.0122266)
 flip_h = true
+texture = ExtResource("5_8scjq")
 
 [node name="OpenCollider" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.355621, 0.0641479, -0.00244141)

@@ -69,12 +69,12 @@ func _process(_delta):
 		creepy_event.emit()
 
 	# TODO: DEBUG/REMOVE
-	debug_ui.text = "STATE: " + str(PlayerState.keys()[player_state])
-	debug_ui.text += "\nPOS: " + str(camera_3d.global_position)
-	debug_ui.text += "\nROT: " + str(camera_3d.global_position)
-	debug_ui.text += "\nCurr nav point: " + str(current_navigation_point)
-	debug_ui.text += "\ntooltip: " + str(tooltip_on)
-	debug_ui.text += "\nAnibook Pos: " + str(animated_book.global_position)
+	#debug_ui.text = "STATE: " + str(PlayerState.keys()[player_state])
+	#debug_ui.text += "\nPOS: " + str(camera_3d.global_position)
+	#debug_ui.text += "\nROT: " + str(camera_3d.global_position)
+	#debug_ui.text += "\nCurr nav point: " + str(current_navigation_point)
+	#debug_ui.text += "\ntooltip: " + str(tooltip_on)
+	#debug_ui.text += "\nAnibook Pos: " + str(animated_book.global_position)
 	
 
 

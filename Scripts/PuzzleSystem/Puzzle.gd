@@ -1,6 +1,7 @@
 class_name Puzzle
 extends Resource
 
+signal puzzle_just_solved(puzzle)
 signal interacted
 
 @export var puzzle_name: String
@@ -69,6 +70,7 @@ func check_puzzle_solution():
 		if alchemical_process_needed:
 			if current_alchemical_process == alchemical_process_solution:
 				print("Puzzle solved!")
+				puzzle_just_solved.emit(self)
 				InventorySystem.add_item(reward)
 				puzzle_solved = true
 		else:

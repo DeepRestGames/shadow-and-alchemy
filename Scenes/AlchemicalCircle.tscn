@@ -1,20 +1,26 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddvlmsgydjki2"]
+[gd_scene load_steps=13 format=3 uid="uid://ddvlmsgydjki2"]
 
 [ext_resource type="Script" path="res://Scripts/PuzzleSystem/AlchemicalCircle.gd" id="1_l6vq5"]
 [ext_resource type="Texture2D" uid="uid://ckh6m5jtdgsdn" path="res://Assets/2D/AlchemicalCircle_noCenter.png" id="1_pjbny"]
+[ext_resource type="Resource" uid="uid://085vrd1f3j7n" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_BloodDistillation.tres" id="2_gwti1"]
 [ext_resource type="PackedScene" uid="uid://dl24362otq47t" path="res://Scenes/InteractionSystem/AlchemicalProcessSymbol.tscn" id="3_2kur5"]
-[ext_resource type="Resource" uid="uid://nfe0h4tn2qaf" path="res://Resources/Puzzles/Tests/TestAlchemicalPuzzle.tres" id="3_xi5p8"]
-[ext_resource type="Resource" uid="uid://dtrbxn2iexvy" path="res://Resources/Puzzles/Tests/TestObjectsPuzzle.tres" id="4_fxgyt"]
+[ext_resource type="Resource" uid="uid://dbiec6p24dgo2" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_BloodSeparation.tres" id="3_nwmat"]
+[ext_resource type="Resource" uid="uid://cvgju2vwnuacr" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Homunculus.tres" id="4_vf06c"]
 [ext_resource type="PackedScene" uid="uid://cmp4gbdjt2xhj" path="res://Scenes/InteractionSystem/AlchemicalCirclePuzzleSlot.tscn" id="5_gkbj8"]
+[ext_resource type="Resource" uid="uid://cpseljbvj58x5" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Mercury.tres" id="5_jmrkn"]
+[ext_resource type="Resource" uid="uid://b4y8lpp7yljn7" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_PhilosopherStone.tres" id="6_tvlf3"]
+[ext_resource type="Resource" uid="uid://cfy7k11vb1jg5" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Sulfur.tres" id="7_taxp6"]
+[ext_resource type="Resource" uid="uid://ojg3m3wpmidh" path="res://Resources/Puzzles/AlchemicalCircle/Puzzle_Vinegar.tres" id="8_npfc6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qaj2o"]
 transparency = 1
 albedo_color = Color(1, 1, 1, 0)
 
-[node name="AlchemicalCircle" type="Node3D"]
+[node name="AlchemicalCircle" type="Node3D" node_paths=PackedStringArray("puzzle_slots")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09885, 0.81, -1.95166)
 script = ExtResource("1_l6vq5")
-related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("3_xi5p8"), ExtResource("4_fxgyt")])
+related_puzzles = Array[Resource("res://Scripts/PuzzleSystem/Puzzle.gd")]([ExtResource("2_gwti1"), ExtResource("3_nwmat"), ExtResource("4_vf06c"), ExtResource("5_jmrkn"), ExtResource("6_tvlf3"), ExtResource("7_taxp6"), ExtResource("8_npfc6")])
+puzzle_slots = [NodePath("AlchemicalCirclePuzzleSlot1"), NodePath("AlchemicalCirclePuzzleSlot2"), NodePath("AlchemicalCirclePuzzleSlot3")]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 0, 0, 0)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4csxpsd7ukr6"]
 
 [ext_resource type="Script" path="res://Scripts/InventorySystem/InventoryUI.gd" id="1_5wtk1"]
-[ext_resource type="Texture2D" uid="uid://dgeu4eo2m5l60" path="res://Icons/UI_Arrow.png" id="2_eq5ge"]
+[ext_resource type="Texture2D" uid="uid://dgeu4eo2m5l60" path="res://Assets/2D/UI_Arrow.png" id="2_eq5ge"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwmtx"]
 bg_color = Color(0, 0, 0, 0.576471)

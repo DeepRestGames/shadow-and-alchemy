@@ -15,7 +15,8 @@ signal interacted
 @onready var options = $Options
 
 
-var diary_path: String = "res://Assets/DiaryPages/"
+var studies_path: String = "res://Assets/DiaryPages/"
+var codex_path: String = "res://Assets/2D/Books/Codex/"
 var pages: Array[String]
 var current_left_page_index: int = 0:
 	# Clamp
@@ -30,9 +31,9 @@ func put_away():
 func pull_out():
 	animation_player.play("appear")
 	interacted.emit()
-
-func _ready():
-	var dir = DirAccess.open(diary_path)
+	
+func _load_pages(pages_path):
+	var dir = DirAccess.open(pages_path)
 	dir.list_dir_begin()
 	while true:
 		var file_name = dir.get_next()
@@ -41,9 +42,12 @@ func _ready():
 			break
 		elif !file_name.begins_with(".") and !file_name.ends_with(".import"):
 			#get_next() returns a string so this can be used to load the images into an array.
-			pages.append((diary_path + file_name))
+			pages.append((pages_path + file_name))
 	left_page.texture = load(pages[current_left_page_index])
 	right_page.texture = load(pages[current_left_page_index+1])
+
+func _ready():
+	_load_pages(codex_path)
 
 func turn_right():
 	current_left_page_index+=2
@@ -71,11 +75,13 @@ func hide_tags():
 
 
 func _on_codex_tag_pressed():
-	pass # Replace with function body.
+	pages.clear()
+	_load_pages(codex_path)
 
 
 func _on_studies_tag_pressed():
-	pass
+	pages.clear()
+	_load_pages(studies_path)
 
 
 func _on_options_tag_pressed():
