@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d1ngk84wlraoa"]
+[gd_scene load_steps=15 format=3 uid="uid://d1ngk84wlraoa"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_h2fim"]
 [ext_resource type="PackedScene" uid="uid://b4csxpsd7ukr6" path="res://Scenes/InventorySystem/InventoryUI.tscn" id="3_3gjop"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://4gxkhk21pip5" path="res://Scenes/UI/Options.tscn" id="4_la86e"]
 [ext_resource type="FontFile" uid="uid://cb57uwfvgsqmd" path="res://Assets/2D/Fonts/Almendra-Italic.ttf" id="5_tl8ok"]
 [ext_resource type="PackedScene" uid="uid://bi3j1l53gsk7j" path="res://Scenes/Items/AnimatedBook.tscn" id="6_4dkbr"]
+[ext_resource type="Script" path="res://Scripts/SuperFastAnimScript.gd" id="6_4iiyy"]
 
 [sub_resource type="Animation" id="Animation_w25xb"]
 length = 0.001
@@ -185,6 +186,124 @@ _data = {
 "disappear": SubResource("Animation_abia0")
 }
 
+[sub_resource type="Animation" id="Animation_r7tr2"]
+resource_name = "fade_in"
+length = 6.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 5, 6)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_colors/font_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 5, 6)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_colors/font_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 5, 6)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:theme_override_colors/font_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.0001, 1, 5, 6)
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"show"
+}, {
+"args": [],
+"method": &"hide_destroy"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_eome7"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:theme_override_colors/font_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_colors/font_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_colors/font_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:theme_override_colors/font_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rgvgi"]
+_data = {
+"RESET": SubResource("Animation_eome7"),
+"fade_in": SubResource("Animation_r7tr2")
+}
+
 [node name="Player" type="Node3D"]
 script = ExtResource("1_h2fim")
 
@@ -238,6 +357,28 @@ text = "Move forward to focus."
 libraries = {
 "": SubResource("AnimationLibrary_yfr54")
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Focus"]
+root_node = NodePath("../Tooltips")
+libraries = {
+"": SubResource("AnimationLibrary_rgvgi")
+}
+
+[node name="Tooltips" type="Label" parent="Focus"]
+visible = false
+offset_left = 1333.0
+offset_top = 281.0
+offset_right = 1893.0
+offset_bottom = 533.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_tl8ok")
+theme_override_font_sizes/font_size = 36
+text = "Arrow keys / WASD - Move
+Mouse - Interact with the world
+Tab/I - Inventory
+J - Journal
+Q/RMB - Close Book"
+script = ExtResource("6_4iiyy")
 
 [node name="AnimatedBook" parent="." instance=ExtResource("6_4dkbr")]
 transform = Transform3D(-0.46966, 0.0177925, -0.0017499, 3.99767e-09, 0.0460027, 0.467743, 0.0178784, 0.467404, -0.0459694, 0.153865, -0.0267514, 0.383972)
