@@ -316,3 +316,4 @@ func alchemical_process_choice_opened():
 
 func alchemical_process_choice_closed():
 	player_state = previous_state
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=127 format=3 uid="uid://csckcocqivyj5"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
@@ -53,7 +53,6 @@
 [ext_resource type="PackedScene" uid="uid://dhtnotvhyj8uf" path="res://Assets/3D/Props/CoinPurse.blend" id="38_4dsmt"]
 [ext_resource type="PackedScene" uid="uid://b6q56y10tfq5m" path="res://Scenes/Items/InventoryItems/Item_SilverCoin.tscn" id="38_gmr18"]
 [ext_resource type="PackedScene" uid="uid://du3dh6rb24kyv" path="res://Scenes/Items/Grimoire.tscn" id="38_t6tu7"]
-[ext_resource type="PackedScene" uid="uid://dqoc03dewm5we" path="res://Scenes/Items/Paper.tscn" id="39_l3spk"]
 [ext_resource type="PackedScene" uid="uid://ccjymunjlm84n" path="res://Assets/3D/Props/GobletsBrutti_v0.0.0.blend" id="41_3uqgs"]
 [ext_resource type="PackedScene" uid="uid://dfl30ul37jev4" path="res://Assets/3D/Props/Skull_v0.0.0.blend" id="43_oohwt"]
 [ext_resource type="Texture2D" uid="uid://bq04jmrgld06l" path="res://Assets/2D/AlchemicalMaterials/Salt_Body.png" id="43_qg3xt"]
@@ -2789,9 +2788,6 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.85315, 0.812321, -2.
 
 [node name="Grimoire" parent="." instance=ExtResource("38_t6tu7")]
 transform = Transform3D(-1.69076e-08, 0.208046, -0.341638, -1.82481e-11, 0.341638, 0.208046, 0.4, 8.80949e-09, -1.44312e-08, -3.90871, 1.17938, -0.0561288)
-
-[node name="Paper" parent="." instance=ExtResource("39_l3spk")]
-transform = Transform3D(-0.257115, 0, 0.306418, 0, 0.4, 0, -0.306418, 0, -0.257115, -3.86294, 0.159394, -0.0677674)
 
 [connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Salt" to="Player" method="_on_book_opened"]
 [connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Surfur" to="Player" method="_on_book_opened"]
