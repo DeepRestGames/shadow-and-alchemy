@@ -15,7 +15,7 @@ signal interacted
 @onready var options = $Options
 
 
-var studies_path: String = "res://Assets/DiaryPages/"
+var studies_path: String = "res://Assets/2D/Books/Journal/"
 var codex_path: String = "res://Assets/2D/Books/Codex/"
 var pages: Array[String]
 var current_left_page_index: int = 0:
@@ -75,13 +75,17 @@ func hide_tags():
 
 
 func _on_codex_tag_pressed():
+	current_left_page_index =0
 	pages.clear()
 	_load_pages(codex_path)
 
 
+
 func _on_studies_tag_pressed():
+	current_left_page_index =0
 	pages.clear()
 	_load_pages(studies_path)
+
 
 
 func _on_options_tag_pressed():
