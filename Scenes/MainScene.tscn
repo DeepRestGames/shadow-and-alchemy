@@ -1684,16 +1684,17 @@ item_model_height = 0.5
 [node name="ItemBookBlack_Salt" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.974988, 0, 0.115277, 0, 0.98178, 0, -0.115277, 0, -0.974988, -1.92681, -0.531197, 7.6943)
 texture = ExtResource("43_qg3xt")
-pages_path = "res://Assets/2D/Books/Aries/"
+pages_path = "res://Assets/2D/Books/Salt/"
 
 [node name="ItemBookBlack_Surfur" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.974988, 0, 0.115277, 0, 0.98178, 0, -0.115277, 0, -0.974988, -1.99533, -0.531486, 7.68842)
 texture = ExtResource("44_iq5v5")
-pages_path = "res://Assets/2D/Books/Pisces/"
+pages_path = "res://Assets/2D/Books/Sulfur/"
 
 [node name="ItemBookBlack_Mercury" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.967791, -0.164959, 0.00782703, -0.164778, 0.967657, 0.0194824, -0.0109879, 0.0178911, -0.981555, -2.08207, -0.531486, 7.68282)
 texture = ExtResource("45_20rln")
+pages_path = "res://Assets/2D/Books/Mercury/"
 
 [node name="ItemBookRed_Aries" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.836417, -0.928486, 7.55917)
@@ -1710,10 +1711,12 @@ texture = ExtResource("49_y4q8n")
 [node name="ItemBookRed_Cancer" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-0.799233, 0.412717, 0.43691, 0.46286, 0.886382, 0.00940226, -0.383389, 0.209743, -0.899456, 0.443116, -0.134974, 7.71259)
 texture = ExtResource("60_n24rn")
+pages_path = "res://Assets/2D/Books/Cancer/"
 
 [node name="ItemBookRed-Leo" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-0.973734, 0.227688, 8.51265e-08, 0.227688, 0.973734, -1.99051e-08, -8.74228e-08, -8.50512e-16, -1, 0.661298, -0.928486, 7.55917)
 texture = ExtResource("51_c2ucd")
+pages_path = "res://Assets/2D/Books/Leo/"
 
 [node name="ItemBookRed_Virgo" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.58636, -0.928486, 7.55917)
@@ -2793,6 +2796,22 @@ transform = Transform3D(-0.257115, 0, 0.306418, 0, 0.4, 0, -0.306418, 0, -0.2571
 [connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Salt" to="Player" method="_on_book_opened"]
 [connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Surfur" to="Player" method="_on_book_opened"]
 [connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Mercury" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Aries" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Taurus" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Gemini" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Cancer" to="Player" method="_process"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed-Leo" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Virgo" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Libra" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Scorpio" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Sagittarius" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Capricorn" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Aquarius" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookRed_Projection" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Earth" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Air" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Water" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Fire" to="Player" method="_on_book_opened"]
 
 [editable path="Player"]
 [editable path="Navigation/FocusPoints/FocusPointTable"]
