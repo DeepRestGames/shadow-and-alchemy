@@ -9,6 +9,8 @@ var item_data: InventoryItemData
 
 # Handle Drag&Drop, using items, etc.
 func _get_drag_data(_at_position):
+	Input.set_custom_mouse_cursor(InteractionSystem.mouse_cursor_drag)
+	
 	var preview_texture = TextureRect.new()
 	preview_texture.texture = icon.texture
 	preview_texture.modulate = Color(1, 1, 1, .4)
