@@ -68,6 +68,13 @@ const book_pickup_array = [
 
 const melting_array = [preload("res://Assets/Audio/Sound/melting.mp3")]
 
+const mortar_array = [
+	preload("res://Assets/Audio/Sound/crushing_4.mp3"),
+	preload("res://Assets/Audio/Sound/crushing_3.mp3"),
+	preload("res://Assets/Audio/Sound/crushing_2.mp3"),
+	preload("res://Assets/Audio/Sound/crushing_1.mp3"),
+]
+
 ##### Setup sounds with randomised timing #####
 
 # Setup thunderstorm
@@ -140,7 +147,9 @@ func _ready():
 	var item_gravedirt = get_node("../Props/GraveDirt/ItemBowlOfDirt")
 	var item_peppergrains = get_node("../Props/ItemPepperGrains")
 	var item_fireplace_slot = get_node("../Props/Fireplace/GenericPuzzleSlot")
+	var item_mortar_slot = get_node("../Props/MortarPestle/GenericPuzzleSlot")
 	var diary = get_node("../Player/Diary")
+	var animated_book = get_node("../Player/AnimatedBook")
 
 	##### Setup background music #####
 
@@ -197,9 +206,22 @@ func _ready():
 	item_gravedirt.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	item_peppergrains.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
 	item_fireplace_slot.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_fireplace_slot.connect("puzzle_molten_coin", play_sound_from_array.bind("molten coin", $Melting, melting_array))
-	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Diary, book_turn_page_array))
+	item_mortar_slot.connect("item_was_interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Books, book_turn_page_array))
+	animated_book.connect("interacted", play_sound_from_array.bind("book picked up", $Books, book_pickup_array))
 
+	##### Setup melting coin sound #####
+
+	item_fireplace_slot.connect("puzzle_molten_coin", play_sound_from_array.bind("molten coin", $Melting, melting_array))
+
+	##### Setup mortar crushing sound #####
+
+	$Mortar.volume_db = -20
+	item_mortar_slot.connect("puzzle_mortar", play_sound_from_array.bind("mortar crushing", $Mortar, mortar_array))
+
+	##### Setup turning pages sound (they use the same sound effect) #####
+
+	animated_book.connect("turn_page", play_sound_from_array.bind("book interacted", $Books, book_turn_page_array))
 
 	##### Setup randomly timed sounds #####
 
@@ -275,23 +297,27 @@ enum Audio_Players_Names
 }
 
 func play_intro_sounds():
+	# Creates temporary `AudioStreamPlayer`s
 	var audio_players: Array = [
-	AudioStreamPlayer.new(), # WALKING
-	AudioStreamPlayer.new(), # DOOR_OPEN
-	AudioStreamPlayer.new(), # DOOR_CLOSE
-	AudioStreamPlayer.new(), # FOUR_STEPS
-	AudioStreamPlayer.new(), # CANDLE_LIGHT
+		AudioStreamPlayer.new(), # WALKING
+		AudioStreamPlayer.new(), # DOOR_OPEN
+		AudioStreamPlayer.new(), # DOOR_CLOSE
+		AudioStreamPlayer.new(), # FOUR_STEPS
+		AudioStreamPlayer.new(), # CANDLE_LIGHT
 	]
 
+	# Adding as children is necessary to be able to use the `AudioStreamPlayer`s
 	for audio_player in audio_players:
 		add_child(audio_player)
 
+	# Assignigng a sound to each `AudioStreamPlayer`
 	audio_players[Audio_Players_Names.WALKING].stream = load("res://Assets/Audio/Sound/walking_outside.mp3")
 	audio_players[Audio_Players_Names.DOOR_OPEN].stream = load("res://Assets/Audio/Sound/door_open.mp3")
 	audio_players[Audio_Players_Names.DOOR_CLOSE].stream = load("res://Assets/Audio/Sound/door_close.mp3")
 	audio_players[Audio_Players_Names.FOUR_STEPS].stream = load("res://Assets/Audio/Sound/footsteps_cellar_four.mp3")
 	audio_players[Audio_Players_Names.CANDLE_LIGHT].stream = load("res://Assets/Audio/Sound/candle_lighting.mp3")
 
+	# Connecting the `finished` signal of each `AudioStreamPlayer` to the following one
 	audio_players[Audio_Players_Names.WALKING].connect("finished", audio_players[Audio_Players_Names.DOOR_OPEN].play)
 	audio_players[Audio_Players_Names.DOOR_OPEN].connect("finished", audio_players[Audio_Players_Names.DOOR_CLOSE].play)
 	audio_players[Audio_Players_Names.DOOR_CLOSE].connect("finished", audio_players[Audio_Players_Names.FOUR_STEPS].play)
@@ -303,6 +329,7 @@ func play_intro_sounds():
 	audio_players[Audio_Players_Names.WALKING].play()
 
 func on_all_sounds_finished(audio_players: Array):
+	# Remove no longer used `AudioStreamPlayer`
 	for audio_player in audio_players:
 		audio_player.queue_free()
 
