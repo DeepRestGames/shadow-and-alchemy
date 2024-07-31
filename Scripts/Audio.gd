@@ -73,7 +73,7 @@ const mortar_array = [
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("Audio scene loaded") # TODO: debug print
-	# play_intro_sounds() # TODO: enable where and when required
+	play_intro_sounds() # TODO: enable where and when required
 
 	##### Nodes required to connect signals #####
 
