@@ -71,6 +71,8 @@ const thunderstorm_array = [preload("res://Assets/Audio/Sound/storm_faded.mp3")]
 
 const water_flask_array = [preload("res://Assets/Audio/Sound/bottle_open.mp3")]
 
+var is_music_already_played: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# print("Audio scene loaded") # TODO: debug print
@@ -238,7 +240,8 @@ func setup_randomly_timed_sound(sound_stream, timer, rand_time_min: float, rand_
 
 # play sound and music
 func play_background_music():
-	if not $BackgroundMusic.is_playing():
+	if not $BackgroundMusic.is_playing() and not is_music_already_played:
+		is_music_already_played = true
 		$BackgroundMusic.play()
 
 
