@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cggn12ohdi7hp"]
 
-[ext_resource type="AudioStream" uid="uid://cuvsb2p6voamx" path="res://Assets/Audio/Music/soundtrack_suspence_fade_out.mp3" id="1_v6wve"]
+[ext_resource type="AudioStream" uid="uid://dmc2g4o60oago" path="res://Assets/Audio/Music/soundtrack_suspence.mp3" id="1_lm14q"]
 [ext_resource type="AudioStream" uid="uid://darvslhdyj1be" path="res://Assets/Audio/Music/creepy-ambience-57898.mp3" id="2_8infd"]
 [ext_resource type="AudioStream" uid="uid://c2pki04fd8067" path="res://Assets/Audio/Sound/fireplace_1.mp3" id="2_qp4p5"]
 [ext_resource type="AudioStream" uid="uid://t622sra4diub" path="res://Assets/Audio/Sound/footsteps_wood_single_2.mp3" id="3_xu7in"]
@@ -12,7 +12,7 @@
 [node name="Audio" type="Node"]
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_v6wve")
+stream = ExtResource("1_lm14q")
 bus = &"Music"
 
 [node name="HomunculusSFX" type="AudioStreamPlayer" parent="."]
