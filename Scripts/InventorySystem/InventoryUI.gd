@@ -50,6 +50,14 @@ func open_inventory_called():
 		is_opened = true
 
 
+func close_inventory():
+	if is_opened:
+		var tween = get_tree().create_tween()
+		tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT).tween_property(inventory_ui_container, "position", closed_position, 1)
+		
+		is_opened = false
+
+
 func _on_central_arrow_pressed():
 	open_inventory_called()
 

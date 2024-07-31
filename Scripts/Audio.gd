@@ -74,7 +74,7 @@ const water_flask_array = [preload("res://Assets/Audio/Sound/bottle_open.mp3")]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# print("Audio scene loaded") # TODO: debug print
-	# play_intro_sounds() # TODO: enable where and when required
+	play_intro_sounds() # TODO: enable where and when required
 
 	##### Nodes required to connect signals #####
 

@@ -18,6 +18,7 @@ var camera_starting_rotation
 @onready var evil_eye: Sprite3D = $HomunculusSpawnPosition/EvilEye
 @onready var black_screen: ColorRect = $ColorRect
 @onready var credits: RichTextLabel = $Credits
+@onready var main_title: TextureRect = $MainTitle
 
 
 func _ready():
@@ -45,6 +46,7 @@ func spawn_homunculus():
 	player.playing_intro = true
 	camera_starting_rotation = camera.rotation
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	player.inventory_ui.close_inventory()
 	
 	var homunculus_instance = homunculus.instantiate()
 	path_follow.add_child(homunculus_instance)
@@ -66,16 +68,26 @@ func ending_scene():
 	tween.chain().tween_property(evil_eye, "modulate", Color.WHITE, 3)
 	tween.chain().tween_interval(1.5)
 	tween.chain().tween_property(camera, "rotation", Vector3(0, -5, 0), .2)
+	await tween.finished
 	neck_brocken.emit()
+	
+	tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 	tween.chain().tween_interval(.5)
 	tween.chain().tween_property(camera, "position", Vector3(0, -0.8, 0.7), 1.5)
 	tween.parallel().tween_property(camera, "rotation", Vector3(2, 0, 0), 1.5)
+	await tween.finished
 	drop_dead.emit()
+	
+	tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 	tween.chain().tween_interval(1.5)
 	tween.chain().tween_property(black_screen, "color", Color.BLACK, 2.5)
 	tween.chain().tween_interval(2.5)
+	tween.chain().tween_property(main_title, "modulate", Color.WHITE, 1.5)
+	tween.chain().tween_interval(5)
+	tween.chain().tween_property(main_title, "modulate", Color.TRANSPARENT, 1.5)
+	tween.chain().tween_interval(2.5)
 	tween.chain().tween_property(credits, "modulate", Color.WHITE, 1.5)
-	tween.chain().tween_interval(10)
+	tween.chain().tween_interval(8)
 	tween.chain().tween_property(credits, "modulate", Color.TRANSPARENT, 1.5)
 	tween.chain().tween_interval(2.5)
 	
