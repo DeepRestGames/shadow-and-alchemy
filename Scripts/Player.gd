@@ -1,7 +1,9 @@
+class_name Player
 extends Node3D
 
 signal player_moved
 signal creepy_event
+signal focus_window
 
 @onready var camera_3d = $Camera3D
 var unfocus_pos: Vector3
@@ -67,6 +69,9 @@ func _process(_delta):
 	# TODO: experiment to start creepy soundtrack at a scripted moment (in this example, focussing on `NavigationPoint11`)
 	if (player_state == PlayerState.FOCUSING) and ("Lectern" in str(current_navigation_point)):
 		creepy_event.emit()
+	
+	if (player_state == PlayerState.FOCUSING) and ("Window" in str(current_navigation_point)):
+		focus_window.emit()
 
 	# TODO: DEBUG/REMOVE
 	#debug_ui.text = "STATE: " + str(PlayerState.keys()[player_state])
