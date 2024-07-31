@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dns78fyxhw4g3"]
 
 [ext_resource type="Script" path="res://Scripts/InteractionSystem/Prop_Pickup.gd" id="1_ytolf"]
-[ext_resource type="Resource" uid="uid://dfw7ssl6mjjsr" path="res://Resources/InventoryItems/Item_JarOfGrapes.tres" id="2_i8k84"]
+[ext_resource type="Resource" uid="uid://dfw7ssl6mjjsr" path="res://Resources/InventoryItems/Item_JarOfGrapes.tres" id="2_xakua"]
 [ext_resource type="PackedScene" uid="uid://cwrqqwx4c4g0q" path="res://Assets/3D/Props/SpiceJarFilledGrapes.blend" id="3_dmlah"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibd1i"]
@@ -14,7 +14,7 @@ collision_layer = 2
 size = Vector3(0.141602, 0.249756, 0.146484)
 material = SubResource("StandardMaterial3D_ibd1i")
 script = ExtResource("1_ytolf")
-inventory_item_data = ExtResource("2_i8k84")
+inventory_item_data = ExtResource("2_xakua")
 item_model_height = 0.25
 
 [node name="SpiceJarFilledGrapes" parent="." instance=ExtResource("3_dmlah")]
