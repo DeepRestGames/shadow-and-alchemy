@@ -3237,6 +3237,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
 
@@ -3253,6 +3254,7 @@ offset_right = -406.5
 offset_bottom = -193.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("130_krdd0")
 theme_override_fonts/bold_font = ExtResource("131_rl1qt")
 theme_override_font_sizes/normal_font_size = 50

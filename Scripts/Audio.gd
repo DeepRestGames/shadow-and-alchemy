@@ -2,51 +2,6 @@ extends Node
 
 ##### Preload sounds to randomise their execution later #####
 
-const thunderstorm_array = [preload("res://Assets/Audio/Sound/storm_faded.mp3")]
-
-const footsteps_array = [
-	preload("res://Assets/Audio/Sound/footsteps_wood_single_2.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_wood_single_3.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_wood_single_4.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_cellar_single_1.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_cellar_single_2.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_cellar_single_3.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_cellar_single_4.mp3"),
-	preload("res://Assets/Audio/Sound/footsteps_cellar_single_5.mp3"),
-]
-
-const creaks_array = [
-	preload("res://Assets/Audio/Sound/creaking_creepy_3.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_creepy_4.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_creepy_5.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_creepy_6.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_door_1.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_door_2.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_metal_1.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_metal_2.mp3"),
-	preload("res://Assets/Audio/Sound/creaking_metal_3.mp3"),
-]
-
-const bucket_water_drops_array = [
-	preload("res://Assets/Audio/Sound/water_drop_1.mp3"),
-	preload("res://Assets/Audio/Sound/water_drop_2.mp3"),
-	preload("res://Assets/Audio/Sound/water_drop_3.mp3"),
-	preload("res://Assets/Audio/Sound/water_drop_4.mp3"),
-	preload("res://Assets/Audio/Sound/water_drop_5.mp3"),
-	preload("res://Assets/Audio/Sound/water_drop_6.mp3"),
-]
-
-const chest_open_array = [preload("res://Assets/Audio/Sound/chest_opening_short.mp3")]
-
-const item_interact_array = [
-	preload("res://Assets/Audio/Sound/drop_1.mp3"),
-	preload("res://Assets/Audio/Sound/drop_2.mp3"),
-	preload("res://Assets/Audio/Sound/drop_3.mp3"),
-	preload("res://Assets/Audio/Sound/drop_4.mp3"),
-	preload("res://Assets/Audio/Sound/drop_5.mp3"),
-	preload("res://Assets/Audio/Sound/drop_6.mp3"),
-]
-
 const book_turn_page_array = [
 	preload("res://Assets/Audio/Sound/book_turn_1.mp3"),
 	preload("res://Assets/Audio/Sound/book_turn_2.mp3"),
@@ -60,20 +15,66 @@ const book_pickup_array = [
 	preload("res://Assets/Audio/Sound/book_pickup_3.mp3"),
 ]
 
+const bucket_water_drops_array = [
+	preload("res://Assets/Audio/Sound/water_drop_1.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_2.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_3.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_4.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_5.mp3"),
+	preload("res://Assets/Audio/Sound/water_drop_6.mp3"),
+]
+
+const chest_open_array = [preload("res://Assets/Audio/Sound/chest_opening_short.mp3")]
+
+const coin_array = [preload("res://Assets/Audio/Sound/silver_coin.mp3")]
+
+const creaks_array = [
+	preload("res://Assets/Audio/Sound/creaking_creepy_3.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_creepy_4.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_creepy_5.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_creepy_6.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_door_1.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_door_2.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_metal_1.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_metal_2.mp3"),
+	preload("res://Assets/Audio/Sound/creaking_metal_3.mp3"),
+]
+
+const footsteps_array = [
+	preload("res://Assets/Audio/Sound/footsteps_wood_single_2.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_wood_single_3.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_wood_single_4.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_cellar_single_1.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_cellar_single_2.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_cellar_single_3.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_cellar_single_4.mp3"),
+	preload("res://Assets/Audio/Sound/footsteps_cellar_single_5.mp3"),
+]
+
 const melting_array = [preload("res://Assets/Audio/Sound/melting.mp3")]
 
 const mortar_array = [
-	preload("res://Assets/Audio/Sound/crushing_4.mp3"),
-	preload("res://Assets/Audio/Sound/crushing_3.mp3"),
-	preload("res://Assets/Audio/Sound/crushing_2.mp3"),
-	preload("res://Assets/Audio/Sound/crushing_1.mp3"),
+	preload("res://Assets/Audio/Sound/crushing_new_1.mp3"),
+	preload("res://Assets/Audio/Sound/crushing_new_2.mp3"),
 ]
 
+const object_interaction_array = [
+	preload("res://Assets/Audio/Sound/drop_1.mp3"),
+	preload("res://Assets/Audio/Sound/drop_2.mp3"),
+	preload("res://Assets/Audio/Sound/drop_3.mp3"),
+	preload("res://Assets/Audio/Sound/drop_4.mp3"),
+	preload("res://Assets/Audio/Sound/drop_5.mp3"),
+	preload("res://Assets/Audio/Sound/drop_6.mp3"),
+]
+
+const thunderstorm_array = [preload("res://Assets/Audio/Sound/storm_faded.mp3")]
+
+const water_flask_array = [preload("res://Assets/Audio/Sound/bottle_open.mp3")]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("Audio scene loaded") # TODO: debug print
-	play_intro_sounds() # TODO: enable where and when required
+	# print("Audio scene loaded") # TODO: debug print
+	# play_intro_sounds() # TODO: enable where and when required
 
 	##### Nodes required to connect signals #####
 
@@ -83,33 +84,36 @@ func _ready():
 	var animated_book = get_node("../Player/AnimatedBook")
 	var chest_top_collision_1: Node = get_node("../Chests/ChestTop/ChestTopCollision")
 	var chest_top_collision_2: Node = get_node("../Props/BloodChest/ChestTop/ChestTopCollision")
+	var coal = get_node("../Props/ItemCoal")
+	var coin = get_node("../Props/CoinPurse/ItemSilverCoin")
+	var crucible = get_node("../Props/ItemCrucible")
 	var diary = get_node("../Player/Diary")
-	var item_coal = get_node("../Props/ItemCoal")
-	var item_crucible = get_node("../Props/ItemCrucible")
-	var item_fireplace_slot = get_node("../Props/Fireplace/GenericPuzzleSlot")
-	var item_flintandsteel = get_node("../Props/ItemFlintAndSteel")
-	var item_gravedirt = get_node("../Props/GraveDirt/ItemBowlOfDirt")
-	var item_jarofgrapes = get_node("../Props/ItemJarOfGrapes")
-	var item_mortar_slot = get_node("../Props/MortarPestle/GenericPuzzleSlot")
-	var item_mushroom = get_node("../Props/ItemMushroom")
-	var item_peppergrains = get_node("../Props/ItemPepperGrains")
+	var fireplace_slot = get_node("../Props/Fireplace/GenericPuzzleSlot")
+	var flintandsteel = get_node("../Props/ItemFlintAndSteel")
+	var gravedirt = get_node("../Props/GraveDirt/ItemBowlOfDirt")
+	var jarofgrapes = get_node("../Props/ItemJarOfGrapes")
+	var mortar_slot = get_node("../Props/MortarPestle/GenericPuzzleSlot")
+	var mushroom = get_node("../Props/ItemMushroom")
 	var opal_stone = get_node("../Props/Hand3/ItemOpalStone")
+	var peppergrains = get_node("../Props/ItemPepperGrains")
 	var player: Node = get_node("../Player")
-	# var item_bookblack_mercury = get_node("../Props/ItemBookBlack_Mercury")
-	# var item_bookblack_salt = get_node("../Props/ItemBookBlack_Salt")
-	# var item_bookblack_surfur = get_node("../Props/ItemBookBlack_Surfur")
-	# var item_bookred = get_node("../Props/ItemBookRed-Leo")
-	# var item_bookred_aquarius = get_node("../Props/ItemBookRed_Aquarius")
-	# var item_bookred_aries = get_node("../Props/ItemBookRed_Aries")
-	# var item_bookred_cancer = get_node("../Props/ItemBookRed_Cancer")
-	# var item_bookred_capricorn = get_node("../Props/ItemBookRed_Capricorn")
-	# var item_bookred_gemini = get_node("../Props/ItemBookRed_Gemini")
-	# var item_bookred_libra = get_node("../Props/ItemBookRed_Libra")
-	# var item_bookred_projection = get_node("../Props/ItemBookRed_Projection")
-	# var item_bookred_sagittarius = get_node("../Props/ItemBookRed_Sagittarius")
-	# var item_bookred_scorpio = get_node("../Props/ItemBookRed_Scorpio")
-	# var item_bookred_taurus = get_node("../Props/ItemBookRed_Taurus")
-	# var item_bookred_virgo = get_node("../Props/ItemBookRed_Virgo")
+	var water_flask = get_node("../Props/Bucket/ItemWaterFlask")
+	var final_manager = get_node("../FinalManager")
+	# var bookblack_mercury = get_node("../Props/ItemBookBlack_Mercury")
+	# var bookblack_salt = get_node("../Props/ItemBookBlack_Salt")
+	# var bookblack_surfur = get_node("../Props/ItemBookBlack_Surfur")
+	# var bookred = get_node("../Props/ItemBookRed-Leo")
+	# var bookred_aquarius = get_node("../Props/ItemBookRed_Aquarius")
+	# var bookred_aries = get_node("../Props/ItemBookRed_Aries")
+	# var bookred_cancer = get_node("../Props/ItemBookRed_Cancer")
+	# var bookred_capricorn = get_node("../Props/ItemBookRed_Capricorn")
+	# var bookred_gemini = get_node("../Props/ItemBookRed_Gemini")
+	# var bookred_libra = get_node("../Props/ItemBookRed_Libra")
+	# var bookred_projection = get_node("../Props/ItemBookRed_Projection")
+	# var bookred_sagittarius = get_node("../Props/ItemBookRed_Sagittarius")
+	# var bookred_scorpio = get_node("../Props/ItemBookRed_Scorpio")
+	# var bookred_taurus = get_node("../Props/ItemBookRed_Taurus")
+	# var bookred_virgo = get_node("../Props/ItemBookRed_Virgo")
 
 
 	##### Setup randomised timings #####
@@ -135,17 +139,20 @@ func _ready():
 	const thunderStorm_volume_db: float = -15.0
 	const creak_volume_db: float = -10
 	const bucket_water_drop_volume_db: float = -20
-	$Fireplace.volume_db = -15
-	$Fireplace.attenuation_model = $Fireplace.ATTENUATION_INVERSE_SQUARE_DISTANCE
 	$BackgroundMusic.volume_db = -15
-	$Footsteps.volume_db = -15
-	$ChestOpening.volume_db = -5
-	$Bucket.volume_db = -15
-	$Bucket.unit_size = 4
+	$HomunculusSFX.volume_db = -15
 	$Bucket.attenuation_model = $Bucket.ATTENUATION_INVERSE_SQUARE_DISTANCE
+	$Bucket.unit_size = 4
+	$Bucket.volume_db = -15
+	$ChestOpening.volume_db = -5
+	$Fireplace.attenuation_model = $Fireplace.ATTENUATION_INVERSE_SQUARE_DISTANCE
+	$Fireplace.volume_db = -15
+	$Footsteps.volume_db = -15
 	$ItemInteract.volume_db = -5
 	$Mortar.volume_db = -10
-
+	$WaterFlask.volume_db = -10
+	$BrokenNeck.volume_db = -10
+	$DropDead.volume_db = -5
 
 	##### Setup background music #####
 
@@ -153,46 +160,52 @@ func _ready():
 	background_music.loop = true
 	background_music.loop_offset = 21.333 # measures 9 to 16 included
 
+	var homunculus_music: AudioStreamMP3 = $HomunculusSFX.stream as AudioStreamMP3
 
 	##### Setup interaction sounds (connections) #####
 
-	alchemical_circle_1.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	alchemical_circle_2.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	alchemical_circle_3.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	alchemical_circle_1.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	alchemical_circle_2.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	alchemical_circle_3.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
 	animated_book.connect("interacted", play_sound_from_array.bind("book picked up", $Books, book_pickup_array))
 	animated_book.connect("turn_page", play_sound_from_array.bind("book interacted", $Books, book_turn_page_array))
+	coin.connect("coin_purse", play_sound_from_array.bind("coin", $WaterFlask, coin_array))
+	water_flask.connect("water_flask", play_sound_from_array.bind("water flask", $WaterFlask, water_flask_array))
 	chest_top_collision_1.connect("chest_opened", play_sound_from_array.bind("chest opening", $ChestOpening, chest_open_array))
 	chest_top_collision_2.connect("chest_opened", play_sound_from_array.bind("chest opening", $ChestOpening, chest_open_array))
 	diary.connect("interacted", play_sound_from_array.bind("diary interacted", $Books, book_turn_page_array))
-	item_coal.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_crucible.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_fireplace_slot.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_fireplace_slot.connect("puzzle_molten_coin", play_sound_from_array.bind("molten coin", $Melting, melting_array))
-	item_flintandsteel.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_gravedirt.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_jarofgrapes.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_mortar_slot.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_mortar_slot.connect("puzzle_mortar", play_sound_from_array.bind("mortar crushing", $Mortar, mortar_array))
-	item_mushroom.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	item_peppergrains.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	opal_stone.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	coal.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	crucible.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	fireplace_slot.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	fireplace_slot.connect("puzzle_molten_coin", play_sound_from_array.bind("molten coin", $Melting, melting_array))
+	flintandsteel.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	gravedirt.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	jarofgrapes.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	mortar_slot.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	mortar_slot.connect("puzzle_mortar", play_sound_from_array.bind("mortar crushing", $Mortar, mortar_array))
+	mushroom.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	peppergrains.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	opal_stone.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
 	player.connect("creepy_event", play_background_music)
 	player.connect("player_moved", play_sound_from_array.bind("footstep", $Footsteps, footsteps_array))
-	# item_bookblack_salt.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookblack_surfur.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookblack_mercury.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_aries.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_taurus.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_gemini.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_cancer.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_virgo.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_libra.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_scorpio.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_sagittarius.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_capricorn.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_aquarius.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
-	# item_bookred_projection.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, item_interact_array))
+	final_manager.connect("homunculus_was_created", play_homunculus_music)
+	final_manager.connect("neck_brocken", play_broken_neck)
+	final_manager.connect("drop_dead", play_drop_dead)
+	# bookblack_salt.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookblack_surfur.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookblack_mercury.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred_aries.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred_taurus.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred_gemini.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred_cancer.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred_virgo.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred_libra.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred_scorpio.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred_sagittarius.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred_capricorn.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred_aquarius.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
+	# bookred_projection.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
 
 
 	##### Setup randomly timed sounds #####
@@ -229,6 +242,21 @@ func setup_randomly_timed_sound(sound_stream, timer, rand_time_min: float, rand_
 func play_background_music():
 	if not $BackgroundMusic.is_playing():
 		$BackgroundMusic.play()
+
+
+func play_homunculus_music():
+	if not $HomunculusSFX.is_playing():
+		$HomunculusSFX.play()
+
+
+func play_broken_neck():
+	$BrokenNeck.play()
+	$BackgroundMusic.stop()
+	$HomunculusSFX.stop()
+
+
+func play_drop_dead():
+	$DropDead.play()
 
 
 # play randomisable sounds from an array of similar sounds

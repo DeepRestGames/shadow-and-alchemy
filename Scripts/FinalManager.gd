@@ -1,6 +1,10 @@
 extends Node3D
 
 
+signal homunculus_was_created
+signal neck_brocken
+signal drop_dead
+
 @export var homunculus: PackedScene
 @onready var homunculus_spawn_position = $HomunculusSpawnPosition
 @onready var path_follow = $HomunculusSpawnPosition/Path3D/PathFollow3D
@@ -45,6 +49,7 @@ func spawn_homunculus():
 	var homunculus_instance = homunculus.instantiate()
 	path_follow.add_child(homunculus_instance)
 	homunculus_instance.global_position = homunculus_spawn_position.global_position
+	homunculus_was_created.emit()
 	
 	await get_tree().create_timer(1.5).timeout
 	move_smoke = true
@@ -61,9 +66,11 @@ func ending_scene():
 	tween.chain().tween_property(evil_eye, "modulate", Color.WHITE, 3)
 	tween.chain().tween_interval(1.5)
 	tween.chain().tween_property(camera, "rotation", Vector3(0, -5, 0), .2)
+	neck_brocken.emit()
 	tween.chain().tween_interval(.5)
 	tween.chain().tween_property(camera, "position", Vector3(0, -0.8, 0.7), 1.5)
 	tween.parallel().tween_property(camera, "rotation", Vector3(2, 0, 0), 1.5)
+	drop_dead.emit()
 	tween.chain().tween_interval(1.5)
 	tween.chain().tween_property(black_screen, "color", Color.BLACK, 2.5)
 	tween.chain().tween_interval(2.5)
