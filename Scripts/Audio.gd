@@ -138,7 +138,7 @@ func _ready():
 	const thunderStorm_volume_db: float = -15.0
 	const creak_volume_db: float = -10
 	const bucket_water_drop_volume_db: float = -20
-	$BackgroundMusic.volume_db = -15
+	$BackgroundMusic.volume_db = -10
 	$HomunculusSFX.volume_db = -15
 	$Bucket.attenuation_model = $Bucket.ATTENUATION_INVERSE_SQUARE_DISTANCE
 	$Bucket.unit_size = 4
@@ -156,8 +156,8 @@ func _ready():
 	##### Setup background music #####
 
 	var background_music: AudioStreamMP3 = $BackgroundMusic.stream as AudioStreamMP3
-	background_music.loop = true
-	background_music.loop_offset = 21.333 # measures 9 to 16 included
+	background_music.loop = false
+	# background_music.loop_offset = 21.333 # measures 9 to 16 included
 
 	var homunculus_music: AudioStreamMP3 = $HomunculusSFX.stream as AudioStreamMP3
 
