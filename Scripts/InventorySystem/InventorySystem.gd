@@ -1,11 +1,16 @@
 extends Node
 
 signal inventory_changed
+signal last_reward_dropped
 
 var inventory_items: Array[InventoryItemData]
 
 
 func add_item(item):
+	if item.item_name == "FinalReward":
+		last_reward_dropped.emit()
+		return
+	
 	inventory_items.append(item)
 	inventory_changed.emit()
 

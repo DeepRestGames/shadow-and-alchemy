@@ -24,7 +24,8 @@ func _on_right_collider_has_been_clicked():
 	if is_open and not animation_player.is_playing():
 		turn_right()
 
-var pages: Array[String]
+@export var pages: Array[Texture2D]
+
 var current_left_page_index: int = 0:
 	# Clamp
 	set(value):
@@ -33,23 +34,23 @@ var current_left_page_index: int = 0:
 		
 		
 func _load_pages(d_path):
-	var dir = DirAccess.open(d_path)
-	dir.list_dir_begin()
-	while true:
-		var file_name = dir.get_next()
-		if file_name == "":
-			#break the while loop when get_next() returns ""
-			break
-		elif !file_name.begins_with(".") and !file_name.ends_with(".import"):
-			#get_next() returns a string so this can be used to load the images into an array.
-			pages.append((d_path + file_name))
-	left_page.texture = load(pages[current_left_page_index])
-	right_page.texture = load(pages[current_left_page_index+1])
+	#var dir = DirAccess.open(d_path)
+	#dir.list_dir_begin()
+	#while true:
+		#var file_name = dir.get_next()
+		#if file_name == "":
+			##break the while loop when get_next() returns ""
+			#break
+		#elif !file_name.begins_with(".") and !file_name.ends_with(".import"):
+			##get_next() returns a string so this can be used to load the images into an array.
+			#pages.append((d_path + file_name)) 
+	left_page.texture = pages[current_left_page_index]
+	right_page.texture = pages[current_left_page_index+1]
 	
 func turn_right():
 	current_left_page_index+=2
-	left_page.texture = load(pages[current_left_page_index])
-	right_page.texture = load(pages[current_left_page_index+1])
+	left_page.texture = pages[current_left_page_index]
+	right_page.texture = pages[current_left_page_index+1]
 	
 func turn_left():
 	if current_left_page_index == 0:
@@ -57,8 +58,8 @@ func turn_left():
 		is_open = false
 		open_collider.use_collision = true
 	current_left_page_index-=2
-	left_page.texture = load(pages[current_left_page_index])
-	right_page.texture = load(pages[current_left_page_index+1])
+	left_page.texture = pages[current_left_page_index]
+	right_page.texture = pages[current_left_page_index+1]
 
 
 

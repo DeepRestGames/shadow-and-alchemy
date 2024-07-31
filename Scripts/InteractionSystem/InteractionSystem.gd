@@ -1,6 +1,9 @@
 extends Node3D
 
 
+var mouse_cursor_default = preload("res://Assets/2D/Cursors/Tblu_Cursor-03.png")
+var mouse_cursor_drag = preload("res://Assets/2D/Cursors/Tblu_Cursor-04.png")
+
 signal alchemical_process_choice_opened
 signal alchemical_process_choice_closed
 
@@ -79,7 +82,6 @@ func _process(_delta):
 			
 			if current_intersected_alchemical_process_symbols != null:
 				current_intersected_alchemical_process_symbols._interacted()
-				alchemical_process_choice_opened.emit()
 		
 		# Check for collisions with generic puzzle slots
 		var puzzle_slots_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, puzzle_slots_collision_layer)
@@ -96,8 +98,12 @@ func _process(_delta):
 		chest_collisions()
 		readable_collisions()
 	
-			
+	if is_dragging_item:
+		Input.set_custom_mouse_cursor(mouse_cursor_drag)
+	
 	if is_dragging_item and Input.is_action_just_released("left_click"):
+		Input.set_custom_mouse_cursor(mouse_cursor_default)
+		
 		# Check collisions with puzzle slots
 		var puzzle_slots_collision_query := PhysicsRayQueryParameters3D.create(ray_origin, ray_end, puzzle_slots_collision_layer)
 		var puzzle_slots_collision_result := space_state.intersect_ray(puzzle_slots_collision_query)

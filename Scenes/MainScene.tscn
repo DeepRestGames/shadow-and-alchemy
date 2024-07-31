@@ -1,6 +1,5 @@
-[gd_scene load_steps=124 format=3 uid="uid://csckcocqivyj5"]
+[gd_scene load_steps=173 format=3 uid="uid://csckcocqivyj5"]
 
-[ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_wd68j"]
 [ext_resource type="PackedScene" uid="uid://d1ngk84wlraoa" path="res://Scenes/Player.tscn" id="2_83pmb"]
 [ext_resource type="Texture2D" uid="uid://5vv2grj3yhfy" path="res://Assets/2D/skybox/polyhaven_moonlit_golf_2k_blurred.hdr" id="4_dkxga"]
 [ext_resource type="PackedScene" uid="uid://cikpxn4e0ls80" path="res://Assets/3D/Cabin/Cabin_v0.0.1.blend" id="4_wff7c"]
@@ -41,51 +40,100 @@
 [ext_resource type="PackedScene" uid="uid://ebtsdp6p2iw4" path="res://Assets/3D/Props/SpiceJarFilledYellow.blend" id="37_2j1vw"]
 [ext_resource type="PackedScene" uid="uid://cgt7qhmb42v61" path="res://Scenes/Items/InventoryItems/Item_Coal.tscn" id="37_e3q8q"]
 [ext_resource type="PackedScene" uid="uid://dns78fyxhw4g3" path="res://Scenes/Items/InventoryItems/Item_JarOfGrapes.tscn" id="37_oqlbi"]
+[ext_resource type="Texture2D" uid="uid://c51dbkw0xp760" path="res://Assets/2D/Books/Salt/Salt_01.png" id="37_qea6j"]
+[ext_resource type="Texture2D" uid="uid://kxe7dftio4il" path="res://Assets/2D/Books/Salt/Salt_02.png" id="38_0ifgp"]
 [ext_resource type="PackedScene" uid="uid://dhtnotvhyj8uf" path="res://Assets/3D/Props/CoinPurse.blend" id="38_4dsmt"]
 [ext_resource type="PackedScene" uid="uid://b6q56y10tfq5m" path="res://Scenes/Items/InventoryItems/Item_SilverCoin.tscn" id="38_gmr18"]
 [ext_resource type="PackedScene" uid="uid://du3dh6rb24kyv" path="res://Scenes/Items/Grimoire.tscn" id="38_t6tu7"]
+[ext_resource type="Texture2D" uid="uid://1ihy2j7dqwxh" path="res://Assets/2D/Books/Salt/Salt_03.png" id="39_3xi63"]
+[ext_resource type="Texture2D" uid="uid://c6ddlb4l6ulhq" path="res://Assets/2D/Books/Salt/Salt_04.png" id="40_7g4ot"]
 [ext_resource type="PackedScene" uid="uid://ccjymunjlm84n" path="res://Assets/3D/Props/GobletsBrutti_v0.0.0.blend" id="41_3uqgs"]
+[ext_resource type="Texture2D" uid="uid://cbuqhueusrdud" path="res://Assets/2D/Books/Sulfur/Sulfur_01.png" id="42_2budf"]
+[ext_resource type="Texture2D" uid="uid://uihbhdjm77sw" path="res://Assets/2D/Books/Sulfur/Sulfur_02.png" id="43_1irep"]
 [ext_resource type="PackedScene" uid="uid://dfl30ul37jev4" path="res://Assets/3D/Props/Skull_v0.0.0.blend" id="43_oohwt"]
 [ext_resource type="Texture2D" uid="uid://bq04jmrgld06l" path="res://Assets/2D/AlchemicalMaterials/Salt_Body.png" id="43_qg3xt"]
+[ext_resource type="Texture2D" uid="uid://hxhh0ugws4gn" path="res://Assets/2D/Books/Sulfur/Sulfur_03.png" id="44_fp6cr"]
 [ext_resource type="Texture2D" uid="uid://bmqc7os6rs7a1" path="res://Assets/2D/AlchemicalMaterials/Sulfur_Soul.png" id="44_iq5v5"]
 [ext_resource type="Texture2D" uid="uid://7uovpfgyhqag" path="res://Assets/2D/BasicElements/Air.png" id="44_mkhsd"]
 [ext_resource type="PackedScene" uid="uid://bmmvq5muuo2ar" path="res://Assets/3D/Props/FirewoodPiece_v0.0.0.blend" id="44_wpeks"]
 [ext_resource type="Texture2D" uid="uid://bjfxknyjo1to4" path="res://Assets/2D/AlchemicalMaterials/Mercury_Spirit.png" id="45_20rln"]
+[ext_resource type="Texture2D" uid="uid://cl4iiwv82eeio" path="res://Assets/2D/Books/Sulfur/Sulfur_04.png" id="45_j2ytf"]
 [ext_resource type="Texture2D" uid="uid://m3n5auvsl1eg" path="res://Assets/2D/BasicElements/Water.png" id="45_yqq5f"]
 [ext_resource type="Texture2D" uid="uid://c8fbk85aj43j1" path="res://Assets/2D/BasicElements/Fire.png" id="46_hocwh"]
 [ext_resource type="PackedScene" uid="uid://dftwsm7355x7m" path="res://Scenes/Items/BookRed.tscn" id="46_x03fn"]
+[ext_resource type="Texture2D" uid="uid://eagsqii78246" path="res://Assets/2D/Books/Mercury/Mercury_01.png" id="47_g3cg2"]
 [ext_resource type="Texture2D" uid="uid://c11eae4qq7wk3" path="res://Assets/2D/BasicElements/Earth.png" id="47_wjf4x"]
 [ext_resource type="Texture2D" uid="uid://hynfrwtgbvxl" path="res://Assets/2D/AlchemicalProcesses/Taurus_Congelation.png" id="48_dcc0o"]
+[ext_resource type="Texture2D" uid="uid://b4pahcus45vd8" path="res://Assets/2D/Books/Mercury/Mercury_02.png" id="48_pamsd"]
 [ext_resource type="PackedScene" uid="uid://i0cbyypo3vy4" path="res://Scenes/Items/BookBrown.tscn" id="48_s5nvg"]
 [ext_resource type="PackedScene" uid="uid://c31eb5bdtyrlb" path="res://Scenes/Items/BookBlue.tscn" id="48_s6rts"]
+[ext_resource type="Texture2D" uid="uid://cdpv00l2yl8v3" path="res://Assets/2D/Books/Mercury/Mercury_03.png" id="49_7nlqh"]
 [ext_resource type="Texture2D" uid="uid://cub380tu2ni0t" path="res://Assets/2D/AlchemicalProcesses/Gemini_Fixation.png" id="49_y4q8n"]
+[ext_resource type="Texture2D" uid="uid://i5r3jhc63qum" path="res://Assets/2D/Books/Mercury/Mercury_04.png" id="50_ifheb"]
 [ext_resource type="Texture2D" uid="uid://bpaywf238lnt1" path="res://Assets/2D/AlchemicalProcesses/Leo_Digestion.png" id="51_c2ucd"]
 [ext_resource type="Texture2D" uid="uid://b8l5h3avop15d" path="res://Assets/2D/AlchemicalProcesses/Virgo_Distillation.png" id="51_fjui4"]
+[ext_resource type="Texture2D" uid="uid://bclaxj4qwv2my" path="res://Assets/2D/Books/Aries/Aries_01.png" id="52_73xpv"]
 [ext_resource type="PackedScene" uid="uid://4mdyxhrt5v7w" path="res://Assets/3D/Props/CandeHolderPlate.blend" id="52_c80qp"]
 [ext_resource type="Texture2D" uid="uid://x7wlw5bydj5o" path="res://Assets/2D/AlchemicalProcesses/Libra_Sublimation.png" id="52_q1hl6"]
 [ext_resource type="PackedScene" uid="uid://b34q46cfgj4fu" path="res://Assets/3D/Props/Lock.blend" id="53_ed8k5"]
 [ext_resource type="Texture2D" uid="uid://be21m7sk2l0sx" path="res://Assets/2D/AlchemicalProcesses/Scorpio_Separation.png" id="53_i03bn"]
+[ext_resource type="Texture2D" uid="uid://5a22fpqxgno4" path="res://Assets/2D/Books/Aries/Aries_02.png" id="53_xt2uq"]
 [ext_resource type="Texture2D" uid="uid://ewlcjmyc4nox" path="res://Assets/2D/AlchemicalProcesses/Sagittarius_Ceration.png" id="54_dwvc6"]
 [ext_resource type="Texture2D" uid="uid://dlu0peeukk8qn" path="res://Assets/2D/Decals/Blank.png" id="55_5y37y"]
 [ext_resource type="Texture2D" uid="uid://c31yis5cdjonm" path="res://Assets/2D/AlchemicalProcesses/Capricorn_Fermentation_Putrefaction.png" id="55_djyml"]
+[ext_resource type="Texture2D" uid="uid://cf5y268nw6ayt" path="res://Assets/2D/Books/Taurus/Taurus_01.png" id="55_ri7hu"]
+[ext_resource type="Texture2D" uid="uid://c8jo2uxjtuoxj" path="res://Assets/2D/Books/Taurus/Taurus_02.png" id="56_1p3mo"]
 [ext_resource type="PackedScene" uid="uid://beb3g1worunrn" path="res://Scenes/Items/BookBlack.tscn" id="57_1l3i3"]
 [ext_resource type="Texture2D" uid="uid://bmd2cemv3mk2p" path="res://Assets/2D/AlchemicalProcesses/Pisces_Projection.png" id="57_uv6jf"]
+[ext_resource type="Texture2D" uid="uid://c3ykaqrux2g46" path="res://Assets/2D/Books/Gemini/Gemini_01.png" id="58_136nk"]
 [ext_resource type="Texture2D" uid="uid://7qphghswk1iv" path="res://Assets/2D/AlchemicalProcesses/Aquarius_Multiplication.png" id="58_efy78"]
+[ext_resource type="Texture2D" uid="uid://datkkyx6a1swb" path="res://Assets/2D/Books/Gemini/Gemini_02.png" id="59_mlukc"]
 [ext_resource type="Texture2D" uid="uid://dvkf8tp7s5461" path="res://Assets/2D/AlchemicalProcesses/Aries_Calcination.png" id="59_qei4b"]
 [ext_resource type="Texture2D" uid="uid://d2u0efwywjjgn" path="res://Assets/2D/AlchemicalProcesses/Cancer_Solution.png" id="60_n24rn"]
+[ext_resource type="Texture2D" uid="uid://cymt083pi4fp3" path="res://Assets/2D/Books/Cancer/Cancer_01.png" id="61_fqhk0"]
+[ext_resource type="Texture2D" uid="uid://dvsuip2tr5rw3" path="res://Assets/2D/Books/Cancer/Cancer_02.png" id="62_uwa5a"]
+[ext_resource type="Texture2D" uid="uid://di60txer2oaan" path="res://Assets/2D/Books/Leo/Leo_01.png" id="64_mriy5"]
+[ext_resource type="Texture2D" uid="uid://nmv0najtw4vl" path="res://Assets/2D/Books/Leo/Leo_02.png" id="65_ihk1n"]
+[ext_resource type="Texture2D" uid="uid://b07pnm1fji05m" path="res://Assets/2D/Books/Virgo/Virgo_01.png" id="67_7al02"]
+[ext_resource type="Texture2D" uid="uid://owx1225psij3" path="res://Assets/2D/Books/Virgo/Virgo_02.png" id="68_e3q2b"]
 [ext_resource type="PackedScene" uid="uid://dh3nrycjoird3" path="res://Scenes/Items/InventoryItems/Item_ChestKey.tscn" id="69_olkeo"]
+[ext_resource type="Texture2D" uid="uid://3bk6l15ji7j2" path="res://Assets/2D/Books/Libra/Libra_01.png" id="70_s6whh"]
 [ext_resource type="Texture2D" uid="uid://d0etjo2vbf0cb" path="res://Assets/2D/AlchemicalMaterials/GraveDirt.png" id="70_yaheh"]
+[ext_resource type="Texture2D" uid="uid://dsei18fitclfh" path="res://Assets/2D/Books/Libra/Libra_02.png" id="71_2ou2t"]
 [ext_resource type="PackedScene" uid="uid://cku0643md7uhn" path="res://Assets/3D/Props/SpiceJarEmpty_v0.0.0.blend" id="71_4eaec"]
 [ext_resource type="PackedScene" uid="uid://dv75xu325saoj" path="res://Scenes/Items/InventoryItems/Item_BowlOfDirt.tscn" id="71_h7c0c"]
 [ext_resource type="PackedScene" uid="uid://cwr2mtw5bu8b6" path="res://Assets/3D/Props/BookPurple_v0.0.0.blend" id="73_6vknn"]
+[ext_resource type="Texture2D" uid="uid://di373ow47dj5k" path="res://Assets/2D/Books/Scorpio/Scorpio_01.png" id="73_usu3p"]
 [ext_resource type="PackedScene" uid="uid://cikgffkunquyf" path="res://Assets/3D/Props/BowlOfSubstance.blend" id="74_a1sr8"]
+[ext_resource type="Texture2D" uid="uid://n7q6bn56j4sg" path="res://Assets/2D/Books/Scorpio/Scorpio_02.png" id="74_k4nmc"]
 [ext_resource type="PackedScene" uid="uid://coi7ttnhyc77y" path="res://Assets/3D/Props/GlassFlaskEmpty_v0.0.0.blend" id="75_0ctrt"]
+[ext_resource type="Texture2D" uid="uid://bddxflkq4dxoy" path="res://Assets/2D/Books/Sagittarius/Sagittarius_01.png" id="76_2m0fr"]
 [ext_resource type="PackedScene" uid="uid://w2o5r7xjg8tw" path="res://Assets/3D/Props/EmptyHolderPlate.blend" id="76_qu3l4"]
+[ext_resource type="Texture2D" uid="uid://cia05twmmn5e6" path="res://Assets/2D/Books/Sagittarius/Sagittarius_02.png" id="77_6l8di"]
 [ext_resource type="PackedScene" uid="uid://dvdddw1tb55q" path="res://Assets/3D/Props/BloodVialEmpty_v0.0.0.blend" id="77_j0jon"]
+[ext_resource type="Texture2D" uid="uid://dkiserejrfl3f" path="res://Assets/2D/Books/Capricorn/Capricorn_01.png" id="79_wbxvj"]
+[ext_resource type="Texture2D" uid="uid://bny6ieqr6uaii" path="res://Assets/2D/Books/Capricorn/Capricorn_02.png" id="80_kjffi"]
+[ext_resource type="Texture2D" uid="uid://dy2aupu1v4kfw" path="res://Assets/2D/Books/Aquarius/Aquarius_01.png" id="82_5dh1o"]
+[ext_resource type="Texture2D" uid="uid://dl5auc37deunr" path="res://Assets/2D/Books/Aquarius/Aquarius_02.png" id="83_jmxws"]
+[ext_resource type="Texture2D" uid="uid://crc5ws6vh5t07" path="res://Assets/2D/Books/Pisces/Pisces_01.png" id="85_de7lc"]
+[ext_resource type="Texture2D" uid="uid://n5wpxp5hkqc8" path="res://Assets/2D/Books/Pisces/Pisces_02.png" id="86_gs4kd"]
 [ext_resource type="PackedScene" uid="uid://cggn12ohdi7hp" path="res://Scenes/Audio.tscn" id="88_yilx3"]
 [ext_resource type="Script" path="res://Scripts/Audio.gd" id="89_jxhjo"]
+[ext_resource type="Texture2D" uid="uid://d3rcv7kd8ogx5" path="res://Assets/2D/Books/Earth/Earth_01.png" id="92_hu0o3"]
+[ext_resource type="Texture2D" uid="uid://dtf1bqkugmmf8" path="res://Assets/2D/Books/Earth/Earth_02.png" id="93_ob4on"]
 [ext_resource type="FontFile" uid="uid://cb57uwfvgsqmd" path="res://Assets/2D/Fonts/Almendra-Italic.ttf" id="94_63wl0"]
 [ext_resource type="Script" path="res://Scripts/SplashScreen.gd" id="94_v0irr"]
+[ext_resource type="Texture2D" uid="uid://drg04saijig0t" path="res://Assets/2D/Books/Air/Air_01.png" id="95_08513"]
+[ext_resource type="Texture2D" uid="uid://e2r5ft87ni3g" path="res://Assets/2D/Books/Air/Air_02.png" id="96_rv5qa"]
+[ext_resource type="Texture2D" uid="uid://cixxdl25e81cn" path="res://Assets/2D/Books/Water/Water_01.png" id="98_2it06"]
+[ext_resource type="Texture2D" uid="uid://dusvucn5i5r6u" path="res://Assets/2D/Books/Water/Water_02.png" id="99_cmrqo"]
+[ext_resource type="Texture2D" uid="uid://bu8rquc606li5" path="res://Assets/2D/Books/Fire/Fire_01.png" id="101_wxcqu"]
+[ext_resource type="Texture2D" uid="uid://qsrdi4fpw7qf" path="res://Assets/2D/Books/Fire/Fire_02.png" id="102_gnphg"]
+[ext_resource type="Script" path="res://Scripts/FinalManager.gd" id="122_3u4xp"]
+[ext_resource type="PackedScene" uid="uid://budmfw0t5joki" path="res://Scenes/ShadowParticles.tscn" id="123_5a5in"]
+[ext_resource type="FontFile" uid="uid://cj2farydupwf2" path="res://Assets/2D/Fonts/Almendra-Regular.ttf" id="130_krdd0"]
+[ext_resource type="FontFile" uid="uid://c3e6xxrhi3xmf" path="res://Assets/2D/Fonts/Almendra-BoldItalic.ttf" id="131_rl1qt"]
+[ext_resource type="Texture2D" uid="uid://c0l13wv851fv6" path="res://Assets/2D/EvilEye.png" id="132_w6yjj"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tca5b"]
 panorama = ExtResource("4_dkxga")
@@ -95,8 +143,7 @@ filter = false
 sky_material = SubResource("PanoramaSkyMaterial_tca5b")
 
 [sub_resource type="Environment" id="Environment_nps7j"]
-background_mode = 2
-background_color = Color(0, 0, 0.0470588, 1)
+background_mode = 1
 background_energy_multiplier = 1.32
 sky = SubResource("Sky_fu3n5")
 sky_rotation = Vector3(0, -2.10836, 0)
@@ -1547,7 +1594,7 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id="Animation_1rst7"]
 resource_name = "fade_out"
-length = 4.0
+length = 11.5
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1632,9 +1679,9 @@ tracks/7/path = NodePath("ColorRect:color:a")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(2.5, 4)
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(2.5, 10, 11.5)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_si8yh"]
@@ -1644,8 +1691,14 @@ _data = {
 "fade_out": SubResource("Animation_1rst7")
 }
 
+[sub_resource type="Curve3D" id="Curve3D_kqfe4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0.09, 0, -0.065, 0, 0, 0, 0, 0.705, 0, 0.175, 0, 0, 0, 0, 0, -0.635, 1.235, 0, 0, 0.16, 0.115, 0, 0, 0, -1.58, 1.235, -0.085, 0, 0, 0, 0, 0, 0, -1.69, 0.67, -0.65, 0, -0.08, 0.185, 0, 0, 0, -1.825, 0.55, -1.395, 0, 0, 0, 0, 0, 0, -1.825, 0.355, -2.85),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
 [node name="MainScene" type="Node3D"]
-script = ExtResource("1_wd68j")
 
 [node name="Player" parent="." node_paths=PackedStringArray("current_navigation_point") instance=ExtResource("2_83pmb")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -3.125, 1.434, -0.188)
@@ -1966,76 +2019,91 @@ item_model_height = 0.5
 transform = Transform3D(-0.974988, 0, 0.115277, 0, 0.98178, 0, -0.115277, 0, -0.974988, -1.92681, -0.531197, 7.6943)
 texture = ExtResource("43_qg3xt")
 pages_path = "res://Assets/2D/Books/Salt/"
+pages_array = Array[Texture2D]([ExtResource("37_qea6j"), ExtResource("38_0ifgp"), ExtResource("39_3xi63"), ExtResource("40_7g4ot")])
 
 [node name="ItemBookBlack_Surfur" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.974988, 0, 0.115277, 0, 0.98178, 0, -0.115277, 0, -0.974988, -1.99533, -0.531486, 7.68842)
 texture = ExtResource("44_iq5v5")
 pages_path = "res://Assets/2D/Books/Sulfur/"
+pages_array = Array[Texture2D]([ExtResource("42_2budf"), ExtResource("43_1irep"), ExtResource("44_fp6cr"), ExtResource("45_j2ytf")])
 
 [node name="ItemBookBlack_Mercury" parent="Props" instance=ExtResource("57_1l3i3")]
 transform = Transform3D(-0.967791, -0.164959, 0.00782703, -0.164778, 0.967657, 0.0194824, -0.0109879, 0.0178911, -0.981555, -2.08207, -0.531486, 7.68282)
 texture = ExtResource("45_20rln")
 pages_path = "res://Assets/2D/Books/Mercury/"
+pages_array = Array[Texture2D]([ExtResource("47_g3cg2"), ExtResource("48_pamsd"), ExtResource("49_7nlqh"), ExtResource("50_ifheb")])
 
 [node name="ItemBookRed_Aries" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.836417, -0.928486, 7.55917)
 texture = ExtResource("59_qei4b")
 pages_path = "res://Assets/2D/Books/Aries/"
+pages_array = Array[Texture2D]([ExtResource("52_73xpv"), ExtResource("53_xt2uq")])
 
 [node name="ItemBookRed_Taurus" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.78636, -0.928486, 7.55917)
 texture = ExtResource("48_dcc0o")
 pages_path = "res://Assets/2D/Books/Taurus/"
+pages_array = Array[Texture2D]([ExtResource("55_ri7hu"), ExtResource("56_1p3mo")])
 
 [node name="ItemBookRed_Gemini" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.73636, -0.928486, 7.55917)
 texture = ExtResource("49_y4q8n")
 pages_path = "res://Assets/2D/Books/Gemini/"
+pages_array = Array[Texture2D]([ExtResource("58_136nk"), ExtResource("59_mlukc")])
 
 [node name="ItemBookRed_Cancer" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-0.799233, 0.412717, 0.43691, 0.46286, 0.886382, 0.00940226, -0.383389, 0.209743, -0.899456, 0.443116, -0.134974, 7.71259)
 texture = ExtResource("60_n24rn")
 pages_path = "res://Assets/2D/Books/Cancer/"
+pages_array = Array[Texture2D]([ExtResource("61_fqhk0"), ExtResource("62_uwa5a")])
 
 [node name="ItemBookRed-Leo" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-0.973734, 0.227688, 8.51265e-08, 0.227688, 0.973734, -1.99051e-08, -8.74228e-08, -8.50512e-16, -1, 0.661298, -0.928486, 7.55917)
 texture = ExtResource("51_c2ucd")
 pages_path = "res://Assets/2D/Books/Leo/"
+pages_array = Array[Texture2D]([ExtResource("64_mriy5"), ExtResource("65_ihk1n")])
 
 [node name="ItemBookRed_Virgo" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.58636, -0.928486, 7.55917)
 texture = ExtResource("51_fjui4")
 pages_path = "res://Assets/2D/Books/Virgo/"
+pages_array = Array[Texture2D]([ExtResource("67_7al02"), ExtResource("68_e3q2b")])
 
 [node name="ItemBookRed_Libra" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.53636, -0.928486, 7.55917)
 texture = ExtResource("52_q1hl6")
 pages_path = "res://Assets/2D/Books/Libra/"
+pages_array = Array[Texture2D]([ExtResource("70_s6whh"), ExtResource("71_2ou2t")])
 
 [node name="ItemBookRed_Scorpio" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.48636, -0.928486, 7.55917)
 texture = ExtResource("53_i03bn")
 pages_path = "res://Assets/2D/Books/Scorpio/"
+pages_array = Array[Texture2D]([ExtResource("73_usu3p"), ExtResource("74_k4nmc")])
 
 [node name="ItemBookRed_Sagittarius" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.43636, -0.928486, 7.55917)
 texture = ExtResource("54_dwvc6")
 pages_path = "res://Assets/2D/Books/Sagittarius/"
+pages_array = Array[Texture2D]([ExtResource("76_2m0fr"), ExtResource("77_6l8di")])
 
 [node name="ItemBookRed_Capricorn" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(4.37114e-08, 1, -3.82137e-15, 1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 0, -1, 0.282748, -1.03101, 7.55917)
 texture = ExtResource("55_djyml")
 pages_path = "res://Assets/2D/Books/Capricorn/"
+pages_array = Array[Texture2D]([ExtResource("79_wbxvj"), ExtResource("80_kjffi")])
 
 [node name="ItemBookRed_Aquarius" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(4.37114e-08, 1, -3.82137e-15, 1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 0, -1, 0.282748, -0.981009, 7.55917)
 texture = ExtResource("58_efy78")
 pages_path = "res://Assets/2D/Books/Aquarius/"
+pages_array = Array[Texture2D]([ExtResource("82_5dh1o"), ExtResource("83_jmxws")])
 
 [node name="ItemBookRed_Projection" parent="Props" instance=ExtResource("46_x03fn")]
 transform = Transform3D(4.37114e-08, 1, -3.82137e-15, 1, -4.37114e-08, -8.74228e-08, -8.74228e-08, 0, -1, 0.282359, -0.931008, 7.559)
 texture = ExtResource("57_uv6jf")
 pages_path = "res://Assets/2D/Books/Pisces/"
+pages_array = Array[Texture2D]([ExtResource("85_de7lc"), ExtResource("86_gs4kd")])
 
 [node name="ItemCrucible" parent="Props" instance=ExtResource("33_6slmt")]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0.684524, -0.527116, 7.84312)
@@ -2049,18 +2117,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.276165, -0.58826, 7.79819)
 [node name="ItemBookBrown_Earth" parent="Props" instance=ExtResource("48_s5nvg")]
 transform = Transform3D(-1.29949, 0, -0.0362983, 0, 1.3, 0, 0.0362983, 0, -1.29949, -0.554228, -0.48961, 7.7493)
 texture = ExtResource("47_wjf4x")
+pages_array = Array[Texture2D]([ExtResource("92_hu0o3"), ExtResource("93_ob4on")])
 
 [node name="ItemBookBrown_Air" parent="Props" instance=ExtResource("48_s5nvg")]
 transform = Transform3D(-1.29949, 0, -0.0362983, 0, 1.3, 0, 0.0362983, 0, -1.29949, -0.636873, -0.48961, 7.75161)
 texture = ExtResource("44_mkhsd")
+pages_array = Array[Texture2D]([ExtResource("95_08513"), ExtResource("96_rv5qa")])
 
 [node name="ItemBookBrown_Water" parent="Props" instance=ExtResource("48_s5nvg")]
 transform = Transform3D(-1.29669, 0, -0.0926753, 0, 1.3, 0, 0.0926753, 0, -1.29669, -0.723769, -0.48961, 7.75962)
 texture = ExtResource("45_yqq5f")
+pages_array = Array[Texture2D]([ExtResource("98_2it06"), ExtResource("99_cmrqo")])
 
 [node name="ItemBookBrown_Fire" parent="Props" instance=ExtResource("48_s5nvg")]
 transform = Transform3D(-1.29819, 0, 0.0685803, 0, 1.3, 0, -0.0685803, 0, -1.29819, -0.81959, -0.48961, 7.74737)
 texture = ExtResource("46_hocwh")
+pages_array = Array[Texture2D]([ExtResource("101_wxcqu"), ExtResource("102_gnphg")])
 
 [node name="GraveDirt" parent="Props" instance=ExtResource("13_pyh8a")]
 transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 4.97294, -1.7614, 4.88553)
@@ -3108,6 +3180,98 @@ text = "Best played with headphones"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Credits" type="RichTextLabel" parent="SplashScreen"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.5
+offset_top = -103.5
+offset_right = 243.5
+offset_bottom = 103.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("130_krdd0")
+theme_override_fonts/bold_font = ExtResource("131_rl1qt")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+bbcode_enabled = true
+text = "[center][b]Thank you for playing.[/b]
+
+[b]Deep Rest Games is:[/b]
+
+Marco \"DughiBoogie\" Dugatto - Programming
+Enrico \"enirfo\" Fornasa - Graphics
+Giovanni \"Gamma_Sigma\" Sartori - Programming, Audio Design
+Matteo \"Steelboot\" Marcuzzo - Programming
+Simone \"tronchitralefoglie\" Ronchi - Writing
+[/center]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="FinalManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "camera")]
+script = ExtResource("122_3u4xp")
+homunculus = ExtResource("123_5a5in")
+player = NodePath("../Player")
+camera = NodePath("../Player/Camera3D")
+
+[node name="HomunculusSpawnPosition" type="Node3D" parent="FinalManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09624, 1.06347, -1.84007)
+
+[node name="Path3D" type="Path3D" parent="FinalManager/HomunculusSpawnPosition"]
+curve = SubResource("Curve3D_kqfe4")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="FinalManager/HomunculusSpawnPosition/Path3D"]
+transform = Transform3D(-4.37113e-08, 0.999996, -4.37112e-08, 0, -4.37112e-08, -0.999996, -0.999997, -4.37112e-08, 1.91068e-15, 0, 0, 0)
+
+[node name="EvilEye" type="Sprite3D" parent="FinalManager/HomunculusSpawnPosition"]
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, -1.825, 0.355, -2.29589)
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("132_w6yjj")
+
+[node name="ColorRect" type="ColorRect" parent="FinalManager"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Credits" type="RichTextLabel" parent="FinalManager"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.161458
+anchor_top = 0.225
+anchor_right = 0.838542
+anchor_bottom = 0.775
+offset_left = 406.5
+offset_top = 193.5
+offset_right = -406.5
+offset_bottom = -193.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("130_krdd0")
+theme_override_fonts/bold_font = ExtResource("131_rl1qt")
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+bbcode_enabled = true
+text = "[center][b]Thank you for playing.[/b]
+
+[b]Deep Rest Games is:[/b]
+
+Marco \"DughiBoogie\" Dugatto - Programming
+Enrico \"enirfo\" Fornasa - Graphics
+Giovanni \"Gamma_Sigma\" Sartori - Programming, Audio Design
+Matteo \"Steelboot\" Marcuzzo - Programming
+Simone \"tronchitralefoglie\" Ronchi - Writing
+[/center]"
+fit_content = true
+autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
+
 [connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Salt" to="Player" method="_on_book_opened"]
 [connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Surfur" to="Player" method="_on_book_opened"]
 [connection signal="open_diary_with_pages" from="Props/ItemBookBlack_Mercury" to="Player" method="_on_book_opened"]
@@ -3123,6 +3287,10 @@ vertical_alignment = 1
 [connection signal="open_diary_with_pages" from="Props/ItemBookRed_Capricorn" to="Player" method="_on_book_opened"]
 [connection signal="open_diary_with_pages" from="Props/ItemBookRed_Aquarius" to="Player" method="_on_book_opened"]
 [connection signal="open_diary_with_pages" from="Props/ItemBookRed_Projection" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Earth" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Air" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Water" to="Player" method="_on_book_opened"]
+[connection signal="open_diary_with_pages" from="Props/ItemBookBrown_Fire" to="Player" method="_on_book_opened"]
 [connection signal="animation_finished" from="SplashScreen/AnimationPlayer" to="Player" method="_on_animation_player_animation_finished"]
 
 [editable path="Player"]

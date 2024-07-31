@@ -9,7 +9,7 @@ extends Node3D
 
 var is_book_open: bool = false
 
-var pages: Array[String]
+var pages: Array[Texture2D]
 var current_left_page_index: int = 0:
 	# Clamp
 	set(value):
@@ -33,36 +33,39 @@ func put_away():
 	interacted.emit()
 	animation_player.play("disappear")
 
-func pull_out(d_path: String):
+func pull_out(p_array): #  d_path: String):
+	current_left_page_index = 0
 	if not is_book_open and player.player_state == player.PlayerState.FOCUSING:
 		interacted.emit()
 		animation_player.play("appear")
-		pages.clear()
-		_load_pages(d_path)
+		_load_pages(p_array)
 
-func _load_pages(d_path):
-	var dir = DirAccess.open(d_path)
-	dir.list_dir_begin()
-	while true:
-		var file_name = dir.get_next()
-		if file_name == "":
-			#break the while loop when get_next() returns ""
-			break
-		elif !file_name.begins_with(".") and !file_name.ends_with(".import"):
-			#get_next() returns a string so this can be used to load the images into an array.
-			pages.append((d_path + file_name))
-	left_page.texture = load(pages[current_left_page_index])
-	right_page.texture = load(pages[current_left_page_index+1])
+func _load_pages(p_array):
+	pages = p_array
+	left_page.texture = pages[current_left_page_index]
+	right_page.texture = pages[current_left_page_index+1]
+	#var dir = DirAccess.open(d_path)
+	#dir.list_dir_begin()
+	#while true:
+		#var file_name = dir.get_next()
+		#if file_name == "":
+			##break the while loop when get_next() returns ""
+			#break
+		#elif !file_name.begins_with(".") and !file_name.ends_with(".import"):
+			##get_next() returns a string so this can be used to load the images into an array.
+			#pages.append((d_path + file_name))
+	#left_page.texture = load(pages[current_left_page_index])
+	#right_page.texture = load(pages[current_left_page_index+1])
 
 func turn_right():
 	turn_page.emit()
 	current_left_page_index+=2
-	left_page.texture = load(pages[current_left_page_index])
-	right_page.texture = load(pages[current_left_page_index+1])
+	left_page.texture = pages[current_left_page_index]
+	right_page.texture = pages[current_left_page_index+1]
 
 func turn_left():
 	turn_page.emit()
 	current_left_page_index-=2
-	left_page.texture = load(pages[current_left_page_index])
-	right_page.texture = load(pages[current_left_page_index+1])
+	left_page.texture = pages[current_left_page_index]
+	right_page.texture = pages[current_left_page_index+1]
 

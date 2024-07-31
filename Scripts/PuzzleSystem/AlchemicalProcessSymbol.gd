@@ -30,7 +30,13 @@ func _ready():
 
 
 func _interacted():
-	alchemical_symbols_choice.show()
+	if alchemical_symbols_choice.is_visible_in_tree():
+		alchemical_symbols_choice.hide()
+		InteractionSystem.alchemical_process_choice_closed.emit()
+	else:
+		alchemical_symbols_choice.show()
+		InteractionSystem.alchemical_process_choice_opened.emit()
+	
 
 
 func new_process_chosen(process: AlchemicalProcesses, icon: Texture2D):
