@@ -30,7 +30,6 @@
 [ext_resource type="Material" uid="uid://d1emby0aspm3t" path="res://Assets/3D/Props/materials/MoltenSilver.tres" id="31_gqid4"]
 [ext_resource type="PackedScene" uid="uid://btcxh60x7v105" path="res://Scenes/Items/InventoryItems/Item_PepperGrains.tscn" id="32_pc1hi"]
 [ext_resource type="PackedScene" uid="uid://ce02y63u3jcdc" path="res://Scenes/Items/InventoryItems/Item_Crucible.tscn" id="33_6slmt"]
-[ext_resource type="PackedScene" uid="uid://b02svl0bdaf0u" path="res://Scenes/Items/InventoryItems/Item_FlintAndSteel.tscn" id="33_td4b1"]
 [ext_resource type="PackedScene" uid="uid://bp0ye040gn0v2" path="res://Assets/3D/Props/DyingEmber.blend" id="35_2t1o2"]
 [ext_resource type="PackedScene" uid="uid://2vfre2wb0jdr" path="res://Assets/3D/Props/ChestBase.blend" id="35_5ec4v"]
 [ext_resource type="Texture2D" uid="uid://mk0guedcs5u0" path="res://Assets/2D/AlchemicalMaterials/Blood.png" id="35_cgouk"]
@@ -117,6 +116,7 @@
 [ext_resource type="Texture2D" uid="uid://dl5auc37deunr" path="res://Assets/2D/Books/Aquarius/Aquarius_02.png" id="83_jmxws"]
 [ext_resource type="Texture2D" uid="uid://crc5ws6vh5t07" path="res://Assets/2D/Books/Pisces/Pisces_01.png" id="85_de7lc"]
 [ext_resource type="Texture2D" uid="uid://n5wpxp5hkqc8" path="res://Assets/2D/Books/Pisces/Pisces_02.png" id="86_gs4kd"]
+[ext_resource type="PackedScene" uid="uid://db3luyfmuhmyy" path="res://Assets/3D/Props/Flint&Steel_v0.0.0.blend" id="88_40hgi"]
 [ext_resource type="PackedScene" uid="uid://cggn12ohdi7hp" path="res://Scenes/Audio.tscn" id="88_yilx3"]
 [ext_resource type="Script" path="res://Scripts/Audio.gd" id="89_jxhjo"]
 [ext_resource type="Texture2D" uid="uid://d3rcv7kd8ogx5" path="res://Assets/2D/Books/Earth/Earth_01.png" id="92_hu0o3"]
@@ -2109,8 +2109,8 @@ pages_array = Array[Texture2D]([ExtResource("85_de7lc"), ExtResource("86_gs4kd")
 [node name="ItemCrucible" parent="Props" instance=ExtResource("33_6slmt")]
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0.684524, -0.527116, 7.84312)
 
-[node name="ItemFlintAndSteel" parent="Props" instance=ExtResource("33_td4b1")]
-transform = Transform3D(-0.658939, 0, 0.752196, 0, 1, 0, -0.752196, 0, -0.658939, 3.35765, -1.39485, 7.5401)
+[node name="Flint&Steel_v0_0_0" parent="Props" instance=ExtResource("88_40hgi")]
+transform = Transform3D(-0.293991, 0, 0.404437, 0, 0.5, 0, -0.404437, 0, -0.293991, 3.35765, -1.41055, 7.5401)
 
 [node name="ItemPepperGrains" parent="Props" instance=ExtResource("32_pc1hi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.276165, -0.58826, 7.79819)
