@@ -26,7 +26,7 @@ const bucket_water_drops_array = [
 
 const chest_open_array = [preload("res://Assets/Audio/Sound/chest_opening_short.mp3")]
 
-const coin_array = [preload("res://Assets/Audio/Sound/coin_purse.mp3")]
+const coin_array = [preload("res://Assets/Audio/Sound/silver_coin.mp3")]
 
 const creaks_array = [
 	preload("res://Assets/Audio/Sound/creaking_creepy_3.mp3"),
@@ -98,6 +98,7 @@ func _ready():
 	var peppergrains = get_node("../Props/ItemPepperGrains")
 	var player: Node = get_node("../Player")
 	var water_flask = get_node("../Props/Bucket/ItemWaterFlask")
+	var final_manager = get_node("../FinalManager")
 	# var bookblack_mercury = get_node("../Props/ItemBookBlack_Mercury")
 	# var bookblack_salt = get_node("../Props/ItemBookBlack_Salt")
 	# var bookblack_surfur = get_node("../Props/ItemBookBlack_Surfur")
@@ -139,6 +140,7 @@ func _ready():
 	const creak_volume_db: float = -10
 	const bucket_water_drop_volume_db: float = -20
 	$BackgroundMusic.volume_db = -15
+	$HomunculusSFX.volume_db = -15
 	$Bucket.attenuation_model = $Bucket.ATTENUATION_INVERSE_SQUARE_DISTANCE
 	$Bucket.unit_size = 4
 	$Bucket.volume_db = -15
@@ -149,7 +151,8 @@ func _ready():
 	$ItemInteract.volume_db = -5
 	$Mortar.volume_db = -10
 	$WaterFlask.volume_db = -10
-
+	$BrokenNeck.volume_db = -10
+	$DropDead.volume_db = -5
 
 	##### Setup background music #####
 
@@ -157,6 +160,7 @@ func _ready():
 	background_music.loop = true
 	background_music.loop_offset = 21.333 # measures 9 to 16 included
 
+	var homunculus_music: AudioStreamMP3 = $HomunculusSFX.stream as AudioStreamMP3
 
 	##### Setup interaction sounds (connections) #####
 
@@ -184,6 +188,9 @@ func _ready():
 	opal_stone.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
 	player.connect("creepy_event", play_background_music)
 	player.connect("player_moved", play_sound_from_array.bind("footstep", $Footsteps, footsteps_array))
+	final_manager.connect("homunculus_was_created", play_homunculus_music)
+	final_manager.connect("neck_brocken", play_broken_neck)
+	final_manager.connect("drop_dead", play_drop_dead)
 	# bookblack_salt.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
 	# bookblack_surfur.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
 	# bookblack_mercury.connect("interacted", play_sound_from_array.bind("item drop", $ItemInteract, object_interaction_array))
@@ -235,6 +242,21 @@ func setup_randomly_timed_sound(sound_stream, timer, rand_time_min: float, rand_
 func play_background_music():
 	if not $BackgroundMusic.is_playing():
 		$BackgroundMusic.play()
+
+
+func play_homunculus_music():
+	if not $HomunculusSFX.is_playing():
+		$HomunculusSFX.play()
+
+
+func play_broken_neck():
+	$BrokenNeck.play()
+	$BackgroundMusic.stop()
+	$HomunculusSFX.stop()
+
+
+func play_drop_dead():
+	$DropDead.play()
 
 
 # play randomisable sounds from an array of similar sounds
