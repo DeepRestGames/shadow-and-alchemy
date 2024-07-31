@@ -156,8 +156,8 @@ func _ready():
 	##### Setup background music #####
 
 	var background_music: AudioStreamMP3 = $BackgroundMusic.stream as AudioStreamMP3
-	background_music.loop = false
-	# background_music.loop_offset = 21.333 # measures 9 to 16 included
+	background_music.loop = true
+	background_music.loop_offset = 21.333 # measures 9 to 16 included
 
 	var homunculus_music: AudioStreamMP3 = $HomunculusSFX.stream as AudioStreamMP3
 
